@@ -51,7 +51,8 @@ export const priceRecords = pgTable("price_records", {
 
 export const deals = pgTable("deals", {
   id: id(), restaurantId: uuid("restaurant_id").notNull().references(() => restaurants.id),
-  title: text("title").notNull(), description: text("description"), price: numeric("price").notNull(),
+  /** price is null for %-off / non-priced offers (e.g. "20% off your entire order"). */
+  title: text("title").notNull(), description: text("description"), price: numeric("price"),
   startsAt: ts("starts_at"), expiresAt: ts("expires_at"), redemption: text("redemption"),
   appOnly: boolean("app_only").default(false), deliveryOnly: boolean("delivery_only").default(false), pickupOnly: boolean("pickup_only").default(false),
   participatingLocations: text("participating_locations"), promoCode: text("promo_code"),

@@ -1,6 +1,6 @@
 import { eq, and } from "drizzle-orm";
 import type { Db } from "../db/client";
-import { restaurants, restaurantLocations, menuItems, nutritionRecords, priceRecords, dataRefreshRuns } from "../db/schema";
+import { restaurants, restaurantLocations, menuItems, nutritionRecords, priceRecords, dataRefreshRuns, deals } from "../db/schema";
 import type { NormalizedItem } from "../adapters/types";
 
 /**
@@ -109,6 +109,32 @@ export async function persistRun(
   }
 
   return { menuItemsUpserted: run.items.length, nutritionRows, priceRows };
+}
+
+/** Persist official coupons as deals. Promo codes carry source URL + lastVerified; UI labels them "listed by official source, checked <time>". */
+export async function persistDeals(
+  db: Db,
+  run: { restaurantSlug: string; coupons: import("../adapters/dominos").NormalizedCoupon[] },
+): Promise<number> {
+  const restaurantId = await ensureRestaurant(db, run.restaurantSlug);
+  let n = 0;
+  for (const c of run.coupons) {
+    await db.insert(deals).values({
+      restaurantId,
+      title: c.name,
+      description: null,
+      price: c.price === null ? null : String(c.price),
+      startsAt: c.effectiveOn ? new Date(c.effectiveOn) : null,
+      expiresAt: c.expiresOn ? new Date(c.expiresOn) : null,
+      promoCode: c.code,
+      pickupOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Carryout" || m === "Carside"),
+      deliveryOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Delivery"),
+      sourceUrl: c.sourceUrl,
+      lastVerified: new Date(c.lastChecked),
+    });
+    n++;
+  }
+  return n;
 }
 
 export async function recordRefreshRun(

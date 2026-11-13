@@ -1,0 +1,1 @@
+ALTER TABLE "deals" ALTER COLUMN "price" DROP NOT NULL;

@@ -8,6 +8,13 @@
       "when": 1794536467886,
       "tag": "0000_mature_turbo",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794606494708,
+      "tag": "0001_deals_price_nullable",
+      "breakpoints": true
     }
   ]
 }
