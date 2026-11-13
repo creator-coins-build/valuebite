@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import { TacoBellAdapter } from "../src/modules/adapters/tacobell";
+import { validateRun } from "../src/modules/ingestion/validate";
+import { scorePopulation, rank } from "../src/modules/scoring/engine";
+const raw = JSON.parse(fs.readFileSync("tests/fixtures/tacobell-036133-menu.json", "utf8"));
+const items = TacoBellAdapter.normalizeItems(raw, { storeId: "036133", zip: "33613", fetchedAt: new Date(), sourceUrl: "x" });
+const v = validateRun(items);
+console.log("items", items.length, "accepted", v.accepted.length, "rejected", v.rejected.length, "anomalies", v.anomalies);
+const byId = new Map(v.accepted.map(i => [i.productId, i]));
+const s = rank(scorePopulation(v.accepted.map(i => ({ id: i.productId, price: i.price, calories: i.calories, protein: null }))), "calPerDollar");
+for (const r of s.slice(0, 8)) console.log(byId.get(r.id)!.name, `$${r.price}`, r.calories, "cal", r.calPerDollar, "cal/$");

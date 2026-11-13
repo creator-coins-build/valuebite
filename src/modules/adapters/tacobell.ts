@@ -1,0 +1,39 @@
+import type { NormalizedItem, RestaurantAdapter } from "./types";
+
+const BASE = "https://www.tacobell.com/tacobellwebservices/v4/tacobell";
+const NUM = /^\d+(\.\d+)?$/;
+
+/**
+ * Taco Bell's own site JSON: exact per-store price + calories.
+ * Protein is NOT in this feed, so it is null (unknown), never guessed.
+ * Calorie ranges ("670-2050", customizable combos) are skipped: no single honest number.
+ */
+export const TacoBellAdapter: RestaurantAdapter = {
+  slug: "taco-bell",
+  async fetchMenu({ storeId }) {
+    const res = await fetch(`${BASE}/products/menu/${encodeURIComponent(storeId)}`, { headers: { "user-agent": "ValueBiteBot/0.1 (+contact owner)" } });
+    if (!res.ok) throw new Error(`taco bell menu ${res.status}`);
+    return res.json();
+  },
+  normalizeItems(raw: any, ctx) {
+    const out: NormalizedItem[] = [];
+    for (const cat of raw?.menuProductCategories ?? []) {
+      for (const p of cat.products ?? []) {
+        const cal = String(p.calories ?? "");
+        const price = p.price?.value;
+        out.push({
+          restaurantSlug: "taco-bell", productId: String(p.code), name: String(p.name), description: p.description ?? null,
+          category: String(p.primaryCategoryCode ?? cat.code),
+          calories: NUM.test(cal) ? Number(cal) : null, proteinG: null,
+          nutritionSourceUrl: ctx.sourceUrl, nutritionConfidence: "high",
+          price: typeof price === "number" ? price : NaN, pricingType: "exact_store",
+          priceSourceUrl: ctx.sourceUrl, storeId: ctx.storeId, zip: ctx.zip, fetchedAt: ctx.fetchedAt.toISOString(),
+        });
+        if (p.isAvailableInStore === false) out.pop();
+      }
+    }
+    // same product appears in several categories: keep first occurrence, report nothing silently dropped elsewhere
+    const seen = new Set<string>();
+    return out.filter(i => (seen.has(i.productId) ? false : (seen.add(i.productId), true)));
+  },
+};
