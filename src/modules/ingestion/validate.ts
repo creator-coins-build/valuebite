@@ -2,15 +2,25 @@ import type { NormalizedItem } from "../adapters/types";
 
 export interface Validation { accepted: NormalizedItem[]; rejected: { item: NormalizedItem; reason: string }[]; anomalies: string[]; quarantine: boolean }
 
+export interface ValidateOptions {
+  /**
+   * Reject rows with null calories. Default true: sources that publish
+   * nutrition (Taco Bell) treat a missing number as bad data. Set false for
+   * sources with no nutrition feed at all (Domino's) - the row is valid for
+   * price display and nutrition stays honestly unknown.
+   */
+  requireCalories: boolean;
+}
+
 /** Per-item: drop unusable rows. Per-run: quarantine whole run on suspicious shape (spec s22). */
-export function validateRun(items: NormalizedItem[], previous?: NormalizedItem[]): Validation {
+export function validateRun(items: NormalizedItem[], previous?: NormalizedItem[], opts: ValidateOptions = { requireCalories: true }): Validation {
   const anomalies: string[] = [];
   const accepted: NormalizedItem[] = [], rejected: Validation["rejected"] = [];
   for (const i of items) {
     let reason = "";
     if (!Number.isFinite(i.price) || i.price <= 0) reason = "bad_price";
-    else if (i.calories === null) reason = "calories_missing_or_range";
-    else if (i.calories <= 0) reason = "nonpositive_calories";
+    else if (i.calories === null && opts.requireCalories) reason = "calories_missing_or_range";
+    else if (i.calories !== null && i.calories <= 0) reason = "nonpositive_calories";
     if (reason) rejected.push({ item: i, reason }); else accepted.push(i);
   }
   const ids = items.map(i => i.productId);
