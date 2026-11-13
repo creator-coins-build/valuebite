@@ -8,3 +8,9 @@
 | Chipotle | Not yet checked | Nutrition calculator page loads | |
 | McDonald's, KFC | 403 Access Denied | 403 | Not attempting to bypass |
 | Wendy's, BK, Popeyes, Little Caesars, Subway | Unclear/empty responses | not checked | Need follow-up |
+
+## Chick-fil-A prices (Level 4 fallback, added 2026-11-13)
+- Chick-fil-A publishes no public price feed. Fallback: Drive Thru Index (drivethruindex.com), a third-party tracker that reads official ordering sites daily across ~3,050 US stores and publishes per-item typical price + range + checked date (JSON-LD Dataset on each item page).
+- 60 item pages harvested via scripts/harvest-cfa-prices.ts (2026-11-13, all checked 2026-11-13). 52 matched official nutrition items by slug.
+- Stored as pricingType=national_estimate, confidence=low. UI label: "Typical price - may vary". NEVER presented as exact.
+- 8 unmatched: 5-ct nuggets, filet/spicy-filet salad variants (DTI tracks items CFA nutrition page structures differently).
