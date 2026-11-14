@@ -120,22 +120,46 @@ export async function persistDeals(
   run: { restaurantSlug: string; coupons: import("../adapters/dominos").NormalizedCoupon[] },
 ): Promise<number> {
   const restaurantId = await ensureRestaurant(db, run.restaurantSlug);
+  const existing = await db.select().from(deals).where(eq(deals.restaurantId, restaurantId));
+  const byCode = new Map(existing.map((d) => [d.promoCode, d]));
+  const seen = new Set<string>();
   let n = 0;
   for (const c of run.coupons) {
-    await db.insert(deals).values({
-      restaurantId,
-      title: c.name,
-      description: null,
-      price: c.price === null ? null : String(c.price),
-      startsAt: c.effectiveOn ? new Date(c.effectiveOn) : null,
-      expiresAt: c.expiresOn ? new Date(c.expiresOn) : null,
-      promoCode: c.code,
-      pickupOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Carryout" || m === "Carside"),
-      deliveryOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Delivery"),
-      sourceUrl: c.sourceUrl,
-      lastVerified: new Date(c.lastChecked),
-    });
+    seen.add(c.code);
+    const cur = byCode.get(c.code);
+    if (cur) {
+      // refresh the evidence on the existing row
+      await db.update(deals).set({
+        title: c.name,
+        price: c.price === null ? null : String(c.price),
+        startsAt: c.effectiveOn ? new Date(c.effectiveOn) : null,
+        expiresAt: c.expiresOn ? new Date(c.expiresOn) : null,
+        sourceUrl: c.sourceUrl,
+        lastVerified: new Date(c.lastChecked),
+        active: true,
+      }).where(eq(deals.id, cur.id));
+    } else {
+      await db.insert(deals).values({
+        restaurantId,
+        title: c.name,
+        description: null,
+        price: c.price === null ? null : String(c.price),
+        startsAt: c.effectiveOn ? new Date(c.effectiveOn) : null,
+        expiresAt: c.expiresOn ? new Date(c.expiresOn) : null,
+        promoCode: c.code,
+        pickupOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Carryout" || m === "Carside"),
+        deliveryOnly: c.serviceMethods.length > 0 && c.serviceMethods.every((m) => m === "Delivery"),
+        sourceUrl: c.sourceUrl,
+        lastVerified: new Date(c.lastChecked),
+      });
+    }
     n++;
+  }
+  // deals no longer listed by the official source are retired, never kept active
+  for (const d of existing) {
+    if (d.promoCode && !seen.has(d.promoCode) && d.active) {
+      await db.update(deals).set({ active: false }).where(eq(deals.id, d.id));
+    }
   }
   return n;
 }
