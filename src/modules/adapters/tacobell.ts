@@ -2,6 +2,7 @@ import type { NormalizedItem, RestaurantAdapter } from "./types";
 
 const BASE = "https://www.tacobell.com/tacobellwebservices/v4/tacobell";
 const NUM = /^\d+(\.\d+)?$/;
+const RANGE = /^(\d+)-(\d+)$/;
 
 /**
  * Taco Bell's own site JSON: exact per-store price + calories.
@@ -21,10 +22,15 @@ export const TacoBellAdapter: RestaurantAdapter = {
       for (const p of cat.products ?? []) {
         const cal = String(p.calories ?? "");
         const price = p.price?.value;
+        const range = RANGE.exec(cal);
         out.push({
           restaurantSlug: "taco-bell", productId: String(p.code), name: String(p.name), description: p.description ?? null,
           category: String(p.primaryCategoryCode ?? cat.code),
-          calories: NUM.test(cal) ? Number(cal) : null, proteinG: null,
+          calories: NUM.test(cal) ? Number(cal) : null,
+          // official range (e.g. combos where drink/side choices vary) - kept as a range, never collapsed
+          caloriesMin: range ? Number(range[1]) : null,
+          caloriesMax: range ? Number(range[2]) : null,
+          proteinG: null,
           nutritionSourceUrl: ctx.sourceUrl, nutritionConfidence: "high",
           price: typeof price === "number" ? price : NaN, pricingType: "exact_store",
           priceSourceUrl: ctx.sourceUrl, storeId: ctx.storeId, zip: ctx.zip, fetchedAt: ctx.fetchedAt.toISOString(),

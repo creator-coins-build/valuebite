@@ -49,6 +49,42 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
     .slice(0, 20)
     .map((s) => ({ s, row: byId.get(s.id)! }));
 
+  // Limited-time deals: chain deal-category items (cal/$ from official ranges) + coupons with published expiry.
+  interface DealView {
+    key: string; title: string; restaurant: string; priceText: string; calText: string;
+    calPerDollar: string | null; sortCal: number; evidence: string;
+  }
+  const dealViews: DealView[] = [];
+  for (const r of rows.filter((r) => r.category === "deals-and-combos")) {
+    const hasRange = r.caloriesMin !== null && r.caloriesMax !== null;
+    const calMin = r.calories ?? r.caloriesMin;
+    const calMax = r.calories ?? r.caloriesMax;
+    dealViews.push({
+      key: `tb:${r.productId}`,
+      title: r.name,
+      restaurant: r.restaurantName,
+      priceText: `$${r.price.toFixed(2)} (exact)`,
+      calText: hasRange ? `${r.caloriesMin}-${r.caloriesMax} (official range)` : r.calories !== null ? String(r.calories) : "unknown",
+      calPerDollar: calMin !== null && calMax !== null && calMin > 0 ? `${Math.round(calMin / r.price)}-${Math.round(calMax / r.price)}` : (calMin === 0 ? "0 (drinks)" : null),
+      sortCal: calMin !== null && calMax !== null && calMax > 0 ? calMax / r.price : -1,
+      evidence: "on the official deals & combos menu, checked " + new Date(r.fetchedAt).toISOString().slice(0, 10),
+    });
+  }
+  for (const d of deals.filter((d) => d.expiresAt !== null)) {
+    dealViews.push({
+      key: `dm:${d.promoCode}`,
+      title: d.title,
+      restaurant: d.restaurantName,
+      priceText: d.price !== null ? `$${d.price.toFixed(2)} w/ code ${d.promoCode}` : `code ${d.promoCode}`,
+      calText: "unknown",
+      calPerDollar: null,
+      sortCal: -1,
+      evidence: `expires ${d.expiresAt!.slice(0, 10)} (published by official source)`,
+    });
+  }
+  dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
+  const dealRows = dealViews;
+
   await client.close();
 
   const table = (title: string, list: { s: (typeof withScores)[number]["s"]; row: (typeof rows)[number] }[], note: string) => (
@@ -136,6 +172,40 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       )}
       {table("Most calories per dollar", byCal, "Entrees only (no sauces, drinks, sides, sweets or party packs).")}
       {table("Cheapest entrees", cheapest, "Entrees only, sorted by price.")}
+
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: 20, marginBottom: 4 }}>Limited-time deals, sorted by calories per dollar</h2>
+        <p style={{ color: "#9aa0a6", fontSize: 13, marginTop: 0 }}>
+          Combo calories are official ranges (they depend on your drink/side picks), so cal/$ is a range too - never collapsed into one number.
+          Deals without published nutrition show cal/$ as unknown instead of a guess.
+        </p>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
+          <thead>
+            <tr style={{ textAlign: "left", color: "#9aa0a6", borderBottom: "1px solid #30363d" }}>
+              <th style={{ padding: "6px 8px" }}>Deal</th>
+              <th style={{ padding: "6px 8px" }}>Restaurant</th>
+              <th style={{ padding: "6px 8px" }}>Price</th>
+              <th style={{ padding: "6px 8px" }}>Calories</th>
+              <th style={{ padding: "6px 8px" }}>cal/$</th>
+              <th style={{ padding: "6px 8px" }}>Limited-time evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            {dealRows.map((d) => (
+              <tr key={d.key} style={{ borderBottom: "1px solid #21262d" }}>
+                <td style={{ padding: "8px" }}>{d.title}</td>
+                <td style={{ padding: "8px", color: "#9aa0a6" }}>{d.restaurant}</td>
+                <td style={{ padding: "8px" }}>{d.priceText}</td>
+                <td style={{ padding: "8px" }}>{d.calText}</td>
+                <td style={{ padding: "8px", fontWeight: d.calPerDollar !== null ? 700 : 400 }}>
+                  {d.calPerDollar !== null ? d.calPerDollar : <span style={{ color: "#9aa0a6" }}>unknown (nutrition not published)</span>}
+                </td>
+                <td style={{ padding: "8px", color: "#9aa0a6", fontSize: 12 }}>{d.evidence}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
       <section>
         <h2 style={{ fontSize: 20, marginBottom: 4 }}>Official deals</h2>

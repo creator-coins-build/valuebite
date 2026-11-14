@@ -3,7 +3,11 @@ export type PricingType = "exact_store" | "zip_local" | "regional" | "national_e
 
 export interface NormalizedItem {
   restaurantSlug: string; productId: string; name: string; description?: string | null; category: string;
-  calories: number | null; proteinG: number | null;
+  /** Single official calorie count, or null when unknown or only a range exists. */
+  calories: number | null;
+  /** Official calorie range (customizable items: "1430-1710"). Both or neither. Never collapsed into a fake single number. */
+  caloriesMin?: number | null; caloriesMax?: number | null;
+  proteinG: number | null;
   nutritionSourceUrl: string; nutritionConfidence: Confidence;
   price: number; pricingType: PricingType; priceSourceUrl: string; storeId: string; zip: string;
   fetchedAt: string; // ISO

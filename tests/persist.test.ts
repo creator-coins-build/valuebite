@@ -33,9 +33,9 @@ describe("PGlite persistence", () => {
       startedAt, finishedAt: new Date(), itemsUpdated: result.menuItemsUpserted, anomalies: v.anomalies,
     });
 
-    expect(result.menuItemsUpserted).toBe(71);
-    expect(result.nutritionRows).toBe(71);
-    expect(result.priceRows).toBe(71);
+    expect(result.menuItemsUpserted).toBe(89);
+    expect(result.nutritionRows).toBe(89);
+    expect(result.priceRows).toBe(89);
 
     // latest price + nutrition per item, read back through SQL
     const rows = await db.execute(sql`
@@ -47,7 +47,7 @@ describe("PGlite persistence", () => {
       JOIN LATERAL (SELECT * FROM nutrition_records n WHERE n.menu_item_id = m.id ORDER BY n.retrieved_at DESC LIMIT 1) n ON true
     `);
     const items = rows.rows as { name: string; category: string; price: number; pricing_type: string; calories: number; protein_g: number | null }[];
-    expect(items).toHaveLength(71);
+    expect(items).toHaveLength(89);
     for (const r of items) expect(r.pricing_type).toBe("exact_store");
 
     const ranked = rankByCalPerDollar(entrees(items.map((r, i) => ({

@@ -17,10 +17,12 @@ export function validateRun(items: NormalizedItem[], previous?: NormalizedItem[]
   const anomalies: string[] = [];
   const accepted: NormalizedItem[] = [], rejected: Validation["rejected"] = [];
   for (const i of items) {
+    const hasRange = typeof i.caloriesMin === "number" && typeof i.caloriesMax === "number";
     let reason = "";
     if (!Number.isFinite(i.price) || i.price <= 0) reason = "bad_price";
-    else if (i.calories === null && opts.requireCalories) reason = "calories_missing_or_range";
+    else if (i.calories === null && !hasRange && opts.requireCalories) reason = "calories_missing_or_range";
     else if (i.calories !== null && i.calories <= 0) reason = "nonpositive_calories";
+    else if (hasRange && (i.caloriesMin! < 0 || i.caloriesMax! < i.caloriesMin!)) reason = "bad_calorie_range";
     if (reason) rejected.push({ item: i, reason }); else accepted.push(i);
   }
   const ids = items.map(i => i.productId);

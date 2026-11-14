@@ -11,6 +11,8 @@ export interface RankableRow {
   price: number;
   pricingType: string;
   calories: number | null;
+  caloriesMin: number | null;
+  caloriesMax: number | null;
   proteinG: number | null;
   priceSourceUrl: string;
   nutritionSourceUrl: string | null;
@@ -23,7 +25,8 @@ export async function rankableRows(db: Db, zip: string): Promise<RankableRow[]> 
            m.restaurant_product_id AS product_id, m.name, m.category,
            p.price::float AS price, p.pricing_type, p.source_url AS price_source_url,
            p.fetched_at AS fetched_at,
-           n.calories::float AS calories, n.protein_g::float AS protein_g,
+           n.calories::float AS calories, n.calories_min::float AS calories_min, n.calories_max::float AS calories_max,
+           n.protein_g::float AS protein_g,
            n.source_url AS nutrition_source_url
     FROM menu_items m
     JOIN restaurants r ON r.id = m.restaurant_id
@@ -46,6 +49,8 @@ export async function rankableRows(db: Db, zip: string): Promise<RankableRow[]> 
     price: r.price,
     pricingType: r.pricing_type,
     calories: r.calories,
+    caloriesMin: r.calories_min,
+    caloriesMax: r.calories_max,
     proteinG: r.protein_g,
     priceSourceUrl: r.price_source_url,
     nutritionSourceUrl: r.nutrition_source_url,

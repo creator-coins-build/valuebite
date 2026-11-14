@@ -85,10 +85,13 @@ export async function persistRun(
     }
 
     // nutrition: append a fresh snapshot per fetch (history is valuable, dupes are cheap to collapse at read time)
-    if (item.calories !== null || item.proteinG !== null) {
+    const hasRange = typeof item.caloriesMin === "number" && typeof item.caloriesMax === "number";
+    if (item.calories !== null || item.proteinG !== null || hasRange) {
       await db.insert(nutritionRecords).values({
         menuItemId,
         calories: item.calories === null ? null : String(item.calories),
+        caloriesMin: hasRange ? String(item.caloriesMin) : null,
+        caloriesMax: hasRange ? String(item.caloriesMax) : null,
         proteinG: item.proteinG === null ? null : String(item.proteinG),
         sourceUrl: item.nutritionSourceUrl,
         retrievedAt: new Date(item.fetchedAt),

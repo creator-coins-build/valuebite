@@ -32,7 +32,9 @@ export const menuItems = pgTable("menu_items", {
 
 export const nutritionRecords = pgTable("nutrition_records", {
   id: id(), menuItemId: uuid("menu_item_id").notNull().references(() => menuItems.id),
-  calories: numeric("calories"), proteinG: numeric("protein_g"), carbsG: numeric("carbs_g"), fatG: numeric("fat_g"),
+  /** calories is the single official count; for customizable items the official range goes in calories_min/max (both set, calories null). */
+  calories: numeric("calories"), caloriesMin: numeric("calories_min"), caloriesMax: numeric("calories_max"),
+  proteinG: numeric("protein_g"), carbsG: numeric("carbs_g"), fatG: numeric("fat_g"),
   sourceId: uuid("source_id").references(() => dataSources.id), sourceUrl: text("source_url").notNull(),
   retrievedAt: ts("retrieved_at").notNull(), confidence: text("confidence").notNull(), // high | medium | low
 });
