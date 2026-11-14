@@ -33,6 +33,21 @@ export function matchEstimate(item: CfaNutritionItem, estimates: CfaPriceEstimat
   return estimates.find((e) => e.slug === slug) ?? null;
 }
 
+/**
+ * The CFA nutrition page has no category codes, so derive a coarse category
+ * from the item name. This keeps sides (waffle fries, filets a la carte) out
+ * of entree rankings. Only used for filtering - never affects stored numbers.
+ */
+export function categorize(title: string): string {
+  const t = title.toLowerCase();
+  if (/salad/.test(t)) return "salads";
+  if (/sandwich|club/.test(t)) return "sandwiches"; // before waffle: "Chicken Waffles Sandwich" is a sandwich
+  if (/wrap/.test(t)) return "wraps";
+  if (/waffle|side|sauce|dip|dressing/.test(t)) return "sides";
+  if (/nugget|strip|filet/.test(t)) return "nuggets-strips";
+  return "entree";
+}
+
 export function toNormalizedItems(
   nutrition: CfaNutritionItem[],
   estimates: CfaPriceEstimate[],
@@ -48,7 +63,7 @@ export function toNormalizedItems(
       productId: n.id,
       name: n.title,
       description: null,
-      category: "entree", // DTI-tracked items are entrees/salads; CFA page has no category codes
+      category: categorize(n.title),
       calories: n.calories,
       proteinG: n.proteinG,
       nutritionSourceUrl: "https://www.chick-fil-a.com/nutrition-allergens",

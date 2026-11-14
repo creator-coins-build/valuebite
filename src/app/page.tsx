@@ -2,6 +2,7 @@ import { openDb } from "../modules/db/client";
 import { rankableRows, activeDeals } from "../modules/db/queries";
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
+import { applyFilters, filtersFromParams, describeFilters } from "../modules/scoring/filters";
 
 export const dynamic = "force-dynamic";
 
@@ -20,10 +21,13 @@ function priceLabel(pricingType: string): { text: string; color: string } {
   }
 }
 
-export default async function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const params = await searchParams;
+  const filters = filtersFromParams(params);
   const { db, client } = await openDb("./data/pgdb");
-  const rows = await rankableRows(db, ZIP);
+  const allRows = await rankableRows(db, ZIP);
   const deals = await activeDeals(db);
+  const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
 
   const scored = scorePopulation(
     rows.map((r) => ({ id: `${r.restaurantSlug}:${r.productId}`, price: r.price, calories: r.calories, protein: r.proteinG })),
@@ -90,10 +94,41 @@ export default async function Home() {
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 20px" }}>
       <h1 style={{ fontSize: 28, marginBottom: 4 }}>ValueBite</h1>
       <p style={{ color: "#9aa0a6", marginTop: 0 }}>
-        Best food value near ZIP {ZIP}. {rows.length} items from {new Set(rows.map((r) => r.restaurantSlug)).size} restaurants.
-        Prices and nutrition carry their source and confidence - estimates are always labeled.
+        Best food value near ZIP {ZIP}. {rows.length} items from {new Set(rows.map((r) => r.restaurantSlug)).size} restaurants
+        ({describeFilters(filters)}). Prices and nutrition carry their source and confidence - estimates are always labeled.
       </p>
 
+      <form method="get" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28, padding: 14, background: "#161b22", borderRadius: 8 }}>
+        <label style={{ fontSize: 13 }}>
+          Budget ${" "}
+          <input name="budget" type="number" step="0.01" min="0" defaultValue={filters.budget} placeholder="10" style={{ width: 70 }} />
+        </label>
+        <label style={{ fontSize: 13 }}>
+          Restaurant{" "}
+          <select name="restaurant" defaultValue={filters.restaurants?.[0] ?? ""}>
+            <option value="">all</option>
+            <option value="taco-bell">Taco Bell</option>
+            <option value="chick-fil-a">Chick-fil-A</option>
+            <option value="dominos">Domino's</option>
+          </select>
+        </label>
+        <label style={{ fontSize: 13 }}>
+          Min protein (g){" "}
+          <input name="minProtein" type="number" min="0" defaultValue={filters.minProteinG} style={{ width: 60 }} />
+        </label>
+        <label style={{ fontSize: 13 }}>
+          Max calories{" "}
+          <input name="maxCalories" type="number" min="0" defaultValue={filters.maxCalories} style={{ width: 70 }} />
+        </label>
+        <button type="submit" style={{ padding: "4px 14px" }}>Apply</button>
+        <a href="/" style={{ color: "#9aa0a6", fontSize: 13, alignSelf: "center" }}>reset</a>
+      </form>
+
+      {filters.budget !== undefined && (
+        <p style={{ color: "#58a6ff", fontSize: 14 }}>
+          Best food under ${filters.budget} near you - {rows.length} items qualify.
+        </p>
+      )}
       {table(
         "Best Value Score",
         byValue,
