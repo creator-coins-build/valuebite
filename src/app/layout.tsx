@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif", background: "#faf7f2", color: "#1c1c1e" }}>
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif", background: "#0e0d0b", color: "#f5f2ec" }}>
         <div style={{ paddingBottom: 64 }}>{children}</div>
         <TabBar />
       </body>

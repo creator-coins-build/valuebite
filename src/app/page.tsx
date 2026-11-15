@@ -4,12 +4,12 @@ import { readSnapshot } from "../modules/db/snapshot";
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
 import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
+import { BRANDS, BrandIcon, brandSlugFor, imgSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
 
 export const dynamic = "force-dynamic";
 
 const ZIP = "33613";
 
-import { BRANDS, BrandIcon, brandSlugFor, imgSrc, card } from "../components/brand";
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
@@ -57,11 +57,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
     });
   }
   for (const d of deals.filter((d) => d.expiresAt !== null)) {
-    const slug = Object.keys(BRANDS).find((k) => BRANDS[k]!.name === d.restaurantName) ?? "dominos";
     dealViews.push({
       key: `dm:${d.promoCode}`,
       title: d.title,
-      slug,
+      slug: brandSlugFor(d.restaurantName),
       priceText: d.price !== null ? `$${d.price.toFixed(2)} w/ ${d.promoCode}` : `code ${d.promoCode}`,
       calPerDollar: null,
       sortCal: -1,
@@ -77,26 +76,26 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   return (
     <main style={{ maxWidth: 860, margin: "0 auto", padding: "20px 16px 48px" }}>
       {/* Header */}
-      <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+      <header style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 18 }}>
         <div>
-          <h1 style={{ fontSize: 28, margin: 0, letterSpacing: -0.8, fontWeight: 800 }}>ValueBite</h1>
-          <p style={{ margin: "2px 0 0", color: "#8a8378", fontSize: 14 }}>Most food for your money near <strong>{ZIP}</strong></p>
+          <h1 style={{ fontSize: 32, margin: 0, letterSpacing: -1.2, fontWeight: 900, color: ORANGE }}>ValueBite</h1>
+          <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 14, fontStyle: "italic" }}>eat good. spend less. near <strong style={{ color: INK }}>{ZIP}</strong></p>
         </div>
       </header>
 
       {/* Budget search pill */}
       <form method="get" style={{ ...card, display: "flex", alignItems: "center", gap: 10, padding: "8px 8px 8px 18px", marginBottom: 14, borderRadius: 999 }}>
-        <span style={{ fontSize: 15, color: "#8a8378" }}>$</span>
+        <span style={{ fontSize: 16, color: ORANGE_TEXT, fontWeight: 800 }}>$</span>
         <input
           name="budget" type="number" step="0.01" min="0" defaultValue={filters.budget} placeholder="What's the budget?"
-          style={{ border: "none", outline: "none", fontSize: 15, flex: 1, minWidth: 0, background: "transparent", color: "#1c1c1e" }}
+          style={{ border: "none", outline: "none", fontSize: 15, flex: 1, minWidth: 0, background: "transparent", color: INK }}
         />
         {activeRestaurant && <input type="hidden" name="restaurant" value={activeRestaurant} />}
-        <button type="submit" style={{ background: "#06c167", color: "#fff", border: "none", borderRadius: 999, padding: "10px 20px", fontWeight: 700, fontSize: 14, cursor: "pointer" }}>
-          Find food
+        <button type="submit" style={{ background: ORANGE, color: "#141210", border: "none", borderRadius: 999, padding: "10px 22px", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>
+          Feed me
         </button>
         {(filters.budget !== undefined || activeRestaurant) && (
-          <a href="/" style={{ color: "#8a8378", fontSize: 13, textDecoration: "none", paddingRight: 8 }}>reset</a>
+          <a href="/" style={{ color: MUTED, fontSize: 13, textDecoration: "none", paddingRight: 8 }}>reset</a>
         )}
       </form>
 
@@ -106,8 +105,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
           href={filters.budget !== undefined ? `/?budget=${filters.budget}` : "/"}
           style={{
             ...card, borderRadius: 999, padding: "8px 16px", display: "flex", alignItems: "center",
-            textDecoration: "none", color: "#1c1c1e", fontSize: 14, fontWeight: activeRestaurant ? 500 : 700,
-            border: activeRestaurant ? "1px solid #f0ebe3" : "2px solid #1c1c1e", whiteSpace: "nowrap",
+            textDecoration: "none", color: INK, fontSize: 14, fontWeight: activeRestaurant ? 500 : 700,
+            border: activeRestaurant ? "1px solid #2a251f" : `2px solid ${ORANGE}`, whiteSpace: "nowrap",
           }}
         >
           All
@@ -121,8 +120,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
               href={href}
               style={{
                 ...card, borderRadius: 999, padding: "5px 14px 5px 5px", display: "flex", alignItems: "center", gap: 8,
-                textDecoration: "none", color: "#1c1c1e", fontSize: 14, fontWeight: active ? 700 : 500,
-                border: active ? "2px solid #1c1c1e" : "1px solid #f0ebe3", whiteSpace: "nowrap",
+                textDecoration: "none", color: INK, fontSize: 14, fontWeight: active ? 700 : 500,
+                border: active ? `2px solid ${ORANGE}` : "1px solid #2a251f", whiteSpace: "nowrap",
               }}
             >
               <BrandIcon slug={slug} size={28} />
@@ -141,17 +140,17 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
               {d.imageUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={imgSrc(d.imageUrl)} alt={d.title} loading="lazy"
-                  style={{ width: "100%", height: 128, objectFit: "cover", background: "#f6f3ee" }} />
+                  style={{ width: "100%", height: 128, objectFit: "cover", background: "#26221c" }} />
               ) : (
-                <div style={{ width: "100%", height: 96, background: "#f6f3ee", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ width: "100%", height: 96, background: "#26221c", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <BrandIcon slug={d.slug} size={44} />
                 </div>
               )}
               <div style={{ padding: "10px 12px 12px", display: "flex", flexDirection: "column", gap: 4 }}>
-                <div style={{ fontWeight: 700, fontSize: 14, lineHeight: 1.25 }}>{d.title}</div>
-                <div style={{ fontSize: 13, color: "#8a8378" }}>{BRANDS[d.slug]?.name ?? d.slug} · {d.priceText}</div>
+                <div style={{ fontWeight: 700, fontSize: 14, lineHeight: 1.25, color: INK }}>{d.title}</div>
+                <div style={{ fontSize: 13, color: MUTED }}>{BRANDS[d.slug]?.name ?? d.slug} · {d.priceText}</div>
                 {d.calPerDollar && (
-                  <span style={{ alignSelf: "flex-start", marginTop: 4, background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>
+                  <span style={{ alignSelf: "flex-start", marginTop: 4, background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>
                     {d.calPerDollar}
                   </span>
                 )}
@@ -167,44 +166,44 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {byValue.map(({ s, row }, i) => (
             <div key={s.id} style={{ ...card, padding: 12, display: "flex", alignItems: "center", gap: 12 }}>
-              <span style={{ fontSize: 14, fontWeight: 800, color: "#c9c2b6", width: 18, textAlign: "center" }}>{i + 1}</span>
+              <span style={{ fontSize: 14, fontWeight: 800, color: "#575046", width: 18, textAlign: "center" }}>{i + 1}</span>
               {row.imageUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={imgSrc(row.imageUrl)} alt={row.name} width={64} height={64} loading="lazy"
-                  style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 16, flexShrink: 0, background: "#f6f3ee" }} />
+                  style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 16, flexShrink: 0, background: "#26221c" }} />
               ) : (
                 <BrandIcon slug={row.restaurantSlug} size={64} />
               )}
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.25 }}>{row.name}</div>
-                <div style={{ fontSize: 13, color: "#8a8378", marginTop: 3 }}>
+                <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.25, color: INK }}>{row.name}</div>
+                <div style={{ fontSize: 13, color: MUTED, marginTop: 3 }}>
                   {BRANDS[row.restaurantSlug]?.name ?? row.restaurantSlug}
                   {row.calories !== null ? ` · ${row.calories} cal` : ""}
                   {row.proteinG !== null ? ` · ${row.proteinG}g protein` : ""}
                 </div>
                 <div style={{ marginTop: 5, display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {row.calories !== null && row.calories > 0 && (
-                    <span style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                    <span style={{ background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
                       {Math.round(row.calories / row.price)} cal/$
                     </span>
                   )}
                   {row.calories === null && row.caloriesMin !== null && row.caloriesMax !== null && row.caloriesMax > 0 && (
-                    <span style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                    <span style={{ background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
                       {Math.round(row.caloriesMin / row.price)}-{Math.round(row.caloriesMax / row.price)} cal/$
                     </span>
                   )}
                   {row.proteinG !== null && row.proteinG > 0 && (
-                    <span style={{ background: "#f0ebfa", color: "#702082", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                    <span style={{ background: "#26221c", color: "#cfc8bc", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
                       {(row.proteinG / row.price).toFixed(1)}g protein/$
                     </span>
                   )}
                 </div>
               </div>
               <div style={{ textAlign: "right", flexShrink: 0 }}>
-                <div style={{ fontWeight: 800, fontSize: 16 }}>
+                <div style={{ fontWeight: 800, fontSize: 16, color: INK }}>
                   {row.pricingType !== "exact_store" && <span title="typical price, may vary">~</span>}${row.price.toFixed(2)}
                 </div>
-                <div style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 10px", fontSize: 12, fontWeight: 700, marginTop: 3 }}>
+                <div style={{ background: ORANGE, color: "#141210", borderRadius: 999, padding: "2px 10px", fontSize: 12, fontWeight: 800, marginTop: 3 }}>
                   {s.valueScore!.toFixed(1)}
                 </div>
               </div>
@@ -214,14 +213,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       </section>
 
       {/* About / honesty notes */}
-      <details style={{ ...card, padding: "12px 16px", fontSize: 13, color: "#8a8378" }}>
-        <summary style={{ cursor: "pointer", fontWeight: 600, color: "#6b655b" }}>How ValueBite works</summary>
+      <details style={{ ...card, padding: "12px 16px", fontSize: 13, color: MUTED }}>
+        <summary style={{ cursor: "pointer", fontWeight: 600, color: "#cfc8bc" }}>How ValueBite works</summary>
         <div style={{ marginTop: 10, lineHeight: 1.6, display: "flex", flexDirection: "column", gap: 6 }}>
           <div>Value Score V1 ranks entrees by 55% protein per $, 35% calories per $, 10% price. Only items with known protein get a score - protein is never guessed.</div>
           <div>Prices marked ~ are typical prices and may vary by store (exact data takes longer). Everything else is the exact price from the restaurant's own ordering site near {ZIP}.</div>
           <div>Deals and codes come from the restaurant's official ordering site or deals menu, checked {checked}. A code is listed by the official source - not a guarantee it works at checkout.</div>
           <div>Product photos are the restaurant's official menu photos. Chains without published photos show their app icon instead.</div>
-          <div><a href="/compare" style={{ color: "#067647" }}>Compare items side by side</a> · <a href="/admin" style={{ color: "#067647" }}>Data sources & refresh log</a></div>
+          <div><a href="/compare" style={{ color: ORANGE_TEXT }}>Compare items side by side</a> · <a href="/admin" style={{ color: ORANGE_TEXT }}>Data sources & refresh log</a></div>
         </div>
       </details>
     </main>

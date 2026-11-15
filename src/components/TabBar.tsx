@@ -31,14 +31,14 @@ export default function TabBar() {
     <nav
       style={{
         position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 50,
-        background: "rgba(255,255,255,0.96)", backdropFilter: "blur(8px)",
-        borderTop: "1px solid #f0ebe3", display: "flex", justifyContent: "center",
+        background: "rgba(14,13,11,0.97)", backdropFilter: "blur(8px)",
+        borderTop: "1px solid #2a251f", display: "flex", justifyContent: "center",
       }}
     >
       <div style={{ display: "flex", width: "100%", maxWidth: 480 }}>
         {tabs.map(({ href, label, Icon }) => {
           const active = pathname === href;
-          const color = active ? "#06c167" : "#8a8378";
+          const color = active ? "#ff8c1a" : "#6e675c";
           return (
             <Link
               key={href}

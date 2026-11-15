@@ -1,7 +1,7 @@
 import { openDb } from "../../modules/db/client";
 import { activeDeals } from "../../modules/db/queries";
 import { readSnapshot } from "../../modules/db/snapshot";
-import { BRANDS, BrandIcon, brandSlugFor, card } from "../../components/brand";
+import { BRANDS, BrandIcon, brandSlugFor, card, ORANGE, MUTED, INK } from "../../components/brand";
 
 export const dynamic = "force-dynamic";
 
@@ -22,9 +22,9 @@ export default async function CodesPage() {
   return (
     <main style={{ maxWidth: 860, margin: "0 auto", padding: "20px 16px 32px" }}>
       <header style={{ marginBottom: 16 }}>
-        <h1 style={{ fontSize: 28, margin: 0, letterSpacing: -0.8, fontWeight: 800 }}>Codes</h1>
-        <p style={{ margin: "2px 0 0", color: "#8a8378", fontSize: 14 }}>
-          Straight from the restaurants' official ordering sites
+        <h1 style={{ fontSize: 32, margin: 0, letterSpacing: -1.2, fontWeight: 900, color: ORANGE }}>Codes</h1>
+        <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 14, fontStyle: "italic" }}>
+          straight from the restaurants' official ordering sites
         </p>
       </header>
 
@@ -35,24 +35,24 @@ export default async function CodesPage() {
             <div key={i} style={{ ...card, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12 }}>
               <BrandIcon slug={slug} size={40} />
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.3, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{d.title}</div>
-                <div style={{ fontSize: 12, color: "#8a8378", marginTop: 3 }}>
+                <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.3, color: INK, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{d.title}</div>
+                <div style={{ fontSize: 12, color: MUTED, marginTop: 3 }}>
                   {BRANDS[slug]?.name ?? d.restaurantName}
                   {d.expiresAt ? ` · expires ${d.expiresAt.slice(0, 10)}` : " · no expiry published"}
                 </div>
               </div>
               {d.promoCode && (
-                <span style={{ fontFamily: "monospace", background: "#f6f3ee", borderRadius: 10, padding: "8px 12px", fontSize: 14, fontWeight: 700, letterSpacing: 0.5 }}>
+                <span style={{ fontFamily: "monospace", background: "#26221c", color: "#ffa245", borderRadius: 10, padding: "8px 12px", fontSize: 14, fontWeight: 700, letterSpacing: 0.5 }}>
                   {d.promoCode}
                 </span>
               )}
-              {d.price !== null && <span style={{ fontWeight: 800, fontSize: 16 }}>${d.price.toFixed(2)}</span>}
+              {d.price !== null && <span style={{ fontWeight: 800, fontSize: 16, color: INK }}>${d.price.toFixed(2)}</span>}
             </div>
           );
         })}
       </div>
 
-      <p style={{ fontSize: 12, color: "#b3ab9e", lineHeight: 1.6 }}>
+      <p style={{ fontSize: 12, color: "#575046", lineHeight: 1.6 }}>
         Listed by the official source, checked {checked}. A code being listed isn't a guarantee it works at checkout.
       </p>
     </main>

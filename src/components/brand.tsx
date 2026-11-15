@@ -26,22 +26,29 @@ export function BrandIcon({ slug, size = 40 }: { slug: string; size?: number }) 
   const b = BRANDS[slug];
   const style: React.CSSProperties = {
     width: size, height: size, borderRadius: size * 0.24,
-    border: "1px solid rgba(0,0,0,0.08)", flexShrink: 0, objectFit: "cover",
+    border: "1px solid rgba(255,255,255,0.08)", flexShrink: 0, objectFit: "cover",
   };
   if (b) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={`/icons/${slug}.png`} alt={b.name} width={size} height={size} style={style} loading="lazy" />;
   }
   return (
-    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#eee9e2", color: "#1c1c1e", fontWeight: 800, fontSize: size * 0.3 }}>
+    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#26221c", color: "#f5f2ec", fontWeight: 800, fontSize: size * 0.3 }}>
       {slug.slice(0, 2).toUpperCase()}
     </span>
   );
 }
 
+/** Shared dark card. */
 export const card: React.CSSProperties = {
-  background: "#fff",
+  background: "#1a1713",
   borderRadius: 22,
-  border: "1px solid #f0ebe3",
-  boxShadow: "0 2px 10px rgba(60,40,20,0.05)",
+  border: "1px solid #2a251f",
+  boxShadow: "0 2px 12px rgba(0,0,0,0.35)",
 };
+
+export const ORANGE = "#ff8c1a";
+export const ORANGE_TEXT = "#ffa245";
+export const ORANGE_SOFT = "rgba(255,140,26,0.14)";
+export const MUTED = "#9c9488";
+export const INK = "#f5f2ec";
