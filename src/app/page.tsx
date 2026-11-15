@@ -1,5 +1,6 @@
 import { openDb } from "../modules/db/client";
 import { rankableRows, activeDeals } from "../modules/db/queries";
+import { readSnapshot } from "../modules/db/snapshot";
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
 import { applyFilters, filtersFromParams, describeFilters } from "../modules/scoring/filters";
@@ -24,9 +25,17 @@ function priceLabel(pricingType: string): { text: string; color: string } {
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
-  const { db, client } = await openDb("./data/pgdb");
-  const allRows = await rankableRows(db, ZIP);
-  const deals = await activeDeals(db);
+  const snap = readSnapshot();
+  let allRows, deals;
+  if (snap) {
+    allRows = snap.rows;
+    deals = snap.deals;
+  } else {
+    const { db, client } = await openDb("./data/pgdb");
+    allRows = await rankableRows(db, ZIP);
+    deals = await activeDeals(db);
+    await client.close();
+  }
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
 
   const scored = scorePopulation(
@@ -84,8 +93,6 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   }
   dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
   const dealRows = dealViews;
-
-  await client.close();
 
   const table = (title: string, list: { s: (typeof withScores)[number]["s"]; row: (typeof rows)[number] }[], note: string) => (
     <section style={{ marginBottom: 40 }}>

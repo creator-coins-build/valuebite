@@ -1,11 +1,30 @@
 import Link from "next/link";
 import { sql } from "drizzle-orm";
 import { openDb } from "../../modules/db/client";
+import { readSnapshot } from "../../modules/db/snapshot";
 
 export const dynamic = "force-dynamic";
 const STALE_HOURS = 48;
 
 export default async function Admin() {
+  const snap = readSnapshot();
+  if (snap) {
+    // Hosted snapshot mode: PGlite stays closed (512Mi memory budget).
+    const generated = new Date(snap.generatedAt);
+    const stale = Date.now() - generated.getTime() > STALE_HOURS * 3600_000;
+    const cell = { padding: "8px", fontSize: 13 } as const;
+    return (
+      <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 20px" }}>
+        <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#58a6ff" }}>&larr; rankings</Link></p>
+        <h1 style={{ fontSize: 26 }}>Data admin</h1>
+        <p style={{ color: stale ? "#d29922" : "#3fb950", fontSize: 14 }}>
+          Snapshot mode (hosted): {snap.rows.length} items, {snap.deals.length} deals, generated {snap.generatedAt}
+          {stale ? " - stale (>48h)" : " - fresh"}.
+        </p>
+        <p style={{ fontSize: 13, color: "#9aa0a6" }}>Refresh runs are tracked in the build pipeline, not on the hosted instance.</p>
+      </main>
+    );
+  }
   const { db, client } = await openDb("./data/pgdb");
 
   const runs = (await db.execute(sql`

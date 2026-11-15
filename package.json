@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start -H 0.0.0.0",
     "seed": "tsx scripts/seed.ts",
-    "refresh": "tsx scripts/refresh.ts"
+    "refresh": "tsx scripts/refresh.ts",
+    "snapshot": "tsx scripts/export-snapshot.ts"
   },
   "keywords": [],
   "author": "",

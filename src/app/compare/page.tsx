@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { openDb } from "../../modules/db/client";
 import { rankableRows, type RankableRow } from "../../modules/db/queries";
+import { readSnapshot } from "../../modules/db/snapshot";
 import { scorePopulation } from "../../modules/scoring/engine";
 import type { ScoreResult } from "../../modules/scoring/types";
 
@@ -29,9 +30,15 @@ export default async function Compare({ searchParams }: { searchParams: Promise<
   const aKey = typeof params.a === "string" ? params.a : "";
   const bKey = typeof params.b === "string" ? params.b : "";
 
-  const { db, client } = await openDb("./data/pgdb");
-  const rows = await rankableRows(db, ZIP);
-  await client.close();
+  const snap = readSnapshot();
+  let rows;
+  if (snap) {
+    rows = snap.rows;
+  } else {
+    const { db, client } = await openDb("./data/pgdb");
+    rows = await rankableRows(db, ZIP);
+    await client.close();
+  }
 
   // compare only entree-like, purchasable items to keep the pickers sane
   const options = rows.filter((r) => r.price > 0 && r.price < 40);
