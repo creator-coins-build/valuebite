@@ -92,13 +92,18 @@ export function loadSnapshot(zip: string): PizzaHutSnapshot | null {
   return snap && isFresh(snap) ? snap : null;
 }
 
+/** Display cleanup for an encoding artifact in the API's variant names ("Medium v Hand-Tossed"). Prices/nutrition untouched. */
+export function displayName(name: string): string {
+  return name.replace(/\s+v\s+/g, " ").replace(/\s{2,}/g, " ").trim();
+}
+
 export function normalizeItems(snap: PizzaHutSnapshot): NormalizedItem[] {
   return snap.products.flatMap((p) => {
     if (!p.priceCents || p.priceCents <= 0) return [];
     return [{
       restaurantSlug: PIZZA_HUT_SLUG,
       productId: p.sku,
-      name: p.name,
+      name: displayName(p.name),
       description: p.desc || null,
       category: p.cat,
       calories: wholeCalories(p),

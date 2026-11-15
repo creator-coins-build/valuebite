@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
-  loadSnapshot, normalizeItems, itemRows, dealRows, wholeCalories,
+  loadSnapshot, normalizeItems, itemRows, dealRows, wholeCalories, displayName,
   PIZZA_HUT_SLUG, type PizzaHutSnapshot,
 } from "../src/modules/adapters/pizzahut";
 
@@ -41,6 +41,11 @@ describe("pizzahut snapshot adapter", () => {
     const pep = items.find((i) => /Hand-Tossed Pepperoni Pizza$/.test(i.name) && /Large/.test(i.name))!;
     expect(pep.price).toBeGreaterThan(10);
     expect(pep.calories).toBe(1408); // 176 cal x 8 slices: whole pizza, not per-slice
+  });
+
+  it("cleans the size-marker artifact out of variant display names", () => {
+    expect(displayName("Medium v Hand-Tossed Cheese Pizza")).toBe("Medium Hand-Tossed Cheese Pizza");
+    expect(displayName("Large Hand-Tossed Pepperoni Pizza")).toBe("Large Hand-Tossed Pepperoni Pizza");
   });
 
   it("keeps drinks/sweets/sauces categories excluded from entree rankings", () => {
