@@ -4,6 +4,7 @@ import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
 import { BRANDS, BrandIcon, brandSlugFor, imgSrc, wideSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
 import { loadData } from "../components/data";
 import { ZipForm } from "../components/ZipForm";
+import { LocalNotice } from "../components/LocalNotice";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +12,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   const params = await searchParams;
   const filters = filtersFromParams(params);
   const zipParam = typeof params.zip === "string" ? params.zip : undefined;
-  const { rows: allRows, deals, zip, stores, live } = await loadData(zipParam);
+  const { rows: allRows, deals, zip, stores, live, liveErrors, requestedZip, fellBack } = await loadData(zipParam);
   const zipQ = zipParam && /^\d{5}$/.test(zipParam) ? `&zip=${zipParam}` : "";
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
 
@@ -74,9 +75,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
         <h1 style={{ fontSize: 34, margin: 0, letterSpacing: -1.4, fontWeight: 900, color: ORANGE }}>ValueBite</h1>
         <p style={{ margin: "1px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>eat good. spend less.</p>
         <div style={{ marginTop: 8 }}><ZipForm zip={zip} /></div>
-        {live && stores.length > 0 && (
-          <p style={{ margin: "6px 0 0", fontSize: 11, color: MUTED }}>exact prices from: {stores.map(s => `${BRANDS[s.slug]?.name ?? s.slug} (${s.address})`).join(" · ")}</p>
-        )}
+        <LocalNotice zip={zip} requestedZip={requestedZip} fellBack={fellBack} live={live} stores={stores} liveErrors={liveErrors} />
       </header>
 
       {/* Restaurant chips */}

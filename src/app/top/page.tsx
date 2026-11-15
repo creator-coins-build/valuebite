@@ -1,6 +1,7 @@
 import { applyFilters, filtersFromParams } from "../../modules/scoring/filters";
 import { BRANDS, BrandIcon, imgSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../../components/brand";
 import { loadData, rankEntrees } from "../../components/data";
+import { LocalNotice } from "../../components/LocalNotice";
 
 export const dynamic = "force-dynamic";
 
@@ -10,7 +11,7 @@ export default async function TopPage({ searchParams }: { searchParams: Promise<
   const params = await searchParams;
   const filters = filtersFromParams(params);
   const zipParam = typeof params.zip === "string" ? params.zip : undefined;
-  const { rows: allRows } = await loadData(zipParam);
+  const { rows: allRows, zip, stores, live, liveErrors, requestedZip, fellBack } = await loadData(zipParam);
   const zipQ = zipParam ? `&zip=${zipParam}` : "";
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
   const ranked = rankEntrees(rows).slice(0, 25);
@@ -21,6 +22,7 @@ export default async function TopPage({ searchParams }: { searchParams: Promise<
       <header style={{ marginBottom: 14 }}>
         <h1 style={{ fontSize: 30, margin: 0, letterSpacing: -1.2, fontWeight: 900, color: ORANGE }}>Top rated</h1>
         <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>the most food for your money, scored</p>
+        <LocalNotice zip={zip} requestedZip={requestedZip} fellBack={fellBack} live={live} stores={stores} liveErrors={liveErrors} compact />
       </header>
 
       {/* Restaurant filter chips */}

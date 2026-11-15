@@ -21,6 +21,10 @@ export interface LoadedData {
   /** true when Taco Bell/Domino's rows+deals were fetched live for a non-default ZIP. */
   live: boolean;
   liveErrors: string[];
+  /** The ZIP the user asked for, when valid. */
+  requestedZip: string | null;
+  /** true when the requested ZIP could not be loaded and default-ZIP data is shown instead. */
+  fellBack: boolean;
 }
 
 /** Snapshot-first data load (hosted serves the committed snapshot; PGlite only for local dev). */
@@ -39,7 +43,7 @@ export async function loadData(zipParam?: string): Promise<LoadedData> {
           rows: [...live.rows, ...estimates],
           deals: live.deals,
           checked: new Date().toISOString().slice(0, 10),
-          zip, stores: live.stores, live: true, liveErrors: live.errors,
+          zip, stores: live.stores, live: true, liveErrors: live.errors, requestedZip: zip, fellBack: false,
         };
       }
     } catch {
@@ -47,18 +51,18 @@ export async function loadData(zipParam?: string): Promise<LoadedData> {
     }
     return {
       rows: snap.rows, deals: snap.deals, checked: snap.generatedAt.slice(0, 10),
-      zip: snap.zip, stores: [], live: false, liveErrors: ["live fetch failed - showing default ZIP"],
+      zip: snap.zip, stores: [], live: false, liveErrors: ["live fetch failed - showing default ZIP"], requestedZip: zip, fellBack: true,
     };
   }
 
   if (snap) {
-    return { rows: snap.rows, deals: snap.deals, checked: snap.generatedAt.slice(0, 10), zip: snap.zip, stores: [], live: false, liveErrors: [] };
+    return { rows: snap.rows, deals: snap.deals, checked: snap.generatedAt.slice(0, 10), zip: snap.zip, stores: [], live: false, liveErrors: [], requestedZip: zip, fellBack: false };
   }
   const { db, client } = await openDb("./data/pgdb");
   const rows = await rankableRows(db, ZIP);
   const deals = await activeDeals(db);
   await client.close();
-  return { rows, deals, checked: new Date().toISOString().slice(0, 10), zip: ZIP, stores: [], live: false, liveErrors: [] };
+  return { rows, deals, checked: new Date().toISOString().slice(0, 10), zip: ZIP, stores: [], live: false, liveErrors: [], requestedZip: null, fellBack: false };
 }
 
 export interface ScoredRow {

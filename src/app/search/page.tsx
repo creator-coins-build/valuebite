@@ -1,6 +1,7 @@
 import { applyFilters, filtersFromParams } from "../../modules/scoring/filters";
 import { BRANDS, BrandIcon, imgSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../../components/brand";
 import { loadData, rankEntrees } from "../../components/data";
+import { LocalNotice } from "../../components/LocalNotice";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +12,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const filters = filtersFromParams(params);
   const q = typeof params.q === "string" ? params.q.trim().toLowerCase() : "";
   const zipParam = typeof params.zip === "string" ? params.zip : undefined;
-  const { rows: allRows } = await loadData(zipParam);
+  const { rows: allRows, zip, stores, live, liveErrors, requestedZip, fellBack } = await loadData(zipParam);
   let rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
   if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
   const ranked = rankEntrees(rows);
@@ -22,6 +23,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       <header style={{ marginBottom: 14 }}>
         <h1 style={{ fontSize: 30, margin: 0, letterSpacing: -1.2, fontWeight: 900, color: ORANGE }}>Search</h1>
         <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>craving something? find the best-value version</p>
+        <LocalNotice zip={zip} requestedZip={requestedZip} fellBack={fellBack} live={live} stores={stores} liveErrors={liveErrors} compact />
       </header>
 
       <form method="get" style={{ ...card, borderRadius: 999, display: "flex", alignItems: "center", gap: 8, padding: "8px 8px 8px 16px", marginBottom: 10 }}>

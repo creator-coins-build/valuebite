@@ -1,6 +1,7 @@
 import { BRANDS, BrandIcon, card, ORANGE, ORANGE_TEXT, MUTED, INK } from "../../components/brand";
 import { loadData } from "../../components/data";
 import { ZipForm } from "../../components/ZipForm";
+import { LocalNotice } from "../../components/LocalNotice";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +10,7 @@ export const metadata = { title: "ValueBite - Profile" };
 export default async function ProfilePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const zipParam = typeof params.zip === "string" ? params.zip : undefined;
-  const { rows, deals, checked, zip, stores, live } = await loadData(zipParam);
+  const { rows, deals, checked, zip, stores, live, liveErrors, requestedZip, fellBack } = await loadData(zipParam);
   const chainCount = new Set(rows.map((r) => r.restaurantSlug)).size;
   const exactCount = rows.filter((r) => r.pricingType === "exact_store").length;
 
@@ -26,9 +27,7 @@ export default async function ProfilePage({ searchParams }: { searchParams: Prom
         <div style={{ fontSize: 26, fontWeight: 900, color: INK, marginTop: 4 }}>{zip}</div>
         <div style={{ fontSize: 13, color: MUTED, marginTop: 2 }}>{zip === "33613" ? "USF Tampa - prices are pulled for stores near this ZIP" : "prices are pulled live for stores near this ZIP"}</div>
         <div style={{ marginTop: 10 }}><ZipForm zip={zip} action="/profile" /></div>
-        {live && stores.length > 0 && (
-          <div style={{ fontSize: 12, color: MUTED, marginTop: 8 }}>{stores.map(s => `${s.slug} - ${s.address}`).join("\n")}</div>
-        )}
+        <LocalNotice zip={zip} requestedZip={requestedZip} fellBack={fellBack} live={live} stores={stores} liveErrors={liveErrors} />
         <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
           {Object.keys(BRANDS).map((slug) => (
             <BrandIcon key={slug} slug={slug} size={34} />

@@ -1,4 +1,5 @@
 import { DigitalOffers } from "../../components/DigitalOffers";
+import { LocalNotice } from "../../components/LocalNotice";
 import { openDb } from "../../modules/db/client";
 import { activeDeals } from "../../modules/db/queries";
 import { readSnapshot } from "../../modules/db/snapshot";
@@ -12,11 +13,13 @@ export default async function CodesPage({ searchParams }: { searchParams: Promis
   const snap = readSnapshot();
   let deals;
   let checked: string;
+  let local: { zip: string; requestedZip: string | null; fellBack: boolean; live: boolean; stores: { slug: string; address: string }[]; liveErrors: string[] } | null = null;
   if (zipParam && /^\d{5}$/.test(zipParam)) {
     const { loadData } = await import("../../components/data");
     const d = await loadData(zipParam);
     deals = d.deals;
     checked = d.checked;
+    local = { zip: d.zip, requestedZip: d.requestedZip, fellBack: d.fellBack, live: d.live, stores: d.stores, liveErrors: d.liveErrors };
   } else if (snap) {
     deals = snap.deals;
     checked = snap.generatedAt.slice(0, 10);
@@ -34,6 +37,7 @@ export default async function CodesPage({ searchParams }: { searchParams: Promis
         <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 14, fontStyle: "italic" }}>
           straight from the restaurants' official ordering sites
         </p>
+        {local && <LocalNotice {...local} compact />}
       </header>
 
       <DigitalOffers />
