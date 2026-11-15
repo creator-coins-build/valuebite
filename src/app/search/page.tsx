@@ -16,7 +16,12 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   let rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
   if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
   const ranked = rankEntrees(rows);
-  const results = q || filters.budget !== undefined || filters.restaurants?.length ? ranked.slice(0, 30) : [];
+  // Missing protein means no Value Score, not an invisible menu item.
+  const scoredKeys = new Set(ranked.map(({ row }) => `${row.restaurantSlug}:${row.productId}`));
+  const unscored = rows.filter((row) => !scoredKeys.has(`${row.restaurantSlug}:${row.productId}`))
+    .sort((a, b) => a.price - b.price || a.name.localeCompare(b.name))
+    .map((row) => ({ row, score: null as number | null }));
+  const results = q || filters.budget !== undefined || filters.restaurants?.length ? [...ranked, ...unscored].slice(0, 30) : [];
 
   return (
     <main style={{ maxWidth: 560, margin: "0 auto", padding: "18px 16px 40px" }}>
@@ -72,7 +77,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               )}
             </div>
             <div style={{ textAlign: "right", flexShrink: 0 }}>
-              <div style={{ fontWeight: 900, fontSize: 19, color: ORANGE, lineHeight: 1 }}>{score.toFixed(1)}</div>
+              <div style={{ fontWeight: 900, fontSize: score === null ? 12 : 19, color: ORANGE, lineHeight: 1 }}>{score === null ? "Unscored" : score.toFixed(1)}</div>
               <div style={{ fontWeight: 700, fontSize: 13, color: INK, marginTop: 3 }}>
                 {row.pricingType !== "exact_store" && "~"}${row.price.toFixed(2)}
               </div>

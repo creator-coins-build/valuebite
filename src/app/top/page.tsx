@@ -39,6 +39,7 @@ export default async function TopPage({ searchParams }: { searchParams: Promise<
         })}
       </nav>
 
+      {activeRestaurant === "papajohns" && <p style={{ color: MUTED, fontSize: 13 }}>Papa John's does not publish protein in this menu feed, so its items have no Value Score. <a href={`/search?restaurant=papajohns${zipQ}`}>Browse its menu and prices</a> or <a href={`/codes${zipQ ? `?${zipQ.slice(1)}` : ""}`}>see official deals</a>.</p>}
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {ranked.map(({ row, score }, i) => (
           <div key={`${row.restaurantSlug}:${row.productId}`} style={{ ...card, padding: 12, display: "flex", alignItems: "center", gap: 12 }}>

@@ -7,14 +7,21 @@ export const BRANDS: Record<string, { initials: string; bg: string; fg: string; 
   "chick-fil-a": { initials: "CFA", bg: "#e51636", fg: "#fff", name: "Chick-fil-A", appStoreUrl: "https://apps.apple.com/us/app/chick-fil-a/id488818252" },
   "burger-king": { initials: "BK", bg: "#f5ebdc", fg: "#d62300", name: "Burger King", appStoreUrl: "https://apps.apple.com/us/app/burger-king-app/id638323895" },
   chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle", appStoreUrl: "https://apps.apple.com/us/app/chipotle/id327228455" },
+  papajohns: { initials: "PJ", bg: "#006341", fg: "#fff", name: "Papa John's", appStoreUrl: "https://apps.apple.com/us/app/papa-johns-pizza-delivery/id407517450" },
 };
 
 export function brandSlugFor(restaurantName: string): string {
   return Object.keys(BRANDS).find((k) => BRANDS[k]!.name === restaurantName) ?? "dominos";
 }
 
+/** Official images served directly to the visitor browser. */
+const DIRECT_HOSTS = new Set(["www.papajohns.com", "papajohns.com"]);
+
 /** Taco Bell's CDN blocks hotlinks, so their photos go through our proxy. */
 export function imgSrc(url: string): string {
+  try {
+    if (DIRECT_HOSTS.has(new URL(url).hostname)) return url;
+  } catch { /* fall through to proxy */ }
   return `/api/img?u=${encodeURIComponent(url)}`;
 }
 

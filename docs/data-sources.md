@@ -89,3 +89,40 @@ Images use only this project's official asset path, not arbitrary Sanity images.
   chipotle.com publishes no per-build photos (public menu page 404s; ordering
   API requires a subscription key - not bypassed). Icon fallback remains.
 - Domino's: unchanged (no official item photos harvested yet).
+
+## Papa John's (2026-11-15): exact per-store prices + deals via the site's own public tRPC API
+
+The public ordering site (www.papajohns.com, no login, no challenge) is a
+Next.js app that calls same-origin tRPC endpoints. These are the exact calls
+its own menu, store-search and deals pages make, observed in a real browser
+session (see data/papajohns/33613.json):
+
+- POST /api/trpc/stores.searchStores  {"json":{"postalCode":"33613","searchType":"CARRYOUT"}}
+  -> nearest stores: storeId, address, distance
+- GET  /api/trpc/product.getByStore   {"json":{"storeId":920}}
+  -> full menu (~196 products): name, sku, displayPrice (store-exact),
+     calories + servingLabel, official image path
+- GET  /api/trpc/deals.getByStore     {"json":{"storeId":920,"isDesktop":true}}
+  -> live store deals (~15): title, offerCode, displayPrice/regularMenuPrice
+
+Store-exact pricing captured for store 920 at 14861 North Dale Mabry
+Highway, Tampa, FL. Only ZIP 33613 is supported in this snapshot.
+Rows and deals fail closed after 48 hours without another browser review.
+
+Constraints, honored:
+- Akamai's edge refuses non-browser clients (plain curl with full browser
+  headers gets an edge rejection). NO workaround is attempted: snapshots are
+  captured through a normal browser session during the
+  refresh only, one snapshot per ZIP, committed to data/papajohns/<zip>.json.
+- A ZIP without a committed snapshot shows NO Papa John's rows (never another
+  store's prices under its name); the attribution line says exactly which
+  store + sample date the prices came from.
+- Nutrition units: feed calories are PER SLICE for pizzas with servingLabel
+  "/slice, N slices"; whole-item calories = calories x N. Other per-portion labels use their explicit piece counts. Blank units
+  are accepted only for individually named sandwiches; ambiguous units stay unknown. Protein is not in the feed -> PJ rows stay out of the
+  protein-based Value Score ranking (unknown stays unknown).
+- Product images hotlink fine from real browsers, but the server-side image
+  proxy cannot fetch them (same edge), so PJ image URLs bypass /api/img
+  (DIRECT_HOSTS in src/components/brand.tsx).
+- Papa John's app (official, seller Papa John's International Inc.):
+  https://apps.apple.com/us/app/papa-johns-pizza-delivery/id407517450
