@@ -24,3 +24,6 @@
 - Nutrition: official US Nutrition Facts paper-menu PDF: https://www.chipotle.com/content/dam/chipotle/menu/nutrition/US-Nutrition-Facts-Paper-Menu-3-2025.pdf - parsed to data/chipotle-nutrition.json (per-ingredient cal/protein).
 - Entrees (burrito/bowl/salad/tacos) are documented default builds = plain sums of official per-ingredient values (build listed on each item's description). Veggie entrees include guacamole per Chipotle's published definition.
 - Items with no official nutrition (Mexican Coke/Sprite, apple juice, kids/family meals) get NO row.
+
+## Wendy's - EXCLUDED (no honest data path)
+No US nutrition PDF exists (only UK), wendys.com/nutrition-allergens is informational-only, and per-item nutrition sits behind the auth-gated, Turnstile-protected ordering app (order.wendys.com, api.app.prd.wendys.digital). Browser attempt 2026-11-15: store search requires Google Places autocomplete and doesn't yield a one-time extraction cleanly. Left out rather than guessed. Revisit if Wendy's publishes a nutrition feed/PDF.
