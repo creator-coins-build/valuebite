@@ -1,0 +1,1821 @@
+{
+ "chain": "sonic",
+ "zip": "33613",
+ "store": {
+  "id": null,
+  "address": "1915 E Fowler Ave, Tampa, FL"
+ },
+ "fetchedAt": "2026-11-15T23:49:54Z",
+ "source": "sonicdrivein.com rendered menu after selecting store 1915 E Fowler Ave via the public store-picker UI",
+ "products": [
+  {
+   "name": "Bacon BREAKFAST TOASTER\u00ae 470 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/bacon-breakfast-toaster",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Bacon Breakfast Burrito 470 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/bacon-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Bacon, Egg and Cheese Brioche Breakfast Sandwich 440 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/local-breakfast-favorites/bacon-egg-and-cheese-brioche-breakfast-sandwich",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Coffee 0 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/breakfast-drinks/coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "French Toast Sticks 570 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/french-toast-sticks",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "French Vanilla Cold Brew Iced Coffee 260 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/breakfast-drinks/french-vanilla-cold-brew-iced-coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Jr. Bacon, Egg and Cheese Breakfast Burrito 270 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/jr-bacon-egg-and-cheese-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Jr. Sausage, Egg and Cheese Breakfast Burrito 280 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/jr-sausage-egg-and-cheese-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Original Cold Brew Iced Coffee 230 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/breakfast-drinks/original-cold-brew-iced-coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Sausage BREAKFAST TOASTER\u00ae 570 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/sausage-breakfast-toaster",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Sausage Breakfast Burrito 490 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/sausage-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Sausage, Egg and Cheese Brioche Breakfast Sandwich 530 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/local-breakfast-favorites/sausage-egg-and-cheese-brioche-breakfast-sandwich",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Simply\u00ae Orange Juice 160 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/breakfast-drinks/simply-orange-juice",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Breakfast Burrito 590 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/supersonic-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Ultimate Meat & Cheese Breakfast Burrito\u2122 820 cal",
+   "cat": "breakfast-all-day",
+   "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/ultimate-meat-cheese-breakfast-burrito",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Bacon SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/all-american-bacon-sonic-smasher",
+   "priceCents": 904,
+   "listPriceCents": null,
+   "cal": 670,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Bacon Triple SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/all-american-bacon-triple-sonic-smasher",
+   "priceCents": 1044,
+   "listPriceCents": null,
+   "cal": 860,
+   "unavailable": false
+  },
+  {
+   "name": "All-American SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/all-american-sonic-smasher",
+   "priceCents": 729,
+   "listPriceCents": null,
+   "cal": 610,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Triple SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/all-american-triple-sonic-smasher",
+   "priceCents": 869,
+   "listPriceCents": null,
+   "cal": 790,
+   "unavailable": false
+  },
+  {
+   "name": "Jr Double Cheeseburger",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/jr-double-cheeseburger",
+   "priceCents": 389,
+   "listPriceCents": null,
+   "cal": 390,
+   "unavailable": false
+  },
+  {
+   "name": "Original SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/original-sonic-smasher",
+   "priceCents": 769,
+   "listPriceCents": null,
+   "cal": 600,
+   "unavailable": false
+  },
+  {
+   "name": "Original Triple SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/original-triple-sonic-smasher",
+   "priceCents": 869,
+   "listPriceCents": null,
+   "cal": 780,
+   "unavailable": false
+  },
+  {
+   "name": "Plain SONIC\u00ae Cheeseburger",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/plain-sonic-cheeseburger",
+   "priceCents": 649,
+   "listPriceCents": null,
+   "cal": 630,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC\u00ae Cheeseburger",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/sonic-cheeseburger",
+   "priceCents": 649,
+   "listPriceCents": null,
+   "cal": 700,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/smoked-gouda-and-bacon-sonic-smasher",
+   "priceCents": 869,
+   "listPriceCents": null,
+   "cal": 720,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon Triple SONIC Smasher\u2122",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/smoked-gouda-and-bacon-triple-sonic-smasher",
+   "priceCents": 969,
+   "listPriceCents": null,
+   "cal": 920,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Bacon Double Cheeseburger",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/supersonic-bacon-double-cheeseburger",
+   "priceCents": 994,
+   "listPriceCents": null,
+   "cal": 1060,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Double Cheeseburger",
+   "cat": "burgers",
+   "href": "/menu/categories/burgers/national-burgers/supersonic-double-cheeseburger",
+   "priceCents": 819,
+   "listPriceCents": null,
+   "cal": 1040,
+   "unavailable": false
+  },
+  {
+   "name": "Chicken Tenders - 3 Piece 260 cal",
+   "cat": "chicken",
+   "href": "/menu/categories/chicken/national-chicken/chicken-tenders-3-piece",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Chicken Tenders - 5 Piece 430 cal",
+   "cat": "chicken",
+   "href": "/menu/categories/chicken/national-chicken/chicken-tenders-5-piece",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Crispy Chicken Sandwich 520 cal",
+   "cat": "chicken",
+   "href": "/menu/categories/chicken/national-chicken/crispy-chicken-sandwich",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Premium Chicken Bites 350 cal",
+   "cat": "chicken",
+   "href": "/menu/categories/chicken/national-chicken/premium-chicken-bites",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "combos",
+   "href": "/menu/categories/combos/7-big-deal-meal",
+   "priceCents": 700,
+   "listPriceCents": null,
+   "cal": 940,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "combos",
+   "href": "/menu/categories/combos/9-big-deal-meal",
+   "priceCents": 900,
+   "listPriceCents": null,
+   "cal": 1050,
+   "unavailable": false
+  },
+  {
+   "name": "3 Piece Chicken Tenders Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/3-piece-chicken-tenders-combo",
+   "priceCents": 989,
+   "listPriceCents": null,
+   "cal": 260,
+   "unavailable": false
+  },
+  {
+   "name": "5 Piece Chicken Tenders Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/5-piece-chicken-tenders-combo",
+   "priceCents": 1169,
+   "listPriceCents": null,
+   "cal": 430,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Bacon SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/all-american-bacon-sonic-smasher-combo",
+   "priceCents": 1344,
+   "listPriceCents": null,
+   "cal": 670,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Bacon Triple SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/all-american-bacon-triple-sonic-smasher-combo",
+   "priceCents": 1299,
+   "listPriceCents": null,
+   "cal": 860,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Hot Dog Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/all-american-hot-dog-combo",
+   "priceCents": 859,
+   "listPriceCents": null,
+   "cal": 410,
+   "unavailable": false
+  },
+  {
+   "name": "All-American SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/all-american-sonic-smasher-combo",
+   "priceCents": 1169,
+   "listPriceCents": null,
+   "cal": 610,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Triple SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/all-american-triple-sonic-smasher-combo",
+   "priceCents": 1299,
+   "listPriceCents": null,
+   "cal": 790,
+   "unavailable": false
+  },
+  {
+   "name": "Bacon Breakfast Burrito Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/bacon-breakfast-burrito-combo",
+   "priceCents": 809,
+   "listPriceCents": null,
+   "cal": 470,
+   "unavailable": false
+  },
+  {
+   "name": "Bacon Breakfast TOASTER\u00ae Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/bacon-breakfast-toaster-combo",
+   "priceCents": 879,
+   "listPriceCents": null,
+   "cal": 470,
+   "unavailable": false
+  },
+  {
+   "name": "Chili Cheese Coney Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/chili-cheese-coney-combo",
+   "priceCents": 859,
+   "listPriceCents": null,
+   "cal": 470,
+   "unavailable": false
+  },
+  {
+   "name": "Crispy Chicken Sandwich Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/crispy-chicken-sandwich-combo",
+   "priceCents": 1039,
+   "listPriceCents": null,
+   "cal": 520,
+   "unavailable": false
+  },
+  {
+   "name": "Footlong Quarter Pound Coney Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/footlong-quarter-pound-coney-combo",
+   "priceCents": 1069,
+   "listPriceCents": null,
+   "cal": 770,
+   "unavailable": false
+  },
+  {
+   "name": "French Toast Sticks Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/french-toast-sticks-combo",
+   "priceCents": 559,
+   "listPriceCents": null,
+   "cal": 570,
+   "unavailable": false
+  },
+  {
+   "name": "Lg Premium Chicken Bites Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/lg-premium-chicken-bites-combo",
+   "priceCents": 1169,
+   "listPriceCents": null,
+   "cal": 510,
+   "unavailable": false
+  },
+  {
+   "name": "Med Premium Chicken Bites Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/med-premium-chicken-bites-combo",
+   "priceCents": 1029,
+   "listPriceCents": null,
+   "cal": 350,
+   "unavailable": false
+  },
+  {
+   "name": "Original SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/original-sonic-smasher-combo",
+   "priceCents": 1189,
+   "listPriceCents": null,
+   "cal": 600,
+   "unavailable": false
+  },
+  {
+   "name": "Original Triple SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/original-triple-sonic-smasher-combo",
+   "priceCents": 1289,
+   "listPriceCents": null,
+   "cal": 780,
+   "unavailable": false
+  },
+  {
+   "name": "Plain SONIC\u00ae Cheeseburger Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/plain-sonic-cheeseburger-combo",
+   "priceCents": 1089,
+   "listPriceCents": null,
+   "cal": 630,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC\u00ae Cheeseburger Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/sonic-cheeseburger-combo",
+   "priceCents": 1089,
+   "listPriceCents": null,
+   "cal": 700,
+   "unavailable": false
+  },
+  {
+   "name": "Sausage Breakfast Burrito Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/sausage-breakfast-burrito-combo",
+   "priceCents": 809,
+   "listPriceCents": null,
+   "cal": 490,
+   "unavailable": false
+  },
+  {
+   "name": "Sausage Breakfast TOASTER\u00ae Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/sausage-breakfast-toaster-combo",
+   "priceCents": 879,
+   "listPriceCents": null,
+   "cal": 570,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/smoked-gouda-and-bacon-sonic-smasher-combo",
+   "priceCents": 1289,
+   "listPriceCents": null,
+   "cal": 720,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon Triple SONIC Smasher\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/smoked-gouda-and-bacon-triple-sonic-smasher-combo",
+   "priceCents": 1389,
+   "listPriceCents": null,
+   "cal": 920,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Bacon Double Cheeseburger Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/supersonic-bacon-double-cheeseburger-combo",
+   "priceCents": 1404,
+   "listPriceCents": null,
+   "cal": 1060,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Breakfast Burrito Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/supersonic-breakfast-burrito-combo",
+   "priceCents": 949,
+   "listPriceCents": null,
+   "cal": 590,
+   "unavailable": false
+  },
+  {
+   "name": "SuperSONIC\u00ae Double Cheeseburger Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/supersonic-double-cheeseburger-combo",
+   "priceCents": 1229,
+   "listPriceCents": null,
+   "cal": 1040,
+   "unavailable": false
+  },
+  {
+   "name": "Ultimate Meat & Cheese Breakfast Burrito\u2122 Combo",
+   "cat": "combos",
+   "href": "/menu/categories/combos/ultimate-meat-cheese-breakfast-burrito-combo",
+   "priceCents": 949,
+   "listPriceCents": null,
+   "cal": 820,
+   "unavailable": false
+  },
+  {
+   "name": "Asian Style Sweet Chili 60 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/asian-style-sweet-chili",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "BBQ 50 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/bbq",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Buffalo 60 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/buffalo",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Groovy Sauce 110 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/groovy-sauce",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Honey Mustard 90 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/honey-mustard",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Jalape\u00f1o Ranch 130 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/jalape-o-ranch",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Marinara 15 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/marinara",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Ranch 110 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/ranch",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Signature Cheese Sauce 130 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/signature-cheese-sauce",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Syrup 90 cal",
+   "cat": "extra-sauces",
+   "href": "/menu/categories/extra-sauces/syrup",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "All-American Dog 410 cal",
+   "cat": "hot-dogs",
+   "href": "/menu/categories/hot-dogs/national-hot-dogs/all-american-dog",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Chili Cheese Coney 470 cal",
+   "cat": "hot-dogs",
+   "href": "/menu/categories/hot-dogs/national-hot-dogs/chili-cheese-coney",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Corn Dog 230 cal",
+   "cat": "hot-dogs",
+   "href": "/menu/categories/hot-dogs/national-hot-dogs/corn-dog",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Footlong Quarter Pound Coney 770 cal",
+   "cat": "hot-dogs",
+   "href": "/menu/categories/hot-dogs/national-hot-dogs/footlong-quarter-pound-coney",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "All Natural Lemonade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/all-natural-lemonade",
+   "priceCents": 399,
+   "listPriceCents": null,
+   "cal": 270,
+   "unavailable": false
+  },
+  {
+   "name": "Blue Raspberry Lemonade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/blue-raspberry-lemonade",
+   "priceCents": 399,
+   "listPriceCents": null,
+   "cal": 280,
+   "unavailable": false
+  },
+  {
+   "name": "Cherry Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/cherry-limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 240,
+   "unavailable": false
+  },
+  {
+   "name": "Cranberry Lemonade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/cranberry-lemonade",
+   "priceCents": 399,
+   "listPriceCents": null,
+   "cal": 330,
+   "unavailable": false
+  },
+  {
+   "name": "Cranberry Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/cranberry-limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 240,
+   "unavailable": false
+  },
+  {
+   "name": "Diet Cherry Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/diet-cherry-limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 15,
+   "unavailable": false
+  },
+  {
+   "name": "Diet Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/diet-limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 5,
+   "unavailable": false
+  },
+  {
+   "name": "Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 170,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Lemonade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/strawberry-lemonade",
+   "priceCents": 399,
+   "listPriceCents": null,
+   "cal": 310,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Limeade",
+   "cat": "lemonades-limeades",
+   "href": "/menu/categories/lemonades-limeades/strawberry-limeade",
+   "priceCents": 369,
+   "listPriceCents": null,
+   "cal": 220,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/value/7-big-deal-meal",
+   "priceCents": 700,
+   "listPriceCents": null,
+   "cal": 940,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/value/9-big-deal-meal",
+   "priceCents": 900,
+   "listPriceCents": null,
+   "cal": 1050,
+   "unavailable": false
+  },
+  {
+   "name": "Berry Citrus Frozen Refresher",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/berry-citrus-frozen-refresher",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 350,
+   "unavailable": false
+  },
+  {
+   "name": "Holiday Creamy Vanilla made with Coca-Cola\u00ae",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/holiday-creamy-vanilla-made-with-coca-cola",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 260,
+   "unavailable": false
+  },
+  {
+   "name": "Holiday Creamy Vanilla made with Coca-Cola\u00ae Zero",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/holiday-creamy-vanilla-made-with-coca-cola-zero",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 90,
+   "unavailable": false
+  },
+  {
+   "name": "Mango Peach Frozen Refresher",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/mango-peach-frozen-refresher",
+   "priceCents": 489,
+   "listPriceCents": null,
+   "cal": 230,
+   "unavailable": true
+  },
+  {
+   "name": "Merry Berry Fizz made with Sprite Zero\u00ae",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/merry-berry-fizz-made-with-sprite-zero",
+   "priceCents": 359,
+   "listPriceCents": null,
+   "cal": 35,
+   "unavailable": false
+  },
+  {
+   "name": "Merry Berry Fizz made with Sprite\u00ae",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/merry-berry-fizz-made-with-sprite",
+   "priceCents": 359,
+   "listPriceCents": null,
+   "cal": 200,
+   "unavailable": false
+  },
+  {
+   "name": "Santa Slush Float",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/santa-slush-float",
+   "priceCents": 299,
+   "listPriceCents": null,
+   "cal": 750,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon SONIC Smasher\u2122",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/burgers/smoked-gouda-and-bacon-sonic-smasher",
+   "priceCents": 869,
+   "listPriceCents": null,
+   "cal": 720,
+   "unavailable": false
+  },
+  {
+   "name": "Smoked Gouda and Bacon Triple SONIC Smasher\u2122",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/burgers/smoked-gouda-and-bacon-triple-sonic-smasher",
+   "priceCents": 969,
+   "listPriceCents": null,
+   "cal": 920,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Passion Fruit Frozen Refresher",
+   "cat": "limited-time",
+   "href": "/menu/categories/limited-time/drinks/strawberry-passion-fruit-frozen-refresher",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 340,
+   "unavailable": false
+  },
+  {
+   "name": "1% Milk 130 cal",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/1-milk",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Bottled Water 0 cal",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/bottled-water",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Cup of Ice 0 cal",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/cup-of-ice",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Minute Maid\u00ae 100% Apple Juice Box 80 cal",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/minute-maid-100-apple-juice-box",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Simply\u00ae Orange Juice 160 cal",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/simply-orange-juice",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Water",
+   "cat": "other-drinks",
+   "href": "/menu/categories/other-drinks/water",
+   "priceCents": 99,
+   "listPriceCents": null,
+   "cal": 0,
+   "unavailable": false
+  },
+  {
+   "name": "Berry Citrus Frozen Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/berry-citrus-frozen-refresher",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 350,
+   "unavailable": false
+  },
+  {
+   "name": "Berry Citrus Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/berry-citrus-refresher",
+   "priceCents": 389,
+   "listPriceCents": null,
+   "cal": 110,
+   "unavailable": false
+  },
+  {
+   "name": "Berry Citrus Sparkling Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/berry-citrus-sparkling-refresher",
+   "priceCents": 389,
+   "listPriceCents": null,
+   "cal": 110,
+   "unavailable": false
+  },
+  {
+   "name": "Mango Peach Frozen Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/mango-peach-frozen-refresher",
+   "priceCents": 489,
+   "listPriceCents": null,
+   "cal": 230,
+   "unavailable": true
+  },
+  {
+   "name": "Mango Peach Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/mango-peach-refresher",
+   "priceCents": 449,
+   "listPriceCents": null,
+   "cal": 50,
+   "unavailable": true
+  },
+  {
+   "name": "Mango Peach Sparkling Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/mango-peach-sparkling-refresher",
+   "priceCents": 449,
+   "listPriceCents": null,
+   "cal": 50,
+   "unavailable": true
+  },
+  {
+   "name": "Strawberry Passion Fruit Frozen Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/strawberry-passion-fruit-frozen-refresher",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 340,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Passion Fruit Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/strawberry-passion-fruit-refresher",
+   "priceCents": 389,
+   "listPriceCents": null,
+   "cal": 100,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Passion Fruit Sparkling Refresher",
+   "cat": "refreshers",
+   "href": "/menu/categories/refreshers/strawberry-passion-fruit-sparkling-refresher",
+   "priceCents": 389,
+   "listPriceCents": null,
+   "cal": 100,
+   "unavailable": false
+  },
+  {
+   "name": "BLT TOASTER\u00ae 450 cal",
+   "cat": "sandwiches",
+   "href": "/menu/categories/sandwiches/local-sandwiches/blt-toaster",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Crispy Chicken Sandwich 520 cal",
+   "cat": "sandwiches",
+   "href": "/menu/categories/sandwiches/national-sandwiches/crispy-chicken-sandwich",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Grilled Cheese Sandwich 390 cal",
+   "cat": "sandwiches",
+   "href": "/menu/categories/sandwiches/national-sandwiches/grilled-cheese-sandwich",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Blue Coconut Cream Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/blue-coconut-cream-slush",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 630,
+   "unavailable": false
+  },
+  {
+   "name": "Blue Coconut Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/blue-coconut-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 260,
+   "unavailable": false
+  },
+  {
+   "name": "Blue Raspberry Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/blue-raspberry-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 260,
+   "unavailable": false
+  },
+  {
+   "name": "Cherry Cream Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/cherry-cream-slush",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 580,
+   "unavailable": false
+  },
+  {
+   "name": "Cherry Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/cherry-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 270,
+   "unavailable": false
+  },
+  {
+   "name": "Cranberry Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/cranberry-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 310,
+   "unavailable": false
+  },
+  {
+   "name": "Grape Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/grape-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 270,
+   "unavailable": false
+  },
+  {
+   "name": "Mango Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/mango-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 250,
+   "unavailable": false
+  },
+  {
+   "name": "POWERADE\u00ae Mountain Berry Blast\u00ae Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/powerade-mountain-berry-blast-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 270,
+   "unavailable": false
+  },
+  {
+   "name": "Peach Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/peach-slush",
+   "priceCents": 319,
+   "listPriceCents": null,
+   "cal": 250,
+   "unavailable": false
+  },
+  {
+   "name": "Santa Slush Float",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/santa-slush-float",
+   "priceCents": 299,
+   "listPriceCents": null,
+   "cal": 750,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Cream Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/strawberry-cream-slush",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 690,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Slush",
+   "cat": "slushes",
+   "href": "/menu/categories/slushes/strawberry-slush",
+   "priceCents": 399,
+   "listPriceCents": null,
+   "cal": 290,
+   "unavailable": false
+  },
+  {
+   "name": "Ched 'R' Peppers",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/ched-r-peppers",
+   "priceCents": 619,
+   "listPriceCents": null,
+   "cal": 710,
+   "unavailable": false
+  },
+  {
+   "name": "Cheese Groovy Fries",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/cheese-groovy-fries",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 460,
+   "unavailable": false
+  },
+  {
+   "name": "Cheese Tots",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/cheese-tots",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 450,
+   "unavailable": false
+  },
+  {
+   "name": "Chili Cheese Groovy Fries",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/chili-cheese-groovy-fries",
+   "priceCents": 549,
+   "listPriceCents": null,
+   "cal": 540,
+   "unavailable": false
+  },
+  {
+   "name": "Chili Cheese Tots",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/chili-cheese-tots",
+   "priceCents": 549,
+   "listPriceCents": null,
+   "cal": 540,
+   "unavailable": false
+  },
+  {
+   "name": "Corn Dog",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/snacks/corn-dog",
+   "priceCents": 259,
+   "listPriceCents": null,
+   "cal": 230,
+   "unavailable": false
+  },
+  {
+   "name": "Groovy Fries",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/groovy-fries",
+   "priceCents": 349,
+   "listPriceCents": null,
+   "cal": 290,
+   "unavailable": false
+  },
+  {
+   "name": "Mozzarella Sticks",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/mozzarella-sticks",
+   "priceCents": 579,
+   "listPriceCents": null,
+   "cal": 560,
+   "unavailable": false
+  },
+  {
+   "name": "Onion Rings",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/onion-rings",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 580,
+   "unavailable": false
+  },
+  {
+   "name": "Premium Chicken Bites",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/snacks/premium-chicken-bites",
+   "priceCents": 639,
+   "listPriceCents": null,
+   "cal": 350,
+   "unavailable": false
+  },
+  {
+   "name": "Soft Pretzel Twist",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/snacks/soft-pretzel-twist",
+   "priceCents": 249,
+   "listPriceCents": null,
+   "cal": 380,
+   "unavailable": false
+  },
+  {
+   "name": "Tots",
+   "cat": "snacks-sides",
+   "href": "/menu/categories/snacks-sides/sides/tots",
+   "priceCents": 349,
+   "listPriceCents": null,
+   "cal": 360,
+   "unavailable": false
+  },
+  {
+   "name": "BARQ'S\u00ae Root Beer",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/barq-s-root-beer",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 170,
+   "unavailable": false
+  },
+  {
+   "name": "Canada Dry\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/canada-dry",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 150,
+   "unavailable": false
+  },
+  {
+   "name": "Coca-Cola\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/coca-cola",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 180,
+   "unavailable": false
+  },
+  {
+   "name": "Coca-Cola\u00ae Zero",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/coca-cola-zero",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 0,
+   "unavailable": false
+  },
+  {
+   "name": "Diet Coke\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/diet-coke",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 0,
+   "unavailable": false
+  },
+  {
+   "name": "Diet Dr Pepper\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/diet-dr-pepper",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 0,
+   "unavailable": false
+  },
+  {
+   "name": "Dirty Dr Pepper\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/dirty-dr-pepper",
+   "priceCents": 429,
+   "listPriceCents": null,
+   "cal": 270,
+   "unavailable": false
+  },
+  {
+   "name": "Dr Pepper\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/dr-pepper",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 160,
+   "unavailable": false
+  },
+  {
+   "name": "Fanta\u00ae Orange",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/fanta-orange",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 170,
+   "unavailable": false
+  },
+  {
+   "name": "Hi-C\u00ae Fruit Punch",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/hi-c-fruit-punch",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 190,
+   "unavailable": false
+  },
+  {
+   "name": "Holiday Creamy Vanilla made with Coca-Cola\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/holiday-creamy-vanilla-made-with-coca-cola",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 260,
+   "unavailable": false
+  },
+  {
+   "name": "Holiday Creamy Vanilla made with Coca-Cola\u00ae Zero",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/holiday-creamy-vanilla-made-with-coca-cola-zero",
+   "priceCents": 419,
+   "listPriceCents": null,
+   "cal": 90,
+   "unavailable": false
+  },
+  {
+   "name": "Merry Berry Fizz made with Sprite Zero\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/merry-berry-fizz-made-with-sprite-zero",
+   "priceCents": 359,
+   "listPriceCents": null,
+   "cal": 35,
+   "unavailable": false
+  },
+  {
+   "name": "Merry Berry Fizz made with Sprite\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/merry-berry-fizz-made-with-sprite",
+   "priceCents": 359,
+   "listPriceCents": null,
+   "cal": 200,
+   "unavailable": false
+  },
+  {
+   "name": "Ocean Water\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/ocean-water",
+   "priceCents": 329,
+   "listPriceCents": null,
+   "cal": 200,
+   "unavailable": false
+  },
+  {
+   "name": "POWERADE\u00ae Mountain Berry Blast\u00ae Drink",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/powerade-mountain-berry-blast-drink",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 80,
+   "unavailable": false
+  },
+  {
+   "name": "Sprite Zero\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/sprite-zero",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 0,
+   "unavailable": false
+  },
+  {
+   "name": "Sprite\u00ae",
+   "cat": "sodas",
+   "href": "/menu/categories/sodas/sprite",
+   "priceCents": 289,
+   "listPriceCents": null,
+   "cal": 170,
+   "unavailable": false
+  },
+  {
+   "name": "Banana Classic Shake 750 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/banana-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Caramel Classic Shake 740 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/caramel-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Caramel Sundae 430 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sundaes/caramel-sundae",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Cheesecake Master Shake\u00ae 750 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/signature-shakes/cheesecake-master-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Chocolate Chip Cookie Dough Blast 820 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/chocolate-chip-cookie-dough-blast",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Chocolate Chunk Brownie Blast 820 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/chocolate-chunk-brownie-blast",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Chocolate Classic Shake 720 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/chocolate-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Hot Fudge Classic Shake 840 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/hot-fudge-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Hot Fudge Sundae 470 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sundaes/hot-fudge-sundae",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "OREO\u00ae Cheesecake Master Shake\u00ae 940 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/signature-shakes/oreo-cheesecake-master-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "OREO\u00ae Chocolate Master Shake\u00ae 910 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/signature-shakes/oreo-chocolate-master-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "OREO\u00ae Peanut Butter Master Shake\u00ae 1020 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/signature-shakes/oreo-peanut-butter-master-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Peanut Butter Classic Shake 830 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/peanut-butter-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC Blast\u00ae made with HEATH\u00ae 860 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-heath",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC Blast\u00ae made with M&M\u2019S\u00ae Chocolate Candies 960 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-m-m-s-chocolate-candies",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC Blast\u00ae made with OREO\u00ae Cookie Pieces 770 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-oreo-cookie-pieces",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "SONIC Blast\u00ae made with REESE\u2019S 890 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-reese-s",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Cheesecake Master Shake\u00ae 790 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/signature-shakes/strawberry-cheesecake-master-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Classic Shake 690 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/strawberry-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Strawberry Sundae 380 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sundaes/strawberry-sundae",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Turtle Truffle Nut Blast 920 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sonic-blasts/turtle-truffle-nut-blast",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Vanilla Classic Shake 710 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/classic-shakes/vanilla-classic-shake",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Vanilla Soft Serve Cup 300 cal",
+   "cat": "sweets",
+   "href": "/menu/categories/sweets/sundaes/vanilla-soft-serve-cup",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Coffee 0 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "French Vanilla Cold Brew Iced Coffee 260 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/french-vanilla-cold-brew-iced-coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Half Sweet Tea / Half Lemonade 220 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/half-sweet-tea-half-lemonade",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Half Sweet Tea / Half Unsweet Tea 90 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/half-sweet-tea-half-unsweet-tea",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Half Unsweet Tea / Half Lemonade 130 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/half-unsweet-tea-half-lemonade",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Original Cold Brew Iced Coffee 230 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/original-cold-brew-iced-coffee",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Sweet Iced Tea 170 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/sweet-iced-tea",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Unsweet Iced Tea 0 cal",
+   "cat": "tea-coffee",
+   "href": "/menu/categories/tea-coffee/unsweet-iced-tea",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "value",
+   "href": "/menu/categories/value/bundles/7-big-deal-meal",
+   "priceCents": 700,
+   "listPriceCents": null,
+   "cal": 940,
+   "unavailable": false
+  },
+  {
+   "name": "",
+   "cat": "value",
+   "href": "/menu/categories/value/bundles/9-big-deal-meal",
+   "priceCents": 900,
+   "listPriceCents": null,
+   "cal": 1050,
+   "unavailable": false
+  },
+  {
+   "name": "Cheesy Baja Tender Wrap",
+   "cat": "value",
+   "href": "/menu/categories/value/1-99-menu/cheesy-baja-tender-wrap",
+   "priceCents": 199,
+   "listPriceCents": null,
+   "cal": 280,
+   "unavailable": false
+  },
+  {
+   "name": "Garlic Parmesan Ranch Tender Wrap",
+   "cat": "value",
+   "href": "/menu/categories/value/1-99-menu/garlic-parmesan-ranch-tender-wrap",
+   "priceCents": 199,
+   "listPriceCents": null,
+   "cal": 300,
+   "unavailable": false
+  },
+  {
+   "name": "Jr Bacon Cheeseburger",
+   "cat": "value",
+   "href": "/menu/categories/value/1-99-menu/jr-bacon-cheeseburger",
+   "priceCents": 199,
+   "listPriceCents": null,
+   "cal": 400,
+   "unavailable": false
+  },
+  {
+   "name": "Small BARQ\u2019S\u00ae Root Beer Float",
+   "cat": "value",
+   "href": "/menu/categories/value/1-99-menu/small-barq-s-root-beer-float",
+   "priceCents": 199,
+   "listPriceCents": 539,
+   "cal": 300,
+   "unavailable": false
+  },
+  {
+   "name": "Vanilla Soft Serve Cup",
+   "cat": "value",
+   "href": "/menu/categories/value/1-99-menu/vanilla-soft-serve-cup",
+   "priceCents": 199,
+   "listPriceCents": null,
+   "cal": 300,
+   "unavailable": false
+  },
+  {
+   "name": "Chicken Tenders Wacky Pack\u00ae 480 cal",
+   "cat": "wacky-pack-kids-meals",
+   "href": "/menu/categories/wacky-pack-kids-meals/chicken-tenders-wacky-pack",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Corn Dog Wacky Pack\u00ae 480 cal",
+   "cat": "wacky-pack-kids-meals",
+   "href": "/menu/categories/wacky-pack-kids-meals/corn-dog-wacky-pack",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Grilled Cheese Wacky Pack\u00ae 680 cal",
+   "cat": "wacky-pack-kids-meals",
+   "href": "/menu/categories/wacky-pack-kids-meals/grilled-cheese-wacky-pack",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Hamburger Wacky Pack\u00ae 270 cal",
+   "cat": "wacky-pack-kids-meals",
+   "href": "/menu/categories/wacky-pack-kids-meals/hamburger-wacky-pack",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  },
+  {
+   "name": "Hot Dog Wacky Pack\u00ae 610 cal",
+   "cat": "wacky-pack-kids-meals",
+   "href": "/menu/categories/wacky-pack-kids-meals/hot-dog-wacky-pack",
+   "priceCents": null,
+   "listPriceCents": null,
+   "cal": null,
+   "unavailable": false
+  }
+ ]
+}
