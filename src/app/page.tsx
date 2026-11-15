@@ -135,7 +135,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
                   </span>
                 )}
                 {digitalNames.has(d.title) && <a href={BRANDS[d.slug]!.appStoreUrl} target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: 12, borderRadius: 999, background: ORANGE, color: "white", padding: "10px 16px", textAlign: "center", textDecoration: "none", fontWeight: 900, fontSize: 14 }}>Get Deal</a>}
-                {digitalNames.has(d.title) && <details style={{ marginTop: 7, color: MUTED, fontSize: 11 }}><summary>Offer details</summary><p>Available in the app or online at participating locations. Get Deal opens the iOS App Store. Price shown is for our selected store, before tax.</p><a href={deals.find(x => x.title === d.title)?.sourceUrl} style={{ color: MUTED }}>Official source</a></details>}
+                {digitalNames.has(d.title) && <details style={{ marginTop: 7, color: MUTED, fontSize: 11 }}><summary>How to get it</summary><ol style={{ margin: "6px 0", paddingLeft: 18, lineHeight: 1.6 }}><li>Open the Taco Bell app (or tacobell.com) and sign in - a Rewards account is free.</li><li>Find it in the menu under Online Exclusives / Member Exclusives.</li><li>Build it, pick your store and order ahead for pickup. Price shown is for our selected store, before tax.</li></ol><a href={deals.find(x => x.title === d.title)?.sourceUrl} style={{ color: MUTED }}>Official source</a></details>}
               </div>
             </div>
           ))}

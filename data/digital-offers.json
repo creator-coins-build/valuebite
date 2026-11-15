@@ -12,7 +12,16 @@
       "id": "bk-walmart-25",
       "title": "25% off your digital order",
       "terms": "Once daily at participating U.S. locations. Activate in Offers first. Before tax and fees; not combinable with other offers or discounted meals. Excludes AK, HI and U.S. territories. Delivery fees apply.",
-      "evidence": "25% off your digital order total"
+      "evidence": "25% off your digital order total",
+      "steps": [
+        "You need an active Walmart+ membership (paid) - without it this offer isn't available.",
+        "In the Walmart app: open your Walmart+ Benefits hub and tap the Burger King Savings tile.",
+        "Tap Get Started and link your free BK Royal Perks account.",
+        "Open the BK app, sign in to Royal Perks, go to the Offers tab and tap the coupon.",
+        "Add it to a mobile order and check out."
+      ],
+      "ctaLabel": "Official how-to",
+      "ctaUrl": "https://campaign.bk.com/partnerships/walmart-faqs"
     },
     {
       "checkedAt": "2026-11-15T17:02:08.709193+00:00",
@@ -25,7 +34,16 @@
       "id": "bk-walmart-whopper",
       "title": "Free Whopper with a purchase",
       "terms": "Once per calendar quarter at participating U.S. locations. Activate in Offers first. Tax, delivery and modifications extra. Not combinable; excludes AK, HI and U.S. territories.",
-      "evidence": "Free Whopper\u00ae sandwich with any digital purchase once per calendar quarter"
+      "evidence": "Free Whopper\u00ae sandwich with any digital purchase once per calendar quarter",
+      "steps": [
+        "You need an active Walmart+ membership (paid) - without it this offer isn't available.",
+        "In the Walmart app: open your Walmart+ Benefits hub and tap the Burger King Savings tile.",
+        "Tap Get Started and link your free BK Royal Perks account.",
+        "Open the BK app, sign in to Royal Perks, go to the Offers tab and tap the coupon.",
+        "Add it to a mobile order and check out."
+      ],
+      "ctaLabel": "Official how-to",
+      "ctaUrl": "https://campaign.bk.com/partnerships/walmart-faqs"
     },
     {
       "id": "chipotle-signup",
@@ -39,7 +57,15 @@
       "terms": "One-time signup reward; use within 7 days after it is added. $5 minimum before tax and tip. Order Chips & Guacamole as a complete side. Participating locations; not combinable or valid on third-party delivery. Also redeemable in restaurant.",
       "sourceUrl": "https://www.chipotle.com/free-chips-guac",
       "evidence": "Eligible members receive one free topping or regular side of guac and one regular side of chips with a purchase of $5.00 or more",
-      "discoveryUrl": "https://www.chipotle.com/rewards"
+      "discoveryUrl": "https://www.chipotle.com/rewards",
+      "steps": [
+        "Get the Chipotle app and join Chipotle Rewards (free).",
+        "Place an order of $5 or more (before tax/tip).",
+        "The free Chips & Guac reward lands in your account within 24-48h - find it under Rewards.",
+        "Use it within 7 days: order Chips & Guacamole as one complete side item."
+      ],
+      "ctaLabel": "Get the app",
+      "ctaUrl": "__APPSTORE__"
     }
   ],
   "coverage": [

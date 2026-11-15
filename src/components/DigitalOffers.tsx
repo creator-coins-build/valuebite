@@ -16,10 +16,15 @@ export function DigitalOffers({ restaurant = "" }: { restaurant?: string }) {
         </div>
         <h3 style={{ color: INK, fontSize: 21, lineHeight: 1.12, letterSpacing: -0.4, margin: "14px 0 8px", fontWeight: 900 }}>{o.title}</h3>
         <p style={{ margin: "0 0 10px", fontSize: 12.5, fontWeight: 800, color: "#a13d10" }}>{o.eligibility}</p>
-        <details style={{ fontSize: 12, color: MUTED, marginBottom: 14 }}><summary style={{ cursor: "pointer" }}>Offer details</summary><p style={{ lineHeight: 1.5 }}>{o.terms}</p><p>Get Deal opens the iOS App Store. Availability depends on your account and location.</p><a href={o.sourceUrl} style={{ color: MUTED }}>Official source</a> · checked {o.checkedAt.slice(0,10)}</details>
+        <ol style={{ margin: "0 0 12px", paddingLeft: 20, fontSize: 12.5, color: INK, lineHeight: 1.55 }}>
+          {o.steps.map((s, i) => <li key={i} style={{ marginBottom: 3 }}>{s}</li>)}
+        </ol>
+        <details style={{ fontSize: 12, color: MUTED, marginBottom: 14 }}><summary style={{ cursor: "pointer" }}>Fine print</summary><p style={{ lineHeight: 1.5 }}>{o.terms}</p><a href={o.sourceUrl} style={{ color: MUTED }}>Official source</a> · checked {o.checkedAt.slice(0,10)}</details>
         <div style={{ marginTop: "auto" }}>
-          <a href={BRANDS[o.restaurantSlug]!.appStoreUrl} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", background: ORANGE, color: "white", borderRadius: 999, padding: "10px 14px", fontSize: 14, fontWeight: 900, textDecoration: "none" }}>Get Deal</a>
-
+          <a href={o.ctaUrl === "__APPSTORE__" ? BRANDS[o.restaurantSlug]!.appStoreUrl : o.ctaUrl} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", background: ORANGE, color: "white", borderRadius: 999, padding: "10px 14px", fontSize: 14, fontWeight: 900, textDecoration: "none" }}>{o.ctaLabel}</a>
+          {o.ctaUrl !== "__APPSTORE__" && (
+            <a href={BRANDS[o.restaurantSlug]!.appStoreUrl} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", marginTop: 8, fontSize: 12, color: MUTED }}>Get the {BRANDS[o.restaurantSlug]!.name} app</a>
+          )}
         </div>
       </article>)}
     </div>
