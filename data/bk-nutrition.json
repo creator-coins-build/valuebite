@@ -1,0 +1,342 @@
+[
+ {
+  "name": "WHOPPER\u00ae Sandwich",
+  "calories": 670,
+  "proteinG": 31.0
+ },
+ {
+  "name": "WHOPPER\u00ae Sandwich with Cheese",
+  "calories": 760,
+  "proteinG": 36.0
+ },
+ {
+  "name": "Bacon & Cheese WHOPPER\u00ae Sandwich",
+  "calories": 820,
+  "proteinG": 40.0
+ },
+ {
+  "name": "DOUBLE WHOPPER\u00ae Sandwich",
+  "calories": 920,
+  "proteinG": 52.0
+ },
+ {
+  "name": "DOUBLE WHOPPER\u00ae Sandwich with Cheese",
+  "calories": 1010,
+  "proteinG": 56.0
+ },
+ {
+  "name": "WHOPPER JR.\u00ae Sandwich",
+  "calories": 330,
+  "proteinG": 15.0
+ },
+ {
+  "name": "Hamburger",
+  "calories": 250,
+  "proteinG": 13.0
+ },
+ {
+  "name": "Cheeseburger",
+  "calories": 290,
+  "proteinG": 15.0
+ },
+ {
+  "name": "Double Hamburger",
+  "calories": 360,
+  "proteinG": 22.0
+ },
+ {
+  "name": "Double Cheeseburger",
+  "calories": 400,
+  "proteinG": 24.0
+ },
+ {
+  "name": "Extra Long Cheeseburger",
+  "calories": 640,
+  "proteinG": 29.0
+ },
+ {
+  "name": "Bacon Cheeseburger",
+  "calories": 340,
+  "proteinG": 18.0
+ },
+ {
+  "name": "Bacon Double Cheeseburger",
+  "calories": 440,
+  "proteinG": 27.0
+ },
+ {
+  "name": "Classic Royal Crispy Chicken Sandwich",
+  "calories": 600,
+  "proteinG": 31.0
+ },
+ {
+  "name": "Spicy Royal Crispy Chicken Sandwich",
+  "calories": 760,
+  "proteinG": 31.0
+ },
+ {
+  "name": "Bacon & Swiss Royal Crispy Chicken Sandwich",
+  "calories": 740,
+  "proteinG": 39.0
+ },
+ {
+  "name": "Original Chicken Sandwich",
+  "calories": 680,
+  "proteinG": 23.0
+ },
+ {
+  "name": "Chicken Jr.",
+  "calories": 440,
+  "proteinG": 13.0
+ },
+ {
+  "name": "Spicy Chicken Jr.",
+  "calories": 380,
+  "proteinG": 12.0
+ },
+ {
+  "name": "Chicken Nuggets- 4pc",
+  "calories": 190,
+  "proteinG": 9.0
+ },
+ {
+  "name": "Chicken Nuggets- 6pc",
+  "calories": 290,
+  "proteinG": 13.0
+ },
+ {
+  "name": "Chicken Nuggets- 10pc",
+  "calories": 480,
+  "proteinG": 22.0
+ },
+ {
+  "name": "Chicken Nuggets- 20pc",
+  "calories": 970,
+  "proteinG": 45.0
+ },
+ {
+  "name": "Chicken Fries - 9 pc.",
+  "calories": 260,
+  "proteinG": 15.0
+ },
+ {
+  "name": "Ken's Golden Italian Dressing",
+  "calories": 190,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Ken's Ranch Dressing",
+  "calories": 210,
+  "proteinG": 0.5
+ },
+ {
+  "name": "Ken's Lite Honey Balsamic Vinaigrette",
+  "calories": 120,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Buttery Garlic Croutons- Packet",
+  "calories": 60,
+  "proteinG": 1.0
+ },
+ {
+  "name": "Onion Rings - value",
+  "calories": 200,
+  "proteinG": 3.0
+ },
+ {
+  "name": "Onion Rings - small",
+  "calories": 280,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Onion Rings - medium",
+  "calories": 360,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Onion Rings - large",
+  "calories": 520,
+  "proteinG": 7.0
+ },
+ {
+  "name": "French Fries - value*",
+  "calories": 230,
+  "proteinG": 3.0
+ },
+ {
+  "name": "French Fries - small*",
+  "calories": 300,
+  "proteinG": 4.0
+ },
+ {
+  "name": "French Fries - medium*",
+  "calories": 370,
+  "proteinG": 5.0
+ },
+ {
+  "name": "French Fries - large*",
+  "calories": 440,
+  "proteinG": 5.0
+ },
+ {
+  "name": "Kids Oatmeal",
+  "calories": 170,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Mott's\u00ae Natural Applesauce",
+  "calories": 50,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Soft Serve Cone",
+  "calories": 200,
+  "proteinG": 5.0
+ },
+ {
+  "name": "Fat FREE Milk (8 fl oz)",
+  "calories": 90,
+  "proteinG": 9.0
+ },
+ {
+  "name": "HERSHEY\u00ae'S Sundae Pie",
+  "calories": 310,
+  "proteinG": 3.0
+ },
+ {
+  "name": "Soft Serve Cup",
+  "calories": 180,
+  "proteinG": 4.0
+ },
+ {
+  "name": "OREO\u00ae Cookie Shake",
+  "calories": 680,
+  "proteinG": 13.0
+ },
+ {
+  "name": "OREO\u00ae Cookie Chocolate Shake",
+  "calories": 710,
+  "proteinG": 14.0
+ },
+ {
+  "name": "Vanilla Shake",
+  "calories": 600,
+  "proteinG": 13.0
+ },
+ {
+  "name": "Chocolate Chip Cookies (each)",
+  "calories": 160,
+  "proteinG": 2.0
+ },
+ {
+  "name": "Ham, Egg, & Cheese Biscuit",
+  "calories": 410,
+  "proteinG": 19.0
+ },
+ {
+  "name": "Sausage, Egg, & Cheese Biscuit",
+  "calories": 550,
+  "proteinG": 20.0
+ },
+ {
+  "name": "Bacon, Egg & Cheese Biscuit",
+  "calories": 410,
+  "proteinG": 15.0
+ },
+ {
+  "name": "Sausage Biscuit",
+  "calories": 430,
+  "proteinG": 11.0
+ },
+ {
+  "name": "Breakfast Burrito Jr.",
+  "calories": 420,
+  "proteinG": 16.0
+ },
+ {
+  "name": "BK\u00ae Ultimate Breakfast Platter",
+  "calories": 970,
+  "proteinG": 26.0
+ },
+ {
+  "name": "Pancake and Sausage platter",
+  "calories": 620,
+  "proteinG": 13.0
+ },
+ {
+  "name": "Hash Browns - small",
+  "calories": 290,
+  "proteinG": 2.0
+ },
+ {
+  "name": "Hash Browns - medium",
+  "calories": 540,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Hash Browns - large",
+  "calories": 740,
+  "proteinG": 6.0
+ },
+ {
+  "name": "American Cheese (2 Slices)",
+  "calories": 80,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Ketchup (Packet)",
+  "calories": 10,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Mayonnaise (Packet)",
+  "calories": 80,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Strawberry or Grape Jam (packet)",
+  "calories": 25,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Breakfast Syrup (1 oz)",
+  "calories": 90,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Barbecue Dipping Sauce (1 oz)",
+  "calories": 50,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Ranch Dipping Sauce (1 oz)",
+  "calories": 140,
+  "proteinG": 0.5
+ },
+ {
+  "name": "Buffalo Dipping Sauce (1 oz)",
+  "calories": 80,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Zesty Onion Ring Dipping Sauce (1 oz)",
+  "calories": 150,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Honey Mustard Dipping Sauce (1oz)",
+  "calories": 90,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Simply Orange Juice\u00ae - 11.5 oz.",
+  "calories": 160,
+  "proteinG": 2.0
+ },
+ {
+  "name": "Frozen Coke\u00ae - 16 oz",
+  "calories": 130,
+  "proteinG": 0.0
+ }
+]

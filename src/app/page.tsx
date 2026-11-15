@@ -17,7 +17,7 @@ function priceLabel(pricingType: string): { text: string; color: string } {
     case "regional":
       return { text: "Regional estimate - may vary", color: "#d29922" };
     default:
-      return { text: "Typical price - may vary", color: "#d29922" };
+      return { text: "Typical price - may vary (exact data takes longer)", color: "#d29922" };
   }
 }
 

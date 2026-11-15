@@ -1,0 +1,440 @@
+[
+ {
+  "name": "FlourTortilla(burrito)",
+  "serving": "1 ea",
+  "calories": 320,
+  "proteinG": 8.0
+ },
+ {
+  "name": "CrispyCornTortilla",
+  "serving": "1 ea",
+  "calories": 70,
+  "proteinG": 1.0
+ },
+ {
+  "name": "Cilantro-LimeBrownRice",
+  "serving": "4 oz",
+  "calories": 210,
+  "proteinG": 4.0
+ },
+ {
+  "name": "Cilantro-LimeWhiteRice",
+  "serving": "4 oz",
+  "calories": 210,
+  "proteinG": 4.0
+ },
+ {
+  "name": "BlackBeans",
+  "serving": "4 oz",
+  "calories": 130,
+  "proteinG": 8.0
+ },
+ {
+  "name": "PintoBeans",
+  "serving": "4 oz",
+  "calories": 130,
+  "proteinG": 8.0
+ },
+ {
+  "name": "FajitaVegetables",
+  "serving": "2 oz",
+  "calories": 20,
+  "proteinG": 1.0
+ },
+ {
+  "name": "Barbacoa",
+  "serving": "4 oz",
+  "calories": 170,
+  "proteinG": 24.0
+ },
+ {
+  "name": "Chicken",
+  "serving": "4 oz",
+  "calories": 180,
+  "proteinG": 32.0
+ },
+ {
+  "name": "Carnitas",
+  "serving": "4 oz",
+  "calories": 210,
+  "proteinG": 23.0
+ },
+ {
+  "name": "Steak",
+  "serving": "4 oz",
+  "calories": 150,
+  "proteinG": 21.0
+ },
+ {
+  "name": "Sofritas",
+  "serving": "4 oz",
+  "calories": 150,
+  "proteinG": 8.0
+ },
+ {
+  "name": "FreshTomatoSalsa",
+  "serving": "4 oz",
+  "calories": 25,
+  "proteinG": 0.0
+ },
+ {
+  "name": "RoastedChili-CornSalsa",
+  "serving": "4 oz",
+  "calories": 80,
+  "proteinG": 3.0
+ },
+ {
+  "name": "Tomatillo-GreenChiliSalsa",
+  "serving": "2 fl oz",
+  "calories": 15,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Tomatillo-RedChiliSalsa",
+  "serving": "2 fl oz",
+  "calories": 30,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Cheese",
+  "serving": "1 oz",
+  "calories": 110,
+  "proteinG": 6.0
+ },
+ {
+  "name": "SourCream",
+  "serving": "2 oz",
+  "calories": 110,
+  "proteinG": 2.0
+ },
+ {
+  "name": "Guacamole(topping/side)",
+  "serving": "4 oz",
+  "calories": 230,
+  "proteinG": 2.0
+ },
+ {
+  "name": "Guacamole(large)",
+  "serving": "8 oz",
+  "calories": 460,
+  "proteinG": 4.0
+ },
+ {
+  "name": "QuesoBlanco(entre\u00e9)",
+  "serving": "2 oz",
+  "calories": 120,
+  "proteinG": 5.0
+ },
+ {
+  "name": "QuesoBlanco(side)",
+  "serving": "4 oz",
+  "calories": 240,
+  "proteinG": 10.0
+ },
+ {
+  "name": "SupergreensSaladMix",
+  "serving": "3 oz",
+  "calories": 15,
+  "proteinG": 1.0
+ },
+ {
+  "name": "RomaineLettuce(tacos)",
+  "serving": "1 oz",
+  "calories": 5,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Chips(regular)",
+  "serving": "4 oz",
+  "calories": 540,
+  "proteinG": 7.0
+ },
+ {
+  "name": "Chips(large)",
+  "serving": "6 oz",
+  "calories": 810,
+  "proteinG": 11.0
+ },
+ {
+  "name": "Chipotle-HoneyVinaigrette",
+  "serving": "2 fl oz",
+  "calories": 220,
+  "proteinG": 1.0
+ },
+ {
+  "name": "Barq'sRootBeer",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Coca-ColaClassic",
+  "serving": "22 fl oz",
+  "calories": 260,
+  "proteinG": 0.0
+ },
+ {
+  "name": "CocaColaLife",
+  "serving": "22 fl oz",
+  "calories": 170,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Coca-ColaZero",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "DietCoke",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "DietCoke,CaffeineFree",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "PibbXtra",
+  "serving": "22 fl oz",
+  "calories": 260,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Sprite",
+  "serving": "22 fl oz",
+  "calories": 260,
+  "proteinG": 0.0
+ },
+ {
+  "name": "FantaOrange",
+  "serving": "22 fl oz",
+  "calories": 290,
+  "proteinG": 0.0
+ },
+ {
+  "name": "MinuteMaidLemonade",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "PoweradeMountainBerryBlast",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "MelloYello",
+  "serving": "22 fl oz",
+  "calories": 290,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Lemonade-BlueSky",
+  "serving": "22 fl oz",
+  "calories": 300,
+  "proteinG": 0.0
+ },
+ {
+  "name": "MangoOrange-BlueSky",
+  "serving": "22 fl oz",
+  "calories": 300,
+  "proteinG": 0.0
+ },
+ {
+  "name": "MaineRootRootBeer",
+  "serving": "22 fl oz",
+  "calories": 170,
+  "proteinG": 0.0
+ },
+ {
+  "name": "ChipotleIcedTea",
+  "serving": "22 fl oz",
+  "calories": 10,
+  "proteinG": 0.0
+ },
+ {
+  "name": "ChipotleSweetIcedTea",
+  "serving": "22 fl oz",
+  "calories": 150,
+  "proteinG": 0.0
+ },
+ {
+  "name": "TractorBerryAguaFresca",
+  "serving": "22 fl oz",
+  "calories": 200,
+  "proteinG": 0.0
+ },
+ {
+  "name": "TractorWatermelonLimeade",
+  "serving": "22 fl oz",
+  "calories": 230,
+  "proteinG": 0.0
+ },
+ {
+  "name": "TractorLemonade",
+  "serving": "22 fl oz",
+  "calories": 170,
+  "proteinG": 0.0
+ },
+ {
+  "name": "TractorMandarinAguaFresca",
+  "serving": "22 fl oz",
+  "calories": 190,
+  "proteinG": 0.0
+ },
+ {
+  "name": "FlourTortilla(taco)",
+  "serving": "2 ea",
+  "calories": 170,
+  "proteinG": 5.0
+ },
+ {
+  "name": "Guacamole",
+  "serving": "2 oz",
+  "calories": 110,
+  "proteinG": 1.0
+ },
+ {
+  "name": "RomaineLettuce",
+  "serving": "1 oz",
+  "calories": 5,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Mandarins",
+  "serving": "1 ea",
+  "calories": 35,
+  "proteinG": 1.0
+ },
+ {
+  "name": "Chips",
+  "serving": "1 oz",
+  "calories": 140,
+  "proteinG": 2.0
+ },
+ {
+  "name": "OrganicMilk",
+  "serving": "8oz",
+  "calories": 110,
+  "proteinG": 8.0
+ },
+ {
+  "name": "OrganicChocolateMilk",
+  "serving": "8oz",
+  "calories": 160,
+  "proteinG": 9.0
+ },
+ {
+  "name": "OrganicAppleJuice",
+  "serving": "6.75oz",
+  "calories": 100,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Pepsi",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Diet Pepsi",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Mountain Dew",
+  "serving": "22 fl oz",
+  "calories": 300,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Diet Mountain Dew",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Tropicana Lemonade",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Sierra Mist",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Mug Root Beer",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "LiptonRaspberryBriskIcedTea",
+  "serving": "22 fl oz",
+  "calories": 220,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Dr. Pepper",
+  "serving": "22 fl oz",
+  "calories": 280,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Diet Dr. Pepper",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Crush Orange",
+  "serving": "22 fl oz",
+  "calories": 300,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Sobe Yumberry Pomegranate",
+  "serving": "22 fl oz",
+  "calories": 0,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Maine Root Root Beer",
+  "serving": "22 fl oz",
+  "calories": 170,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Chipotle Sweet Iced Tea",
+  "serving": "22 fl oz",
+  "calories": 150,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Tractor Berry Agua Fresca",
+  "serving": "22 fl oz",
+  "calories": 200,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Tractor Lemonade",
+  "serving": "22 fl oz",
+  "calories": 170,
+  "proteinG": 0.0
+ },
+ {
+  "name": "Tractor Mandarin Agua Fresca",
+  "serving": "22 fl oz",
+  "calories": 190,
+  "proteinG": 0.0
+ }
+]

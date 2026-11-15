@@ -12,6 +12,8 @@ import { TacoBellAdapter } from "../src/modules/adapters/tacobell";
 import { DominosAdapter, normalizeCoupons } from "../src/modules/adapters/dominos";
 import { parseNutritionHtml } from "../src/modules/adapters/chickfila";
 import { toNormalizedItems } from "../src/modules/adapters/chickfila-prices";
+import { toNormalizedItems as bkToNormalizedItems } from "../src/modules/adapters/bk-prices";
+import { toNormalizedItems as cpToNormalizedItems } from "../src/modules/adapters/chipotle-prices";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const FIXTURES = join(ROOT, "tests", "fixtures");
@@ -46,6 +48,24 @@ async function main() {
   const cfaR = await persistRun(db, { restaurantSlug: "chick-fil-a", storeId: "", zip: "33613", items: cfaV.accepted });
   await recordRefreshRun(db, { adapter: "chick-fil-a", kind: "menu", status: cfaV.anomalies.length ? "quarantined" : "success", startedAt, finishedAt: NOW, itemsUpdated: cfaR.menuItemsUpserted, anomalies: cfaV.anomalies });
   console.log(`chick-fil-a: ${cfaR.menuItemsUpserted} items`);
+
+  // Burger King - official nutrition PDF + Level 4 typical prices
+  const bkNutrition = JSON.parse(readFileSync(join(ROOT, "data", "bk-nutrition.json"), "utf8"));
+  const bkEst = JSON.parse(readFileSync(join(ROOT, "data", "burger-king-price-estimates.json"), "utf8")).estimates;
+  const { items: bkItems, unmatchedPriced: bkUnmatched } = bkToNormalizedItems(bkNutrition, bkEst, { zip: "33613", fetchedAt: NOW });
+  const bkV = validateRun(bkItems);
+  const bkR = await persistRun(db, { restaurantSlug: "burger-king", storeId: "", zip: "33613", items: bkV.accepted });
+  await recordRefreshRun(db, { adapter: "burger-king", kind: "menu", status: bkV.anomalies.length ? "quarantined" : "success", startedAt, finishedAt: NOW, itemsUpdated: bkR.menuItemsUpserted, anomalies: bkV.anomalies });
+  console.log(`burger-king: ${bkR.menuItemsUpserted} items (${bkUnmatched.length} DTI items skipped - no official nutrition)`);
+
+  // Chipotle - official per-ingredient nutrition composed into entrees + Level 4 typical prices
+  const cpNutrition = JSON.parse(readFileSync(join(ROOT, "data", "chipotle-nutrition.json"), "utf8"));
+  const cpEst = JSON.parse(readFileSync(join(ROOT, "data", "chipotle-price-estimates.json"), "utf8")).estimates;
+  const { items: cpItems, unmatchedPriced: cpUnmatched } = cpToNormalizedItems(cpNutrition, cpEst, { zip: "33613", fetchedAt: NOW });
+  const cpV = validateRun(cpItems);
+  const cpR = await persistRun(db, { restaurantSlug: "chipotle", storeId: "", zip: "33613", items: cpV.accepted });
+  await recordRefreshRun(db, { adapter: "chipotle", kind: "menu", status: cpV.anomalies.length ? "quarantined" : "success", startedAt, finishedAt: NOW, itemsUpdated: cpR.menuItemsUpserted, anomalies: cpV.anomalies });
+  console.log(`chipotle: ${cpR.menuItemsUpserted} items (${cpUnmatched.length} DTI items skipped - no official nutrition)`);
 
   await client.close();
   console.log("seeded ./data/pgdb");
