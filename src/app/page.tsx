@@ -9,44 +9,7 @@ export const dynamic = "force-dynamic";
 
 const ZIP = "33613";
 
-/** Real app icons, served locally from /public/icons (official App Store artwork). */
-const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: string }> = {
-  "taco-bell": { initials: "TB", bg: "#702082", fg: "#fff", name: "Taco Bell" },
-  dominos: { initials: "D", bg: "#006491", fg: "#fff", name: "Domino's" },
-  "chick-fil-a": { initials: "CFA", bg: "#e51636", fg: "#fff", name: "Chick-fil-A" },
-  "burger-king": { initials: "BK", bg: "#f5ebdc", fg: "#d62300", name: "Burger King" },
-  chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle" },
-};
-
-/** Taco Bell's CDN blocks hotlinks, so their photos go through our proxy. */
-function imgSrc(url: string): string {
-  return `/api/img?u=${encodeURIComponent(url)}`;
-}
-
-function BrandIcon({ slug, size = 40 }: { slug: string; size?: number }) {
-  const b = BRANDS[slug];
-  const style: React.CSSProperties = {
-    width: size, height: size, borderRadius: size * 0.24,
-    border: "1px solid rgba(0,0,0,0.08)", flexShrink: 0, objectFit: "cover",
-  };
-  if (b) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={`/icons/${slug}.png`} alt={b.name} width={size} height={size} style={style} loading="lazy" />;
-  }
-  return (
-    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#eee9e2", color: "#1c1c1e", fontWeight: 800, fontSize: size * 0.3 }}>
-      {slug.slice(0, 2).toUpperCase()}
-    </span>
-  );
-}
-
-const card: React.CSSProperties = {
-  background: "#fff",
-  borderRadius: 22,
-  border: "1px solid #f0ebe3",
-  boxShadow: "0 2px 10px rgba(60,40,20,0.05)",
-};
-
+import { BRANDS, BrandIcon, brandSlugFor, imgSrc, card } from "../components/brand";
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
@@ -219,6 +182,23 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
                   {row.calories !== null ? ` · ${row.calories} cal` : ""}
                   {row.proteinG !== null ? ` · ${row.proteinG}g protein` : ""}
                 </div>
+                <div style={{ marginTop: 5, display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {row.calories !== null && row.calories > 0 && (
+                    <span style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                      {Math.round(row.calories / row.price)} cal/$
+                    </span>
+                  )}
+                  {row.calories === null && row.caloriesMin !== null && row.caloriesMax !== null && row.caloriesMax > 0 && (
+                    <span style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                      {Math.round(row.caloriesMin / row.price)}-{Math.round(row.caloriesMax / row.price)} cal/$
+                    </span>
+                  )}
+                  {row.proteinG !== null && row.proteinG > 0 && (
+                    <span style={{ background: "#f0ebfa", color: "#702082", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
+                      {(row.proteinG / row.price).toFixed(1)}g protein/$
+                    </span>
+                  )}
+                </div>
               </div>
               <div style={{ textAlign: "right", flexShrink: 0 }}>
                 <div style={{ fontWeight: 800, fontSize: 16 }}>
@@ -230,31 +210,6 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Official codes */}
-      <section style={{ marginBottom: 30 }}>
-        <h2 style={{ fontSize: 21, margin: "0 0 12px", letterSpacing: -0.4 }}>Official codes</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {deals.map((d, i) => {
-            const slug = Object.keys(BRANDS).find((k) => BRANDS[k]!.name === d.restaurantName) ?? "dominos";
-            return (
-              <div key={i} style={{ ...card, padding: "12px 14px", display: "flex", alignItems: "center", gap: 12 }}>
-                <BrandIcon slug={slug} size={36} />
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontWeight: 600, fontSize: 14, lineHeight: 1.3 }}>{d.title}</div>
-                  {d.expiresAt && <div style={{ fontSize: 12, color: "#8a8378", marginTop: 2 }}>expires {d.expiresAt.slice(0, 10)}</div>}
-                </div>
-                {d.promoCode && (
-                  <span style={{ fontFamily: "monospace", background: "#f6f3ee", borderRadius: 10, padding: "6px 10px", fontSize: 13, fontWeight: 700 }}>
-                    {d.promoCode}
-                  </span>
-                )}
-                {d.price !== null && <span style={{ fontWeight: 700, fontSize: 15 }}>${d.price.toFixed(2)}</span>}
-              </div>
-            );
-          })}
         </div>
       </section>
 

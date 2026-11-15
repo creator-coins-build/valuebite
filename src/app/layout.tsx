@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import TabBar from "../components/TabBar";
 
 export const metadata: Metadata = {
   title: "ValueBite",
@@ -10,7 +11,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif", background: "#faf7f2", color: "#1c1c1e" }}>
-        {children}
+        <div style={{ paddingBottom: 64 }}>{children}</div>
+        <TabBar />
       </body>
     </html>
   );
