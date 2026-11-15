@@ -6,11 +6,18 @@ import { BRANDS, BrandIcon, brandSlugFor, card, ORANGE, MUTED, INK } from "../..
 
 export const dynamic = "force-dynamic";
 
-export default async function CodesPage() {
+export default async function CodesPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const params = await searchParams;
+  const zipParam = typeof params.zip === "string" ? params.zip : undefined;
   const snap = readSnapshot();
   let deals;
   let checked: string;
-  if (snap) {
+  if (zipParam && /^\d{5}$/.test(zipParam)) {
+    const { loadData } = await import("../../components/data");
+    const d = await loadData(zipParam);
+    deals = d.deals;
+    checked = d.checked;
+  } else if (snap) {
     deals = snap.deals;
     checked = snap.generatedAt.slice(0, 10);
   } else {

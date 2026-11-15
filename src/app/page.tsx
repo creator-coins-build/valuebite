@@ -2,14 +2,17 @@ import { DigitalOffers } from "../components/DigitalOffers";
 import { entrees } from "../modules/scoring/rank";
 import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
 import { BRANDS, BrandIcon, brandSlugFor, imgSrc, wideSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
-import { loadData, ZIP } from "../components/data";
+import { loadData } from "../components/data";
+import { ZipForm } from "../components/ZipForm";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
-  const { rows: allRows, deals } = await loadData();
+  const zipParam = typeof params.zip === "string" ? params.zip : undefined;
+  const { rows: allRows, deals, zip, stores, live } = await loadData(zipParam);
+  const zipQ = zipParam && /^\d{5}$/.test(zipParam) ? `&zip=${zipParam}` : "";
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
 
   // Deals: chain deal-category items + official coupons, best cal/$ first.
@@ -48,8 +51,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   }
   const digitalNames = new Set(deals.filter(d => d.redemption === "online" || d.appOnly).map(d => d.title));
   dealViews.sort((x, y) => Number(digitalNames.has(y.title)) - Number(digitalNames.has(x.title)) || y.sortCal - x.sortCal || x.title.localeCompare(y.title));
-  // Hero-worthy = food, not drink-only packs (a 0-cal floor means beverages).
-  const heroDeals = dealViews.filter(d => digitalNames.has(d.title) && d.calPerDollar !== "drinks").slice(0, 5);
+  // Hero-worthy = food, not drink packs (0-cal floor or drink-named; Dylan's call).
+  const DRINKY = /drink|beverage|soda|freeze/i;
+  const heroDeals = dealViews.filter(d => digitalNames.has(d.title) && d.calPerDollar !== "drinks" && !DRINKY.test(d.title)).slice(0, 5);
 
   // App/online-exclusive deals from official sources (currently Taco Bell's
   // "Member exclusive" + "Online exclusives" menu categories).
@@ -68,13 +72,17 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       {/* Header */}
       <header style={{ textAlign: "center", marginBottom: 16 }}>
         <h1 style={{ fontSize: 34, margin: 0, letterSpacing: -1.4, fontWeight: 900, color: ORANGE }}>ValueBite</h1>
-        <p style={{ margin: "1px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>eat good. spend less. near {ZIP}</p>
+        <p style={{ margin: "1px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>eat good. spend less.</p>
+        <div style={{ marginTop: 8 }}><ZipForm zip={zip} /></div>
+        {live && stores.length > 0 && (
+          <p style={{ margin: "6px 0 0", fontSize: 11, color: MUTED }}>exact prices from: {stores.map(s => `${BRANDS[s.slug]?.name ?? s.slug} (${s.address})`).join(" · ")}</p>
+        )}
       </header>
 
       {/* Restaurant chips */}
       <nav style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 6, marginBottom: 18 }}>
         <a
-          href="/"
+          href={`/${zipQ ? `?${zipQ.slice(1)}` : ""}`}
           style={{
             ...card, borderRadius: 999, padding: "7px 14px", display: "flex", alignItems: "center",
             textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: activeRestaurant ? 500 : 700,
@@ -88,7 +96,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
           return (
             <a
               key={slug}
-              href={active ? "/" : `/?restaurant=${slug}`}
+              href={active ? `/${zipQ ? `?${zipQ.slice(1)}` : ""}` : `/?restaurant=${slug}${zipQ}`}
               style={{
                 ...card, borderRadius: 999, padding: "4px 12px 4px 4px", display: "flex", alignItems: "center", gap: 7,
                 textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: active ? 700 : 500,

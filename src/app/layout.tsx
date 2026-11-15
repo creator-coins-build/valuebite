@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Suspense } from "react";
 import TabBar from "../components/TabBar";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body style={{ margin: 0, fontFamily: "Nunito, system-ui, -apple-system, sans-serif", background: "#f7f4ef", color: "#191512" }}>
         <div style={{ paddingBottom: 64 }}>{children}</div>
-        <TabBar />
+        <Suspense fallback={null}><TabBar /></Suspense>
       </body>
     </html>
   );

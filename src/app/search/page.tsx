@@ -10,7 +10,8 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const params = await searchParams;
   const filters = filtersFromParams(params);
   const q = typeof params.q === "string" ? params.q.trim().toLowerCase() : "";
-  const { rows: allRows } = await loadData();
+  const zipParam = typeof params.zip === "string" ? params.zip : undefined;
+  const { rows: allRows } = await loadData(zipParam);
   let rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
   if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q));
   const ranked = rankEntrees(rows);
@@ -24,6 +25,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       </header>
 
       <form method="get" style={{ ...card, borderRadius: 999, display: "flex", alignItems: "center", gap: 8, padding: "8px 8px 8px 16px", marginBottom: 10 }}>
+        {zipParam && <input type="hidden" name="zip" value={zipParam} />}
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9a9186" strokeWidth="2" strokeLinecap="round">
           <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
         </svg>
@@ -41,7 +43,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       </form>
 
       {(q || filters.budget !== undefined) && (
-        <a href="/search" style={{ fontSize: 13, color: MUTED, textDecoration: "none" }}>clear</a>
+        <a href={`/search${zipParam ? `?zip=${zipParam}` : ""}`} style={{ fontSize: 13, color: MUTED, textDecoration: "none" }}>clear</a>
       )}
 
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 12 }}>

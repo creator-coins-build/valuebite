@@ -1,12 +1,15 @@
 import { BRANDS, BrandIcon, card, ORANGE, ORANGE_TEXT, MUTED, INK } from "../../components/brand";
-import { loadData, ZIP } from "../../components/data";
+import { loadData } from "../../components/data";
+import { ZipForm } from "../../components/ZipForm";
 
 export const dynamic = "force-dynamic";
 
 export const metadata = { title: "ValueBite - Profile" };
 
-export default async function ProfilePage() {
-  const { rows, deals, checked } = await loadData();
+export default async function ProfilePage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const params = await searchParams;
+  const zipParam = typeof params.zip === "string" ? params.zip : undefined;
+  const { rows, deals, checked, zip, stores, live } = await loadData(zipParam);
   const chainCount = new Set(rows.map((r) => r.restaurantSlug)).size;
   const exactCount = rows.filter((r) => r.pricingType === "exact_store").length;
 
@@ -20,8 +23,12 @@ export default async function ProfilePage() {
       {/* Area card */}
       <section style={{ ...card, padding: 18, marginBottom: 14 }}>
         <div style={{ fontSize: 12, color: MUTED, textTransform: "uppercase", letterSpacing: 1, fontWeight: 700 }}>Your area</div>
-        <div style={{ fontSize: 26, fontWeight: 900, color: INK, marginTop: 4 }}>{ZIP}</div>
-        <div style={{ fontSize: 13, color: MUTED, marginTop: 2 }}>USF Tampa - prices are pulled for stores near this ZIP</div>
+        <div style={{ fontSize: 26, fontWeight: 900, color: INK, marginTop: 4 }}>{zip}</div>
+        <div style={{ fontSize: 13, color: MUTED, marginTop: 2 }}>{zip === "33613" ? "USF Tampa - prices are pulled for stores near this ZIP" : "prices are pulled live for stores near this ZIP"}</div>
+        <div style={{ marginTop: 10 }}><ZipForm zip={zip} action="/profile" /></div>
+        {live && stores.length > 0 && (
+          <div style={{ fontSize: 12, color: MUTED, marginTop: 8 }}>{stores.map(s => `${s.slug} - ${s.address}`).join("\n")}</div>
+        )}
         <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
           {Object.keys(BRANDS).map((slug) => (
             <BrandIcon key={slug} slug={slug} size={34} />
@@ -56,7 +63,7 @@ export default async function ProfilePage() {
         <div style={{ fontSize: 12, color: MUTED, textTransform: "uppercase", letterSpacing: 1, fontWeight: 700 }}>How ValueBite works</div>
         <div style={{ fontSize: 13.5, color: "#5c554b", lineHeight: 1.7, marginTop: 10, display: "flex", flexDirection: "column", gap: 8 }}>
           <div>Value Score V1 ranks entrees by 55% protein per $, 35% calories per $, 10% price. Only items with known protein get a score - protein is never guessed.</div>
-          <div>Prices marked ~ are typical prices and may vary by store. Everything else is the exact price from the restaurant's own ordering site near {ZIP}.</div>
+          <div>Prices marked ~ are typical prices and may vary by store. Everything else is the exact price from the restaurant's own ordering site near {zip}.</div>
           <div>Deals and codes come from the restaurant's official ordering site or deals menu, checked {checked}. A code is listed by the official source - not a guarantee it works at checkout.</div>
           <div>Product photos are the restaurant's official menu photos. Chains without published photos show their app icon instead.</div>
         </div>

@@ -9,7 +9,9 @@ export const metadata = { title: "ValueBite - Top rated" };
 export default async function TopPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
-  const { rows: allRows } = await loadData();
+  const zipParam = typeof params.zip === "string" ? params.zip : undefined;
+  const { rows: allRows } = await loadData(zipParam);
+  const zipQ = zipParam ? `&zip=${zipParam}` : "";
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
   const ranked = rankEntrees(rows).slice(0, 25);
   const activeRestaurant = filters.restaurants?.[0] ?? "";
@@ -23,11 +25,11 @@ export default async function TopPage({ searchParams }: { searchParams: Promise<
 
       {/* Restaurant filter chips */}
       <nav style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 6, marginBottom: 16 }}>
-        <a href="/top" style={{ ...card, borderRadius: 999, padding: "7px 14px", textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: activeRestaurant ? 500 : 700, border: activeRestaurant ? "1px solid #efe9e1" : `2px solid ${ORANGE}`, whiteSpace: "nowrap" }}>All</a>
+        <a href={`/top${zipQ ? `?${zipQ.slice(1)}` : ""}`} style={{ ...card, borderRadius: 999, padding: "7px 14px", textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: activeRestaurant ? 500 : 700, border: activeRestaurant ? "1px solid #efe9e1" : `2px solid ${ORANGE}`, whiteSpace: "nowrap" }}>All</a>
         {Object.entries(BRANDS).map(([slug, b]) => {
           const active = activeRestaurant === slug;
           return (
-            <a key={slug} href={active ? "/top" : `/top?restaurant=${slug}`} style={{ ...card, borderRadius: 999, padding: "4px 12px 4px 4px", display: "flex", alignItems: "center", gap: 7, textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: active ? 700 : 500, border: active ? `2px solid ${ORANGE}` : "1px solid #efe9e1", whiteSpace: "nowrap" }}>
+            <a key={slug} href={active ? `/top${zipQ ? `?${zipQ.slice(1)}` : ""}` : `/top?restaurant=${slug}${zipQ}`} style={{ ...card, borderRadius: 999, padding: "4px 12px 4px 4px", display: "flex", alignItems: "center", gap: 7, textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: active ? 700 : 500, border: active ? `2px solid ${ORANGE}` : "1px solid #efe9e1", whiteSpace: "nowrap" }}>
               <BrandIcon slug={slug} size={26} />
               {b.name}
             </a>

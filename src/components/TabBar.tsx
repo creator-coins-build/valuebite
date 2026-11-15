@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 function HomeIcon({ color }: { color: string }) {
   return (
@@ -46,6 +46,9 @@ function PersonIcon({ color }: { color: string }) {
 
 export default function TabBar() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const zip = searchParams.get("zip");
+  const zipQ = zip && /^\d{5}$/.test(zip) ? `?zip=${zip}` : "";
   const tabs = [
     { href: "/", label: "Home", Icon: HomeIcon },
     { href: "/top", label: "Top", Icon: TrophyIcon },
@@ -68,7 +71,7 @@ export default function TabBar() {
           return (
             <Link
               key={href}
-              href={href}
+              href={`${href}${zipQ}`}
               style={{
                 flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
                 padding: "8px 0 10px", textDecoration: "none", color,
