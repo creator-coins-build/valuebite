@@ -3,24 +3,56 @@ import { rankableRows, activeDeals } from "../modules/db/queries";
 import { readSnapshot } from "../modules/db/snapshot";
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
-import { applyFilters, filtersFromParams, describeFilters } from "../modules/scoring/filters";
+import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
 
 export const dynamic = "force-dynamic";
 
 const ZIP = "33613";
 
-function priceLabel(pricingType: string): { text: string; color: string } {
+/** Brand tiles: colored rounded squares with initials (no hotlinked logos). */
+const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: string }> = {
+  "taco-bell": { initials: "TB", bg: "#702082", fg: "#fff", name: "Taco Bell" },
+  dominos: { initials: "D", bg: "#006491", fg: "#fff", name: "Domino's" },
+  "chick-fil-a": { initials: "CFA", bg: "#e51636", fg: "#fff", name: "Chick-fil-A" },
+  "burger-king": { initials: "BK", bg: "#f5ebdc", fg: "#d62300", name: "Burger King" },
+  chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle" },
+};
+
+function BrandTile({ slug, size = 40 }: { slug: string; size?: number }) {
+  const b = BRANDS[slug] ?? { initials: slug.slice(0, 2).toUpperCase(), bg: "#e8e6e3", fg: "#1c1c1e" };
+  return (
+    <span
+      style={{
+        display: "inline-flex", alignItems: "center", justifyContent: "center",
+        width: size, height: size, borderRadius: size * 0.32,
+        background: b.bg, color: b.fg, fontWeight: 800, fontSize: size * 0.3,
+        border: "1px solid rgba(0,0,0,0.06)", flexShrink: 0,
+      }}
+    >
+      {b.initials}
+    </span>
+  );
+}
+
+function priceLabel(pricingType: string): string | null {
   switch (pricingType) {
     case "exact_store":
-      return { text: "Exact store price", color: "#3fb950" };
+      return "Exact store price";
     case "zip_local":
-      return { text: "Local estimate", color: "#d29922" };
+      return "Local estimate";
     case "regional":
-      return { text: "Regional estimate - may vary", color: "#d29922" };
+      return "Regional estimate";
     default:
-      return { text: "Typical price - may vary (exact data takes longer)", color: "#d29922" };
+      return "Typical price - may vary (exact data takes longer)";
   }
 }
+
+const card: React.CSSProperties = {
+  background: "#fff",
+  borderRadius: 18,
+  border: "1px solid #eceae6",
+  boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+};
 
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
@@ -48,201 +80,198 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
 
   const entreeRows = entrees(rows.map((r) => ({ ...r, calories: r.calories, category: r.category ?? "" })));
   const entreeKeys = new Set(entreeRows.map((r) => `${r.restaurantSlug}:${r.productId}`));
-  const entreeScored = withScores.filter(({ s }) => entreeKeys.has(s.id));
+  const byValue = withScores.filter(({ s }) => entreeKeys.has(s.id) && s.valueScore !== null).slice(0, 10);
 
-  const byValue = entreeScored.filter(({ s }) => s.valueScore !== null).slice(0, 20);
-  const byCal = rankScores(scored.filter((s) => entreeKeys.has(s.id) && s.calPerDollar !== null), "calPerDollar")
-    .slice(0, 20)
-    .map((s) => ({ s, row: byId.get(s.id)! }));
-  const cheapest = rankScores(scored.filter((s) => entreeKeys.has(s.id) && s.price !== null), "cheapest")
-    .slice(0, 20)
-    .map((s) => ({ s, row: byId.get(s.id)! }));
-
-  // Limited-time deals: chain deal-category items (cal/$ from official ranges) + coupons with published expiry.
+  // Deals first: chain deal-category items + official coupons, sorted by cal/$ (best first).
   interface DealView {
-    key: string; title: string; restaurant: string; priceText: string; calText: string;
+    key: string; title: string; slug: string; priceText: string; calText: string;
     calPerDollar: string | null; sortCal: number; evidence: string;
   }
   const dealViews: DealView[] = [];
-  for (const r of rows.filter((r) => r.category === "deals-and-combos")) {
+  for (const r of allRows.filter((r) => r.category === "deals-and-combos")) {
     const hasRange = r.caloriesMin !== null && r.caloriesMax !== null;
     const calMin = r.calories ?? r.caloriesMin;
     const calMax = r.calories ?? r.caloriesMax;
     dealViews.push({
       key: `tb:${r.productId}`,
       title: r.name,
-      restaurant: r.restaurantName,
-      priceText: `$${r.price.toFixed(2)} (exact)`,
-      calText: hasRange ? `${r.caloriesMin}-${r.caloriesMax} (official range)` : r.calories !== null ? String(r.calories) : "unknown",
-      calPerDollar: calMin !== null && calMax !== null && calMin > 0 ? `${Math.round(calMin / r.price)}-${Math.round(calMax / r.price)}` : (calMin === 0 ? "0 (drinks)" : null),
+      slug: r.restaurantSlug,
+      priceText: `$${r.price.toFixed(2)}`,
+      calText: hasRange ? `${r.caloriesMin}-${r.caloriesMax} cal` : r.calories !== null ? `${r.calories} cal` : "cal unknown",
+      calPerDollar: calMin !== null && calMax !== null && calMin > 0 ? `${Math.round(calMin / r.price)}-${Math.round(calMax / r.price)} cal/$` : calMin === 0 ? "0 (drinks)" : null,
       sortCal: calMin !== null && calMax !== null && calMax > 0 ? calMax / r.price : -1,
-      evidence: "on the official deals & combos menu, checked " + new Date(r.fetchedAt).toISOString().slice(0, 10),
+      evidence: "official deals menu, checked " + new Date(r.fetchedAt).toISOString().slice(0, 10),
     });
   }
   for (const d of deals.filter((d) => d.expiresAt !== null)) {
+    const slug = Object.keys(BRANDS).find((k) => BRANDS[k]!.name === d.restaurantName) ?? "dominos";
     dealViews.push({
       key: `dm:${d.promoCode}`,
       title: d.title,
-      restaurant: d.restaurantName,
+      slug,
       priceText: d.price !== null ? `$${d.price.toFixed(2)} w/ code ${d.promoCode}` : `code ${d.promoCode}`,
-      calText: "unknown",
+      calText: "cal unknown",
       calPerDollar: null,
       sortCal: -1,
-      evidence: `expires ${d.expiresAt!.slice(0, 10)} (published by official source)`,
+      evidence: `expires ${d.expiresAt!.slice(0, 10)}`,
     });
   }
   dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
-  const dealRows = dealViews;
+  const topDeals = dealViews.slice(0, 12);
 
-  const table = (title: string, list: { s: (typeof withScores)[number]["s"]; row: (typeof rows)[number] }[], note: string) => (
-    <section style={{ marginBottom: 40 }}>
-      <h2 style={{ fontSize: 20, marginBottom: 4 }}>{title}</h2>
-      <p style={{ color: "#9aa0a6", fontSize: 13, marginTop: 0 }}>{note}</p>
-      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-        <thead>
-          <tr style={{ textAlign: "left", color: "#9aa0a6", borderBottom: "1px solid #30363d" }}>
-            <th style={{ padding: "6px 8px" }}>Item</th>
-            <th style={{ padding: "6px 8px" }}>Restaurant</th>
-            <th style={{ padding: "6px 8px" }}>Price</th>
-            <th style={{ padding: "6px 8px" }}>Calories</th>
-            <th style={{ padding: "6px 8px" }}>Protein</th>
-            <th style={{ padding: "6px 8px" }}>cal/$</th>
-            <th style={{ padding: "6px 8px" }}>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {list.map(({ s, row }) => {
-            const pl = priceLabel(row.pricingType);
-            return (
-              <tr key={s.id} style={{ borderBottom: "1px solid #21262d" }}>
-                <td style={{ padding: "8px" }}>{row.name}</td>
-                <td style={{ padding: "8px", color: "#9aa0a6" }}>{row.restaurantName}</td>
-                <td style={{ padding: "8px" }}>
-                  ${row.price.toFixed(2)}{" "}
-                  <span style={{ color: pl.color, fontSize: 11 }}>{pl.text}</span>
-                </td>
-                <td style={{ padding: "8px" }}>{row.calories ?? "unknown"}</td>
-                <td style={{ padding: "8px" }}>{row.proteinG !== null ? `${row.proteinG}g` : <span style={{ color: "#9aa0a6" }}>unknown</span>}</td>
-                <td style={{ padding: "8px" }}>{s.calPerDollar !== null ? Math.round(s.calPerDollar) : "-"}</td>
-                <td style={{ padding: "8px", fontWeight: 700 }}>{s.valueScore !== null ? s.valueScore.toFixed(1) : "-"}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </section>
-  );
+  const activeRestaurant = filters.restaurants?.[0] ?? "";
 
   return (
-    <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 20px" }}>
-      <h1 style={{ fontSize: 28, marginBottom: 4 }}>ValueBite</h1>
-      <p style={{ color: "#9aa0a6", marginTop: 0 }}>
-        Best food value near ZIP {ZIP}. {rows.length} items from {new Set(rows.map((r) => r.restaurantSlug)).size} restaurants
-        ({describeFilters(filters)}). Prices and nutrition carry their source and confidence - estimates are always labeled.
-      </p>
+    <main style={{ maxWidth: 860, margin: "0 auto", padding: "20px 16px 48px" }}>
+      {/* Header */}
+      <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+        <div>
+          <h1 style={{ fontSize: 26, margin: 0, letterSpacing: -0.5 }}>ValueBite</h1>
+          <p style={{ margin: "2px 0 0", color: "#6b6b70", fontSize: 14 }}>Best food value near <strong>{ZIP}</strong></p>
+        </div>
+        <span style={{ background: "#fff", border: "1px solid #eceae6", borderRadius: 999, padding: "8px 14px", fontSize: 13, color: "#6b6b70" }}>
+          {rows.length} items
+        </span>
+      </header>
 
-      <form method="get" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28, padding: 14, background: "#161b22", borderRadius: 8 }}>
-        <label style={{ fontSize: 13 }}>
-          Budget ${" "}
-          <input name="budget" type="number" step="0.01" min="0" defaultValue={filters.budget} placeholder="10" style={{ width: 70 }} />
-        </label>
-        <label style={{ fontSize: 13 }}>
-          Restaurant{" "}
-          <select name="restaurant" defaultValue={filters.restaurants?.[0] ?? ""}>
-            <option value="">all</option>
-            <option value="taco-bell">Taco Bell</option>
-            <option value="chick-fil-a">Chick-fil-A</option>
-            <option value="dominos">Domino's</option>
-          </select>
-        </label>
-        <label style={{ fontSize: 13 }}>
-          Min protein (g){" "}
-          <input name="minProtein" type="number" min="0" defaultValue={filters.minProteinG} style={{ width: 60 }} />
-        </label>
-        <label style={{ fontSize: 13 }}>
-          Max calories{" "}
-          <input name="maxCalories" type="number" min="0" defaultValue={filters.maxCalories} style={{ width: 70 }} />
-        </label>
-        <button type="submit" style={{ padding: "4px 14px" }}>Apply</button>
-        <a href="/" style={{ color: "#9aa0a6", fontSize: 13, alignSelf: "center" }}>reset</a>
+      {/* Budget search pill */}
+      <form method="get" style={{ ...card, display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", marginBottom: 14, borderRadius: 999 }}>
+        <span style={{ color: "#6b6b70", fontSize: 14 }}>Budget</span>
+        <input
+          name="budget" type="number" step="0.01" min="0" defaultValue={filters.budget} placeholder="10"
+          style={{ border: "none", outline: "none", fontSize: 16, width: 90, background: "transparent" }}
+        />
+        {activeRestaurant && <input type="hidden" name="restaurant" value={activeRestaurant} />}
+        <button type="submit" style={{ marginLeft: "auto", background: "#06c167", color: "#fff", border: "none", borderRadius: 999, padding: "8px 18px", fontWeight: 700, fontSize: 14, cursor: "pointer" }}>
+          Find food
+        </button>
+        {(filters.budget !== undefined || activeRestaurant) && (
+          <a href="/" style={{ color: "#6b6b70", fontSize: 13, textDecoration: "none" }}>reset</a>
+        )}
       </form>
 
-      {filters.budget !== undefined && (
-        <p style={{ color: "#58a6ff", fontSize: 14 }}>
-          Best food under ${filters.budget} near you - {rows.length} items qualify.
-        </p>
-      )}
-      {table(
-        "Best Value Score",
-        byValue,
-        "Value Score V1: 55% protein/$, 35% calories/$, 10% price. Only items with known protein get a score - protein is never guessed.",
-      )}
-      {table("Most calories per dollar", byCal, "Entrees only (no sauces, drinks, sides, sweets or party packs).")}
-      {table("Cheapest entrees", cheapest, "Entrees only, sorted by price.")}
+      {/* Restaurant chips */}
+      <nav style={{ display: "flex", gap: 10, overflowX: "auto", paddingBottom: 6, marginBottom: 22 }}>
+        <a
+          href={filters.budget !== undefined ? `/?budget=${filters.budget}` : "/"}
+          style={{
+            ...card, borderRadius: 999, padding: "8px 14px", display: "flex", alignItems: "center", gap: 8,
+            textDecoration: "none", color: "#1c1c1e", fontSize: 14, fontWeight: activeRestaurant ? 500 : 700,
+            border: activeRestaurant ? "1px solid #eceae6" : "2px solid #1c1c1e", whiteSpace: "nowrap",
+          }}
+        >
+          All
+        </a>
+        {Object.entries(BRANDS).map(([slug, b]) => {
+          const active = activeRestaurant === slug;
+          const href = filters.budget !== undefined ? `/?restaurant=${slug}&budget=${filters.budget}` : `/?restaurant=${slug}`;
+          return (
+            <a
+              key={slug}
+              href={href}
+              style={{
+                ...card, borderRadius: 999, padding: "6px 14px 6px 6px", display: "flex", alignItems: "center", gap: 8,
+                textDecoration: "none", color: "#1c1c1e", fontSize: 14, fontWeight: active ? 700 : 500,
+                border: active ? "2px solid #1c1c1e" : "1px solid #eceae6", whiteSpace: "nowrap",
+              }}
+            >
+              <BrandTile slug={slug} size={28} />
+              {b.name}
+            </a>
+          );
+        })}
+      </nav>
 
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 20, marginBottom: 4 }}>Limited-time deals, sorted by calories per dollar</h2>
-        <p style={{ color: "#9aa0a6", fontSize: 13, marginTop: 0 }}>
-          Combo calories are official ranges (they depend on your drink/side picks), so cal/$ is a range too - never collapsed into one number.
-          Deals without published nutrition show cal/$ as unknown instead of a guess.
+      {/* Deals first - the promos, up top */}
+      <section style={{ marginBottom: 28 }}>
+        <h2 style={{ fontSize: 20, margin: "0 0 2px" }}>Today's best deals</h2>
+        <p style={{ margin: "0 0 12px", color: "#6b6b70", fontSize: 13 }}>
+          Official promos, sorted by calories per dollar. Codes come from the restaurant's own ordering site with their published expiry.
         </p>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-          <thead>
-            <tr style={{ textAlign: "left", color: "#9aa0a6", borderBottom: "1px solid #30363d" }}>
-              <th style={{ padding: "6px 8px" }}>Deal</th>
-              <th style={{ padding: "6px 8px" }}>Restaurant</th>
-              <th style={{ padding: "6px 8px" }}>Price</th>
-              <th style={{ padding: "6px 8px" }}>Calories</th>
-              <th style={{ padding: "6px 8px" }}>cal/$</th>
-              <th style={{ padding: "6px 8px" }}>Limited-time evidence</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dealRows.map((d) => (
-              <tr key={d.key} style={{ borderBottom: "1px solid #21262d" }}>
-                <td style={{ padding: "8px" }}>{d.title}</td>
-                <td style={{ padding: "8px", color: "#9aa0a6" }}>{d.restaurant}</td>
-                <td style={{ padding: "8px" }}>{d.priceText}</td>
-                <td style={{ padding: "8px" }}>{d.calText}</td>
-                <td style={{ padding: "8px", fontWeight: d.calPerDollar !== null ? 700 : 400 }}>
-                  {d.calPerDollar !== null ? d.calPerDollar : <span style={{ color: "#9aa0a6" }}>unknown (nutrition not published)</span>}
-                </td>
-                <td style={{ padding: "8px", color: "#9aa0a6", fontSize: 12 }}>{d.evidence}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 6 }}>
+          {topDeals.map((d) => (
+            <div key={d.key} style={{ ...card, minWidth: 230, maxWidth: 230, padding: 14, display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <BrandTile slug={d.slug} size={30} />
+                <span style={{ fontSize: 12, color: "#6b6b70" }}>{BRANDS[d.slug]?.name ?? d.slug}</span>
+              </div>
+              <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.3 }}>{d.title}</div>
+              <div style={{ fontSize: 14, color: "#1c1c1e" }}>{d.priceText}</div>
+              <div style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 6 }}>
+                {d.calPerDollar ? (
+                  <span style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>{d.calPerDollar}</span>
+                ) : (
+                  <span style={{ background: "#f1efec", color: "#6b6b70", borderRadius: 999, padding: "3px 10px", fontSize: 12 }}>cal/$ unknown</span>
+                )}
+                <span style={{ fontSize: 11, color: "#9a9aa0" }}>{d.evidence}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section>
-        <h2 style={{ fontSize: 20, marginBottom: 4 }}>Official deals</h2>
-        <p style={{ color: "#9aa0a6", fontSize: 13, marginTop: 0 }}>
-          Listed by the restaurant's official ordering site. A code is shown only with its freshness evidence - last checked time and published expiry.
+      {/* Best value cards */}
+      <section style={{ marginBottom: 28 }}>
+        <h2 style={{ fontSize: 20, margin: "0 0 2px" }}>Best value right now</h2>
+        <p style={{ margin: "0 0 12px", color: "#6b6b70", fontSize: 13 }}>
+          Value Score V1: 55% protein/$, 35% calories/$, 10% price. Entrees only. Only items with known protein get a score - protein is never guessed.
         </p>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-          <thead>
-            <tr style={{ textAlign: "left", color: "#9aa0a6", borderBottom: "1px solid #30363d" }}>
-              <th style={{ padding: "6px 8px" }}>Deal</th>
-              <th style={{ padding: "6px 8px" }}>Restaurant</th>
-              <th style={{ padding: "6px 8px" }}>Code</th>
-              <th style={{ padding: "6px 8px" }}>Price</th>
-              <th style={{ padding: "6px 8px" }}>Expires</th>
-              <th style={{ padding: "6px 8px" }}>Listed by official source, checked</th>
-            </tr>
-          </thead>
-          <tbody>
-            {deals.map((d, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid #21262d" }}>
-                <td style={{ padding: "8px" }}>{d.title}</td>
-                <td style={{ padding: "8px", color: "#9aa0a6" }}>{d.restaurantName}</td>
-                <td style={{ padding: "8px", fontFamily: "monospace" }}>{d.promoCode ?? "-"}</td>
-                <td style={{ padding: "8px" }}>{d.price !== null ? `$${d.price.toFixed(2)}` : "-"}</td>
-                <td style={{ padding: "8px" }}>{d.expiresAt ? d.expiresAt.slice(0, 10) : "no expiry published"}</td>
-                <td style={{ padding: "8px", color: "#9aa0a6", fontSize: 12 }}>{d.lastVerified.slice(0, 16).replace("T", " ")} UTC</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          {byValue.map(({ s, row }, i) => {
+            const pl = priceLabel(row.pricingType);
+            return (
+              <div key={s.id} style={{ ...card, padding: 14, display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ fontSize: 15, fontWeight: 800, color: "#9a9aa0", width: 20, textAlign: "center" }}>{i + 1}</span>
+                <BrandTile slug={row.restaurantSlug} />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontWeight: 700, fontSize: 15 }}>{row.name}</div>
+                  <div style={{ fontSize: 13, color: "#6b6b70", marginTop: 2 }}>
+                    {row.calories !== null ? `${row.calories} cal` : "cal unknown"}
+                    {row.proteinG !== null ? ` · ${row.proteinG}g protein` : " · protein unknown"}
+                    {pl && row.pricingType !== "exact_store" && <span style={{ color: "#b7791f" }}> · {pl}</span>}
+                  </div>
+                </div>
+                <div style={{ textAlign: "right", flexShrink: 0 }}>
+                  <div style={{ fontWeight: 800, fontSize: 17 }}>${row.price.toFixed(2)}</div>
+                  <div style={{ background: "#e6f7ee", color: "#067647", borderRadius: 999, padding: "2px 10px", fontSize: 12, fontWeight: 700, marginTop: 3 }}>
+                    {s.valueScore!.toFixed(1)}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* All official codes */}
+      <section>
+        <h2 style={{ fontSize: 20, margin: "0 0 2px" }}>All official codes</h2>
+        <p style={{ margin: "0 0 12px", color: "#6b6b70", fontSize: 13 }}>
+          Listed by the restaurant's official ordering site. Shown only with freshness evidence.
+        </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          {deals.map((d, i) => {
+            const slug = Object.keys(BRANDS).find((k) => BRANDS[k]!.name === d.restaurantName) ?? "dominos";
+            return (
+              <div key={i} style={{ ...card, padding: "12px 14px", display: "flex", alignItems: "center", gap: 12 }}>
+                <BrandTile slug={slug} size={32} />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontWeight: 600, fontSize: 14 }}>{d.title}</div>
+                  <div style={{ fontSize: 12, color: "#9a9aa0", marginTop: 2 }}>
+                    listed by official source, checked {d.lastVerified.slice(0, 10)}
+                    {d.expiresAt ? ` · expires ${d.expiresAt.slice(0, 10)}` : " · no expiry published"}
+                  </div>
+                </div>
+                {d.promoCode && (
+                  <span style={{ fontFamily: "monospace", background: "#f1efec", borderRadius: 10, padding: "6px 10px", fontSize: 13, fontWeight: 700 }}>
+                    {d.promoCode}
+                  </span>
+                )}
+                {d.price !== null && <span style={{ fontWeight: 700, fontSize: 15 }}>${d.price.toFixed(2)}</span>}
+              </div>
+            );
+          })}
+        </div>
       </section>
     </main>
   );
