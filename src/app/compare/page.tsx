@@ -14,12 +14,12 @@ function metric(label: string, a: string, b: string, winner: "a" | "b" | "tie" |
   const style = (side: "a" | "b") => ({
     padding: "8px",
     fontWeight: winner === side ? 700 : 400,
-    color: winner === side ? "#3fb950" : "#e8eaed",
+    color: winner === side ? "#3fb950" : "#f5f2ec",
   });
   return (
-    <tr style={{ borderBottom: "1px solid #21262d" }}>
+    <tr style={{ borderBottom: "1px solid #26221c" }}>
       <td style={style("a")}>{a}</td>
-      <td style={{ padding: "8px", color: "#9aa0a6", textAlign: "center" }}>{label}</td>
+      <td style={{ padding: "8px", color: "#9c9488", textAlign: "center" }}>{label}</td>
       <td style={{ ...style("b"), textAlign: "right" }}>{b}</td>
     </tr>
   );
@@ -75,11 +75,11 @@ export default async function Compare({ searchParams }: { searchParams: Promise<
 
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "32px 20px" }}>
-      <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#58a6ff" }}>&larr; rankings</Link></p>
+      <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#ffa245" }}>&larr; rankings</Link></p>
       <h1 style={{ fontSize: 26 }}>Compare items</h1>
-      <form method="get" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 28, padding: 14, background: "#161b22", borderRadius: 8 }}>
+      <form method="get" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center", marginBottom: 28, padding: 14, background: "#1a1713", borderRadius: 8 }}>
         {select("a", aKey)}
-        <span style={{ color: "#9aa0a6" }}>vs</span>
+        <span style={{ color: "#9c9488" }}>vs</span>
         {select("b", bKey)}
         <button type="submit" style={{ padding: "4px 14px" }}>Compare</button>
       </form>
@@ -87,10 +87,10 @@ export default async function Compare({ searchParams }: { searchParams: Promise<
       {a && b && sa && sb ? (
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 15 }}>
           <thead>
-            <tr style={{ borderBottom: "2px solid #30363d", textAlign: "left" }}>
-              <th style={{ padding: "8px", width: "40%" }}>{a.name}<div style={{ color: "#9aa0a6", fontSize: 12, fontWeight: 400 }}>{a.restaurantName}</div></th>
+            <tr style={{ borderBottom: "2px solid #2a251f", textAlign: "left" }}>
+              <th style={{ padding: "8px", width: "40%" }}>{a.name}<div style={{ color: "#9c9488", fontSize: 12, fontWeight: 400 }}>{a.restaurantName}</div></th>
               <th style={{ padding: "8px", width: "20%" }}></th>
-              <th style={{ padding: "8px", width: "40%", textAlign: "right" }}>{b.name}<div style={{ color: "#9aa0a6", fontSize: 12, fontWeight: 400 }}>{b.restaurantName}</div></th>
+              <th style={{ padding: "8px", width: "40%", textAlign: "right" }}>{b.name}<div style={{ color: "#9c9488", fontSize: 12, fontWeight: 400 }}>{b.restaurantName}</div></th>
             </tr>
           </thead>
           <tbody>
@@ -103,7 +103,7 @@ export default async function Compare({ searchParams }: { searchParams: Promise<
           </tbody>
         </table>
       ) : (
-        <p style={{ color: "#9aa0a6" }}>Pick two items to compare. Prices keep their honesty labels; unknown nutrition is shown as unknown, never as 0.</p>
+        <p style={{ color: "#9c9488" }}>Pick two items to compare. Prices keep their honesty labels; unknown nutrition is shown as unknown, never as 0.</p>
       )}
     </main>
   );

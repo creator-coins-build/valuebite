@@ -15,13 +15,13 @@ export default async function Admin() {
     const cell = { padding: "8px", fontSize: 13 } as const;
     return (
       <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 20px" }}>
-        <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#58a6ff" }}>&larr; rankings</Link></p>
+        <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#ffa245" }}>&larr; rankings</Link></p>
         <h1 style={{ fontSize: 26 }}>Data admin</h1>
         <p style={{ color: stale ? "#d29922" : "#3fb950", fontSize: 14 }}>
           Snapshot mode (hosted): {snap.rows.length} items, {snap.deals.length} deals, generated {snap.generatedAt}
           {stale ? " - stale (>48h)" : " - fresh"}.
         </p>
-        <p style={{ fontSize: 13, color: "#9aa0a6" }}>Refresh runs are tracked in the build pipeline, not on the hosted instance.</p>
+        <p style={{ fontSize: 13, color: "#9c9488" }}>Refresh runs are tracked in the build pipeline, not on the hosted instance.</p>
       </main>
     );
   }
@@ -47,12 +47,12 @@ export default async function Admin() {
   await client.close();
 
   const cell = { padding: "8px", fontSize: 13 } as const;
-  const head = { padding: "6px 8px", textAlign: "left" as const, color: "#9aa0a6", borderBottom: "1px solid #30363d" };
+  const head = { padding: "6px 8px", textAlign: "left" as const, color: "#9c9488", borderBottom: "1px solid #2a251f" };
   const statusColor = (s: string) => (s === "success" ? "#3fb950" : s === "quarantined" ? "#d29922" : "#f85149");
 
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 20px" }}>
-      <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#58a6ff" }}>&larr; rankings</Link></p>
+      <p style={{ fontSize: 13 }}><Link href="/" style={{ color: "#ffa245" }}>&larr; rankings</Link></p>
       <h1 style={{ fontSize: 26 }}>Data admin</h1>
 
       <h2 style={{ fontSize: 18 }}>Source freshness</h2>
@@ -63,7 +63,7 @@ export default async function Admin() {
             const ageH = (Date.now() - new Date(f.newest_price).getTime()) / 3.6e6;
             const stale = ageH > STALE_HOURS;
             return (
-              <tr key={f.slug} style={{ borderBottom: "1px solid #21262d" }}>
+              <tr key={f.slug} style={{ borderBottom: "1px solid #26221c" }}>
                 <td style={cell}>{f.name}</td>
                 <td style={cell}>{f.price_rows}</td>
                 <td style={cell}>{new Date(f.newest_price).toISOString().slice(0, 16).replace("T", " ")} UTC</td>
@@ -73,7 +73,7 @@ export default async function Admin() {
             );
           })}
           {dealFreshness.map((d) => (
-            <tr key={d.name} style={{ borderBottom: "1px solid #21262d" }}>
+            <tr key={d.name} style={{ borderBottom: "1px solid #26221c" }}>
               <td style={cell}>{d.name} deals</td>
               <td style={cell}>{d.deals}</td>
               <td style={cell}>checked {new Date(d.newest_check).toISOString().slice(0, 16).replace("T", " ")} UTC</td>
@@ -88,13 +88,13 @@ export default async function Admin() {
         <thead><tr><th style={head}>Adapter</th><th style={head}>Kind</th><th style={head}>Status</th><th style={head}>Items</th><th style={head}>Started</th><th style={head}>Anomalies / error</th></tr></thead>
         <tbody>
           {runs.map((r, i) => (
-            <tr key={i} style={{ borderBottom: "1px solid #21262d" }}>
+            <tr key={i} style={{ borderBottom: "1px solid #26221c" }}>
               <td style={cell}>{r.adapter}</td>
               <td style={cell}>{r.kind}</td>
               <td style={{ ...cell, color: statusColor(r.status) }}>{r.status}</td>
               <td style={cell}>{r.items_updated}</td>
               <td style={cell}>{new Date(r.started_at).toISOString().slice(0, 16).replace("T", " ")}</td>
-              <td style={{ ...cell, color: "#9aa0a6" }}>{r.error ?? (r.anomalies ? JSON.stringify(r.anomalies) : "")}</td>
+              <td style={{ ...cell, color: "#9c9488" }}>{r.error ?? (r.anomalies ? JSON.stringify(r.anomalies) : "")}</td>
             </tr>
           ))}
         </tbody>
