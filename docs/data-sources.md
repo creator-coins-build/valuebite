@@ -76,3 +76,16 @@ records share the same exact name, use the most recently updated record.
 The selected source IDs, source update times and query URL are preserved in
 `data/official-images.json` and `docs/research/bk-photos-2026-11-15.json`.
 Images use only this project's official asset path, not arbitrary Sanity images.
+
+## Photo coverage ceiling (2026-11-15)
+
+- Taco Bell: official per-item photos from the store menu feed (all rows with feed images).
+- Burger King: 19/19 rows via exact-name match to BK's official Sanity menu images.
+- Chick-fil-A: 7 rows. The official menu pages publish one card per base item
+  (e.g. "Cobb Salad", "8 ct Nuggets"); our rows are cheese/count/protein
+  variants the site does not photograph separately. No further honest matches
+  exist on the current site.
+- Chipotle: no photos. Our rows are composite builds ("Chicken Bowl");
+  chipotle.com publishes no per-build photos (public menu page 404s; ordering
+  API requires a subscription key - not bypassed). Icon fallback remains.
+- Domino's: unchanged (no official item photos harvested yet).
