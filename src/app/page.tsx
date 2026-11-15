@@ -48,7 +48,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   }
   const digitalNames = new Set(deals.filter(d => d.redemption === "online" || d.appOnly).map(d => d.title));
   dealViews.sort((x, y) => Number(digitalNames.has(y.title)) - Number(digitalNames.has(x.title)) || y.sortCal - x.sortCal || x.title.localeCompare(y.title));
-  const heroDeals = dealViews.filter(d => digitalNames.has(d.title)).slice(0, 5);
+  // Hero-worthy = food, not drink-only packs (a 0-cal floor means beverages).
+  const heroDeals = dealViews.filter(d => digitalNames.has(d.title) && d.calPerDollar !== "drinks").slice(0, 5);
 
   // App/online-exclusive deals from official sources (currently Taco Bell's
   // "Member exclusive" + "Online exclusives" menu categories).
