@@ -39,13 +39,20 @@ export default async function TopPage({ searchParams }: { searchParams: Promise<
         {ranked.map(({ row, score }, i) => (
           <div key={`${row.restaurantSlug}:${row.productId}`} style={{ ...card, padding: 12, display: "flex", alignItems: "center", gap: 12 }}>
             <span style={{ fontSize: 14, fontWeight: 800, color: "#c9c0b4", width: 18, textAlign: "center" }}>{i + 1}</span>
-            {row.imageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={imgSrc(row.imageUrl)} alt={row.name} width={64} height={64} loading="lazy"
-                style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 18, flexShrink: 0, background: "#f7f4ef" }} />
-            ) : (
-              <BrandIcon slug={row.restaurantSlug} size={64} />
-            )}
+            <div style={{ position: "relative", flexShrink: 0 }}>
+              {row.imageUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={imgSrc(row.imageUrl)} alt={row.name} width={64} height={64} loading="lazy"
+                  style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 18, display: "block", background: "#f7f4ef" }} />
+              ) : (
+                <BrandIcon slug={row.restaurantSlug} size={64} />
+              )}
+              {row.imageUrl && (
+                <div style={{ position: "absolute", bottom: -4, right: -4, borderRadius: 6, overflow: "hidden", boxShadow: "0 1px 4px rgba(0,0,0,0.25)" }}>
+                  <BrandIcon slug={row.restaurantSlug} size={20} />
+                </div>
+              )}
+            </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.25, color: INK }}>{row.name}</div>
               <div style={{ fontSize: 13, color: MUTED, marginTop: 3 }}>
