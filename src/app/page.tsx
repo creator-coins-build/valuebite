@@ -1,3 +1,4 @@
+import { DigitalOffers } from "../components/DigitalOffers";
 import { entrees } from "../modules/scoring/rank";
 import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
 import { BRANDS, BrandIcon, brandSlugFor, imgSrc, wideSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
@@ -45,8 +46,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       });
     }
   }
-  dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
-  const heroDeals = dealViews.slice(0, 5);
+  const digitalNames = new Set(deals.filter(d => d.redemption === "online" || d.appOnly).map(d => d.title));
+  dealViews.sort((x, y) => Number(digitalNames.has(y.title)) - Number(digitalNames.has(x.title)) || y.sortCal - x.sortCal || x.title.localeCompare(y.title));
+  const heroDeals = dealViews.filter(d => digitalNames.has(d.title)).slice(0, 5);
+
+  // App/online-exclusive deals from official sources (currently Taco Bell's
+  // "Member exclusive" + "Online exclusives" menu categories).
+  const appDeals = deals.filter(d => (d.redemption === "app" || d.redemption === "online") && Date.now() - Date.parse(d.lastVerified) < 48 * 3600_000 && (!filters.restaurants?.length || filters.restaurants.includes(brandSlugFor(d.restaurantName))));
 
   // Crowd favorites: photo'd ENTREES with the most calories per dollar (sauces/packets excluded).
   const entreeKeySet = new Set(entrees(rows).map((r) => `${r.restaurantSlug}:${r.productId}`));
@@ -98,7 +104,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
 
       {/* Hero deals - Popeyes-style big photo cards */}
       <section style={{ marginBottom: 26 }}>
-        <h2 style={{ fontSize: 22, margin: "0 0 12px", letterSpacing: -0.5, fontWeight: 800 }}>Today's best deals</h2>
+        <h2 style={{ fontSize: 22, margin: "0 0 12px", letterSpacing: -0.5, fontWeight: 800 }}>App & online picks</h2>
         <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 6, scrollSnapType: "x mandatory" }}>
           {heroDeals.map((d) => (
             <div key={d.key} style={{ ...card, minWidth: "86%", overflow: "hidden", position: "relative", scrollSnapAlign: "center", padding: 0 }}>
@@ -123,16 +129,21 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
               <div style={{ padding: "12px 14px 14px" }}>
                 <div style={{ fontWeight: 800, fontSize: 16.5, lineHeight: 1.25, color: INK, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{d.title}</div>
                 <div style={{ fontSize: 13, color: MUTED, marginTop: 3 }}>{BRANDS[d.slug]?.name ?? d.slug}{d.price === null ? ` · ${d.priceText}` : ""}</div>
+                {digitalNames.has(d.title) && <span style={{ display: "inline-block", background: "#191512", color: "white", borderRadius: 999, padding: "3px 9px", fontSize: 11, marginTop: 7, marginRight: 6 }}>App + online</span>}
                 {d.calPerDollar && (
                   <span style={{ display: "inline-block", marginTop: 7, background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "3px 11px", fontSize: 12.5, fontWeight: 700 }}>
                     {d.calPerDollar}
                   </span>
                 )}
+                {digitalNames.has(d.title) && <a href={BRANDS[d.slug]!.appStoreUrl} target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: 12, borderRadius: 999, background: ORANGE, color: "white", padding: "10px 16px", textAlign: "center", textDecoration: "none", fontWeight: 900, fontSize: 14 }}>Get Deal</a>}
+                {digitalNames.has(d.title) && <details style={{ marginTop: 7, color: MUTED, fontSize: 11 }}><summary>Offer details</summary><p>Available in the app or online at participating locations. Get Deal opens the iOS App Store. Price shown is for our selected store, before tax.</p><a href={deals.find(x => x.title === d.title)?.sourceUrl} style={{ color: MUTED }}>Official source</a></details>}
               </div>
             </div>
           ))}
         </div>
       </section>
+
+      <DigitalOffers restaurant={activeRestaurant} />
 
       {/* Crowd favorites - 2-col grid with circular photos */}
       <section style={{ marginBottom: 26 }}>

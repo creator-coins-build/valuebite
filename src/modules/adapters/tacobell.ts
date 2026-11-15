@@ -46,3 +46,32 @@ export const TacoBellAdapter: RestaurantAdapter = {
     return out.filter(i => (seen.has(i.productId) ? false : (seen.add(i.productId), true)));
   },
 };
+
+export interface TbExclusive {
+  productId: string; name: string; price: number | null;
+  /** Member-exclusive does not mean app-only. Both current categories are digital offers. */
+  kind: "app" | "online";
+}
+
+/**
+ * Taco Bell's own menu JSON marks app/online-only products in two dedicated
+ * categories ("Member exclusive", "Online exclusives") - an official source
+ * for digital-exclusive offers, refreshed with the menu.
+ */
+export function exclusiveDeals(raw: any): TbExclusive[] {
+  const out: TbExclusive[] = [];
+  for (const cat of raw?.menuProductCategories ?? []) {
+    const kind = ["member-exclusive", "online-exclusives"].includes(cat?.code) ? "online" as const : null;
+    if (!kind) continue;
+    for (const p of cat.products ?? []) {
+      if (p.isAvailableInStore === false) continue;
+      out.push({
+        productId: String(p.code),
+        name: String(p.name),
+        price: typeof p.price?.value === "number" ? p.price.value : null,
+        kind,
+      });
+    }
+  }
+  return out;
+}

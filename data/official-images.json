@@ -1,0 +1,44 @@
+{
+  "chick-fil-a:39841": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/Jul19_CFASandwich_desktop800.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381802+00:00",
+    "sourceName": "Chick-fil-A\u00ae Chicken Sandwich"
+  },
+  "chick-fil-a:10296": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/CFASpicySandwich_800.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381845+00:00",
+    "sourceName": "Spicy Chicken Sandwich"
+  },
+  "chick-fil-a:10318": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/nuggets_8ct_PDP.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381858+00:00",
+    "sourceName": "Chick-fil-A\u00ae Nuggets"
+  },
+  "chick-fil-a:10324": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/grilledNuggets_8ct_PDP_Desk.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381867+00:00",
+    "sourceName": "Grilled Nuggets"
+  },
+  "chick-fil-a:10335": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/wrap_desk-1.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381937+00:00",
+    "sourceName": "Chick-fil-A Cool Wrap\u00ae"
+  },
+  "chick-fil-a:10331": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/strips_3ct_PDP_Desk.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381961+00:00",
+    "sourceName": "Chick-fil-A Chick-n-Strips\u00ae"
+  },
+  "chick-fil-a:10305": {
+    "imageUrl": "https://www.chick-fil-a.com/wp-content/uploads/sites/2/2025/06/0003s_0009_Final__0026_CFA_PDP_Grilled-Deluxe-Sandwich_1085.png",
+    "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
+    "checkedAt": "2026-11-15T17:02:39.381972+00:00",
+    "sourceName": "Grilled Chicken Sandwich"
+  }
+}

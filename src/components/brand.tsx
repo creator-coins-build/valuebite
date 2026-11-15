@@ -1,12 +1,12 @@
 import React from "react";
 
 /** Real app icons, served locally from /public/icons (official App Store artwork). */
-export const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: string }> = {
-  "taco-bell": { initials: "TB", bg: "#702082", fg: "#fff", name: "Taco Bell" },
-  dominos: { initials: "D", bg: "#006491", fg: "#fff", name: "Domino's" },
-  "chick-fil-a": { initials: "CFA", bg: "#e51636", fg: "#fff", name: "Chick-fil-A" },
-  "burger-king": { initials: "BK", bg: "#f5ebdc", fg: "#d62300", name: "Burger King" },
-  chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle" },
+export const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: string; appStoreUrl: string }> = {
+  "taco-bell": { initials: "TB", bg: "#702082", fg: "#fff", name: "Taco Bell", appStoreUrl: "https://apps.apple.com/us/app/taco-bell-fast-food-delivery/id497387361" },
+  dominos: { initials: "D", bg: "#006491", fg: "#fff", name: "Domino's", appStoreUrl: "https://apps.apple.com/us/app/dominos-pizza-usa/id436491861" },
+  "chick-fil-a": { initials: "CFA", bg: "#e51636", fg: "#fff", name: "Chick-fil-A", appStoreUrl: "https://apps.apple.com/us/app/chick-fil-a/id488818252" },
+  "burger-king": { initials: "BK", bg: "#f5ebdc", fg: "#d62300", name: "Burger King", appStoreUrl: "https://apps.apple.com/us/app/burger-king-app/id638323895" },
+  chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle", appStoreUrl: "https://apps.apple.com/us/app/chipotle/id327228455" },
 };
 
 export function brandSlugFor(restaurantName: string): string {

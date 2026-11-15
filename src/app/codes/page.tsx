@@ -1,3 +1,4 @@
+import { DigitalOffers } from "../../components/DigitalOffers";
 import { openDb } from "../../modules/db/client";
 import { activeDeals } from "../../modules/db/queries";
 import { readSnapshot } from "../../modules/db/snapshot";
@@ -28,6 +29,8 @@ export default async function CodesPage() {
         </p>
       </header>
 
+      <DigitalOffers />
+      <h2 style={{ fontSize: 22 }}>Official codes & digital exclusives</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
         {deals.map((d, i) => {
           const slug = brandSlugFor(d.restaurantName);
@@ -40,7 +43,18 @@ export default async function CodesPage() {
                   {BRANDS[slug]?.name ?? d.restaurantName}
                   {d.expiresAt ? ` · expires ${d.expiresAt.slice(0, 10)}` : " · no expiry published"}
                 </div>
+                {d.redemption && (
+                  <span style={{ display: "inline-block", marginTop: 6, background: "#111", color: "#fff", borderRadius: 999, padding: "2px 10px", fontSize: 10.5, fontWeight: 800, letterSpacing: 0.4, textTransform: "uppercase" }}>
+                    {d.redemption === "app" ? "In app only" : "App + online"}
+                  </span>
+                )}
               </div>
+              {d.redemption && BRANDS[slug]?.appStoreUrl ? (
+                <a href={BRANDS[slug].appStoreUrl} target="_blank" rel="noopener noreferrer"
+                  style={{ background: ORANGE, color: "#fff", borderRadius: 999, padding: "9px 16px", fontSize: 13.5, fontWeight: 800, textDecoration: "none", whiteSpace: "nowrap" }}>
+                  Get Deal
+                </a>
+              ) : null}
               {d.promoCode && (
                 <span style={{ fontFamily: "monospace", background: "#f1ece4", color: "#e85d10", borderRadius: 10, padding: "8px 12px", fontSize: 14, fontWeight: 700, letterSpacing: 0.5 }}>
                   {d.promoCode}

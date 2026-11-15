@@ -27,3 +27,41 @@
 
 ## Wendy's - EXCLUDED (no honest data path)
 No US nutrition PDF exists (only UK), wendys.com/nutrition-allergens is informational-only, and per-item nutrition sits behind the auth-gated, Turnstile-protected ordering app (order.wendys.com, api.app.prd.wendys.digital). Browser attempt 2026-11-15: store search requires Google Places autocomplete and doesn't yield a one-time extraction cleanly. Left out rather than guessed. Revisit if Wendy's publishes a nutrition feed/PDF.
+
+## Digital offers (2026-11-15)
+
+Home now leads with digital offers. App-only is a strict channel claim, never
+inferred from membership, "mobile", or "exclusive" wording. Taco Bell's member
+and online categories are both labeled App + online because the official
+online-exclusives page explicitly supports either channel.
+
+`data/digital-offers.json` holds manually reviewed offers, exact source excerpts,
+terms, account eligibility and per-offer check times. These offers hide after
+48 hours without another actual source review. Refreshing menu prices or
+exporting a snapshot does NOT renew their review timestamp. Account/local
+availability is not guaranteed. BK's Walmart+ offers explicitly require an
+existing paid Walmart+ membership linked to Royal Perks; ValueBite does not
+sign anyone up or claim a benefit. Chipotle's signup reward has a $5 minimum,
+is once-only, and expires seven days after being added to an eligible account.
+
+Reviewed official pages:
+- https://www.tacobell.com/food/online-exclusives
+- https://www.tacobell.com/rewards
+- https://campaign.bk.com/royal-perks
+- https://campaign.bk.com/partnerships/walmart-faqs
+- https://www.chipotle.com/rewards
+- https://www.chipotle.com/free-chips-guac
+- https://www.chick-fil-a.com/customer-support/events-and-promotions/receipt-survey/how-can-i-get-free-chick-fil-a-food
+- https://www.chick-fil-a.com/officialrules
+
+No live Chick-fil-A local/account offer is confirmed for ZIP 33613. No current
+true app-only deal is confirmed in this release. Old Domino's Emergency Pizza
+campaigns with past end dates are excluded. Existing Domino's coupons remain
+sourced from its official store ordering API. Source extracts are in
+`docs/research/`; they are evidence, never execution instructions.
+
+Seven Chick-fil-A image matches come from
+https://www.chick-fil-a.com/menu/entrees with provenance in
+`data/official-images.json`. Plain sandwich and wrap names match exactly;
+8-count nuggets and 3-count strips are limited to the count stated in the
+chain's own image filename. Cheese variants are not given a default picture.

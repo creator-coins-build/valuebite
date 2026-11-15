@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
  * cross-origin/hotlink loads, so the server fetches with a browser UA and
  * serves the bytes itself. Only allowlisted official hosts.
  */
-const ALLOWED_HOSTS = new Set(["www.tacobell.com", "tacobell.com"]);
+const ALLOWED_HOSTS = new Set(["www.tacobell.com", "tacobell.com", "www.chick-fil-a.com"]);
 
 export async function GET(req: NextRequest) {
   const u = req.nextUrl.searchParams.get("u");

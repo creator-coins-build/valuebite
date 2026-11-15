@@ -6,9 +6,9 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { openDb } from "../src/modules/db/client";
-import { persistRun, persistDeals, recordRefreshRun } from "../src/modules/ingestion/persist";
+import { persistRun, persistDeals, persistExclusiveDeals, recordRefreshRun } from "../src/modules/ingestion/persist";
 import { validateRun } from "../src/modules/ingestion/validate";
-import { TacoBellAdapter } from "../src/modules/adapters/tacobell";
+import { TacoBellAdapter, exclusiveDeals } from "../src/modules/adapters/tacobell";
 import { DominosAdapter, normalizeCoupons } from "../src/modules/adapters/dominos";
 import { parseNutritionHtml } from "../src/modules/adapters/chickfila";
 import { toNormalizedItems } from "../src/modules/adapters/chickfila-prices";
@@ -26,10 +26,12 @@ async function main() {
 
   // Taco Bell - store 036133, 2031 E Bearss Ave
   const tbCtx = { storeId: "036133", zip: "33613", fetchedAt: NOW, sourceUrl: "https://www.tacobell.com/tacobellwebservices/v4/tacobell/products/menu/036133" };
-  const tbV = validateRun(TacoBellAdapter.normalizeItems(fx("tacobell-036133-menu.json"), tbCtx));
+  const tbRaw = fx("tacobell-036133-menu.json");
+  const tbV = validateRun(TacoBellAdapter.normalizeItems(tbRaw, tbCtx));
   const tbR = await persistRun(db, { restaurantSlug: "taco-bell", storeId: "036133", zip: "33613", address: "2031 E Bearss Ave, Tampa, FL 33613", items: tbV.accepted });
+  const tbX = await persistExclusiveDeals(db, { restaurantSlug: "taco-bell", exclusives: exclusiveDeals(tbRaw), sourceUrl: tbCtx.sourceUrl, lastChecked: NOW });
   await recordRefreshRun(db, { adapter: "taco-bell", kind: "menu", status: tbV.anomalies.length ? "quarantined" : "success", startedAt, finishedAt: NOW, itemsUpdated: tbR.menuItemsUpserted, anomalies: tbV.anomalies });
-  console.log(`taco-bell: ${tbR.menuItemsUpserted} items`);
+  console.log(`taco-bell: ${tbR.menuItemsUpserted} items, ${tbX} exclusive deals`);
 
   // Domino's - store 3813, 14955 N Florida Ave + coupons
   const dmCtx = { storeId: "3813", zip: "33613", fetchedAt: NOW, sourceUrl: "https://order.dominos.com/power/store/3813/menu?lang=en&structured=true" };

@@ -2,6 +2,7 @@ import { eq, and } from "drizzle-orm";
 import type { Db } from "../db/client";
 import { restaurants, restaurantLocations, menuItems, nutritionRecords, priceRecords, dataRefreshRuns, deals } from "../db/schema";
 import type { NormalizedItem } from "../adapters/types";
+import type { TbExclusive } from "../adapters/tacobell";
 
 /**
  * Persist a validated adapter run.
@@ -158,6 +159,49 @@ export async function persistDeals(
   // deals no longer listed by the official source are retired, never kept active
   for (const d of existing) {
     if (d.promoCode && !seen.has(d.promoCode) && d.active) {
+      await db.update(deals).set({ active: false }).where(eq(deals.id, d.id));
+    }
+  }
+  return n;
+}
+
+/**
+ * Persist official app/online-exclusive products as deals. Keyed by
+ * (restaurant, product title) among code-free deals; appOnly + redemption
+ * label the redemption channel. Products that leave the official exclusive
+ * categories are retired, never kept active.
+ */
+export async function persistExclusiveDeals(
+  db: Db,
+  run: { restaurantSlug: string; exclusives: TbExclusive[]; sourceUrl: string; lastChecked: Date },
+): Promise<number> {
+  const restaurantId = await ensureRestaurant(db, run.restaurantSlug);
+  const existing = await db.select().from(deals).where(eq(deals.restaurantId, restaurantId));
+  const mine = existing.filter((d) => d.promoCode === null);
+  const byTitle = new Map(mine.map((d) => [d.title, d]));
+  const seen = new Set<string>();
+  let n = 0;
+  for (const x of run.exclusives) {
+    seen.add(x.name);
+    const cur = byTitle.get(x.name);
+    const fields = {
+      price: x.price === null ? null : String(x.price),
+      appOnly: x.kind === "app",
+      redemption: x.kind, // app | online
+      description: x.kind === "app" ? "Exclusive to app / rewards members" : "Online-order exclusive",
+      sourceUrl: run.sourceUrl,
+      lastVerified: run.lastChecked,
+      active: true,
+    };
+    if (cur) {
+      await db.update(deals).set(fields).where(eq(deals.id, cur.id));
+    } else {
+      await db.insert(deals).values({ restaurantId, title: x.name, promoCode: null, ...fields });
+    }
+    n++;
+  }
+  for (const d of mine) {
+    if (!seen.has(d.title) && d.active) {
       await db.update(deals).set({ active: false }).where(eq(deals.id, d.id));
     }
   }

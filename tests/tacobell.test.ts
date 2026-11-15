@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
-import { TacoBellAdapter } from "@/modules/adapters/tacobell";
+import { TacoBellAdapter, exclusiveDeals } from "@/modules/adapters/tacobell";
 import { validateRun } from "@/modules/ingestion/validate";
 import { scorePopulation, rank } from "@/modules/scoring/engine";
 
@@ -30,5 +30,18 @@ describe("taco bell adapter (real captured fixture)", () => {
     const doubled = v.accepted.map(i => ({ ...i, price: i.price * 2 }));
     expect(validateRun(doubled, v.accepted).quarantine).toBe(true);
     expect(validateRun(v.accepted.map(i => ({ ...i, price: 0 }))).quarantine).toBe(true);
+  });
+});
+
+
+describe("app/online exclusives (official categories)", () => {
+  it("extracts member-exclusive and online-exclusive products only", () => {
+    const x = exclusiveDeals(raw);
+    expect(x.length).toBeGreaterThan(0);
+    expect(x.every(e => e.kind === "online")).toBe(true); // membership alone never proves app-only
+    expect(exclusiveDeals({menuProductCategories:[{code:"member-exclusive",products:[{code:"x", name:"Unavailable",isAvailableInStore:false}]}]})).toHaveLength(0);
+    // no duplicates from other categories leak in
+    const names = new Set(x.map(e => e.name));
+    expect(names.size).toBe(x.length);
   });
 });

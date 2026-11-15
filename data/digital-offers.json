@@ -1,0 +1,67 @@
+{
+  "reviewedAt": "2026-11-15T17:02:08.709193+00:00",
+  "offers": [
+    {
+      "checkedAt": "2026-11-15T17:02:08.709193+00:00",
+      "expiresAt": null,
+      "appOnly": false,
+      "restaurantSlug": "burger-king",
+      "sourceUrl": "https://campaign.bk.com/partnerships/walmart-faqs",
+      "channel": "App + online",
+      "eligibility": "Walmart+ membership + linked Royal Perks account required",
+      "id": "bk-walmart-25",
+      "title": "25% off your digital order",
+      "terms": "Once daily at participating U.S. locations. Activate in Offers first. Before tax and fees; not combinable with other offers or discounted meals. Excludes AK, HI and U.S. territories. Delivery fees apply.",
+      "evidence": "25% off your digital order total"
+    },
+    {
+      "checkedAt": "2026-11-15T17:02:08.709193+00:00",
+      "expiresAt": null,
+      "appOnly": false,
+      "restaurantSlug": "burger-king",
+      "sourceUrl": "https://campaign.bk.com/partnerships/walmart-faqs",
+      "channel": "App + online",
+      "eligibility": "Walmart+ membership + linked Royal Perks account required",
+      "id": "bk-walmart-whopper",
+      "title": "Free Whopper with a purchase",
+      "terms": "Once per calendar quarter at participating U.S. locations. Activate in Offers first. Tax, delivery and modifications extra. Not combinable; excludes AK, HI and U.S. territories.",
+      "evidence": "Free Whopper\u00ae sandwich with any digital purchase once per calendar quarter"
+    },
+    {
+      "id": "chipotle-signup",
+      "title": "Free chips & guac with $5+ purchase",
+      "restaurantSlug": "chipotle",
+      "checkedAt": "2026-11-15T17:02:08.709193+00:00",
+      "expiresAt": null,
+      "appOnly": false,
+      "channel": "Rewards offer",
+      "eligibility": "Eligible new Rewards members; digital reward must be in your account",
+      "terms": "One-time signup reward; use within 7 days after it is added. $5 minimum before tax and tip. Order Chips & Guacamole as a complete side. Participating locations; not combinable or valid on third-party delivery. Also redeemable in restaurant.",
+      "sourceUrl": "https://www.chipotle.com/free-chips-guac",
+      "evidence": "Eligible members receive one free topping or regular side of guac and one regular side of chips with a purchase of $5.00 or more",
+      "discoveryUrl": "https://www.chipotle.com/rewards"
+    }
+  ],
+  "coverage": [
+    {
+      "slug": "taco-bell",
+      "status": "Digital exclusives verified for the selected store."
+    },
+    {
+      "slug": "dominos",
+      "status": "Official ordering-feed coupons available. No current app-only offer confirmed."
+    },
+    {
+      "slug": "chick-fil-a",
+      "status": "Local and account-targeted app offers vary. No live offer confirmed for 33613."
+    },
+    {
+      "slug": "burger-king",
+      "status": "Walmart+ digital offers verified; membership required."
+    },
+    {
+      "slug": "chipotle",
+      "status": "Conditional new-member reward verified; not app-only."
+    }
+  ]
+}

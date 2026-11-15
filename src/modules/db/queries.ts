@@ -1,3 +1,4 @@
+import officialImages from "../../../data/official-images.json";
 import { sql } from "drizzle-orm";
 import type { Db } from "./client";
 
@@ -53,7 +54,7 @@ export async function rankableRows(db: Db, zip: string): Promise<RankableRow[]> 
     caloriesMin: r.calories_min,
     caloriesMax: r.calories_max,
     proteinG: r.protein_g,
-    imageUrl: r.image_url ?? null,
+    imageUrl: r.image_url ?? (officialImages as Record<string, { imageUrl: string }>)[`${r.restaurant_slug}:${r.product_id}`]?.imageUrl ?? null,
     priceSourceUrl: r.price_source_url,
     nutritionSourceUrl: r.nutrition_source_url,
     fetchedAt: r.fetched_at,
@@ -68,12 +69,15 @@ export interface DealRow {
   expiresAt: string | null;
   lastVerified: string;
   sourceUrl: string;
+  appOnly: boolean;
+  /** Redemption channel label: "app" | "online" | null (null = ordinary coupon). */
+  redemption: string | null;
 }
 
 export async function activeDeals(db: Db): Promise<DealRow[]> {
   const res = await db.execute(sql`
     SELECT r.name AS restaurant_name, d.title, d.price::float AS price, d.promo_code,
-           d.expires_at, d.last_verified, d.source_url
+           d.expires_at, d.last_verified, d.source_url, d.app_only, d.redemption
     FROM deals d JOIN restaurants r ON r.id = d.restaurant_id
     WHERE d.active AND (d.expires_at IS NULL OR d.expires_at > now())
     ORDER BY d.expires_at ASC NULLS LAST
@@ -86,5 +90,7 @@ export async function activeDeals(db: Db): Promise<DealRow[]> {
     expiresAt: r.expires_at ? new Date(r.expires_at).toISOString() : null,
     lastVerified: new Date(r.last_verified).toISOString(),
     sourceUrl: r.source_url,
+    appOnly: Boolean(r.app_only),
+    redemption: r.redemption ?? null,
   }));
 }

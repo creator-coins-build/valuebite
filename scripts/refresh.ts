@@ -9,9 +9,9 @@
  * Usage: npx tsx scripts/refresh.ts [zip]
  */
 import { openDb } from "../src/modules/db/client";
-import { persistRun, persistDeals, recordRefreshRun } from "../src/modules/ingestion/persist";
+import { persistRun, persistDeals, persistExclusiveDeals, recordRefreshRun } from "../src/modules/ingestion/persist";
 import { validateRun } from "../src/modules/ingestion/validate";
-import { TacoBellAdapter } from "../src/modules/adapters/tacobell";
+import { TacoBellAdapter, exclusiveDeals } from "../src/modules/adapters/tacobell";
 import { DominosAdapter, normalizeCoupons } from "../src/modules/adapters/dominos";
 import { resolveStores } from "../src/modules/location/resolve";
 
@@ -29,13 +29,15 @@ async function main() {
   if (tbStore) {
     try {
       const ctx = { storeId: tbStore.storeId, zip: ZIP, fetchedAt: new Date(), sourceUrl: `https://www.tacobell.com/tacobellwebservices/v4/tacobell/products/menu/${tbStore.storeId}` };
-      const v = validateRun(TacoBellAdapter.normalizeItems(await TacoBellAdapter.fetchMenu({ storeId: tbStore.storeId }), ctx));
-      let updated = 0;
+      const raw = await TacoBellAdapter.fetchMenu({ storeId: tbStore.storeId });
+      const v = validateRun(TacoBellAdapter.normalizeItems(raw, ctx));
+      let updated = 0, xDeals = 0;
       if (!v.quarantine) {
         updated = (await persistRun(db, { restaurantSlug: "taco-bell", storeId: tbStore.storeId, zip: ZIP, address: tbStore.address, items: v.accepted })).menuItemsUpserted;
+        xDeals = await persistExclusiveDeals(db, { restaurantSlug: "taco-bell", exclusives: exclusiveDeals(raw), sourceUrl: ctx.sourceUrl, lastChecked: ctx.fetchedAt });
       }
       await recordRefreshRun(db, { adapter: "taco-bell", kind: "menu", status: v.quarantine ? "quarantined" : "success", startedAt, finishedAt: new Date(), itemsUpdated: updated, anomalies: v.anomalies });
-      console.log(`taco-bell: ${updated} items${v.quarantine ? " (QUARANTINED: " + v.anomalies.join(",") + ")" : ""}`);
+      console.log(`taco-bell: ${updated} items, ${xDeals} exclusive deals${v.quarantine ? " (QUARANTINED: " + v.anomalies.join(",") + ")" : ""}`);
     } catch (e) {
       await recordRefreshRun(db, { adapter: "taco-bell", kind: "menu", status: "failed", startedAt, finishedAt: new Date(), itemsUpdated: 0, error: String(e) });
       console.log(`taco-bell: FAILED ${e}`);
