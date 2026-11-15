@@ -1,0 +1,605 @@
+{
+  "harvestedAt": "2026-11-15T03:10:45.270Z",
+  "estimates": [
+    {
+      "slug": "large-seasoned-potatoes",
+      "itemName": "Wendy's Large Seasoned Potatoes",
+      "low": 1.79,
+      "high": 3.99,
+      "storeCount": 5649,
+      "typical": 2.59,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-seasoned-potatoes"
+    },
+    {
+      "slug": "medium-seasoned-potatoes",
+      "itemName": "Wendy's Medium Seasoned Potatoes",
+      "low": 1.6,
+      "high": 3.49,
+      "storeCount": 5649,
+      "typical": 2.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-seasoned-potatoes"
+    },
+    {
+      "slug": "small-seasoned-potatoes",
+      "itemName": "Wendy's Small Seasoned Potatoes",
+      "low": 1.39,
+      "high": 2.99,
+      "storeCount": 5649,
+      "typical": 1.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/small-seasoned-potatoes"
+    },
+    {
+      "slug": "large-natural-cut-fries",
+      "itemName": "Wendy's Large Natural-Cut Fries",
+      "low": 2.74,
+      "high": 5.59,
+      "storeCount": 5649,
+      "typical": 3.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-natural-cut-fries"
+    },
+    {
+      "slug": "medium-natural-cut-fries",
+      "itemName": "Wendy's Medium Natural-Cut Fries",
+      "low": 2.34,
+      "high": 4.89,
+      "storeCount": 5649,
+      "typical": 3.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-natural-cut-fries"
+    },
+    {
+      "slug": "small-natural-cut-fries",
+      "itemName": "Wendy's Small Natural-Cut Fries",
+      "low": 1.94,
+      "high": 4.24,
+      "storeCount": 5649,
+      "typical": 2.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/small-natural-cut-fries"
+    },
+    {
+      "slug": "10-pc-chicken-nuggets",
+      "itemName": "Wendy's 10 PC. Chicken Nuggets",
+      "low": 4.49,
+      "high": 7.99,
+      "storeCount": 5649,
+      "typical": 5.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/10-pc-chicken-nuggets"
+    },
+    {
+      "slug": "maple-bacon-chicken-croissant",
+      "itemName": "Wendy's Maple Bacon Chicken Croissant",
+      "low": 3.99,
+      "high": 6.99,
+      "storeCount": 5648,
+      "typical": 4.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/maple-bacon-chicken-croissant"
+    },
+    {
+      "slug": "spicy-chicken-sandwich",
+      "itemName": "Wendy's Spicy Chicken Sandwich",
+      "low": 5.49,
+      "high": 9.05,
+      "storeCount": 5648,
+      "typical": 6.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/spicy-chicken-sandwich"
+    },
+    {
+      "slug": "breakfast-baconator",
+      "itemName": "Wendy's Breakfast Baconator",
+      "low": 3.99,
+      "high": 7.19,
+      "storeCount": 5647,
+      "typical": 4.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/breakfast-baconator"
+    },
+    {
+      "slug": "sausage-egg-swiss-croissant",
+      "itemName": "Wendy's Sausage, Egg & Swiss Croissant",
+      "low": 3.59,
+      "high": 6.49,
+      "storeCount": 5647,
+      "typical": 4.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/sausage-egg-swiss-croissant"
+    },
+    {
+      "slug": "bacon-egg-swiss-croissant",
+      "itemName": "Wendy's Bacon, Egg & Swiss Croissant",
+      "low": 3.59,
+      "high": 6.49,
+      "storeCount": 5647,
+      "typical": 4.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/bacon-egg-swiss-croissant"
+    },
+    {
+      "slug": "asiago-ranch-club-sandwich-spicy",
+      "itemName": "Wendy's Asiago Ranch Club Sandwich, Spicy",
+      "low": 6.39,
+      "high": 10.59,
+      "storeCount": 5647,
+      "typical": 7.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/asiago-ranch-club-sandwich-spicy"
+    },
+    {
+      "slug": "homestyle-french-toast-sticks-6-pc",
+      "itemName": "Wendy's Homestyle French Toast Sticks, 6 PC",
+      "low": 3.19,
+      "high": 5.99,
+      "storeCount": 5646,
+      "typical": 4.19,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/homestyle-french-toast-sticks-6-pc"
+    },
+    {
+      "slug": "large-diet-coke",
+      "itemName": "Wendy's Large Diet Coke",
+      "low": 2.39,
+      "high": 5.19,
+      "storeCount": 5646,
+      "typical": 3.29,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-diet-coke"
+    },
+    {
+      "slug": "medium-diet-coke",
+      "itemName": "Wendy's Medium Diet Coke",
+      "low": 1.99,
+      "high": 4.59,
+      "storeCount": 5646,
+      "typical": 2.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-diet-coke"
+    },
+    {
+      "slug": "diet-coke",
+      "itemName": "Wendy's Diet Coke",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5646,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/diet-coke"
+    },
+    {
+      "slug": "classic-chicken-sandwich",
+      "itemName": "Wendy's Classic Chicken Sandwich",
+      "low": 5.29,
+      "high": 9.05,
+      "storeCount": 5646,
+      "typical": 6.29,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/classic-chicken-sandwich"
+    },
+    {
+      "slug": "large-sprite-watermelon",
+      "itemName": "Wendy's Large Sprite Watermelon",
+      "low": 2.89,
+      "high": 5.99,
+      "storeCount": 5645,
+      "typical": 3.89,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-sprite-watermelon"
+    },
+    {
+      "slug": "medium-sprite-watermelon",
+      "itemName": "Wendy's Medium Sprite Watermelon",
+      "low": 2.49,
+      "high": 5.39,
+      "storeCount": 5645,
+      "typical": 3.59,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-sprite-watermelon"
+    },
+    {
+      "slug": "sprite-watermelon",
+      "itemName": "Wendy's Sprite Watermelon",
+      "low": 2.09,
+      "high": 4.59,
+      "storeCount": 5645,
+      "typical": 3.09,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/sprite-watermelon"
+    },
+    {
+      "slug": "chocolate-milk",
+      "itemName": "Wendy's Chocolate Milk",
+      "low": 1.19,
+      "high": 3.39,
+      "storeCount": 5645,
+      "typical": 1.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/chocolate-milk"
+    },
+    {
+      "slug": "milk",
+      "itemName": "Wendy's Milk",
+      "low": 1.19,
+      "high": 3.39,
+      "storeCount": 5645,
+      "typical": 1.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/milk"
+    },
+    {
+      "slug": "4-pc-chicken-nuggets",
+      "itemName": "Wendy's 4 PC. Chicken Nuggets",
+      "low": 1.69,
+      "high": 3.89,
+      "storeCount": 5645,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/4-pc-chicken-nuggets"
+    },
+    {
+      "slug": "asiago-ranch-club-sandwich-classic",
+      "itemName": "Wendy's Asiago Ranch Club Sandwich, Classic",
+      "low": 6.39,
+      "high": 10.59,
+      "storeCount": 5645,
+      "typical": 7.29,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/asiago-ranch-club-sandwich-classic"
+    },
+    {
+      "slug": "large-watermelon-lemonade",
+      "itemName": "Wendy's Large Watermelon Lemonade",
+      "low": 2.99,
+      "high": 5.99,
+      "storeCount": 5644,
+      "typical": 3.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-watermelon-lemonade"
+    },
+    {
+      "slug": "medium-watermelon-lemonade",
+      "itemName": "Wendy's Medium Watermelon Lemonade",
+      "low": 2.69,
+      "high": 5.19,
+      "storeCount": 5644,
+      "typical": 3.59,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-watermelon-lemonade"
+    },
+    {
+      "slug": "watermelon-lemonade",
+      "itemName": "Wendy's Watermelon Lemonade",
+      "low": 2.29,
+      "high": 4.59,
+      "storeCount": 5644,
+      "typical": 3.09,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/watermelon-lemonade"
+    },
+    {
+      "slug": "double-stack",
+      "itemName": "Wendy's Double Stack",
+      "low": 2.59,
+      "high": 4.79,
+      "storeCount": 5644,
+      "typical": 3.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/double-stack"
+    },
+    {
+      "slug": "jr-bacon-cheeseburger",
+      "itemName": "Wendy's Jr. Bacon Cheeseburger",
+      "low": 2.49,
+      "high": 4.69,
+      "storeCount": 5644,
+      "typical": 3.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/jr-bacon-cheeseburger"
+    },
+    {
+      "slug": "homestyle-french-toast-sticks-4-pc",
+      "itemName": "Wendy's Homestyle French Toast Sticks, 4 PC",
+      "low": 2.19,
+      "high": 4.89,
+      "storeCount": 5644,
+      "typical": 3.19,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/homestyle-french-toast-sticks-4-pc"
+    },
+    {
+      "slug": "large-sprite",
+      "itemName": "Wendy's Large Sprite",
+      "low": 2.39,
+      "high": 5.19,
+      "storeCount": 5644,
+      "typical": 3.29,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-sprite"
+    },
+    {
+      "slug": "medium-sprite",
+      "itemName": "Wendy's Medium Sprite",
+      "low": 1.99,
+      "high": 4.59,
+      "storeCount": 5644,
+      "typical": 2.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-sprite"
+    },
+    {
+      "slug": "small-sprite",
+      "itemName": "Wendy's Small Sprite",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5644,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/small-sprite"
+    },
+    {
+      "slug": "large-coca-cola",
+      "itemName": "Wendy's Large Coca-Cola",
+      "low": 2.39,
+      "high": 5.19,
+      "storeCount": 5644,
+      "typical": 3.29,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-coca-cola"
+    },
+    {
+      "slug": "medium-coca-cola",
+      "itemName": "Wendy's Medium Coca-Cola",
+      "low": 1.99,
+      "high": 4.59,
+      "storeCount": 5644,
+      "typical": 2.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-coca-cola"
+    },
+    {
+      "slug": "coca-cola",
+      "itemName": "Wendy's Coca-Cola",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5644,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/coca-cola"
+    },
+    {
+      "slug": "jr-natural-cut-fries",
+      "itemName": "Wendy's Jr. Natural-Cut Fries",
+      "low": 1.49,
+      "high": 3.49,
+      "storeCount": 5643,
+      "typical": 2.09,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/jr-natural-cut-fries"
+    },
+    {
+      "slug": "barqs-root-beer",
+      "itemName": "Wendy's Barq's Root Beer",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5643,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/barqs-root-beer"
+    },
+    {
+      "slug": "pure-life-bottled-water",
+      "itemName": "Wendy's Pure Life Bottled Water",
+      "low": 1.39,
+      "high": 3.49,
+      "storeCount": 5643,
+      "typical": 1.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/pure-life-bottled-water"
+    },
+    {
+      "slug": "coca-cola-zero-sugar",
+      "itemName": "Wendy's Coca-Cola Zero Sugar",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5642,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/coca-cola-zero-sugar"
+    },
+    {
+      "slug": "hi-c-flashin-fruit-punch",
+      "itemName": "Wendy's Hi-C Flashin' Fruit Punch",
+      "low": 1.59,
+      "high": 3.85,
+      "storeCount": 5641,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/hi-c-flashin-fruit-punch"
+    },
+    {
+      "slug": "grilled-chicken-ranch-wrap",
+      "itemName": "Wendy's Grilled Chicken Ranch Wrap",
+      "low": 5.59,
+      "high": 9.39,
+      "storeCount": 5641,
+      "typical": 6.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/grilled-chicken-ranch-wrap"
+    },
+    {
+      "slug": "honest-kids-fruit-punch",
+      "itemName": "Wendy's Honest Kids Fruit Punch",
+      "low": 0.99,
+      "high": 2.59,
+      "storeCount": 5641,
+      "typical": 1.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/honest-kids-fruit-punch"
+    },
+    {
+      "slug": "10-pc-spicy-chicken-nuggets",
+      "itemName": "Wendy's 10 PC. Spicy Chicken Nuggets",
+      "low": 4.49,
+      "high": 7.99,
+      "storeCount": 5641,
+      "typical": 5.39,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/10-pc-spicy-chicken-nuggets"
+    },
+    {
+      "slug": "large-cold-brew-with-cream-and-sugar",
+      "itemName": "Wendy's Large Cold Brew with Cream and Sugar",
+      "low": 2.99,
+      "high": 5.69,
+      "storeCount": 5640,
+      "typical": 3.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-cold-brew-with-cream-and-sugar"
+    },
+    {
+      "slug": "medium-cold-brew-with-cream-and-sugar",
+      "itemName": "Wendy's Medium Cold Brew with Cream and Sugar",
+      "low": 2.39,
+      "high": 4.59,
+      "storeCount": 5640,
+      "typical": 3.19,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-cold-brew-with-cream-and-sugar"
+    },
+    {
+      "slug": "cold-brew-with-cream-and-sugar",
+      "itemName": "Wendy's Cold Brew with Cream and Sugar",
+      "low": 1.69,
+      "high": 3.84,
+      "storeCount": 5640,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/cold-brew-with-cream-and-sugar"
+    },
+    {
+      "slug": "large-caramel-cold-brew-with-cream",
+      "itemName": "Wendy's Large Caramel Cold Brew with Cream",
+      "low": 2.99,
+      "high": 5.69,
+      "storeCount": 5640,
+      "typical": 3.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-caramel-cold-brew-with-cream"
+    },
+    {
+      "slug": "medium-caramel-cold-brew-with-cream",
+      "itemName": "Wendy's Medium Caramel Cold Brew with Cream",
+      "low": 2.39,
+      "high": 4.59,
+      "storeCount": 5640,
+      "typical": 3.19,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-caramel-cold-brew-with-cream"
+    },
+    {
+      "slug": "caramel-cold-brew-with-cream",
+      "itemName": "Wendy's Caramel Cold Brew with Cream",
+      "low": 1.69,
+      "high": 3.84,
+      "storeCount": 5640,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/caramel-cold-brew-with-cream"
+    },
+    {
+      "slug": "large-cold-brew",
+      "itemName": "Wendy's Large Cold Brew",
+      "low": 2.99,
+      "high": 5.69,
+      "storeCount": 5640,
+      "typical": 3.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/large-cold-brew"
+    },
+    {
+      "slug": "medium-cold-brew",
+      "itemName": "Wendy's Medium Cold Brew",
+      "low": 2.39,
+      "high": 4.59,
+      "storeCount": 5640,
+      "typical": 3.19,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-cold-brew"
+    },
+    {
+      "slug": "small-cold-brew",
+      "itemName": "Wendy's Small Cold Brew",
+      "low": 1.69,
+      "high": 3.85,
+      "storeCount": 5640,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/small-cold-brew"
+    },
+    {
+      "slug": "medium-coca-cola-zero-sugar",
+      "itemName": "Wendy's Medium Coca-Cola Zero Sugar",
+      "low": 1.99,
+      "high": 4.59,
+      "storeCount": 5640,
+      "typical": 2.99,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/medium-coca-cola-zero-sugar"
+    },
+    {
+      "slug": "kids-sprite-watermelon",
+      "itemName": "Wendy's Kids' Sprite Watermelon",
+      "low": 1.19,
+      "high": 2.89,
+      "storeCount": 5637,
+      "typical": 1.79,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/kids-sprite-watermelon"
+    },
+    {
+      "slug": "kids-watermelon-lemonade",
+      "itemName": "Wendy's Kids' Watermelon Lemonade",
+      "low": 1.19,
+      "high": 2.89,
+      "storeCount": 5636,
+      "typical": 1.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/kids-watermelon-lemonade"
+    },
+    {
+      "slug": "crispy-chicken-sandwich",
+      "itemName": "Wendy's Crispy Chicken Sandwich",
+      "low": 1.69,
+      "high": 4,
+      "storeCount": 5635,
+      "typical": 2.59,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/crispy-chicken-sandwich"
+    },
+    {
+      "slug": "jr-cheeseburger",
+      "itemName": "Wendy's Jr. Cheeseburger",
+      "low": 1.79,
+      "high": 3.99,
+      "storeCount": 5635,
+      "typical": 2.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/jr-cheeseburger"
+    },
+    {
+      "slug": "apple-bites",
+      "itemName": "Wendy's Apple Bites",
+      "low": 0.99,
+      "high": 2.69,
+      "storeCount": 5633,
+      "typical": 1.49,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/wendys/apple-bites"
+    }
+  ]
+}

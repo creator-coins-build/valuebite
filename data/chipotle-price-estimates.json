@@ -1,0 +1,605 @@
+{
+  "harvestedAt": "2026-11-15T03:12:03.245Z",
+  "estimates": [
+    {
+      "slug": "large-tomatillo-green-chili-salsa",
+      "itemName": "Chipotle Large Tomatillo-Green Chili Salsa",
+      "low": 2.15,
+      "high": 2.5,
+      "storeCount": 4146,
+      "typical": 2.4,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-tomatillo-green-chili-salsa"
+    },
+    {
+      "slug": "large-fresh-tomato-salsa",
+      "itemName": "Chipotle Large Fresh Tomato Salsa",
+      "low": 2.15,
+      "high": 2.5,
+      "storeCount": 4146,
+      "typical": 2.35,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-fresh-tomato-salsa"
+    },
+    {
+      "slug": "veggie-salad",
+      "itemName": "Chipotle Veggie Salad",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4146,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/veggie-salad"
+    },
+    {
+      "slug": "jarritos-guava",
+      "itemName": "Chipotle Jarritos Guava",
+      "low": 3.45,
+      "high": 3.95,
+      "storeCount": 4146,
+      "typical": 3.45,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/jarritos-guava"
+    },
+    {
+      "slug": "jarritos-mango",
+      "itemName": "Chipotle Jarritos Mango",
+      "low": 3.45,
+      "high": 3.95,
+      "storeCount": 4146,
+      "typical": 3.45,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/jarritos-mango"
+    },
+    {
+      "slug": "veggie-bowl",
+      "itemName": "Chipotle Veggie Bowl",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4146,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/veggie-bowl"
+    },
+    {
+      "slug": "large-tomatillo-red-chili-salsa",
+      "itemName": "Chipotle Large Tomatillo-Red Chili Salsa",
+      "low": 2.15,
+      "high": 2.5,
+      "storeCount": 4146,
+      "typical": 2.4,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-tomatillo-red-chili-salsa"
+    },
+    {
+      "slug": "large-roasted-chili-corn-salsa",
+      "itemName": "Chipotle Large Roasted Chili-Corn Salsa",
+      "low": 2.15,
+      "high": 2.5,
+      "storeCount": 4146,
+      "typical": 2.4,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-roasted-chili-corn-salsa"
+    },
+    {
+      "slug": "large-side-of-guacamole",
+      "itemName": "Chipotle Large Side of Guacamole",
+      "low": 5.7,
+      "high": 6.4,
+      "storeCount": 4146,
+      "typical": 5.9,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-side-of-guacamole"
+    },
+    {
+      "slug": "side-of-guacamole",
+      "itemName": "Chipotle Side of Guacamole",
+      "low": 2.85,
+      "high": 3.2,
+      "storeCount": 4146,
+      "typical": 2.95,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/side-of-guacamole"
+    },
+    {
+      "slug": "guacamole-kids-build-your-own",
+      "itemName": "Chipotle Guacamole Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.15,
+      "storeCount": 4145,
+      "typical": 5.7,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/guacamole-kids-build-your-own"
+    },
+    {
+      "slug": "apple-juice",
+      "itemName": "Chipotle Apple Juice",
+      "low": 3.5,
+      "high": 3.95,
+      "storeCount": 4145,
+      "typical": 3.5,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/apple-juice"
+    },
+    {
+      "slug": "veggie-burrito",
+      "itemName": "Chipotle Veggie Burrito",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4144,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/veggie-burrito"
+    },
+    {
+      "slug": "sofritas-salad",
+      "itemName": "Chipotle Sofritas Salad",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4144,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-salad"
+    },
+    {
+      "slug": "beef-barbacoa-salad",
+      "itemName": "Chipotle Beef Barbacoa Salad",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4144,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-salad"
+    },
+    {
+      "slug": "carnitas-salad",
+      "itemName": "Chipotle Carnitas Salad",
+      "low": 9.2,
+      "high": 13.05,
+      "storeCount": 4144,
+      "typical": 10.55,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-salad"
+    },
+    {
+      "slug": "veggie-tacos-3",
+      "itemName": "Chipotle Veggie Tacos (3)",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4144,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/veggie-tacos-3"
+    },
+    {
+      "slug": "veggie-taco",
+      "itemName": "Chipotle Veggie Taco",
+      "low": 3.5,
+      "high": 4.1,
+      "storeCount": 4144,
+      "typical": 3.5,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/veggie-taco"
+    },
+    {
+      "slug": "large-side-of-queso-blanco",
+      "itemName": "Chipotle Large Side of Queso Blanco",
+      "low": 5.7,
+      "high": 6.4,
+      "storeCount": 4144,
+      "typical": 5.9,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-side-of-queso-blanco"
+    },
+    {
+      "slug": "sofritas-bowl",
+      "itemName": "Chipotle Sofritas Bowl",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4144,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-bowl"
+    },
+    {
+      "slug": "beef-barbacoa-bowl",
+      "itemName": "Chipotle Beef Barbacoa Bowl",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4144,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-bowl"
+    },
+    {
+      "slug": "side-of-queso-blanco",
+      "itemName": "Chipotle Side of Queso Blanco",
+      "low": 2.85,
+      "high": 3.2,
+      "storeCount": 4144,
+      "typical": 2.95,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/side-of-queso-blanco"
+    },
+    {
+      "slug": "carnitas-bowl",
+      "itemName": "Chipotle Carnitas Bowl",
+      "low": 9.2,
+      "high": 13.05,
+      "storeCount": 4144,
+      "typical": 10.55,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-bowl"
+    },
+    {
+      "slug": "family-meal-carnitas",
+      "itemName": "Chipotle Family Meal - Carnitas",
+      "low": 50,
+      "high": 64,
+      "storeCount": 4143,
+      "typical": 58,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/family-meal-carnitas"
+    },
+    {
+      "slug": "family-meal-beef-barbacoa",
+      "itemName": "Chipotle Family Meal - Beef Barbacoa",
+      "low": 56,
+      "high": 70,
+      "storeCount": 4143,
+      "typical": 64,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/family-meal-beef-barbacoa"
+    },
+    {
+      "slug": "family-meal-sofritas",
+      "itemName": "Chipotle Family Meal - Sofritas",
+      "low": 45,
+      "high": 59,
+      "storeCount": 4143,
+      "typical": 53,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/family-meal-sofritas"
+    },
+    {
+      "slug": "queso-blanco-kids-build-your-own",
+      "itemName": "Chipotle Queso Blanco Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.15,
+      "storeCount": 4143,
+      "typical": 5.7,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/queso-blanco-kids-build-your-own"
+    },
+    {
+      "slug": "sofritas-kids-build-your-own",
+      "itemName": "Chipotle Sofritas Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.15,
+      "storeCount": 4143,
+      "typical": 5.7,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-kids-build-your-own"
+    },
+    {
+      "slug": "beef-barbacoa-kids-build-your-own",
+      "itemName": "Chipotle Beef Barbacoa Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.75,
+      "storeCount": 4143,
+      "typical": 5.95,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-kids-build-your-own"
+    },
+    {
+      "slug": "carnitas-kids-build-your-own",
+      "itemName": "Chipotle Carnitas Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.35,
+      "storeCount": 4143,
+      "typical": 5.85,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-kids-build-your-own"
+    },
+    {
+      "slug": "mexican-sprite",
+      "itemName": "Chipotle Mexican Sprite",
+      "low": 3.45,
+      "high": 3.95,
+      "storeCount": 4143,
+      "typical": 3.45,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/mexican-sprite"
+    },
+    {
+      "slug": "tractor-organic-lemonade",
+      "itemName": "Chipotle Tractor Organic Lemonade",
+      "low": 3.5,
+      "high": 3.95,
+      "storeCount": 4143,
+      "typical": 3.5,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/tractor-organic-lemonade"
+    },
+    {
+      "slug": "mexican-coca-cola",
+      "itemName": "Chipotle Mexican Coca-Cola",
+      "low": 3.45,
+      "high": 3.95,
+      "storeCount": 4143,
+      "typical": 3.45,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/mexican-coca-cola"
+    },
+    {
+      "slug": "sofritas-burrito",
+      "itemName": "Chipotle Sofritas Burrito",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4142,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-burrito"
+    },
+    {
+      "slug": "beef-barbacoa-burrito",
+      "itemName": "Chipotle Beef Barbacoa Burrito",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4142,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-burrito"
+    },
+    {
+      "slug": "guacamole-kids-quesadilla",
+      "itemName": "Chipotle Guacamole Kids Quesadilla",
+      "low": 4.7,
+      "high": 5.95,
+      "storeCount": 4142,
+      "typical": 5.2,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/guacamole-kids-quesadilla"
+    },
+    {
+      "slug": "cheese-only-kids-quesadilla",
+      "itemName": "Chipotle Cheese Only Kids Quesadilla",
+      "low": 4.15,
+      "high": 4.95,
+      "storeCount": 4142,
+      "typical": 4.6,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/cheese-only-kids-quesadilla"
+    },
+    {
+      "slug": "steak-salad",
+      "itemName": "Chipotle Steak Salad",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4142,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/steak-salad"
+    },
+    {
+      "slug": "chicken-salad",
+      "itemName": "Chipotle Chicken Salad",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4142,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chicken-salad"
+    },
+    {
+      "slug": "carnitas-burrito",
+      "itemName": "Chipotle Carnitas Burrito",
+      "low": 9.2,
+      "high": 13.05,
+      "storeCount": 4142,
+      "typical": 10.55,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-burrito"
+    },
+    {
+      "slug": "sofritas-tacos-3",
+      "itemName": "Chipotle Sofritas Tacos (3)",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4142,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-tacos-3"
+    },
+    {
+      "slug": "beef-barbacoa-tacos-3",
+      "itemName": "Chipotle Beef Barbacoa Tacos (3)",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4142,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-tacos-3"
+    },
+    {
+      "slug": "carnitas-tacos-3",
+      "itemName": "Chipotle Carnitas Tacos (3)",
+      "low": 9.2,
+      "high": 13.05,
+      "storeCount": 4142,
+      "typical": 10.55,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-tacos-3"
+    },
+    {
+      "slug": "sofritas-taco",
+      "itemName": "Chipotle Sofritas Taco",
+      "low": 3.5,
+      "high": 4.1,
+      "storeCount": 4142,
+      "typical": 3.5,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/sofritas-taco"
+    },
+    {
+      "slug": "beef-barbacoa-taco",
+      "itemName": "Chipotle Beef Barbacoa Taco",
+      "low": 4.2,
+      "high": 5.8,
+      "storeCount": 4142,
+      "typical": 4.7,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/beef-barbacoa-taco"
+    },
+    {
+      "slug": "carnitas-taco",
+      "itemName": "Chipotle Carnitas Taco",
+      "low": 3.7,
+      "high": 5.25,
+      "storeCount": 4142,
+      "typical": 4.2,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/carnitas-taco"
+    },
+    {
+      "slug": "side-of-steak",
+      "itemName": "Chipotle Side of Steak",
+      "low": 5.35,
+      "high": 7.45,
+      "storeCount": 4142,
+      "typical": 6,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/side-of-steak"
+    },
+    {
+      "slug": "side-of-chicken",
+      "itemName": "Chipotle Side of Chicken",
+      "low": 3.35,
+      "high": 5.3,
+      "storeCount": 4142,
+      "typical": 4,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/side-of-chicken"
+    },
+    {
+      "slug": "steak-bowl",
+      "itemName": "Chipotle Steak Bowl",
+      "low": 10.45,
+      "high": 14.45,
+      "storeCount": 4142,
+      "typical": 11.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/steak-bowl"
+    },
+    {
+      "slug": "large-chips",
+      "itemName": "Chipotle Large Chips",
+      "low": 2.45,
+      "high": 2.95,
+      "storeCount": 4142,
+      "typical": 2.75,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-chips"
+    },
+    {
+      "slug": "large-chips-large-guacamole",
+      "itemName": "Chipotle Large Chips & Large Guacamole",
+      "low": 8.15,
+      "high": 9.35,
+      "storeCount": 4142,
+      "typical": 8.65,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/large-chips-large-guacamole"
+    },
+    {
+      "slug": "chicken-bowl",
+      "itemName": "Chipotle Chicken Bowl",
+      "low": 8.45,
+      "high": 12.3,
+      "storeCount": 4142,
+      "typical": 9.8,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chicken-bowl"
+    },
+    {
+      "slug": "chips-roasted-chili-corn-salsa",
+      "itemName": "Chipotle Chips & Roasted Chili-Corn Salsa",
+      "low": 2.1,
+      "high": 2.95,
+      "storeCount": 4142,
+      "typical": 2.3,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips-roasted-chili-corn-salsa"
+    },
+    {
+      "slug": "chips-tomatillo-red-chili-salsa",
+      "itemName": "Chipotle Chips & Tomatillo-Red Chili Salsa",
+      "low": 2.1,
+      "high": 2.95,
+      "storeCount": 4142,
+      "typical": 2.3,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips-tomatillo-red-chili-salsa"
+    },
+    {
+      "slug": "chips-tomatillo-green-chili-salsa",
+      "itemName": "Chipotle Chips & Tomatillo-Green Chili Salsa",
+      "low": 2.1,
+      "high": 2.95,
+      "storeCount": 4142,
+      "typical": 2.3,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips-tomatillo-green-chili-salsa"
+    },
+    {
+      "slug": "chips-fresh-tomato-salsa",
+      "itemName": "Chipotle Chips & Fresh Tomato Salsa",
+      "low": 2.1,
+      "high": 2.95,
+      "storeCount": 4142,
+      "typical": 2.3,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips-fresh-tomato-salsa"
+    },
+    {
+      "slug": "chips-guacamole",
+      "itemName": "Chipotle Chips & Guacamole",
+      "low": 4.6,
+      "high": 5.6,
+      "storeCount": 4142,
+      "typical": 4.9,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips-guacamole"
+    },
+    {
+      "slug": "chips",
+      "itemName": "Chipotle Chips",
+      "low": 1.75,
+      "high": 2.4,
+      "storeCount": 4142,
+      "typical": 1.95,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chips"
+    },
+    {
+      "slug": "steak-kids-build-your-own",
+      "itemName": "Chipotle Steak Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.75,
+      "storeCount": 4141,
+      "typical": 5.95,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/steak-kids-build-your-own"
+    },
+    {
+      "slug": "chicken-kids-build-your-own",
+      "itemName": "Chipotle Chicken Kids Build Your Own",
+      "low": 5.1,
+      "high": 6.15,
+      "storeCount": 4141,
+      "typical": 5.7,
+      "checkedDate": "2026-11-15",
+      "sourceUrl": "https://drivethruindex.com/items/chipotle/chicken-kids-build-your-own"
+    }
+  ]
+}
