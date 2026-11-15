@@ -173,6 +173,6 @@ PH rows show the brand icon.
   https://apps.apple.com/us/app/pizza-hut-delivery-takeout/id321560858
 
 ## Scouting leads (not yet captured)
-- Sonic: dmb.sonicdrivein.com "Digital Menu Board API" root responds but no public docs (swagger/openapi/api all 404). www.sonicdrivein.com/menu is JS-rendered; needs cloud-browser recon of the storefront API the menu page calls (same pattern as PH/PJ). Not started.
+- Sonic (recon 2026-11-15 PM): capture path = UI-driving, NOT API replay. Item pages are public and rendered with name/description/calories (e.g. /menu/categories/limited-time/value/7-big-deal-meal/ shows 940 cal). Prices/deals require store selection via the "Select A Store" UI (page shows "Find a store for pricing" until then). Backend api-idp.sonicdrivein.com (/menu/0, /snc/digital-exp-api/v1/locations?latitude&longitude) is worker-gated (requires app-issued x-channel/location/hostname context) and sits behind PerimeterX; do not hand-replay. Store lookup by lat/lon is callable. Next: dedicated capture run - drive Select A Store with 33613/33543, read rendered prices per category, same method as PH/PJ.
 - DQ: undetermined. Jack in the Box: not started.
 - Hard stops (no-bypass rule): McDonald's/KFC 403, Popeyes WAF, Wendy's auth+Turnstile, Panda Express 403.
