@@ -1,31 +1,27 @@
-# Pizza Hut nutrition units - OPEN ISSUE (2026-11-15)
+# Pizza Hut nutrition units - RESOLVED (2026-11-15)
 
-Main asked to verify the feed serving definition before relying on PH calories.
-Finding: the live site displays a COMPOSITE per-slice value, the GraphQL
-variant nutritionInformation is only the BASE.
+Question (from Main): verify the feed's serving definition before relying on
+PH calories in comparisons.
 
-Evidence (store 038716, Wesley Chapel, captured in-session 2026-11-15 ~18:31Z):
-- GetCategoryByCode variant: "Large Hand-Tossed Pepperoni Pizza" ->
-  nutritionInformation: ["name:","calories:176","servings:8","unit:slice","units:slices","portion:0"], price 1749.
-- Same store/site menu page displays: "Pepperoni $17.49 ... 323 cal/slice, 8 slices".
-- GetProducts response (client-side nav query): defaultModifiers carry their
-  OWN nutritionInformation, e.g. Pepperoni topping "calories:40","units:Slice";
-  Pork 50, Bacon 30. So displayed 323/slice = base + default modifiers
-  (176 + 40 + ... exact composition TBD next run: find where 323 is composed -
-  check base cheese variant value, crust slot modifier, size-specific values).
-- Third-party references (fastfoodnutrition.org, PH-cited calculators) put a
-  large hand-tossed pepperoni slice at ~310-320 cal, consistent with 323, NOT 176.
+Finding: the GraphQL variant nutritionInformation is the BASE ONLY (crust for
+pizzas). The site displays a COMPOSITE: variant base + every default modifier's
+own nutritionInformation (sauce, cheese, crust finishers, toppings).
 
-Impact: current data/pizzahut/33613.json (live) understates whole-item calories
-(176x8=1408 vs site-displayed 323x8=2584). Adapter wholeCalories = cal x serv is
-arithmetically fine but cal is the wrong input. PH rows are Unscored (no protein)
-so rankings are unaffected; displayed calories are understated.
+Verified composition, per slice, store 038716 + 038698, 2026-11-15:
+  displayed cal/slice = variant base + sum(default modifier calories x weight)
+  - Large Hand-Tossed Pepperoni: 176 + marinara 10 + cheese 80 + pepperoni 50
+    + garlic-parm 7 = 323 = site display "323 cal/slice, 8 slices" (exact)
+  - Pepperoni Lover's 393, Supreme 478, Meat Lover's 623, Cheese 273 - all exact
+    matches to the site's own menu cards.
+  - Third-party PH nutrition references (~320/slice large pepperoni) agree.
+Whole-item = composite per-slice x servings (8 for a large).
 
-Next run:
-1. In a PH session, find the exact composition of the displayed 323 (GetProducts
-   response fields: variant base + slot_pizza_crust/size + toppings modifiers).
-2. Fix the pizzahut adapter/snapshot to use composite per-slice calories that
-   match the site's own display; regenerate 33613 + 33543 snapshots.
-3. Then finish PH 33543 capture: store 038716 (28670 FL-54, Wesley Chapel,
-   storeNumber cookie confirmed). Capture script from 33613 run is in the
-   transcript at 2026-11-15 13:13 EST (search chat_events for GetCategoryByCode).
+Evidence trail: raw variant entries captured in-session
+(["name:","calories:176","servings:8","unit:slice","units:slices","portion:0"]),
+modifier entries (e.g. Pepperoni "calories:50","units:Slice"), and the site's
+own rendered menu text ("323 cal/slice, 8 slices").
+
+Action taken: both snapshots (33613 store 038698, 33543 store 038716)
+re-captured with composite per-unit calories; adapter wholeCalories = cal x
+serv restored. Base-only capture (which understated calories ~1.8x) retired;
+capture scripts must include defaultModifiers nutrition from now on.

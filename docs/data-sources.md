@@ -162,8 +162,11 @@ Same rules as Papa John's: browser-session capture only during refresh, one
 committed snapshot per ZIP (data/pizzahut/33613.json), exact rows only for
 covered ZIPs with the store + sample date shown, rows/deals fail closed after
 48h without an actual re-review, no workarounds for non-browser access.
-Whole-item calories = per-unit calories x official unit count; variants
-missing either number keep calories unknown. No protein published -> PH rows
+Whole-item calories = composite per-unit calories x official unit count,
+where composite = variant base + default modifiers' nutrition (verified
+against the site's own display 2026-11-15, see
+docs/research/ph-nutrition-units-2026-11-15.md); variants missing either
+number keep calories unknown. No protein published -> PH rows
 stay out of the Value Score ranking. This API carries no product images, so
 PH rows show the brand icon.
 - Pizza Hut app (official, seller Pizza Hut, Inc.):

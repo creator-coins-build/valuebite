@@ -21,10 +21,12 @@ import type { RankableRow, DealRow } from "../db/queries";
  * Hut rows at all - never another store's prices under its name.
  *
  * Nutrition units: each variant carries nutritionInformation entries like
- * calories:320 / servings:8 / unit:slice) are BASE-ONLY; the site displays
- * a composite including default modifiers. PH calories are currently
- * suppressed (unknown) pending composition verification - see
- * docs/research/ph-nutrition-units-2026-11-15.md.
+ * Per-unit calories are the COMPOSITE the site itself displays: variant base
+ * plus default modifiers' nutrition (sauce, cheese, crust finishers, toppings),
+ * captured at snapshot time. Verified against the site's own menu display
+ * (Pepperoni 323, Pepperoni Lover's 393, Supreme 478, Meat Lover's 623 cal/slice,
+ * 2026-11-15 - see docs/research/ph-nutrition-units-2026-11-15.md).
+ * Whole-item calories = composite per-unit calories x servings.
  * Protein is not published per item here, so PH rows stay out of the
  * protein-based Value Score ranking (unknown stays unknown).
  */
@@ -62,17 +64,11 @@ export interface PizzaHutSnapshot {
   deals: PHDeal[];
 }
 
-/**
- * Whole-item calories. SUPPRESSED (2026-11-15): the feed's variant calories
- * are base-only - the site's own menu displays a composite of base +
- * crust/size + default toppings (e.g. Large Hand-Tossed Pepperoni: feed says
- * 176/slice, the site displays 323 cal/slice; default modifiers carry their
- * own nutritionInformation). Until the composite composition is verified
- * against the site's display, every PH calorie stays unknown (never show a
- * number we cannot stand behind). Restore per-category only with evidence.
- */
+/** Whole-item calories: composite per-unit calories x the official unit count (slices, wings, sticks...). */
 export function wholeCalories(p: Pick<PHProduct, "cal" | "serv">): number | null {
-  return null;
+  if (p.cal === null || !Number.isFinite(p.cal)) return null;
+  if (p.serv === null || !Number.isFinite(p.serv) || p.serv <= 0) return null;
+  return p.cal * p.serv;
 }
 
 const cache = new Map<string, PizzaHutSnapshot | null>();

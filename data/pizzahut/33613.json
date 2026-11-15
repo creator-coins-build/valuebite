@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-15T18:13:16.513Z",
+ "fetchedAt": "2026-11-15T18:42:42.777Z",
  "zip": "33613",
  "storeId": "038698",
  "storeAddress": "2550 E. Fowler Ave., Tampa, FL",
@@ -176,7 +176,7 @@
    "sku": "variant_CLSS001_660SB_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 90,
+   "cal": 1025,
    "serv": 8,
    "unit": "slice",
    "desc": "A savory-sweet combination of sweet marinara, chicken sausage, bacon & tomatoes. Try it on our Tavern Style crust. Prices, partic., & avail. may vary. Addtl. ch"
@@ -198,7 +198,7 @@
    "sku": "variant_CLSS001_660SB_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "A savory-sweet combination of sweet marinara, chicken sausage, bacon & tomatoes. Try it on our Tavern Style crust. Prices, partic., & avail. may vary. Addtl. ch"
@@ -209,7 +209,7 @@
    "sku": "variant_CLSS001_220P_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 719,
-   "cal": 100,
+   "cal": 150,
    "serv": 4,
    "unit": "slice",
    "desc": ""
@@ -220,7 +220,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 100,
+   "cal": 205,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -231,7 +231,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 129,
+   "cal": 236,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -242,7 +242,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 160,
+   "cal": 275,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -253,7 +253,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 35,
+   "cal": 60,
    "serv": 16,
    "unit": "slice",
    "desc": ""
@@ -264,7 +264,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 125,
+   "cal": 275,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -275,7 +275,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 176,
+   "cal": 323,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -286,7 +286,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 225,
+   "cal": 380,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -297,7 +297,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 1949,
-   "cal": 239,
+   "cal": 356,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -308,7 +308,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 45,
+   "cal": 80,
    "serv": 16,
    "unit": "slice",
    "desc": ""
@@ -319,7 +319,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 190,
+   "cal": 275,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -330,7 +330,7 @@
    "sku": "variant_CLSS001_220P_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 1949,
-   "cal": 300,
+   "cal": 940,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -341,7 +341,7 @@
    "sku": "variant_CLSS001_220P_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 90,
+   "cal": 185,
    "serv": 8,
    "unit": "slice",
    "desc": ""
@@ -352,7 +352,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 130,
+   "cal": 245,
    "serv": 16,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -363,7 +363,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 300,
+   "cal": 560,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -374,7 +374,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 420,
+   "cal": 650,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -385,7 +385,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 350,
+   "cal": 582,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -396,7 +396,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 390,
+   "cal": 582,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -407,7 +407,7 @@
    "sku": "variant_CLSS001_656UL_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 210,
+   "cal": 390,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -418,7 +418,7 @@
    "sku": "variant_CLSS001_656UL_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 170,
+   "cal": 250,
    "serv": 4,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -429,7 +429,7 @@
    "sku": "variant_CLSS001_656UL_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 290,
+   "cal": 455,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -440,7 +440,7 @@
    "sku": "variant_CLSS001_656UL_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 250,
+   "cal": 407,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -462,7 +462,7 @@
    "sku": "variant_CLSS001_656UL_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 250,
+   "cal": 407,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -473,7 +473,7 @@
    "sku": "variant_CLSS001_656UL_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1719,
-   "cal": 210,
+   "cal": 390,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -484,7 +484,7 @@
    "sku": "variant_CLSS001_656UL_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 290,
+   "cal": 455,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -495,7 +495,7 @@
    "sku": "variant_CLSS001_656UL_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 90,
+   "cal": 165,
    "serv": 16,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -517,7 +517,7 @@
    "sku": "variant_CLSS001_656UL_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 1000,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -539,7 +539,7 @@
    "sku": "variant_CLSS001_656UL_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 265,
    "serv": 8,
    "unit": "slice",
    "desc": "Go all out with sweet marinara, Italian sausage, classic pepperoni, fire roasted peppers, caramelized onions & tomatoes."
@@ -550,7 +550,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 105,
    "serv": 16,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -561,7 +561,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 325,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -572,7 +572,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 420,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -583,7 +583,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 363,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -594,7 +594,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 396,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -605,7 +605,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 80,
    "serv": 16,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -616,7 +616,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 235,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -627,7 +627,7 @@
    "sku": "variant_CLSS001_654PE_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 165,
    "serv": 4,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -638,7 +638,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 300,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -649,7 +649,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 266,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -671,7 +671,7 @@
    "sku": "variant_CLSS001_654PE_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 266,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -682,7 +682,7 @@
    "sku": "variant_CLSS001_654PE_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 235,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -693,7 +693,7 @@
    "sku": "variant_CLSS001_654PE_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 305,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -704,7 +704,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 300,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -715,7 +715,7 @@
    "sku": "variant_CLSS001_654PE_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 970,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -737,7 +737,7 @@
    "sku": "variant_CLSS001_654PE_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 210,
    "serv": 8,
    "unit": "slice",
    "desc": "A combo of sweet marinara, classic pepperoni & crispy cupped pepperoni topped to the edge. Comes square-cut on Thin 'N Crispy\u00ae crust & sprinkled with parmesan-o"
@@ -748,7 +748,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 55,
    "serv": 16,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -759,7 +759,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 230,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -770,7 +770,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 350,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -781,7 +781,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 288,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -792,7 +792,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 321,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -803,7 +803,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 40,
    "serv": 16,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -814,7 +814,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 165,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -825,7 +825,7 @@
    "sku": "variant_CLSS001_657PM_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 140,
    "serv": 4,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -836,7 +836,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 245,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -858,7 +858,7 @@
    "sku": "variant_CLSS001_657PM_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 201,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -869,7 +869,7 @@
    "sku": "variant_CLSS001_657PM_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 165,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -880,7 +880,7 @@
    "sku": "variant_CLSS001_657PM_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 245,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -891,7 +891,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 201,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -902,7 +902,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 265,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -913,7 +913,7 @@
    "sku": "variant_CLSS001_657PM_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 920,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -935,7 +935,7 @@
    "sku": "variant_CLSS001_657PM_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "A flavorful new combo of sweet marinara, tomatoes & roasted garlic that's finished with a basil pesto drizzle."
@@ -946,7 +946,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 491,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -957,7 +957,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 478,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -968,7 +968,7 @@
    "sku": "variant_CLSS001_129S_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 200,
    "serv": 4,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -979,7 +979,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 336,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -990,7 +990,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 465,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1001,7 +1001,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 515,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1012,7 +1012,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 340,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1023,7 +1023,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 375,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1034,7 +1034,7 @@
    "sku": "variant_CLSS001_129S_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 336,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1045,7 +1045,7 @@
    "sku": "variant_CLSS001_129S_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 340,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1067,7 +1067,7 @@
    "sku": "variant_CLSS001_129S_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 385,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1078,7 +1078,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 170,
    "serv": 16,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1089,7 +1089,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 125,
    "serv": 16,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1100,7 +1100,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 320,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1111,7 +1111,7 @@
    "sku": "variant_CLSS001_129S_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 385,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1122,7 +1122,7 @@
    "sku": "variant_CLSS001_129S_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 1050,
    "serv": 8,
    "unit": "slice",
    "desc": "This loaded pizza is the perfect choice for family dinner or a lunch with your crew. Includes pepperoni, seasoned pork, beef, mushrooms, green bell peppers and "
@@ -1144,7 +1144,7 @@
    "sku": "variant_CLSS001_128SS_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 849,
-   "cal": 100,
+   "cal": 245,
    "serv": 4,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1155,7 +1155,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 160,
+   "cal": 460,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1166,7 +1166,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1879,
-   "cal": 129,
+   "cal": 421,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1177,7 +1177,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2129,
-   "cal": 125,
+   "cal": 620,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1188,7 +1188,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2279,
-   "cal": 225,
+   "cal": 630,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1199,7 +1199,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2129,
-   "cal": 176,
+   "cal": 603,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1210,7 +1210,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1879,
-   "cal": 100,
+   "cal": 455,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1221,7 +1221,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2329,
-   "cal": 239,
+   "cal": 606,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1232,7 +1232,7 @@
    "sku": "variant_CLSS001_128SS_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1849,
-   "cal": 129,
+   "cal": 421,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1243,7 +1243,7 @@
    "sku": "variant_CLSS001_128SS_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1849,
-   "cal": 100,
+   "cal": 455,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1265,7 +1265,7 @@
    "sku": "variant_CLSS001_128SS_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1999,
-   "cal": 160,
+   "cal": 475,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1276,7 +1276,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2129,
-   "cal": 45,
+   "cal": 245,
    "serv": 16,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1287,7 +1287,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1879,
-   "cal": 35,
+   "cal": 180,
    "serv": 16,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1298,7 +1298,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 2079,
-   "cal": 190,
+   "cal": 470,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1309,7 +1309,7 @@
    "sku": "variant_CLSS001_128SS_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2329,
-   "cal": 300,
+   "cal": 1135,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1331,7 +1331,7 @@
    "sku": "variant_CLSS001_128SS_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 2079,
-   "cal": 90,
+   "cal": 435,
    "serv": 8,
    "unit": "slice",
    "desc": "The ultimate combination of pepperoni, beef, ham, Italian sausage, pork sausage, sweet red onions, fresh mushrooms, crisp green peppers and black olives."
@@ -1342,7 +1342,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 441,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1353,7 +1353,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 470,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1364,7 +1364,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 475,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1375,7 +1375,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 195,
    "serv": 16,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1386,7 +1386,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 640,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1397,7 +1397,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 645,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1408,7 +1408,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 623,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1419,7 +1419,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 621,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1430,7 +1430,7 @@
    "sku": "variant_CLSS001_092ML_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 255,
    "serv": 4,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1441,7 +1441,7 @@
    "sku": "variant_CLSS001_092ML_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 441,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1452,7 +1452,7 @@
    "sku": "variant_CLSS001_092ML_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 470,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1474,7 +1474,7 @@
    "sku": "variant_CLSS001_092ML_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 485,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1485,7 +1485,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 260,
    "serv": 16,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1496,7 +1496,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 450,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1507,7 +1507,7 @@
    "sku": "variant_CLSS001_092ML_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 490,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1518,7 +1518,7 @@
    "sku": "variant_CLSS001_092ML_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 1155,
    "serv": 8,
    "unit": "slice",
    "desc": "This savory recipe is jam-packed with pepperoni, ham, pork, beef, Italian sausage and bacon."
@@ -1540,7 +1540,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 276,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1551,7 +1551,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 250,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1562,7 +1562,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 150,
+   "cal": 290,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1573,7 +1573,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 60,
    "serv": 16,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1584,7 +1584,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 130,
+   "cal": 350,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1595,7 +1595,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 220,
+   "cal": 420,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1606,7 +1606,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 393,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1617,7 +1617,7 @@
    "sku": "variant_CLSS001_107PL_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 180,
    "serv": 4,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1628,7 +1628,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 416,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1639,7 +1639,7 @@
    "sku": "variant_CLSS001_107PL_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 266,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1650,7 +1650,7 @@
    "sku": "variant_CLSS001_107PL_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 205,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1672,7 +1672,7 @@
    "sku": "variant_CLSS001_107PL_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 150,
+   "cal": 275,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1683,7 +1683,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 80,
    "serv": 16,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1694,7 +1694,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 185,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1705,7 +1705,7 @@
    "sku": "variant_CLSS001_107PL_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 275,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1716,7 +1716,7 @@
    "sku": "variant_CLSS001_107PL_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 940,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic 1-topping pepperoni pizza you crave, loaded up with 50% more pepperoni."
@@ -1738,7 +1738,7 @@
    "sku": "variant_CLSS001_010B_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1749,7 +1749,7 @@
    "sku": "variant_CLSS001_010B_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1760,7 +1760,7 @@
    "sku": "variant_CLSS001_010B_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1782,7 +1782,7 @@
    "sku": "variant_CLSS001_010B_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 176,
+   "cal": 273,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1793,7 +1793,7 @@
    "sku": "variant_CLSS001_010B_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 225,
+   "cal": 335,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1804,7 +1804,7 @@
    "sku": "variant_CLSS001_010B_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 125,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1826,7 +1826,7 @@
    "sku": "variant_CLSS001_010B_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 239,
+   "cal": 306,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1837,7 +1837,7 @@
    "sku": "variant_CLSS001_010B_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 659,
-   "cal": 100,
+   "cal": 130,
    "serv": 4,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1848,7 +1848,7 @@
    "sku": "variant_CLSS001_010B_SIZE214GF_BASE701GF",
    "cat": "pizza",
    "priceCents": 1049,
-   "cal": 60,
+   "cal": 100,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1859,7 +1859,7 @@
    "sku": "variant_CLSS001_010B_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 90,
+   "cal": 150,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1870,7 +1870,7 @@
    "sku": "variant_CLSS001_010B_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 190,
+   "cal": 255,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1903,7 +1903,7 @@
    "sku": "variant_CLSS001_010B_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 300,
+   "cal": 905,
    "serv": 8,
    "unit": "slice",
    "desc": "Be the Picasso of your next pizza night. Choose from our awesome ingredients and crusts. Onions, sausage, peppers, olives, pineapple-whatever you crave!"
@@ -1914,7 +1914,7 @@
    "sku": "variant_CLSS001_139VL_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 135,
    "serv": 4,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1925,7 +1925,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 206,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1936,7 +1936,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 180,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1947,7 +1947,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 250,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1958,7 +1958,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 40,
    "serv": 16,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1969,7 +1969,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 245,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1980,7 +1980,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 355,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -1991,7 +1991,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 293,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2002,7 +2002,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 326,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2013,7 +2013,7 @@
    "sku": "variant_CLSS001_139VL_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 206,
    "serv": 8,
    "unit": "slices",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2024,7 +2024,7 @@
    "sku": "variant_CLSS001_139VL_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 180,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2046,7 +2046,7 @@
    "sku": "variant_CLSS001_139VL_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 255,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2057,7 +2057,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 60,
    "serv": 16,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2068,7 +2068,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 170,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2079,7 +2079,7 @@
    "sku": "variant_CLSS001_139VL_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 265,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2090,7 +2090,7 @@
    "sku": "variant_CLSS001_139VL_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 915,
    "serv": 8,
    "unit": "slice",
    "desc": "With mushrooms, onions, green bell peppers, tomatoes and black olives, this recipe has all the veggies you love."
@@ -2112,7 +2112,7 @@
    "sku": "variant_CLSS001_551GP_SIZE214GF_BASE701GF",
    "cat": "pizza",
    "priceCents": 1169,
-   "cal": 60,
+   "cal": 125,
    "serv": 8,
    "unit": "slice",
    "desc": "UDI's Certified Gluten Free Crust, topped with classic marinara sauce, pepperoni and 100% real mozzarella."
@@ -2123,7 +2123,7 @@
    "sku": "variant_CLSS001_554CA_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 90,
+   "cal": 185,
    "serv": 8,
    "unit": "slice",
    "desc": "Cauliflower Pepperoni"
@@ -2134,7 +2134,7 @@
    "sku": "variant_CLSS001_038CP_SIZE133XT_BASE451NY",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 233,
+   "cal": 383,
    "serv": 6,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2145,7 +2145,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE972HN",
    "cat": "pizza",
    "priceCents": 700,
-   "cal": 129,
+   "cal": 226,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2156,7 +2156,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE971N",
    "cat": "pizza",
    "priceCents": 800,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2167,7 +2167,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE970TH",
    "cat": "pizza",
    "priceCents": 700,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2178,7 +2178,7 @@
    "sku": "variant_CLSS001_038CP_SIZE170HT_BASE941HP",
    "cat": "pizza",
    "priceCents": 1329,
-   "cal": 96,
+   "cal": 113,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2189,7 +2189,7 @@
    "sku": "variant_CLSS001_038CP_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 176,
+   "cal": 273,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2200,7 +2200,7 @@
    "sku": "variant_CLSS001_038CP_SIZE214GF_BASE701GF",
    "cat": "pizza",
    "priceCents": 1049,
-   "cal": 60,
+   "cal": 100,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2211,7 +2211,7 @@
    "sku": "variant_CLSS001_038CP_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 239,
+   "cal": 306,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2222,7 +2222,7 @@
    "sku": "variant_CLSS001_038CP_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 659,
-   "cal": 100,
+   "cal": 130,
    "serv": 4,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2233,7 +2233,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2244,7 +2244,7 @@
    "sku": "variant_CLSS001_038CP_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 225,
+   "cal": 335,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2255,7 +2255,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2266,7 +2266,7 @@
    "sku": "variant_CLSS001_038CP_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 125,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2277,7 +2277,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2288,7 +2288,7 @@
    "sku": "variant_CLSS001_038CP_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2299,7 +2299,7 @@
    "sku": "variant_CLSS001_038CP_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2321,7 +2321,7 @@
    "sku": "variant_CLSS001_038CP_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2376,7 +2376,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 90,
+   "cal": 150,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2387,7 +2387,7 @@
    "sku": "variant_CLSS001_038CP_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 190,
+   "cal": 255,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2420,7 +2420,7 @@
    "sku": "variant_CLSS001_038CP_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 300,
+   "cal": 905,
    "serv": 8,
    "unit": "slice",
    "desc": "The classic cheese pizza, a customer favorite!"
@@ -2431,7 +2431,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 659,
-   "cal": 100,
+   "cal": 130,
    "serv": 4,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2442,7 +2442,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2453,7 +2453,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2464,7 +2464,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 176,
+   "cal": 273,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2475,7 +2475,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 225,
+   "cal": 335,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2486,7 +2486,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2497,7 +2497,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE170HT_BASE941HP",
    "cat": "pizza",
    "priceCents": 1329,
-   "cal": 96,
+   "cal": 113,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2508,7 +2508,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 1549,
-   "cal": 125,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2519,7 +2519,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE972HN",
    "cat": "pizza",
    "priceCents": 700,
-   "cal": 120,
+   "cal": 217,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2530,7 +2530,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE970TH",
    "cat": "pizza",
    "priceCents": 700,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2541,7 +2541,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE971N",
    "cat": "pizza",
    "priceCents": 800,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2552,7 +2552,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE214GF_BASE701GF",
    "cat": "pizza",
    "priceCents": 1049,
-   "cal": 60,
+   "cal": 100,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2563,7 +2563,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 239,
+   "cal": 306,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2574,7 +2574,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2585,7 +2585,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1369,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2607,7 +2607,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2618,7 +2618,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE133XT_BASE451NY",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 233,
+   "cal": 383,
    "serv": 6,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2662,7 +2662,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 90,
+   "cal": 150,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2673,7 +2673,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 190,
+   "cal": 255,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2684,7 +2684,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE455CR",
    "cat": "pizza",
    "priceCents": 1699,
-   "cal": 225,
+   "cal": 335,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2695,7 +2695,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE050M_BASE455CR",
    "cat": "pizza",
    "priceCents": 1519,
-   "cal": 155,
+   "cal": 265,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2706,7 +2706,7 @@
    "sku": "variant_CLSS001_010BCYO1T_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 300,
+   "cal": 905,
    "serv": 8,
    "unit": "slice",
    "desc": "CYO 1-Top Pizza"
@@ -2728,7 +2728,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 240,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2739,7 +2739,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 306,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2750,7 +2750,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 196,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2761,7 +2761,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2772,7 +2772,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 335,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2783,7 +2783,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 273,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2794,7 +2794,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 160,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2805,7 +2805,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 130,
    "serv": 4,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2827,7 +2827,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 50,
    "serv": 16,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2838,7 +2838,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 315,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2849,7 +2849,7 @@
    "sku": "variant_CLSS001_026BQ_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 1205,
    "serv": 8,
    "unit": "slice",
    "desc": "We pile on shredded beef, classic pizza sauce and cheese."
@@ -2860,7 +2860,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 320,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2871,7 +2871,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 410,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2882,7 +2882,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 381,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2893,7 +2893,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 358,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2904,7 +2904,7 @@
    "sku": "variant_CLSS001_521BY_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 165,
    "serv": 4,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2915,7 +2915,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 225,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2926,7 +2926,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 285,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2937,7 +2937,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 246,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2948,7 +2948,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 100,
    "serv": 16,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2959,7 +2959,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 75,
    "serv": 16,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2970,7 +2970,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 305,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2981,7 +2981,7 @@
    "sku": "variant_CLSS001_521BY_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 955,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -2992,7 +2992,7 @@
    "sku": "variant_CLSS001_521BY_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "This BBQ pizza comes topped with grilled chicken, bacon and onion. Who's the grillmaster now?"
@@ -3003,7 +3003,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE020H",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 129,
+   "cal": 251,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3014,7 +3014,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE010T",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 125,
+   "cal": 305,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3025,7 +3025,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE015P",
    "cat": "pizza",
    "priceCents": 2179,
-   "cal": 225,
+   "cal": 400,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3036,7 +3036,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE020H",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 176,
+   "cal": 343,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3047,7 +3047,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE431S",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 239,
+   "cal": 371,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3058,7 +3058,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE010T",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 100,
+   "cal": 225,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3069,7 +3069,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE015P",
    "cat": "pizza",
    "priceCents": 1929,
-   "cal": 160,
+   "cal": 290,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3080,7 +3080,7 @@
    "sku": "variant_CLSS001_921HL_SIZE988TR_BASE020H",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 129,
+   "cal": 251,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3091,7 +3091,7 @@
    "sku": "variant_CLSS001_921HL_SIZE988TR_BASE010T",
    "cat": "pizza",
    "priceCents": 1749,
-   "cal": 100,
+   "cal": 225,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3113,7 +3113,7 @@
    "sku": "variant_CLSS001_921HL_SIZE988TR_BASE015P",
    "cat": "pizza",
    "priceCents": 1899,
-   "cal": 160,
+   "cal": 290,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3124,7 +3124,7 @@
    "sku": "variant_CLSS001_921HL_SIZE020P_BASE015P",
    "cat": "pizza",
    "priceCents": 819,
-   "cal": 100,
+   "cal": 155,
    "serv": 4,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3135,7 +3135,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE435TV",
    "cat": "pizza",
    "priceCents": 2029,
-   "cal": 45,
+   "cal": 95,
    "serv": 16,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3146,7 +3146,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE435TV",
    "cat": "pizza",
    "priceCents": 1779,
-   "cal": 35,
+   "cal": 65,
    "serv": 16,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3157,7 +3157,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE431S",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 190,
+   "cal": 305,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3168,7 +3168,7 @@
    "sku": "variant_CLSS001_921HL_SIZE060L_BASE862CB",
    "cat": "pizza",
    "priceCents": 2229,
-   "cal": 300,
+   "cal": 960,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3190,7 +3190,7 @@
    "sku": "variant_CLSS001_921HL_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1979,
-   "cal": 90,
+   "cal": 215,
    "serv": 8,
    "unit": "slice",
    "desc": "Take an island escape.  Ham, tropical pineapple and bacon."
@@ -3740,7 +3740,7 @@
    "sku": "variant_CLSS001_553CC_SIZE050M_BASE600CC",
    "cat": "pizza",
    "priceCents": 1569,
-   "cal": 90,
+   "cal": 150,
    "serv": 8,
    "unit": "slice",
    "desc": "Cauliflower Cheese Pizza"
@@ -3751,7 +3751,7 @@
    "sku": "variant_CLSS001_232CK_SIZE385I_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1170,
+   "cal": 1310,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -3773,7 +3773,7 @@
    "sku": "variant_CLSS001_232CK_SIZE965MB_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 690,
+   "cal": 760,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -3784,7 +3784,7 @@
    "sku": "variant_CLSS001_232CK_SIZE964MH_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1170,
+   "cal": 1310,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -3806,7 +3806,7 @@
    "sku": "variant_CLSS001_230MV_SIZE385I_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1080,
+   "cal": 1460,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -3828,7 +3828,7 @@
    "sku": "variant_CLSS001_230MV_SIZE965MB_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 560,
+   "cal": 755,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -3839,7 +3839,7 @@
    "sku": "variant_CLSS001_230MV_SIZE964MH_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1080,
+   "cal": 1460,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -3861,7 +3861,7 @@
    "sku": "variant_CLSS001_231PP_SIZE385I_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1130,
+   "cal": 1200,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
@@ -3883,7 +3883,7 @@
    "sku": "variant_CLSS001_231PP_SIZE965MB_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 580,
+   "cal": 615,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
@@ -3894,7 +3894,7 @@
    "sku": "variant_CLSS001_231PP_SIZE964MH_BASE433PI",
    "cat": "melts",
    "priceCents": 799,
-   "cal": 1130,
+   "cal": 1200,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
@@ -5445,7 +5445,7 @@
    "sku": "variant_CLSS001_232CK_SIZE385I_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1170,
+   "cal": 1310,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -5467,7 +5467,7 @@
    "sku": "variant_CLSS001_232CK_SIZE965MB_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 690,
+   "cal": 760,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -5478,7 +5478,7 @@
    "sku": "variant_CLSS001_232CK_SIZE964MH_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1170,
+   "cal": 1310,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with chicken, bacon, creamy Alfredo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions."
@@ -5500,7 +5500,7 @@
    "sku": "variant_CLSS001_230MV_SIZE385I_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1080,
+   "cal": 1460,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -5522,7 +5522,7 @@
    "sku": "variant_CLSS001_230MV_SIZE965MB_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 560,
+   "cal": 755,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -5533,7 +5533,7 @@
    "sku": "variant_CLSS001_230MV_SIZE964MH_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1080,
+   "cal": 1460,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni, ham, Italian sausage, pork, beef, bacon and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutio"
@@ -5555,7 +5555,7 @@
    "sku": "variant_CLSS001_231PP_SIZE385I_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1130,
+   "cal": 1200,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
@@ -5577,7 +5577,7 @@
    "sku": "variant_CLSS001_231PP_SIZE965MB_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 580,
+   "cal": 615,
    "serv": 1,
    "unit": "half melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
@@ -5588,7 +5588,7 @@
    "sku": "variant_CLSS001_231PP_SIZE964MH_BASE433PI",
    "cat": "deals-and-combos",
    "priceCents": 799,
-   "cal": 1130,
+   "cal": 1200,
    "serv": 1,
    "unit": "melt",
    "desc": "A Melt loaded with pepperoni and cheese. Served with marinara for dipping. Comes with one dipping sauce; no substitutions."
