@@ -171,3 +171,8 @@ stay out of the Value Score ranking. This API carries no product images, so
 PH rows show the brand icon.
 - Pizza Hut app (official, seller Pizza Hut, Inc.):
   https://apps.apple.com/us/app/pizza-hut-delivery-takeout/id321560858
+
+## Scouting leads (not yet captured)
+- Sonic: dmb.sonicdrivein.com "Digital Menu Board API" root responds but no public docs (swagger/openapi/api all 404). www.sonicdrivein.com/menu is JS-rendered; needs cloud-browser recon of the storefront API the menu page calls (same pattern as PH/PJ). Not started.
+- DQ: undetermined. Jack in the Box: not started.
+- Hard stops (no-bypass rule): McDonald's/KFC 403, Popeyes WAF, Wendy's auth+Turnstile, Panda Express 403.
