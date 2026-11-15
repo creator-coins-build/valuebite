@@ -70,7 +70,7 @@ export async function persistRun(
     if (existing[0]) {
       await db
         .update(menuItems)
-        .set({ name: item.name, description: item.description ?? null, category: item.category, lastVerified: new Date(item.fetchedAt) })
+        .set({ name: item.name, description: item.description ?? null, category: item.category, imageUrl: item.imageUrl ?? null, lastVerified: new Date(item.fetchedAt) })
         .where(eq(menuItems.id, existing[0].id));
       menuItemId = existing[0].id;
     } else {
@@ -78,7 +78,7 @@ export async function persistRun(
         .insert(menuItems)
         .values({
           restaurantId, restaurantProductId: item.productId, name: item.name,
-          description: item.description ?? null, category: item.category, lastVerified: new Date(item.fetchedAt),
+          description: item.description ?? null, category: item.category, imageUrl: item.imageUrl ?? null, lastVerified: new Date(item.fetchedAt),
         })
         .returning();
       menuItemId = m!.id;

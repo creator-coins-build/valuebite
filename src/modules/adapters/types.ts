@@ -8,6 +8,8 @@ export interface NormalizedItem {
   /** Official calorie range (customizable items: "1430-1710"). Both or neither. Never collapsed into a fake single number. */
   caloriesMin?: number | null; caloriesMax?: number | null;
   proteinG: number | null;
+  /** Official product image URL from the chain's own feed, when present. */
+  imageUrl?: string | null;
   nutritionSourceUrl: string; nutritionConfidence: Confidence;
   price: number; pricingType: PricingType; priceSourceUrl: string; storeId: string; zip: string;
   fetchedAt: string; // ISO

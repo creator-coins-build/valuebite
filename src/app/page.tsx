@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 const ZIP = "33613";
 
-/** Brand tiles: colored rounded squares with initials (no hotlinked logos). */
+/** Real app icons, served locally from /public/icons (official App Store artwork). */
 const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: string }> = {
   "taco-bell": { initials: "TB", bg: "#702082", fg: "#fff", name: "Taco Bell" },
   dominos: { initials: "D", bg: "#006491", fg: "#fff", name: "Domino's" },
@@ -20,18 +20,24 @@ const BRANDS: Record<string, { initials: string; bg: string; fg: string; name: s
 
 function BrandTile({ slug, size = 40 }: { slug: string; size?: number }) {
   const b = BRANDS[slug] ?? { initials: slug.slice(0, 2).toUpperCase(), bg: "#e8e6e3", fg: "#1c1c1e" };
+  const style: React.CSSProperties = {
+    width: size, height: size, borderRadius: size * 0.24,
+    border: "1px solid rgba(0,0,0,0.08)", flexShrink: 0, objectFit: "cover",
+  };
+  if (BRANDS[slug]) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={`/icons/${slug}.png`} alt={`${BRANDS[slug]!.name} app icon`} width={size} height={size} style={style} loading="lazy" />;
+  }
   return (
-    <span
-      style={{
-        display: "inline-flex", alignItems: "center", justifyContent: "center",
-        width: size, height: size, borderRadius: size * 0.32,
-        background: b.bg, color: b.fg, fontWeight: 800, fontSize: size * 0.3,
-        border: "1px solid rgba(0,0,0,0.06)", flexShrink: 0,
-      }}
-    >
+    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: b.bg, color: b.fg, fontWeight: 800, fontSize: size * 0.3 }}>
       {b.initials}
     </span>
   );
+}
+
+/** Route official chain photos through /api/img (their CDN blocks hotlinks). */
+function imgSrc(url: string): string {
+  return `/api/img?u=${encodeURIComponent(url)}`;
 }
 
 function priceLabel(pricingType: string): string | null {
@@ -85,7 +91,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
   // Deals first: chain deal-category items + official coupons, sorted by cal/$ (best first).
   interface DealView {
     key: string; title: string; slug: string; priceText: string; calText: string;
-    calPerDollar: string | null; sortCal: number; evidence: string;
+    calPerDollar: string | null; sortCal: number; evidence: string; imageUrl: string | null;
   }
   const dealViews: DealView[] = [];
   for (const r of allRows.filter((r) => r.category === "deals-and-combos")) {
@@ -101,6 +107,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       calPerDollar: calMin !== null && calMax !== null && calMin > 0 ? `${Math.round(calMin / r.price)}-${Math.round(calMax / r.price)} cal/$` : calMin === 0 ? "0 (drinks)" : null,
       sortCal: calMin !== null && calMax !== null && calMax > 0 ? calMax / r.price : -1,
       evidence: "official deals menu, checked " + new Date(r.fetchedAt).toISOString().slice(0, 10),
+      imageUrl: r.imageUrl ?? null,
     });
   }
   for (const d of deals.filter((d) => d.expiresAt !== null)) {
@@ -114,6 +121,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       calPerDollar: null,
       sortCal: -1,
       evidence: `expires ${d.expiresAt!.slice(0, 10)}`,
+      imageUrl: null,
     });
   }
   dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
@@ -191,6 +199,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
         <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 6 }}>
           {topDeals.map((d) => (
             <div key={d.key} style={{ ...card, minWidth: 230, maxWidth: 230, padding: 14, display: "flex", flexDirection: "column", gap: 8 }}>
+              {d.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={imgSrc(d.imageUrl)} alt={d.title} loading="lazy"
+                  style={{ width: "100%", height: 118, objectFit: "cover", borderRadius: 12, background: "#f6f5f3" }} />
+              )}
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <BrandTile slug={d.slug} size={30} />
                 <span style={{ fontSize: 12, color: "#6b6b70" }}>{BRANDS[d.slug]?.name ?? d.slug}</span>
@@ -222,7 +235,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
             return (
               <div key={s.id} style={{ ...card, padding: 14, display: "flex", alignItems: "center", gap: 12 }}>
                 <span style={{ fontSize: 15, fontWeight: 800, color: "#9a9aa0", width: 20, textAlign: "center" }}>{i + 1}</span>
-                <BrandTile slug={row.restaurantSlug} />
+                {row.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={imgSrc(row.imageUrl)} alt={row.name} width={56} height={56} loading="lazy"
+                    style={{ width: 56, height: 56, objectFit: "cover", borderRadius: 14, border: "1px solid rgba(0,0,0,0.06)", background: "#f6f5f3", flexShrink: 0 }} />
+                ) : (
+                  <BrandTile slug={row.restaurantSlug} size={56} />
+                )}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontWeight: 700, fontSize: 15 }}>{row.name}</div>
                   <div style={{ fontSize: 13, color: "#6b6b70", marginTop: 2 }}>
