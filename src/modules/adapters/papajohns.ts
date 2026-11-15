@@ -170,6 +170,7 @@ export function dealRows(snap: PapaJohnsSnapshot): DealRow[] {
   return snap.deals.map((d) => ({
     restaurantName: PAPA_JOHNS_NAME,
     title: d.title,
+    description: d.desc,
     price: parsePrice(d.price),
     promoCode: d.offerCode,
     expiresAt: null, // the feed gives no expiry; freshness comes from the snapshot's fetchedAt

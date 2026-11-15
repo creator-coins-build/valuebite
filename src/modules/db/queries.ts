@@ -62,6 +62,8 @@ export async function rankableRows(db: Db, zip: string): Promise<RankableRow[]> 
 }
 
 export interface DealRow {
+  /** Official offer description/conditions when the source supplies them. */
+  description?: string;
   restaurantName: string;
   title: string;
   price: number | null;

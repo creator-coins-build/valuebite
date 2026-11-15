@@ -73,6 +73,7 @@ describe("papajohns snapshot adapter", () => {
       expect(d.appOnly).toBe(false);
       expect(d.redemption).toBe("online");
     }
+    expect(deals.find((d) => d.title === "Papa Pairings")!.description).toContain("two or more");
     expect(deals.find((d) => d.title === "20% Off")!.promoCode).toBe("PJ20OFF");
     expect(deals.find((d) => d.title === "20% Off")!.price).toBeNull(); // percent deal, no fixed price
     expect(deals.find((d) => d.title === "The Grand Papa Pizza")!.price).toBe(14.99);

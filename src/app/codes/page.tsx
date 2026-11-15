@@ -37,6 +37,8 @@ export default async function CodesPage({ searchParams }: { searchParams: Promis
                 {d.price !== null && <strong>${d.price.toFixed(2)}</strong>}
               </div>
               <p style={{ fontSize: 12, color: MUTED }}>Papa John's · store 920 · sampled {d.lastVerified.slice(0, 10)} · no expiry published</p>
+              {d.description && <p style={{ fontSize: 13, lineHeight: 1.5, fontWeight: 700 }}>{d.description}</p>}
+              {d.title === "Papa Pairings" && <p style={{ color: "#a13d10", fontWeight: 800, fontSize: 13 }}>Choose 2 or more eligible items. Shown price is not the total order price.</p>}
               <p style={{ fontSize: 13, lineHeight: 1.5 }}>Choose 14861 North Dale Mabry Hwy, Tampa for carryout. Open Deals and select this offer{d.promoCode ? " or enter the code below" : ""}. Check the full terms and final price there before ordering.</p>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
                 {d.promoCode && <code style={{ background: "#f1ece4", padding: "8px 12px", borderRadius: 10 }}>{d.promoCode}</code>}
