@@ -45,6 +45,14 @@ describe("pizzahut snapshot adapter", () => {
     expect(pep.calories).toBe(2584); // 323 composite cal/slice x 8 slices, matches the site's own display
   });
 
+  it("keeps calories unknown for categories without verified composition", () => {
+    const items = normalizeItems(snap);
+    for (const i of items) {
+      if (i.category === "pizza") continue;
+      expect(i.calories).toBeNull(); // unverified category: unknown stays unknown
+    }
+  });
+
   it("cleans the size-marker artifact out of variant display names", () => {
     expect(displayName("Medium v Hand-Tossed Cheese Pizza")).toBe("Medium Hand-Tossed Cheese Pizza");
     expect(displayName("Large Hand-Tossed Pepperoni Pizza")).toBe("Large Hand-Tossed Pepperoni Pizza");

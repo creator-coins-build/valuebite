@@ -71,6 +71,9 @@ export function wholeCalories(p: Pick<PHProduct, "cal" | "serv">): number | null
   return p.cal * p.serv;
 }
 
+/** Categories whose composite calories are verified against the site's own display (evidence: docs/research/ph-nutrition-units-2026-11-15.md). */
+export const VERIFIED_CAL_CATS: ReadonlySet<string> = new Set(["pizza"]);
+
 const cache = new Map<string, PizzaHutSnapshot | null>();
 
 export function isFresh(snap: PizzaHutSnapshot, now = Date.now()): boolean {
@@ -122,7 +125,10 @@ export function normalizeItems(snap: PizzaHutSnapshot): NormalizedItem[] {
       name: displayName(p.name),
       description: p.desc || null,
       category: p.cat,
-      calories: wholeCalories(p),
+      // Composite formula is verified against the site's own display for
+      // pizzas only (5 exact matches, 2026-11-15). Other categories stay
+      // unknown until their representative cases are verified the same way.
+      calories: VERIFIED_CAL_CATS.has(p.cat) ? wholeCalories(p) : null,
       proteinG: null, // not published - unknown stays unknown
       imageUrl: null, // this API carries no product images
       nutritionSourceUrl: MENU_URL,
