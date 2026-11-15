@@ -6,7 +6,11 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seed": "tsx scripts/seed.ts",
+    "refresh": "tsx scripts/refresh.ts"
   },
   "keywords": [],
   "author": "",
