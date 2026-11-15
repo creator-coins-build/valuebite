@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
  * cross-origin/hotlink loads, so the server fetches with a browser UA and
  * serves the bytes itself. Only allowlisted official hosts.
  */
-const ALLOWED_HOSTS = new Set(["www.tacobell.com", "tacobell.com", "www.chick-fil-a.com"]);
+const ALLOWED_HOSTS = new Set(["www.tacobell.com", "tacobell.com", "www.chick-fil-a.com", "cdn.sanity.io"]);
 
 export async function GET(req: NextRequest) {
   const u = req.nextUrl.searchParams.get("u");
@@ -16,7 +16,8 @@ export async function GET(req: NextRequest) {
   } catch {
     return new NextResponse("bad url", { status: 400 });
   }
-  if (!ALLOWED_HOSTS.has(url.hostname)) return new NextResponse("host not allowed", { status: 403 });
+  if (url.protocol !== "https:" || !ALLOWED_HOSTS.has(url.hostname)) return new NextResponse("host not allowed", { status: 403 });
+  if (url.hostname === "cdn.sanity.io" && !url.pathname.startsWith("/images/kjfd81ul/prod_bk_us/")) return new NextResponse("project not allowed", { status: 403 });
 
   const upstream = await fetch(url, {
     headers: {

@@ -65,3 +65,14 @@ https://www.chick-fil-a.com/menu/entrees with provenance in
 `data/official-images.json`. Plain sandwich and wrap names match exactly;
 8-count nuggets and 3-count strips are limited to the count stated in the
 chain's own image filename. Cheese variants are not given a default picture.
+
+Burger King photo expansion: its official www.bk.com JavaScript menu references
+Sanity project kjfd81ul, dataset prod_bk_us. The unauthenticated public item
+query returns item names and dereferenced image URLs. All 19 existing BK rows
+now have exact name matches after removing only the chain prefix, trademark
+symbols, letter case and extra whitespace. We did not collapse bacon, cheese,
+double, portion size or other meaningful food differences. Where multiple
+records share the same exact name, use the most recently updated record.
+The selected source IDs, source update times and query URL are preserved in
+`data/official-images.json` and `docs/research/bk-photos-2026-11-15.json`.
+Images use only this project's official asset path, not arbitrary Sanity images.

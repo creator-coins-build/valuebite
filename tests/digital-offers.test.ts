@@ -20,8 +20,12 @@ describe("official digital offers", () => {
     }
   });
   it("keeps source evidence for every added food photo", () => {
-    expect(Object.keys(images)).toHaveLength(7);
-    for (const x of Object.values(images)) {
+    expect(Object.keys(images).length).toBeGreaterThanOrEqual(7);
+    for (const [key, x] of Object.entries(images)) {
+      if (key.startsWith("burger-king:")) {
+        expect(x.imageUrl).toMatch(/^https:\/\/cdn\.sanity\.io\/images\/kjfd81ul\/prod_bk_us\//);
+        continue;
+      }
       expect(x.sourceUrl).toBe("https://www.chick-fil-a.com/menu/entrees");
       expect(x.imageUrl).toMatch(/^https:\/\/www\.chick-fil-a\.com\/wp-content\/uploads\//);
     }

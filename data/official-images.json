@@ -40,5 +40,157 @@
     "sourceUrl": "https://www.chick-fil-a.com/menu/entrees",
     "checkedAt": "2026-11-15T17:02:39.381972+00:00",
     "sourceName": "Grilled Chicken Sandwich"
+  },
+  "burger-king:medium-french-fries": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/e32bacde0ffa44d93964c39abab892022dccad63-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.973099+00:00",
+    "sourceName": "Medium French Fries",
+    "sourceId": "item_74555",
+    "sourceUpdatedAt": "2026-11-05T10:14:51Z"
+  },
+  "burger-king:large-french-fries": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/6d799719b933ed4133dd1e707aab171d470b0f6e-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.977679+00:00",
+    "sourceName": "Large French Fries ",
+    "sourceId": "item_81354",
+    "sourceUpdatedAt": "2026-11-05T10:07:32Z"
+  },
+  "burger-king:original-chicken-sandwich": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/48a959af020453214be04cadee9e53ecc51fb735-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.982280+00:00",
+    "sourceName": "Original Chicken Sandwich",
+    "sourceId": "item_58311",
+    "sourceUpdatedAt": "2026-11-05T10:14:27Z"
+  },
+  "burger-king:simply-orange-juice": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/a1c8eb57d44b0c86aca8984d42b0d696aaa62d34-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.986768+00:00",
+    "sourceName": "Simply\u00ae Orange Juice",
+    "sourceId": "item_693",
+    "sourceUpdatedAt": "2026-11-05T10:14:51Z"
+  },
+  "burger-king:whopper-jr": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/a18250eb58852c438734edbfc138104b76b6f2a8-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.990915+00:00",
+    "sourceName": "Whopper Jr.\u00ae",
+    "sourceId": "item_954",
+    "sourceUpdatedAt": "2026-11-05T10:14:07Z"
+  },
+  "burger-king:whopper-with-cheese": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/8b5de0dd83deaf8d69128fe9b5996303bc07bb6f-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.995501+00:00",
+    "sourceName": "Whopper with Cheese",
+    "sourceId": "item_960",
+    "sourceUpdatedAt": "2026-11-05T10:06:19Z"
+  },
+  "burger-king:whopper": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/1c9fe7bcdcb04ef9904726873c96060fcc0d7d0a-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:40.999374+00:00",
+    "sourceName": "Whopper",
+    "sourceId": "item_74629",
+    "sourceUpdatedAt": "2026-11-05T10:11:57Z"
+  },
+  "burger-king:small-french-fries": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/6f9ec4396f43236bfdd899d3eadf39caa60497af-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.003839+00:00",
+    "sourceName": "Small French Fries",
+    "sourceId": "item_62299",
+    "sourceUpdatedAt": "2026-11-05T10:09:41Z"
+  },
+  "burger-king:double-whopper-with-cheese": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/47fe92cee2dcba3ecfc9327da1ca53ee5c5b8823-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.008573+00:00",
+    "sourceName": "Double Whopper with Cheese",
+    "sourceId": "item_355",
+    "sourceUpdatedAt": "2026-11-05T10:14:08Z"
+  },
+  "burger-king:double-whopper": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/723f70536cfd35e9b7bea3c54589bdd4da6e628b-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.012783+00:00",
+    "sourceName": "Double Whopper",
+    "sourceId": "item_350",
+    "sourceUpdatedAt": "2026-11-05T10:06:18Z"
+  },
+  "burger-king:whopper-with-bacon-cheese": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/98d0bf4e0a9cb91a9375e1cf87c03a70149337b9-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.017667+00:00",
+    "sourceName": "Whopper with Bacon & Cheese",
+    "sourceId": "item_140",
+    "sourceUpdatedAt": "2026-11-05T10:02:20Z"
+  },
+  "burger-king:large-onion-rings": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/e2b2e3834675f6dcba26ac841c3bc847dca019e4-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.022180+00:00",
+    "sourceName": "Large Onion Rings",
+    "sourceId": "item_686",
+    "sourceUpdatedAt": "2026-11-05T10:10:52Z"
+  },
+  "burger-king:medium-onion-rings": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/2f1f1c87c082b18cee83d286921162a24dc869bd-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.026616+00:00",
+    "sourceName": "Medium Onion Rings",
+    "sourceId": "item_74635",
+    "sourceUpdatedAt": "2026-11-05T10:14:29Z"
+  },
+  "burger-king:hersheys-sundae-pie": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/2297011f3490e069656530a1fb11b58789ba483d-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.031171+00:00",
+    "sourceName": "HERSHEY'S\u00ae Sundae Pie",
+    "sourceId": "item_724",
+    "sourceUpdatedAt": "2026-11-05T10:02:19Z"
+  },
+  "burger-king:medium-hash-browns": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/2be77047da5fed20af77d638f5a1c80c5e174551-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.035690+00:00",
+    "sourceName": "Medium Hash Browns",
+    "sourceId": "item_89678",
+    "sourceUpdatedAt": "2026-11-05T10:10:36Z"
+  },
+  "burger-king:large-hash-browns": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/1fc5ff8ae8ac9f020aec801fbaefc6b5ea789be2-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.040126+00:00",
+    "sourceName": "Large Hash Browns",
+    "sourceId": "item_568",
+    "sourceUpdatedAt": "2026-11-05T10:12:47Z"
+  },
+  "burger-king:small-onion-rings": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/3cbd7749633784fd04096cf4a12d500280663c02-1333x1333.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.044534+00:00",
+    "sourceName": "Small Onion Rings",
+    "sourceId": "item_90106",
+    "sourceUpdatedAt": "2026-11-05T10:14:15Z"
+  },
+  "burger-king:small-hash-browns": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/9d6a79ce3fcd15511686f08f02986adaa1031a12-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.048950+00:00",
+    "sourceName": "Small Hash Browns",
+    "sourceId": "item_54613",
+    "sourceUpdatedAt": "2026-11-05T10:23:37Z"
+  },
+  "burger-king:double-cheeseburger": {
+    "imageUrl": "https://cdn.sanity.io/images/kjfd81ul/prod_bk_us/20e33b05372cf2fc830180f8519734cc8bc2d490-1600x1600.png",
+    "sourceUrl": "https://kjfd81ul.apicdn.sanity.io/v2026-04-24/data/query/prod_bk_us?query=%2A%5B_type+%3D%3D+%22item%22+%26%26+defined%28image%29+%26%26+%21%28_id+in+path%28%22drafts.%2A%2A%22%29%29%5D%7B_id%2C_updatedAt%2Cname%2C%22imageUrl%22%3Aimage.asset-%3Eurl%7D",
+    "checkedAt": "2026-11-15T17:07:41.053240+00:00",
+    "sourceName": "Double Cheeseburger",
+    "sourceId": "item_95981",
+    "sourceUpdatedAt": "2026-11-05T10:14:09Z"
   }
 }

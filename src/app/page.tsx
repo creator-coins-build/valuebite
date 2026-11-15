@@ -52,7 +52,6 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
 
   // App/online-exclusive deals from official sources (currently Taco Bell's
   // "Member exclusive" + "Online exclusives" menu categories).
-  const appDeals = deals.filter(d => (d.redemption === "app" || d.redemption === "online") && Date.now() - Date.parse(d.lastVerified) < 48 * 3600_000 && (!filters.restaurants?.length || filters.restaurants.includes(brandSlugFor(d.restaurantName))));
 
   // Crowd favorites: photo'd ENTREES with the most calories per dollar (sauces/packets excluded).
   const entreeKeySet = new Set(entrees(rows).map((r) => `${r.restaurantSlug}:${r.productId}`));
