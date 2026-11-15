@@ -1,9 +1,11 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PGlite } from "@electric-sql/pglite";
-import { drizzle } from "drizzle-orm/pglite";
+import type { PGlite } from "@electric-sql/pglite";
 import * as schema from "./schema";
+
+// PGlite is loaded lazily inside openDb: on the hosted 512Mi server the pages
+// serve from data/snapshot.json and never touch this module's WASM at all.
 
 /**
  * Dev persistence: PGlite (embedded Postgres in WASM). The sandbox has no
@@ -13,11 +15,8 @@ import * as schema from "./schema";
 
 const MIGRATIONS_DIR = join(dirname(fileURLToPath(import.meta.url)), "../../../drizzle");
 
-export type Db = ReturnType<typeof makeDb>;
-
-function makeDb(client: PGlite) {
-  return drizzle({ client, schema });
-}
+import type { PgliteDatabase } from "drizzle-orm/pglite";
+export type Db = PgliteDatabase<typeof schema>;
 
 /** Applies every SQL migration in drizzle/ in filename order. Idempotent via a tracking table. */
 async function migrate(client: PGlite): Promise<void> {
@@ -34,8 +33,9 @@ async function migrate(client: PGlite): Promise<void> {
 
 /** Open (or create) a database at dataDir. Use "memory://" in tests. */
 export async function openDb(dataDir: string = "memory://"): Promise<{ db: Db; client: PGlite }> {
+  const [{ PGlite }, { drizzle }] = await Promise.all([import("@electric-sql/pglite"), import("drizzle-orm/pglite")]);
   const client = new PGlite(dataDir);
   await client.waitReady;
   await migrate(client);
-  return { db: makeDb(client), client };
+  return { db: drizzle({ client, schema }), client };
 }
