@@ -18,7 +18,7 @@ export function LocalNotice({ zip, requestedZip, fellBack, live, stores, liveErr
   return <>
     {stores.length > 0 && (
       <p style={{ margin: "6px 0 0", fontSize: 11, color: MUTED, textAlign: "center" }}>
-        exact prices from these stores: {stores.map(s => s.address).join(" · ")}{compact ? "" : " (other stores in the ZIP may price differently)"}
+        Local prices: Taco Bell + Domino's at {stores.map(s => s.address).join(" · ")}. Other chains: estimates (~).
       </p>
     )}
     {liveErrors.length > 0 && (
