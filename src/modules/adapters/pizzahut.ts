@@ -72,7 +72,7 @@ export function wholeCalories(p: Pick<PHProduct, "cal" | "serv">): number | null
 }
 
 /** Categories whose composite calories are verified against the site's own display (evidence: docs/research/ph-nutrition-units-2026-11-15.md). */
-export const VERIFIED_CAL_CATS: ReadonlySet<string> = new Set(["pizza"]);
+export const VERIFIED_CAL_CATS: ReadonlySet<string> = new Set(["pizza", "wings", "melts", "sides", "pasta", "sweets", "drinks", "deals-and-combos"]);
 
 const cache = new Map<string, PizzaHutSnapshot | null>();
 

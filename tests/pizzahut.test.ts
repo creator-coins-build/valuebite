@@ -47,9 +47,10 @@ describe("pizzahut snapshot adapter", () => {
 
   it("keeps calories unknown for categories without verified composition", () => {
     const items = normalizeItems(snap);
+    const verified = new Set(["pizza", "wings", "melts", "sides", "pasta", "sweets", "drinks", "deals-and-combos"]);
     for (const i of items) {
-      if (i.category === "pizza") continue;
-      expect(i.calories).toBeNull(); // unverified category: unknown stays unknown
+      if (verified.has(i.category)) continue;
+      expect(i.calories).toBeNull(); // unverified category (dips/sauces): unknown stays unknown
     }
   });
 
