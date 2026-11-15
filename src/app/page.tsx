@@ -112,6 +112,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
       {/* Hero deals - Popeyes-style big photo cards */}
       <section style={{ marginBottom: 26 }}>
         <h2 style={{ fontSize: 22, margin: "0 0 12px", letterSpacing: -0.5, fontWeight: 800 }}>App & online picks</h2>
+        {heroDeals.length === 0 && <p style={{ fontSize: 14, color: MUTED }}>No featured picks for this filter. <a href={`/codes${zipQ ? `?${zipQ.slice(1)}` : ""}`}>See official codes and store deals</a>.</p>}
         <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 6, scrollSnapType: "x mandatory" }}>
           {heroDeals.map((d) => (
             <div key={d.key} style={{ ...card, minWidth: "86%", overflow: "hidden", position: "relative", scrollSnapAlign: "center", padding: 0 }}>

@@ -126,3 +126,16 @@ Constraints, honored:
   (DIRECT_HOSTS in src/components/brand.tsx).
 - Papa John's app (official, seller Papa John's International Inc.):
   https://apps.apple.com/us/app/papa-johns-pizza-delivery/id407517450
+
+### Browser snapshot refresh
+
+Use the ordinary official carryout flow at https://www.papajohns.com/order/carryout,
+search 33613 and confirm store 920's address. From that public menu session,
+read the three menuCategory/product/deals responses above. Map every category's
+sections/productGroups/productSkus to its categoryId, preserving full product
+names, SKUs, displayPrice, calories, servingLabel, description and image.
+Store the response capture time, ZIP, store ID and displayed address alongside
+products and deals in data/papajohns/33613.json. Do not change fetchedAt without
+actually reviewing the live source. A failed source review must not renew data.
+New ZIPs need their own locator result, address confirmation and dated capture.
+Never export session cookies or retry the refused non-browser route.

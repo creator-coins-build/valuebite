@@ -29,7 +29,7 @@ export function DigitalOffers({ restaurant = "" }: { restaurant?: string }) {
       </article>)}
     </div>
     {offers.length === 0 && <p style={{ color: MUTED, fontSize: 13 }}>No confirmed digital offers here right now.</p>}
-    <details style={{ marginTop: 8, fontSize: 12, color: MUTED }}><summary style={{ cursor: "pointer" }}>Coverage across all 5 restaurants</summary>
+    <details style={{ marginTop: 8, fontSize: 12, color: MUTED }}><summary style={{ cursor: "pointer" }}>Rewards coverage across 5 restaurants</summary>
       <ul style={{ paddingLeft: 18, lineHeight: 1.5 }}>{offersData.coverage.map(c => <li key={c.slug}><strong>{BRANDS[c.slug]!.name}:</strong> {c.status}</li>)}</ul>
       <p>No currently confirmed app-only offer is listed. App + online and account-based rewards are labeled separately. Offers can vary by account and restaurant; confirm availability in the restaurant's app.</p>
     </details>
