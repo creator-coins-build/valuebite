@@ -38,7 +38,7 @@ export function LocalNotice({ zip, requestedZip, fellBack, live, stores, liveErr
     ))}
     {liveErrors.length > 0 && (
       <p style={{ margin: "4px 0 0", fontSize: 11, color: "#a13d10", textAlign: "center" }}>
-        {liveErrors.map(e => e.split(":")[0]).join(", ")} unavailable for {requestedZip} right now
+        {liveErrors.some(e => e.includes("no local snapshot")) ? `Papa John's has no saved store sample for ${requestedZip}. Its current coverage is ZIP 33613 only.` : `${liveErrors.map(e => e.split(":")[0]).join(", ")} unavailable for ${requestedZip} right now`}
       </p>
     )}
   </>;
