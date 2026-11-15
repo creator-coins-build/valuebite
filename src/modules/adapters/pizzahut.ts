@@ -21,8 +21,10 @@ import type { RankableRow, DealRow } from "../db/queries";
  * Hut rows at all - never another store's prices under its name.
  *
  * Nutrition units: each variant carries nutritionInformation entries like
- * calories:320 / servings:8 / unit:slice. Whole-item calories = calories x
- * servings. Variants without both numbers keep calories unknown.
+ * calories:320 / servings:8 / unit:slice) are BASE-ONLY; the site displays
+ * a composite including default modifiers. PH calories are currently
+ * suppressed (unknown) pending composition verification - see
+ * docs/research/ph-nutrition-units-2026-11-15.md.
  * Protein is not published per item here, so PH rows stay out of the
  * protein-based Value Score ranking (unknown stays unknown).
  */
@@ -60,11 +62,17 @@ export interface PizzaHutSnapshot {
   deals: PHDeal[];
 }
 
-/** Whole-item calories: per-unit count x the official unit count (slices, wings, sticks...). */
+/**
+ * Whole-item calories. SUPPRESSED (2026-11-15): the feed's variant calories
+ * are base-only - the site's own menu displays a composite of base +
+ * crust/size + default toppings (e.g. Large Hand-Tossed Pepperoni: feed says
+ * 176/slice, the site displays 323 cal/slice; default modifiers carry their
+ * own nutritionInformation). Until the composite composition is verified
+ * against the site's display, every PH calorie stays unknown (never show a
+ * number we cannot stand behind). Restore per-category only with evidence.
+ */
 export function wholeCalories(p: Pick<PHProduct, "cal" | "serv">): number | null {
-  if (p.cal === null || !Number.isFinite(p.cal)) return null;
-  if (p.serv === null || !Number.isFinite(p.serv) || p.serv <= 0) return null;
-  return p.cal * p.serv;
+  return null;
 }
 
 const cache = new Map<string, PizzaHutSnapshot | null>();

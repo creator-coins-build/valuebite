@@ -19,12 +19,14 @@ describe("pizzahut snapshot adapter", () => {
     expect(loadSnapshot("99999")).toBeNull();
   });
 
-  it("converts per-unit nutrition to whole-item using official unit counts", () => {
-    expect(wholeCalories({ cal: 320, serv: 8 })).toBe(2560); // 8 slices
-    expect(wholeCalories({ cal: 100, serv: 4 })).toBe(400);  // 4pc wings
-    expect(wholeCalories({ cal: 1170, serv: 1 })).toBe(1170); // whole melt
+  it("suppresses all calories until the site's composite nutrition is verified", () => {
+    // Feed variant calories are base-only; the site displays base + default
+    // modifiers (176/slice feed vs 323/slice displayed). Unknown stays unknown.
+    expect(wholeCalories({ cal: 320, serv: 8 })).toBeNull();
+    expect(wholeCalories({ cal: 100, serv: 4 })).toBeNull();
+    expect(wholeCalories({ cal: 1170, serv: 1 })).toBeNull();
     expect(wholeCalories({ cal: null, serv: 8 })).toBeNull();
-    expect(wholeCalories({ cal: 320, serv: null })).toBeNull(); // never guessed
+    expect(wholeCalories({ cal: 320, serv: null })).toBeNull();
   });
 
   it("normalizes variants with exact store prices, never invented nutrition", () => {
@@ -40,7 +42,7 @@ describe("pizzahut snapshot adapter", () => {
     }
     const pep = items.find((i) => /Hand-Tossed Pepperoni Pizza$/.test(i.name) && /Large/.test(i.name))!;
     expect(pep.price).toBeGreaterThan(10);
-    expect(pep.calories).toBe(1408); // 176 cal x 8 slices: whole pizza, not per-slice
+    expect(pep.calories).toBeNull(); // suppressed: feed value is base-only, site displays a composite
   });
 
   it("cleans the size-marker artifact out of variant display names", () => {
