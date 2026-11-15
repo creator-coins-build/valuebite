@@ -9,10 +9,6 @@ export const BRANDS: Record<string, { initials: string; bg: string; fg: string; 
   chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle" },
 };
 
-export function brandName(slug: string): string {
-  return BRANDS[slug]?.name ?? slug;
-}
-
 export function brandSlugFor(restaurantName: string): string {
   return Object.keys(BRANDS).find((k) => BRANDS[k]!.name === restaurantName) ?? "dominos";
 }
@@ -22,33 +18,38 @@ export function imgSrc(url: string): string {
   return `/api/img?u=${encodeURIComponent(url)}`;
 }
 
+/** TB publishes a wide 750x340 hero crop alongside the 269x269 square - same URL, different suffix. */
+export function wideSrc(url: string): string {
+  return imgSrc(url.replace("269x269", "750x340"));
+}
+
 export function BrandIcon({ slug, size = 40 }: { slug: string; size?: number }) {
   const b = BRANDS[slug];
   const style: React.CSSProperties = {
     width: size, height: size, borderRadius: size * 0.24,
-    border: "1px solid rgba(255,255,255,0.08)", flexShrink: 0, objectFit: "cover",
+    border: "1px solid rgba(0,0,0,0.08)", flexShrink: 0, objectFit: "cover",
   };
   if (b) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={`/icons/${slug}.png`} alt={b.name} width={size} height={size} style={style} loading="lazy" />;
   }
   return (
-    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#26221c", color: "#f5f2ec", fontWeight: 800, fontSize: size * 0.3 }}>
+    <span style={{ ...style, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#f1ece4", color: "#191512", fontWeight: 800, fontSize: size * 0.3 }}>
       {slug.slice(0, 2).toUpperCase()}
     </span>
   );
 }
 
-/** Shared dark card. */
+/** Shared light card (Popeyes-style warm white). */
 export const card: React.CSSProperties = {
-  background: "#1a1713",
-  borderRadius: 22,
-  border: "1px solid #2a251f",
-  boxShadow: "0 2px 12px rgba(0,0,0,0.35)",
+  background: "#fff",
+  borderRadius: 24,
+  border: "1px solid #efe9e1",
+  boxShadow: "0 2px 12px rgba(90,60,20,0.06)",
 };
 
-export const ORANGE = "#ff8c1a";
-export const ORANGE_TEXT = "#ffa245";
-export const ORANGE_SOFT = "rgba(255,140,26,0.14)";
-export const MUTED = "#9c9488";
-export const INK = "#f5f2ec";
+export const ORANGE = "#f26722";
+export const ORANGE_TEXT = "#e85d10";
+export const ORANGE_SOFT = "rgba(242,103,34,0.12)";
+export const MUTED = "#7a7268";
+export const INK = "#191512";

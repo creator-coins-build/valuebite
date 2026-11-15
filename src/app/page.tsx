@@ -1,156 +1,130 @@
-import { openDb } from "../modules/db/client";
-import { rankableRows, activeDeals } from "../modules/db/queries";
-import { readSnapshot } from "../modules/db/snapshot";
-import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
 import { applyFilters, filtersFromParams } from "../modules/scoring/filters";
-import { BRANDS, BrandIcon, brandSlugFor, imgSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
+import { BRANDS, BrandIcon, brandSlugFor, imgSrc, wideSrc, card, ORANGE, ORANGE_TEXT, ORANGE_SOFT, MUTED, INK } from "../components/brand";
+import { loadData, ZIP } from "../components/data";
 
 export const dynamic = "force-dynamic";
-
-const ZIP = "33613";
 
 export default async function Home({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const params = await searchParams;
   const filters = filtersFromParams(params);
-  const snap = readSnapshot();
-  let allRows, deals;
-  if (snap) {
-    allRows = snap.rows;
-    deals = snap.deals;
-  } else {
-    const { db, client } = await openDb("./data/pgdb");
-    allRows = await rankableRows(db, ZIP);
-    deals = await activeDeals(db);
-    await client.close();
-  }
+  const { rows: allRows, deals } = await loadData();
   const rows = applyFilters(allRows.map((r) => ({ ...r, category: r.category ?? "" })), filters);
 
-  const scored = scorePopulation(
-    rows.map((r) => ({ id: `${r.restaurantSlug}:${r.productId}`, price: r.price, calories: r.calories, protein: r.proteinG })),
-  );
-  const byId = new Map(rows.map((r) => [`${r.restaurantSlug}:${r.productId}`, r]));
-  const withScores = rankScores(scored, "value")
-    .map((s) => ({ s, row: byId.get(s.id)! }))
-    .filter(({ row }) => row !== undefined);
-
-  const entreeRows = entrees(rows.map((r) => ({ ...r, calories: r.calories, category: r.category ?? "" })));
-  const entreeKeys = new Set(entreeRows.map((r) => `${r.restaurantSlug}:${r.productId}`));
-  const byValue = withScores.filter(({ s }) => entreeKeys.has(s.id) && s.valueScore !== null).slice(0, 10);
-
+  // Deals: chain deal-category items + official coupons, best cal/$ first.
   interface DealView {
-    key: string; title: string; slug: string; priceText: string;
+    key: string; title: string; slug: string; price: number | null; priceText: string;
     calPerDollar: string | null; sortCal: number; imageUrl: string | null;
   }
   const dealViews: DealView[] = [];
-  for (const r of allRows.filter((r) => r.category === "deals-and-combos")) {
+  for (const r of rows.filter((r) => r.category === "deals-and-combos")) {
     const calMin = r.calories ?? r.caloriesMin;
     const calMax = r.calories ?? r.caloriesMax;
     dealViews.push({
       key: `tb:${r.productId}`,
       title: r.name,
       slug: r.restaurantSlug,
+      price: r.price,
       priceText: `$${r.price.toFixed(2)}`,
       calPerDollar: calMin !== null && calMax !== null && calMin > 0 ? `${Math.round(calMin / r.price)}-${Math.round(calMax / r.price)} cal/$` : calMin === 0 ? "drinks" : null,
       sortCal: calMin !== null && calMax !== null && calMax > 0 ? calMax / r.price : -1,
       imageUrl: r.imageUrl ?? null,
     });
   }
-  for (const d of deals.filter((d) => d.expiresAt !== null)) {
-    dealViews.push({
-      key: `dm:${d.promoCode}`,
-      title: d.title,
-      slug: brandSlugFor(d.restaurantName),
-      priceText: d.price !== null ? `$${d.price.toFixed(2)} w/ ${d.promoCode}` : `code ${d.promoCode}`,
-      calPerDollar: null,
-      sortCal: -1,
-      imageUrl: null,
-    });
+  if (!filters.restaurants?.length || filters.restaurants.includes("dominos")) {
+    for (const d of deals.filter((d) => d.expiresAt !== null).slice(0, 4)) {
+      dealViews.push({
+        key: `dm:${d.promoCode}`,
+        title: d.title,
+        slug: brandSlugFor(d.restaurantName),
+        price: d.price,
+        priceText: d.price !== null ? `$${d.price.toFixed(2)} w/ ${d.promoCode}` : `code ${d.promoCode}`,
+        calPerDollar: null,
+        sortCal: -1,
+        imageUrl: null,
+      });
+    }
   }
   dealViews.sort((x, y) => y.sortCal - x.sortCal || x.title.localeCompare(y.title));
-  const topDeals = dealViews.slice(0, 12);
+  const heroDeals = dealViews.slice(0, 5);
+
+  // Crowd favorites: photo'd ENTREES with the most calories per dollar (sauces/packets excluded).
+  const entreeKeySet = new Set(entrees(rows).map((r) => `${r.restaurantSlug}:${r.productId}`));
+  const favorites = rows
+    .filter((r) => r.imageUrl && (r.calories ?? 0) > 0 && entreeKeySet.has(`${r.restaurantSlug}:${r.productId}`))
+    .sort((a, b) => (b.calories! / b.price) - (a.calories! / a.price))
+    .slice(0, 4);
 
   const activeRestaurant = filters.restaurants?.[0] ?? "";
-  const checked = snap?.generatedAt?.slice(0, 10) ?? new Date().toISOString().slice(0, 10);
 
   return (
-    <main style={{ maxWidth: 860, margin: "0 auto", padding: "20px 16px 48px" }}>
+    <main style={{ maxWidth: 560, margin: "0 auto", padding: "18px 16px 40px" }}>
       {/* Header */}
-      <header style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 18 }}>
-        <div>
-          <h1 style={{ fontSize: 32, margin: 0, letterSpacing: -1.2, fontWeight: 900, color: ORANGE }}>ValueBite</h1>
-          <p style={{ margin: "2px 0 0", color: MUTED, fontSize: 14, fontStyle: "italic" }}>eat good. spend less. near <strong style={{ color: INK }}>{ZIP}</strong></p>
-        </div>
+      <header style={{ textAlign: "center", marginBottom: 16 }}>
+        <h1 style={{ fontSize: 34, margin: 0, letterSpacing: -1.4, fontWeight: 900, color: ORANGE }}>ValueBite</h1>
+        <p style={{ margin: "1px 0 0", color: MUTED, fontSize: 13.5, fontStyle: "italic" }}>eat good. spend less. near {ZIP}</p>
       </header>
 
-      {/* Budget search pill */}
-      <form method="get" style={{ ...card, display: "flex", alignItems: "center", gap: 10, padding: "8px 8px 8px 18px", marginBottom: 14, borderRadius: 999 }}>
-        <span style={{ fontSize: 16, color: ORANGE_TEXT, fontWeight: 800 }}>$</span>
-        <input
-          name="budget" type="number" step="0.01" min="0" defaultValue={filters.budget} placeholder="What's the budget?"
-          style={{ border: "none", outline: "none", fontSize: 15, flex: 1, minWidth: 0, background: "transparent", color: INK }}
-        />
-        {activeRestaurant && <input type="hidden" name="restaurant" value={activeRestaurant} />}
-        <button type="submit" style={{ background: ORANGE, color: "#141210", border: "none", borderRadius: 999, padding: "10px 22px", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>
-          Feed me
-        </button>
-        {(filters.budget !== undefined || activeRestaurant) && (
-          <a href="/" style={{ color: MUTED, fontSize: 13, textDecoration: "none", paddingRight: 8 }}>reset</a>
-        )}
-      </form>
-
       {/* Restaurant chips */}
-      <nav style={{ display: "flex", gap: 10, overflowX: "auto", paddingBottom: 6, marginBottom: 24 }}>
+      <nav style={{ display: "flex", gap: 8, overflowX: "auto", paddingBottom: 6, marginBottom: 18 }}>
         <a
-          href={filters.budget !== undefined ? `/?budget=${filters.budget}` : "/"}
+          href="/"
           style={{
-            ...card, borderRadius: 999, padding: "8px 16px", display: "flex", alignItems: "center",
-            textDecoration: "none", color: INK, fontSize: 14, fontWeight: activeRestaurant ? 500 : 700,
-            border: activeRestaurant ? "1px solid #2a251f" : `2px solid ${ORANGE}`, whiteSpace: "nowrap",
+            ...card, borderRadius: 999, padding: "7px 14px", display: "flex", alignItems: "center",
+            textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: activeRestaurant ? 500 : 700,
+            border: activeRestaurant ? "1px solid #efe9e1" : `2px solid ${ORANGE}`, whiteSpace: "nowrap",
           }}
         >
           All
         </a>
         {Object.entries(BRANDS).map(([slug, b]) => {
           const active = activeRestaurant === slug;
-          const href = filters.budget !== undefined ? `/?restaurant=${slug}&budget=${filters.budget}` : `/?restaurant=${slug}`;
           return (
             <a
               key={slug}
-              href={href}
+              href={active ? "/" : `/?restaurant=${slug}`}
               style={{
-                ...card, borderRadius: 999, padding: "5px 14px 5px 5px", display: "flex", alignItems: "center", gap: 8,
-                textDecoration: "none", color: INK, fontSize: 14, fontWeight: active ? 700 : 500,
-                border: active ? `2px solid ${ORANGE}` : "1px solid #2a251f", whiteSpace: "nowrap",
+                ...card, borderRadius: 999, padding: "4px 12px 4px 4px", display: "flex", alignItems: "center", gap: 7,
+                textDecoration: "none", color: INK, fontSize: 13.5, fontWeight: active ? 700 : 500,
+                border: active ? `2px solid ${ORANGE}` : "1px solid #efe9e1", whiteSpace: "nowrap",
               }}
             >
-              <BrandIcon slug={slug} size={28} />
+              <BrandIcon slug={slug} size={26} />
               {b.name}
             </a>
           );
         })}
       </nav>
 
-      {/* Deals first - the promos, up top */}
-      <section style={{ marginBottom: 30 }}>
-        <h2 style={{ fontSize: 21, margin: "0 0 12px", letterSpacing: -0.4 }}>Today's best deals</h2>
-        <div style={{ display: "flex", gap: 14, overflowX: "auto", paddingBottom: 6 }}>
-          {topDeals.map((d) => (
-            <div key={d.key} style={{ ...card, minWidth: 210, maxWidth: 210, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+      {/* Hero deals - Popeyes-style big photo cards */}
+      <section style={{ marginBottom: 26 }}>
+        <h2 style={{ fontSize: 22, margin: "0 0 12px", letterSpacing: -0.5, fontWeight: 800 }}>Today's best deals</h2>
+        <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 6, scrollSnapType: "x mandatory" }}>
+          {heroDeals.map((d) => (
+            <div key={d.key} style={{ ...card, minWidth: "86%", overflow: "hidden", position: "relative", scrollSnapAlign: "center", padding: 0 }}>
               {d.imageUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={imgSrc(d.imageUrl)} alt={d.title} loading="lazy"
-                  style={{ width: "100%", height: 128, objectFit: "cover", background: "#26221c" }} />
+                <img src={wideSrc(d.imageUrl)} alt={d.title} loading="lazy"
+                  style={{ width: "100%", height: 190, objectFit: "cover", display: "block", background: "#f1ece4" }} />
               ) : (
-                <div style={{ width: "100%", height: 96, background: "#26221c", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <BrandIcon slug={d.slug} size={44} />
+                <div style={{ width: "100%", height: 150, background: "#f1ece4", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <BrandIcon slug={d.slug} size={56} />
                 </div>
               )}
-              <div style={{ padding: "10px 12px 12px", display: "flex", flexDirection: "column", gap: 4 }}>
-                <div style={{ fontWeight: 700, fontSize: 14, lineHeight: 1.25, color: INK }}>{d.title}</div>
-                <div style={{ fontSize: 13, color: MUTED }}>{BRANDS[d.slug]?.name ?? d.slug} · {d.priceText}</div>
+              {d.price !== null && (
+                <div style={{
+                  position: "absolute", top: 12, right: 12, width: 58, height: 58, borderRadius: "50%",
+                  background: "#fff", display: "flex", alignItems: "center", justifyContent: "center",
+                  fontWeight: 900, fontSize: 16, color: ORANGE, boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+                }}>
+                  ${d.price.toFixed(2)}
+                </div>
+              )}
+              <div style={{ padding: "12px 14px 14px" }}>
+                <div style={{ fontWeight: 800, fontSize: 16.5, lineHeight: 1.25, color: INK, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{d.title}</div>
+                <div style={{ fontSize: 13, color: MUTED, marginTop: 3 }}>{BRANDS[d.slug]?.name ?? d.slug}{d.price === null ? ` · ${d.priceText}` : ""}</div>
                 {d.calPerDollar && (
-                  <span style={{ alignSelf: "flex-start", marginTop: 4, background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>
+                  <span style={{ display: "inline-block", marginTop: 7, background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "3px 11px", fontSize: 12.5, fontWeight: 700 }}>
                     {d.calPerDollar}
                   </span>
                 )}
@@ -160,69 +134,30 @@ export default async function Home({ searchParams }: { searchParams: Promise<Rec
         </div>
       </section>
 
-      {/* Best value list */}
-      <section style={{ marginBottom: 30 }}>
-        <h2 style={{ fontSize: 21, margin: "0 0 12px", letterSpacing: -0.4 }}>Best value right now</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {byValue.map(({ s, row }, i) => (
-            <div key={s.id} style={{ ...card, padding: 12, display: "flex", alignItems: "center", gap: 12 }}>
-              <span style={{ fontSize: 14, fontWeight: 800, color: "#575046", width: 18, textAlign: "center" }}>{i + 1}</span>
-              {row.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={imgSrc(row.imageUrl)} alt={row.name} width={64} height={64} loading="lazy"
-                  style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 16, flexShrink: 0, background: "#26221c" }} />
-              ) : (
-                <BrandIcon slug={row.restaurantSlug} size={64} />
-              )}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.25, color: INK }}>{row.name}</div>
-                <div style={{ fontSize: 13, color: MUTED, marginTop: 3 }}>
-                  {BRANDS[row.restaurantSlug]?.name ?? row.restaurantSlug}
-                  {row.calories !== null ? ` · ${row.calories} cal` : ""}
-                  {row.proteinG !== null ? ` · ${row.proteinG}g protein` : ""}
-                </div>
-                <div style={{ marginTop: 5, display: "flex", gap: 6, flexWrap: "wrap" }}>
-                  {row.calories !== null && row.calories > 0 && (
-                    <span style={{ background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
-                      {Math.round(row.calories / row.price)} cal/$
-                    </span>
-                  )}
-                  {row.calories === null && row.caloriesMin !== null && row.caloriesMax !== null && row.caloriesMax > 0 && (
-                    <span style={{ background: ORANGE_SOFT, color: ORANGE_TEXT, borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
-                      {Math.round(row.caloriesMin / row.price)}-{Math.round(row.caloriesMax / row.price)} cal/$
-                    </span>
-                  )}
-                  {row.proteinG !== null && row.proteinG > 0 && (
-                    <span style={{ background: "#26221c", color: "#cfc8bc", borderRadius: 999, padding: "2px 9px", fontSize: 12, fontWeight: 700 }}>
-                      {(row.proteinG / row.price).toFixed(1)}g protein/$
-                    </span>
-                  )}
-                </div>
+      {/* Crowd favorites - 2-col grid with circular photos */}
+      <section style={{ marginBottom: 26 }}>
+        <h2 style={{ fontSize: 22, margin: "0 0 12px", letterSpacing: -0.5, fontWeight: 800 }}>Crowd favorites</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          {favorites.map((row) => (
+            <div key={`${row.restaurantSlug}:${row.productId}`} style={{ ...card, padding: "16px 12px 14px", textAlign: "center" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={imgSrc(row.imageUrl!)} alt={row.name} loading="lazy"
+                style={{ width: 110, height: 110, objectFit: "cover", borderRadius: "50%", background: "#f7f4ef", margin: "0 auto 10px", display: "block" }} />
+              <div style={{ fontWeight: 700, fontSize: 14, lineHeight: 1.25, color: INK, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", minHeight: 35 }}>{row.name}</div>
+              <div style={{ fontSize: 12.5, color: MUTED, marginTop: 4 }}>
+                {row.pricingType !== "exact_store" && "~"}${row.price.toFixed(2)}
               </div>
-              <div style={{ textAlign: "right", flexShrink: 0 }}>
-                <div style={{ fontWeight: 800, fontSize: 16, color: INK }}>
-                  {row.pricingType !== "exact_store" && <span title="typical price, may vary">~</span>}${row.price.toFixed(2)}
-                </div>
-                <div style={{ background: ORANGE, color: "#141210", borderRadius: 999, padding: "2px 10px", fontSize: 12, fontWeight: 800, marginTop: 3 }}>
-                  {s.valueScore!.toFixed(1)}
-                </div>
-              </div>
+              <span style={{ display: "inline-block", marginTop: 6, background: ORANGE, color: "#fff", borderRadius: 999, padding: "3px 12px", fontSize: 12.5, fontWeight: 800 }}>
+                {Math.round(row.calories! / row.price)} cal/$
+              </span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* About / honesty notes */}
-      <details style={{ ...card, padding: "12px 16px", fontSize: 13, color: MUTED }}>
-        <summary style={{ cursor: "pointer", fontWeight: 600, color: "#cfc8bc" }}>How ValueBite works</summary>
-        <div style={{ marginTop: 10, lineHeight: 1.6, display: "flex", flexDirection: "column", gap: 6 }}>
-          <div>Value Score V1 ranks entrees by 55% protein per $, 35% calories per $, 10% price. Only items with known protein get a score - protein is never guessed.</div>
-          <div>Prices marked ~ are typical prices and may vary by store (exact data takes longer). Everything else is the exact price from the restaurant's own ordering site near {ZIP}.</div>
-          <div>Deals and codes come from the restaurant's official ordering site or deals menu, checked {checked}. A code is listed by the official source - not a guarantee it works at checkout.</div>
-          <div>Product photos are the restaurant's official menu photos. Chains without published photos show their app icon instead.</div>
-          <div><a href="/compare" style={{ color: ORANGE_TEXT }}>Compare items side by side</a> · <a href="/admin" style={{ color: ORANGE_TEXT }}>Data sources & refresh log</a></div>
-        </div>
-      </details>
+      <p style={{ textAlign: "center", fontSize: 13, color: MUTED }}>
+        <a href="/top" style={{ color: ORANGE_TEXT, fontWeight: 700, textDecoration: "none" }}>See the full ranked list</a>
+      </p>
     </main>
   );
 }

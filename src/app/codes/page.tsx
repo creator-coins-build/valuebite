@@ -42,7 +42,7 @@ export default async function CodesPage() {
                 </div>
               </div>
               {d.promoCode && (
-                <span style={{ fontFamily: "monospace", background: "#26221c", color: "#ffa245", borderRadius: 10, padding: "8px 12px", fontSize: 14, fontWeight: 700, letterSpacing: 0.5 }}>
+                <span style={{ fontFamily: "monospace", background: "#f1ece4", color: "#e85d10", borderRadius: 10, padding: "8px 12px", fontSize: 14, fontWeight: 700, letterSpacing: 0.5 }}>
                   {d.promoCode}
                 </span>
               )}
@@ -52,7 +52,7 @@ export default async function CodesPage() {
         })}
       </div>
 
-      <p style={{ fontSize: 12, color: "#575046", lineHeight: 1.6 }}>
+      <p style={{ fontSize: 12, color: "#b3ab9e", lineHeight: 1.6 }}>
         Listed by the official source, checked {checked}. A code being listed isn't a guarantee it works at checkout.
       </p>
     </main>
