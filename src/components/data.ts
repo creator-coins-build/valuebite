@@ -1,8 +1,8 @@
 import { openDb } from "../modules/db/client";
 import { rankableRows, activeDeals } from "../modules/db/queries";
 import { readSnapshot } from "../modules/db/snapshot";
-import { loadSnapshot as loadPapaJohns, itemRows as papaJohnsRows, dealRows as papaJohnsDeals, PAPA_JOHNS_SLUG, PAPA_JOHNS_NAME } from "../modules/adapters/papajohns";
-import { loadSnapshot as loadPizzaHut, itemRows as pizzaHutRows, dealRows as pizzaHutDeals, PIZZA_HUT_SLUG, PIZZA_HUT_NAME } from "../modules/adapters/pizzahut";
+import { loadSnapshot as loadPapaJohns, itemRows as papaJohnsRows, dealRows as papaJohnsDeals, coveredZips as papaJohnsZips, PAPA_JOHNS_SLUG, PAPA_JOHNS_NAME } from "../modules/adapters/papajohns";
+import { loadSnapshot as loadPizzaHut, itemRows as pizzaHutRows, dealRows as pizzaHutDeals, coveredZips as pizzaHutZips, PIZZA_HUT_SLUG, PIZZA_HUT_NAME } from "../modules/adapters/pizzahut";
 
 /** Browser-captured per-store snapshot chains: exact rows only for ZIPs with a fresh committed snapshot. */
 function snapshotChains(zip: string) {
@@ -11,12 +11,12 @@ function snapshotChains(zip: string) {
   if (pj) {
     out.rows.push(...papaJohnsRows(pj)); out.deals.push(...papaJohnsDeals(pj));
     out.stores.push({ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: pj.fetchedAt.slice(0, 10) });
-  } else out.missing.push(`${PAPA_JOHNS_NAME}: no local snapshot`);
+  } else out.missing.push(`${PAPA_JOHNS_NAME}: no local snapshot; covered ZIPs: ${papaJohnsZips().join(", ") || "none"}`);
   const ph = loadPizzaHut(zip);
   if (ph) {
     out.rows.push(...pizzaHutRows(ph)); out.deals.push(...pizzaHutDeals(ph));
     out.stores.push({ slug: PIZZA_HUT_SLUG, address: ph.storeAddress, asOf: ph.fetchedAt.slice(0, 10) });
-  } else out.missing.push(`${PIZZA_HUT_NAME}: no local snapshot`);
+  } else out.missing.push(`${PIZZA_HUT_NAME}: no local snapshot; covered ZIPs: ${pizzaHutZips().join(", ") || "none"}`);
   return out;
 }
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";

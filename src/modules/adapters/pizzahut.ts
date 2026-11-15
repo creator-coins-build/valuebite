@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { NormalizedItem } from "./types";
 import type { RankableRow, DealRow } from "../db/queries";
@@ -90,6 +90,18 @@ export function loadSnapshot(zip: string): PizzaHutSnapshot | null {
   }
   cache.set(zip, snap);
   return snap && isFresh(snap) ? snap : null;
+}
+
+/** ZIPs with a committed Pizza Hut snapshot file (freshness applied at load time). */
+export function coveredZips(): string[] {
+  try {
+    return readdirSync(join(process.cwd(), "data", "pizzahut"))
+      .filter((f) => /^\d{5}\.json$/.test(f))
+      .map((f) => f.slice(0, 5))
+      .sort();
+  } catch {
+    return [];
+  }
 }
 
 /** Display cleanup for an encoding artifact in the API's variant names ("Medium v Hand-Tossed"). Prices/nutrition untouched. */
