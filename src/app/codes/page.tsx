@@ -29,23 +29,27 @@ export default async function CodesPage({ searchParams }: { searchParams: Promis
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20 }}>
         {deals.map((d, i) => {
           const slug = brandSlugFor(d.restaurantName);
-          if (slug === "papajohns") return (
+          const SNAP_STORES: Record<string, { store: string; addr: string; dealsUrl: string }> = {
+            papajohns: { store: "store 920", addr: "14861 North Dale Mabry Hwy, Tampa", dealsUrl: "https://www.papajohns.com/order/specials" },
+            pizzahut: { store: "store 038698", addr: "2550 E. Fowler Ave., Tampa", dealsUrl: "https://www.pizzahut.com/deals" },
+          };
+          if (SNAP_STORES[slug]) { const ss = SNAP_STORES[slug]!; return (
             <article key={i} style={{ ...card, padding: 16 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <BrandIcon slug={slug} size={40} />
                 <div style={{ flex: 1, fontWeight: 800 }}>{d.title}</div>
                 {d.price !== null && <strong>${d.price.toFixed(2)}</strong>}
               </div>
-              <p style={{ fontSize: 12, color: MUTED }}>Papa John's · store 920 · sampled {d.lastVerified.slice(0, 10)} · no expiry published</p>
+              <p style={{ fontSize: 12, color: MUTED }}>{d.restaurantName} · {ss.store} · sampled {d.lastVerified.slice(0, 10)} · no expiry published</p>
               {d.description && <p style={{ fontSize: 13, lineHeight: 1.5, fontWeight: 700 }}>{d.description}</p>}
               {d.title === "Papa Pairings" && <p style={{ color: "#a13d10", fontWeight: 800, fontSize: 13 }}>Choose 2 or more eligible items. Shown price is not the total order price.</p>}
-              <p style={{ fontSize: 13, lineHeight: 1.5 }}>Choose 14861 North Dale Mabry Hwy, Tampa for carryout. Open Deals and select this offer{d.promoCode ? " or enter the code below" : ""}. Check the full terms and final price there before ordering.</p>
+              <p style={{ fontSize: 13, lineHeight: 1.5 }}>Choose {ss.addr} for carryout. Open Deals and select this offer{d.promoCode ? " or enter the code below" : ""}. Check the full terms and final price there before ordering.</p>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
                 {d.promoCode && <code style={{ background: "#f1ece4", padding: "8px 12px", borderRadius: 10 }}>{d.promoCode}</code>}
-                <a href={d.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: "white", background: ORANGE, borderRadius: 999, padding: "9px 16px", textDecoration: "none", fontWeight: 800 }}>Official deals</a>
+                <a href={ss.dealsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "white", background: ORANGE, borderRadius: 999, padding: "9px 16px", textDecoration: "none", fontWeight: 800 }}>Official deals</a>
               </div>
             </article>
-          );
+          ); }
           return (
             <div key={i} style={{ ...card, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12 }}>
               <BrandIcon slug={slug} size={40} />

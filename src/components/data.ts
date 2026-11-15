@@ -2,6 +2,23 @@ import { openDb } from "../modules/db/client";
 import { rankableRows, activeDeals } from "../modules/db/queries";
 import { readSnapshot } from "../modules/db/snapshot";
 import { loadSnapshot as loadPapaJohns, itemRows as papaJohnsRows, dealRows as papaJohnsDeals, PAPA_JOHNS_SLUG, PAPA_JOHNS_NAME } from "../modules/adapters/papajohns";
+import { loadSnapshot as loadPizzaHut, itemRows as pizzaHutRows, dealRows as pizzaHutDeals, PIZZA_HUT_SLUG, PIZZA_HUT_NAME } from "../modules/adapters/pizzahut";
+
+/** Browser-captured per-store snapshot chains: exact rows only for ZIPs with a fresh committed snapshot. */
+function snapshotChains(zip: string) {
+  const out = { rows: [] as import("../modules/db/queries").RankableRow[], deals: [] as import("../modules/db/queries").DealRow[], stores: [] as { slug: string; address: string; asOf: string }[], missing: [] as string[] };
+  const pj = loadPapaJohns(zip);
+  if (pj) {
+    out.rows.push(...papaJohnsRows(pj)); out.deals.push(...papaJohnsDeals(pj));
+    out.stores.push({ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: pj.fetchedAt.slice(0, 10) });
+  } else out.missing.push(`${PAPA_JOHNS_NAME}: no local snapshot`);
+  const ph = loadPizzaHut(zip);
+  if (ph) {
+    out.rows.push(...pizzaHutRows(ph)); out.deals.push(...pizzaHutDeals(ph));
+    out.stores.push({ slug: PIZZA_HUT_SLUG, address: ph.storeAddress, asOf: ph.fetchedAt.slice(0, 10) });
+  } else out.missing.push(`${PIZZA_HUT_NAME}: no local snapshot`);
+  return out;
+}
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
 import { entrees } from "../modules/scoring/rank";
 import type { RankableRow } from "../modules/db/queries";
@@ -9,7 +26,7 @@ import type { RankableRow } from "../modules/db/queries";
 export const ZIP = "33613";
 
 /** Chains with exact per-store, ZIP-specific data (never carried across ZIPs as national estimates). */
-const LIVE_SLUGS = new Set(["taco-bell", "dominos", PAPA_JOHNS_SLUG]);
+const LIVE_SLUGS = new Set(["taco-bell", "dominos", PAPA_JOHNS_SLUG, PIZZA_HUT_SLUG]);
 
 export interface LoadedData {
   rows: import("../modules/db/queries").RankableRow[];
@@ -40,16 +57,16 @@ export async function loadData(zipParam?: string): Promise<LoadedData> {
       if (live.rows.length > 0) {
         // Estimate chains are national (~) and ZIP-independent: keep them from the snapshot.
         const estimates = snap.rows.filter((r) => !LIVE_SLUGS.has(r.restaurantSlug));
-        // Papa John's: exact only from a committed browser-captured snapshot for THIS zip.
-        const pj = loadPapaJohns(zip);
+        // Snapshot chains: exact only from a committed browser-captured snapshot for THIS zip.
+        const sc = snapshotChains(zip);
         return {
-          rows: [...live.rows, ...(pj ? papaJohnsRows(pj) : []), ...estimates],
-          deals: [...live.deals, ...(pj ? papaJohnsDeals(pj) : [])],
+          rows: [...live.rows, ...sc.rows, ...estimates],
+          deals: [...live.deals, ...sc.deals],
           checked: new Date().toISOString().slice(0, 10),
           zip,
-          stores: [...live.stores, ...(pj ? [{ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: pj.fetchedAt.slice(0, 10) }] : [])],
+          stores: [...live.stores, ...sc.stores],
           live: true,
-          liveErrors: pj ? live.errors : [...live.errors, `${PAPA_JOHNS_NAME}: no local snapshot`],
+          liveErrors: [...live.errors, ...sc.missing],
           requestedZip: zip, fellBack: false,
         };
       }
@@ -63,13 +80,13 @@ export async function loadData(zipParam?: string): Promise<LoadedData> {
   }
 
   if (snap) {
-    // Default-ZIP view: add Papa John's when a committed snapshot covers this ZIP, with freshness.
-    const pj = loadPapaJohns(snap.zip);
+    // Default-ZIP view: add snapshot chains when a committed snapshot covers this ZIP, with freshness.
+    const sc = snapshotChains(snap.zip);
     return {
-      rows: [...snap.rows, ...(pj ? papaJohnsRows(pj) : [])],
-      deals: [...snap.deals, ...(pj ? papaJohnsDeals(pj) : [])],
+      rows: [...snap.rows, ...sc.rows],
+      deals: [...snap.deals, ...sc.deals],
       checked: snap.generatedAt.slice(0, 10), zip: snap.zip,
-      stores: pj ? [{ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: pj.fetchedAt.slice(0, 10) }] : [],
+      stores: sc.stores,
       live: false, liveErrors: [], requestedZip: zip, fellBack: false,
     };
   }

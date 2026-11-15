@@ -139,3 +139,32 @@ products and deals in data/papajohns/33613.json. Do not change fetchedAt without
 actually reviewing the live source. A failed source review must not renew data.
 New ZIPs need their own locator result, address confirmation and dated capture.
 Never export session cookies or retry the refused non-browser route.
+
+## Pizza Hut (2026-11-15): exact per-store prices + nutrition + meal deals via the site's public storefront GraphQL
+
+The public ordering site (www.pizzahut.com, no sign-in) calls the Yum! Brands
+storefront GraphQL API with an anonymous guest token the site mints for every
+visitor (POST /api/create-yum-guest-token, stored in the Yum_token cookie;
+used only inside the browser session, never exported):
+
+- POST https://api.prod.ph-us.yumconnect.dev/ph_us/storefront/graphql
+  - GetCategoryByCode(storeNumber, channel:"WEB", categoryCode) -> every item's
+    variants with exact price {amount cents} and nutritionInformation entries
+    (calories / servings / unit, e.g. 176 cal x 8 slices for a Large
+    Hand-Tossed Pepperoni at $17.49)
+  - GetBundlesByCode(storeNumber, channel:"WEB") -> ~67 priced meal deals
+    (bundle codes are internal identifiers, NOT customer promo codes)
+
+Store chosen through the normal public carryout flow: search 33613, pick from
+the site's own list -> store 038698 = 2550 E. Fowler Ave., Tampa.
+
+Same rules as Papa John's: browser-session capture only during refresh, one
+committed snapshot per ZIP (data/pizzahut/33613.json), exact rows only for
+covered ZIPs with the store + sample date shown, rows/deals fail closed after
+48h without an actual re-review, no workarounds for non-browser access.
+Whole-item calories = per-unit calories x official unit count; variants
+missing either number keep calories unknown. No protein published -> PH rows
+stay out of the Value Score ranking. This API carries no product images, so
+PH rows show the brand icon.
+- Pizza Hut app (official, seller Pizza Hut, Inc.):
+  https://apps.apple.com/us/app/pizza-hut-delivery-takeout/id321560858
