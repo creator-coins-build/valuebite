@@ -115,9 +115,13 @@ export function coveredZips(): string[] {
 }
 
 export function normalizeItems(snap: SonicSnapshot): NormalizedItem[] {
+  const seen = new Set<string>();
   return snap.products.flatMap((p) => {
     if (p.unavailable) return []; // the site itself flags these as not orderable
     if (p.priceCents === null || !Number.isFinite(p.priceCents) || p.priceCents <= 0) return []; // unknown stays unknown
+    const key = p.name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    if (seen.has(key)) return []; // same item listed under a second category (e.g. limited-time + burgers)
+    seen.add(key);
     return [{
       restaurantSlug: SONIC_SLUG,
       productId: slugOf(p.href),

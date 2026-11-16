@@ -32,8 +32,10 @@ describe("sonic snapshot adapter", () => {
     }
     const unavailable = snap.products.filter((p) => p.unavailable).length;
     const unpriced = snap.products.filter((p) => !p.unavailable && (p.priceCents === null || p.priceCents <= 0)).length;
-    expect(items.length).toBe(snap.products.length - unavailable - unpriced);
+    expect(items.length).toBeLessThanOrEqual(snap.products.length - unavailable - unpriced); // cross-category duplicates collapse to one row
     expect(unpriced).toBeGreaterThan(0); // 63 items showed no price at capture - unknown stays unknown
+    const names = items.map((i) => i.name.toLowerCase());
+    expect(new Set(names).size).toBe(names.length); // no duplicate rows for the same item
   });
 
   it("maps categories so drinks/sweets/sauces never rank as entrees", () => {
