@@ -12,6 +12,7 @@ const CHAIN_NAMES: Record<string, string> = {
   dominos: "Domino's",
   papajohns: "Papa John's",
   pizzahut: "Pizza Hut",
+  sonic: "Sonic",
 };
 
 export function LocalNotice({ zip, requestedZip, fellBack, live, stores, liveErrors, compact = false }: {

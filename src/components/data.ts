@@ -3,6 +3,7 @@ import { rankableRows, activeDeals } from "../modules/db/queries";
 import { readSnapshot } from "../modules/db/snapshot";
 import { loadSnapshot as loadPapaJohns, itemRows as papaJohnsRows, dealRows as papaJohnsDeals, coveredZips as papaJohnsZips, PAPA_JOHNS_SLUG, PAPA_JOHNS_NAME } from "../modules/adapters/papajohns";
 import { loadSnapshot as loadPizzaHut, itemRows as pizzaHutRows, dealRows as pizzaHutDeals, coveredZips as pizzaHutZips, PIZZA_HUT_SLUG, PIZZA_HUT_NAME } from "../modules/adapters/pizzahut";
+import { loadSnapshot as loadSonic, itemRows as sonicRows, dealRows as sonicDeals, coveredZips as sonicZips, SONIC_SLUG, SONIC_NAME } from "../modules/adapters/sonic";
 
 /** Browser-captured per-store snapshot chains: exact rows only for ZIPs with a fresh committed snapshot. */
 function snapshotChains(zip: string) {
@@ -17,6 +18,11 @@ function snapshotChains(zip: string) {
     out.rows.push(...pizzaHutRows(ph)); out.deals.push(...pizzaHutDeals(ph));
     out.stores.push({ slug: PIZZA_HUT_SLUG, address: ph.storeAddress, asOf: ph.fetchedAt.slice(0, 10) });
   } else out.missing.push(`${PIZZA_HUT_NAME}: no local snapshot; covered ZIPs: ${pizzaHutZips().join(", ") || "none"}`);
+  const sc_ = loadSonic(zip);
+  if (sc_) {
+    out.rows.push(...sonicRows(sc_)); out.deals.push(...sonicDeals(sc_));
+    out.stores.push({ slug: SONIC_SLUG, address: sc_.store.address, asOf: sc_.fetchedAt.slice(0, 10) });
+  } else out.missing.push(`${SONIC_NAME}: no local snapshot; covered ZIPs: ${sonicZips().join(", ") || "none"}`);
   return out;
 }
 import { scorePopulation, rank as rankScores } from "../modules/scoring/engine";
@@ -26,7 +32,7 @@ import type { RankableRow } from "../modules/db/queries";
 export const ZIP = "33613";
 
 /** Chains with exact per-store, ZIP-specific data (never carried across ZIPs as national estimates). */
-const LIVE_SLUGS = new Set(["taco-bell", "dominos", PAPA_JOHNS_SLUG, PIZZA_HUT_SLUG]);
+const LIVE_SLUGS = new Set(["taco-bell", "dominos", PAPA_JOHNS_SLUG, PIZZA_HUT_SLUG, SONIC_SLUG]);
 
 export interface LoadedData {
   rows: import("../modules/db/queries").RankableRow[];

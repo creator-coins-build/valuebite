@@ -9,6 +9,7 @@ export const BRANDS: Record<string, { initials: string; bg: string; fg: string; 
   chipotle: { initials: "C", bg: "#a81612", fg: "#fff", name: "Chipotle", appStoreUrl: "https://apps.apple.com/us/app/chipotle/id327228455" },
   papajohns: { initials: "PJ", bg: "#006341", fg: "#fff", name: "Papa John's", appStoreUrl: "https://apps.apple.com/us/app/papa-johns-pizza-delivery/id407517450" },
   pizzahut: { initials: "PH", bg: "#e32219", fg: "#fff", name: "Pizza Hut", appStoreUrl: "https://apps.apple.com/us/app/pizza-hut-delivery-takeout/id321560858" },
+  sonic: { initials: "S", bg: "#00549f", fg: "#fff", name: "Sonic", appStoreUrl: "https://apps.apple.com/us/app/sonic-drive-in/id867827909" },
 };
 
 export function brandSlugFor(restaurantName: string): string {
