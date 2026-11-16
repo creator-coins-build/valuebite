@@ -5,7 +5,7 @@
   "id": null,
   "address": "1915 E Fowler Ave, Tampa, FL"
  },
- "fetchedAt": "2026-11-15T23:49:54Z",
+ "fetchedAt": "2026-11-16T00:11:52Z",
  "source": "sonicdrivein.com rendered menu after selecting store 1915 E Fowler Ave via the public store-picker UI",
  "products": [
   {
@@ -14,7 +14,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/bacon-breakfast-toaster",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 470,
    "unavailable": false
   },
   {
@@ -23,7 +23,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/bacon-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 470,
    "unavailable": false
   },
   {
@@ -32,7 +32,7 @@
    "href": "/menu/categories/breakfast-all-day/local-breakfast-favorites/bacon-egg-and-cheese-brioche-breakfast-sandwich",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 440,
    "unavailable": false
   },
   {
@@ -41,7 +41,7 @@
    "href": "/menu/categories/breakfast-all-day/breakfast-drinks/coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 0,
    "unavailable": false
   },
   {
@@ -50,7 +50,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/french-toast-sticks",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 570,
    "unavailable": false
   },
   {
@@ -59,7 +59,7 @@
    "href": "/menu/categories/breakfast-all-day/breakfast-drinks/french-vanilla-cold-brew-iced-coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 260,
    "unavailable": false
   },
   {
@@ -68,7 +68,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/jr-bacon-egg-and-cheese-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 270,
    "unavailable": false
   },
   {
@@ -77,7 +77,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/jr-sausage-egg-and-cheese-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 280,
    "unavailable": false
   },
   {
@@ -86,7 +86,7 @@
    "href": "/menu/categories/breakfast-all-day/breakfast-drinks/original-cold-brew-iced-coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 230,
    "unavailable": false
   },
   {
@@ -95,7 +95,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/sausage-breakfast-toaster",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 570,
    "unavailable": false
   },
   {
@@ -104,7 +104,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/sausage-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 490,
    "unavailable": false
   },
   {
@@ -113,7 +113,7 @@
    "href": "/menu/categories/breakfast-all-day/local-breakfast-favorites/sausage-egg-and-cheese-brioche-breakfast-sandwich",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 530,
    "unavailable": false
   },
   {
@@ -122,7 +122,7 @@
    "href": "/menu/categories/breakfast-all-day/breakfast-drinks/simply-orange-juice",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 160,
    "unavailable": false
   },
   {
@@ -131,7 +131,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/supersonic-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 590,
    "unavailable": false
   },
   {
@@ -140,7 +140,7 @@
    "href": "/menu/categories/breakfast-all-day/national-breakfast-entrees/ultimate-meat-cheese-breakfast-burrito",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 820,
    "unavailable": false
   },
   {
@@ -266,7 +266,7 @@
    "href": "/menu/categories/chicken/national-chicken/chicken-tenders-3-piece",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 260,
    "unavailable": false
   },
   {
@@ -275,7 +275,7 @@
    "href": "/menu/categories/chicken/national-chicken/chicken-tenders-5-piece",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 430,
    "unavailable": false
   },
   {
@@ -284,7 +284,7 @@
    "href": "/menu/categories/chicken/national-chicken/crispy-chicken-sandwich",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 520,
    "unavailable": false
   },
   {
@@ -293,7 +293,7 @@
    "href": "/menu/categories/chicken/national-chicken/premium-chicken-bites",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 350,
    "unavailable": false
   },
   {
@@ -563,7 +563,7 @@
    "href": "/menu/categories/extra-sauces/asian-style-sweet-chili",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 60,
    "unavailable": false
   },
   {
@@ -572,7 +572,7 @@
    "href": "/menu/categories/extra-sauces/bbq",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 50,
    "unavailable": false
   },
   {
@@ -581,7 +581,7 @@
    "href": "/menu/categories/extra-sauces/buffalo",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 60,
    "unavailable": false
   },
   {
@@ -590,7 +590,7 @@
    "href": "/menu/categories/extra-sauces/groovy-sauce",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 110,
    "unavailable": false
   },
   {
@@ -599,7 +599,7 @@
    "href": "/menu/categories/extra-sauces/honey-mustard",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 90,
    "unavailable": false
   },
   {
@@ -608,7 +608,7 @@
    "href": "/menu/categories/extra-sauces/jalape-o-ranch",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 130,
    "unavailable": false
   },
   {
@@ -617,7 +617,7 @@
    "href": "/menu/categories/extra-sauces/marinara",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 15,
    "unavailable": false
   },
   {
@@ -626,7 +626,7 @@
    "href": "/menu/categories/extra-sauces/ranch",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 110,
    "unavailable": false
   },
   {
@@ -635,7 +635,7 @@
    "href": "/menu/categories/extra-sauces/signature-cheese-sauce",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 130,
    "unavailable": false
   },
   {
@@ -644,7 +644,7 @@
    "href": "/menu/categories/extra-sauces/syrup",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 90,
    "unavailable": false
   },
   {
@@ -653,7 +653,7 @@
    "href": "/menu/categories/hot-dogs/national-hot-dogs/all-american-dog",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 410,
    "unavailable": false
   },
   {
@@ -662,7 +662,7 @@
    "href": "/menu/categories/hot-dogs/national-hot-dogs/chili-cheese-coney",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 470,
    "unavailable": false
   },
   {
@@ -671,7 +671,7 @@
    "href": "/menu/categories/hot-dogs/national-hot-dogs/corn-dog",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 230,
    "unavailable": false
   },
   {
@@ -680,7 +680,7 @@
    "href": "/menu/categories/hot-dogs/national-hot-dogs/footlong-quarter-pound-coney",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 770,
    "unavailable": false
   },
   {
@@ -887,7 +887,7 @@
    "href": "/menu/categories/other-drinks/1-milk",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 130,
    "unavailable": false
   },
   {
@@ -896,7 +896,7 @@
    "href": "/menu/categories/other-drinks/bottled-water",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 0,
    "unavailable": false
   },
   {
@@ -905,7 +905,7 @@
    "href": "/menu/categories/other-drinks/cup-of-ice",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 0,
    "unavailable": false
   },
   {
@@ -914,7 +914,7 @@
    "href": "/menu/categories/other-drinks/minute-maid-100-apple-juice-box",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 80,
    "unavailable": false
   },
   {
@@ -923,7 +923,7 @@
    "href": "/menu/categories/other-drinks/simply-orange-juice",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 160,
    "unavailable": false
   },
   {
@@ -1022,7 +1022,7 @@
    "href": "/menu/categories/sandwiches/local-sandwiches/blt-toaster",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 450,
    "unavailable": false
   },
   {
@@ -1031,7 +1031,7 @@
    "href": "/menu/categories/sandwiches/national-sandwiches/crispy-chicken-sandwich",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 520,
    "unavailable": false
   },
   {
@@ -1040,7 +1040,7 @@
    "href": "/menu/categories/sandwiches/national-sandwiches/grilled-cheese-sandwich",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 390,
    "unavailable": false
   },
   {
@@ -1436,7 +1436,7 @@
    "href": "/menu/categories/sweets/classic-shakes/banana-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 750,
    "unavailable": false
   },
   {
@@ -1445,7 +1445,7 @@
    "href": "/menu/categories/sweets/classic-shakes/caramel-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 740,
    "unavailable": false
   },
   {
@@ -1454,7 +1454,7 @@
    "href": "/menu/categories/sweets/sundaes/caramel-sundae",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 430,
    "unavailable": false
   },
   {
@@ -1463,7 +1463,7 @@
    "href": "/menu/categories/sweets/signature-shakes/cheesecake-master-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 750,
    "unavailable": false
   },
   {
@@ -1472,7 +1472,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/chocolate-chip-cookie-dough-blast",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 820,
    "unavailable": false
   },
   {
@@ -1481,7 +1481,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/chocolate-chunk-brownie-blast",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 820,
    "unavailable": false
   },
   {
@@ -1490,7 +1490,7 @@
    "href": "/menu/categories/sweets/classic-shakes/chocolate-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 720,
    "unavailable": false
   },
   {
@@ -1499,7 +1499,7 @@
    "href": "/menu/categories/sweets/classic-shakes/hot-fudge-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 840,
    "unavailable": false
   },
   {
@@ -1508,7 +1508,7 @@
    "href": "/menu/categories/sweets/sundaes/hot-fudge-sundae",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 470,
    "unavailable": false
   },
   {
@@ -1517,7 +1517,7 @@
    "href": "/menu/categories/sweets/signature-shakes/oreo-cheesecake-master-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 940,
    "unavailable": false
   },
   {
@@ -1526,7 +1526,7 @@
    "href": "/menu/categories/sweets/signature-shakes/oreo-chocolate-master-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 910,
    "unavailable": false
   },
   {
@@ -1535,7 +1535,7 @@
    "href": "/menu/categories/sweets/signature-shakes/oreo-peanut-butter-master-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 1020,
    "unavailable": false
   },
   {
@@ -1544,7 +1544,7 @@
    "href": "/menu/categories/sweets/classic-shakes/peanut-butter-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 830,
    "unavailable": false
   },
   {
@@ -1553,7 +1553,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-heath",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 860,
    "unavailable": false
   },
   {
@@ -1562,7 +1562,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-m-m-s-chocolate-candies",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 960,
    "unavailable": false
   },
   {
@@ -1571,7 +1571,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-oreo-cookie-pieces",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 770,
    "unavailable": false
   },
   {
@@ -1580,7 +1580,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/sonic-blast-made-with-reese-s",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 890,
    "unavailable": false
   },
   {
@@ -1589,7 +1589,7 @@
    "href": "/menu/categories/sweets/signature-shakes/strawberry-cheesecake-master-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 790,
    "unavailable": false
   },
   {
@@ -1598,7 +1598,7 @@
    "href": "/menu/categories/sweets/classic-shakes/strawberry-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 690,
    "unavailable": false
   },
   {
@@ -1607,7 +1607,7 @@
    "href": "/menu/categories/sweets/sundaes/strawberry-sundae",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 380,
    "unavailable": false
   },
   {
@@ -1616,7 +1616,7 @@
    "href": "/menu/categories/sweets/sonic-blasts/turtle-truffle-nut-blast",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 920,
    "unavailable": false
   },
   {
@@ -1625,7 +1625,7 @@
    "href": "/menu/categories/sweets/classic-shakes/vanilla-classic-shake",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 710,
    "unavailable": false
   },
   {
@@ -1634,7 +1634,7 @@
    "href": "/menu/categories/sweets/sundaes/vanilla-soft-serve-cup",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 300,
    "unavailable": false
   },
   {
@@ -1643,7 +1643,7 @@
    "href": "/menu/categories/tea-coffee/coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 0,
    "unavailable": false
   },
   {
@@ -1652,7 +1652,7 @@
    "href": "/menu/categories/tea-coffee/french-vanilla-cold-brew-iced-coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 260,
    "unavailable": false
   },
   {
@@ -1661,7 +1661,7 @@
    "href": "/menu/categories/tea-coffee/half-sweet-tea-half-lemonade",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 220,
    "unavailable": false
   },
   {
@@ -1670,7 +1670,7 @@
    "href": "/menu/categories/tea-coffee/half-sweet-tea-half-unsweet-tea",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 90,
    "unavailable": false
   },
   {
@@ -1679,7 +1679,7 @@
    "href": "/menu/categories/tea-coffee/half-unsweet-tea-half-lemonade",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 130,
    "unavailable": false
   },
   {
@@ -1688,7 +1688,7 @@
    "href": "/menu/categories/tea-coffee/original-cold-brew-iced-coffee",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 230,
    "unavailable": false
   },
   {
@@ -1697,7 +1697,7 @@
    "href": "/menu/categories/tea-coffee/sweet-iced-tea",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 170,
    "unavailable": false
   },
   {
@@ -1706,7 +1706,7 @@
    "href": "/menu/categories/tea-coffee/unsweet-iced-tea",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 0,
    "unavailable": false
   },
   {
@@ -1778,7 +1778,7 @@
    "href": "/menu/categories/wacky-pack-kids-meals/chicken-tenders-wacky-pack",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 480,
    "unavailable": false
   },
   {
@@ -1787,7 +1787,7 @@
    "href": "/menu/categories/wacky-pack-kids-meals/corn-dog-wacky-pack",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 480,
    "unavailable": false
   },
   {
@@ -1796,7 +1796,7 @@
    "href": "/menu/categories/wacky-pack-kids-meals/grilled-cheese-wacky-pack",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 680,
    "unavailable": false
   },
   {
@@ -1805,7 +1805,7 @@
    "href": "/menu/categories/wacky-pack-kids-meals/hamburger-wacky-pack",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 270,
    "unavailable": false
   },
   {
@@ -1814,8 +1814,9 @@
    "href": "/menu/categories/wacky-pack-kids-meals/hot-dog-wacky-pack",
    "priceCents": null,
    "listPriceCents": null,
-   "cal": null,
+   "cal": 610,
    "unavailable": false
   }
- ]
+ ],
+ "note": "77 items show no price on the official site at this store (View Item, not orderable at capture time); their calories come from the same official cards."
 }

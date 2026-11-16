@@ -182,3 +182,8 @@ PH rows show the brand icon.
 - GOTCHA: Sonic store selection is ephemeral - it survives only a handful of client-side navigations, then prices silently vanish ("View Item" replaces price/Add To Bag). Full page reloads always drop it. Capture in batches of ~4-5 categories, re-select store between batches, and verify EVERY extracted card has $ (checking only the first card is not enough).
 - Store select flow that works: Order Pickup button -> searchbox type ZIP -> click "Tampa, FL" suggestion -> first "Order Here".
 - TODO next run: re-capture the 8 unpriced categories for 33613; full capture for 33543 (store 1908 Bruce B. Downs Blvd, Wesley Chapel); build sonic adapter + wire coverage; item-level size variants not captured (cards show default size only).
+
+### Sonic capture update (2026-11-15 ~7 PM ET)
+- Re-captured sweets (23) and breakfast (14) WITH prices. Final 33613 snapshot: 201 items, 138 with exact prices, all 201 with official calories.
+- The 63 unpriced items (tea-coffee, other-drinks, hot-dogs, chicken, extra-sauces, wacky-pack, sandwiches) consistently render as "View Item" with NO price on the official site at store 1915 E Fowler Ave even while every other category on the same page shows prices - treated as genuinely not orderable at capture time, price stays unknown (matches the site's own display). OPEN QUESTION: verify at a different time of day whether these become priced (possible daypart/availability gating).
+- Store session reliably dies after ~1-2 category navigations; extract immediately and verify category-prefixed cards (not just any card) carry $ before extracting.
