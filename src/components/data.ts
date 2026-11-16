@@ -5,23 +5,32 @@ import { loadSnapshot as loadPapaJohns, itemRows as papaJohnsRows, dealRows as p
 import { loadSnapshot as loadPizzaHut, itemRows as pizzaHutRows, dealRows as pizzaHutDeals, coveredZips as pizzaHutZips, PIZZA_HUT_SLUG, PIZZA_HUT_NAME } from "../modules/adapters/pizzahut";
 import { loadSnapshot as loadSonic, itemRows as sonicRows, dealRows as sonicDeals, coveredZips as sonicZips, SONIC_SLUG, SONIC_NAME } from "../modules/adapters/sonic";
 
+/** Store-local calendar date for a captured snapshot's UTC timestamp (all covered stores are US Eastern). */
+function storeLocalDate(iso: string): string {
+  try {
+    return new Date(iso).toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+  } catch {
+    return iso.slice(0, 10);
+  }
+}
+
 /** Browser-captured per-store snapshot chains: exact rows only for ZIPs with a fresh committed snapshot. */
 function snapshotChains(zip: string) {
   const out = { rows: [] as import("../modules/db/queries").RankableRow[], deals: [] as import("../modules/db/queries").DealRow[], stores: [] as { slug: string; address: string; asOf: string }[], missing: [] as string[] };
   const pj = loadPapaJohns(zip);
   if (pj) {
     out.rows.push(...papaJohnsRows(pj)); out.deals.push(...papaJohnsDeals(pj));
-    out.stores.push({ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: pj.fetchedAt.slice(0, 10) });
+    out.stores.push({ slug: PAPA_JOHNS_SLUG, address: pj.storeAddress, asOf: storeLocalDate(pj.fetchedAt) });
   } else out.missing.push(`${PAPA_JOHNS_NAME}: no local snapshot; covered ZIPs: ${papaJohnsZips().join(", ") || "none"}`);
   const ph = loadPizzaHut(zip);
   if (ph) {
     out.rows.push(...pizzaHutRows(ph)); out.deals.push(...pizzaHutDeals(ph));
-    out.stores.push({ slug: PIZZA_HUT_SLUG, address: ph.storeAddress, asOf: ph.fetchedAt.slice(0, 10) });
+    out.stores.push({ slug: PIZZA_HUT_SLUG, address: ph.storeAddress, asOf: storeLocalDate(ph.fetchedAt) });
   } else out.missing.push(`${PIZZA_HUT_NAME}: no local snapshot; covered ZIPs: ${pizzaHutZips().join(", ") || "none"}`);
   const sc_ = loadSonic(zip);
   if (sc_) {
     out.rows.push(...sonicRows(sc_)); out.deals.push(...sonicDeals(sc_));
-    out.stores.push({ slug: SONIC_SLUG, address: sc_.store.address, asOf: sc_.fetchedAt.slice(0, 10) });
+    out.stores.push({ slug: SONIC_SLUG, address: sc_.store.address, asOf: storeLocalDate(sc_.fetchedAt) });
   } else out.missing.push(`${SONIC_NAME}: no local snapshot; covered ZIPs: ${sonicZips().join(", ") || "none"}`);
   return out;
 }
