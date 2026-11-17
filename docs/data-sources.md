@@ -195,3 +195,13 @@ Goal: which snapshot chains can become live per-ZIP server-side adapters (TB/Dom
 - Pizza Hut: two API layers. (1) services.digital.pizzahut.com/phdapi/v2/stores/{id}?key=... IS reachable via plain curl (store info only; no menu endpoints - /menu paths 404). (2) Menu data comes from api.prod.ph-us.yumconnect.dev/ph_us/storefront/graphql (reachable, responds 200 to unauthenticated trivial query) using query GetCategoryByCode(storeNumber, channel=WEB, categoryCode, includeSubcategories) with fragments incl. variants.price and nutritionInformation + defaultModifiers nutrition (matches the verified composite rule). BUT real queries return 401 without a guest token, and the token endpoint (www.pizzahut.com/api/create-yum-guest-token) is on the walled host (connection refused from datacenter). VERDICT: menu not server-side reachable without replaying browser-issued tokens (not allowed); stays browser-capture snapshot.
 - Sonic: unchanged - api-idp.sonicdrivein.com is worker-gated behind PerimeterX; stays UI-driven capture.
 - Net: TB + Domino's remain the only live per-ZIP server-side adapters. Free-route scaling for PJ/PH/Sonic = scheduled browser-driven snapshot capture extended to more stores/ZIPs, using the endpoint/query intel above to keep captures efficient and honest.
+
+## Sonic - PAUSED (2026-11-17)
+
+Sonic capture is paused per product-owner decision. On 2026-11-17 a fresh 33613
+capture reached 16/18 categories, then store sessions began dropping instantly and
+navigation redirected to wrong categories - treated as suspected soft-throttling and
+stopped per the no-workarounds rule. Decision: let existing snapshots lapse and hide
+at expiry; no retries (new session or timer alone does not justify retrying). Resume
+only with a genuinely new signal or a verified authorized alternative. Partial raw
+batch preserved at data/sonic/raw/refresh-33613-2026-11-17/ (not assembled).
