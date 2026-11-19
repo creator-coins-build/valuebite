@@ -11,11 +11,17 @@ const snap = JSON.parse(
 ) as SonicSnapshot;
 
 describe("sonic snapshot adapter", () => {
-  it("loads the committed 33613 snapshot and rejects uncovered ZIPs", () => {
+  it("loads the committed 33613 snapshot only while fresh and rejects uncovered ZIPs", () => {
     const loaded = loadSnapshot("33613");
-    expect(loaded).not.toBeNull();
-    expect(loaded!.store.address).toContain("Fowler");
-    expect(loaded!.products.length).toBeGreaterThan(150);
+    const ageH = (Date.now() - Date.parse(snap.fetchedAt)) / 3.6e6;
+    if (ageH < 48) {
+      expect(loaded).not.toBeNull();
+      expect(loaded!.store.address).toContain("Fowler");
+      expect(loaded!.products.length).toBeGreaterThan(150);
+    } else {
+      // fail-closed: snapshots older than 48h hide (Sonic capture paused 2026-11-17)
+      expect(loaded).toBeNull();
+    }
     expect(loadSnapshot("99999")).toBeNull();
     expect(loadSnapshot("33613!")).toBeNull();
   });
