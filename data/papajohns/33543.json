@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-21T03:51:48.891Z",
+ "fetchedAt": "2026-11-22T03:52:16.651Z",
  "zip": "33543",
  "storeId": 3193,
  "storeAddress": "5434 Bruce B Downs Boulevard, Wesley Chapel, FL",
@@ -2171,17 +2171,6 @@
    "servingLabel": "",
    "desc": "2-Liter Pepsi Wild Cherry",
    "image": "/static-assets/a/images/web/product/beverages/2025/2025_beverages_menu_pepsi_cherry.jpg"
-  },
-  {
-   "name": "2 Liter Pepsi Zero Sugar",
-   "sku": "2-619-26-93",
-   "cat": "drinks",
-   "price": "3.99",
-   "regular": "3.99",
-   "calories": 0,
-   "servingLabel": "",
-   "desc": "2-Liter Pepsi Zero Sugar",
-   "image": "/static-assets/a/images/web/product/beverages/2025/2025_beverages_menu_pepsi_zero.jpg"
   },
   {
    "name": "2 Liter Starry",
