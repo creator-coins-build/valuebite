@@ -1,43 +1,10 @@
 {
- "fetchedAt": "2026-11-22T03:52:16.651Z",
+ "fetchedAt": "2026-11-23T03:53:09.484Z",
  "zip": "33543",
  "storeId": 3193,
  "storeAddress": "5434 Bruce B Downs Boulevard, Wesley Chapel, FL",
  "source": "papajohns.com public tRPC (menuCategory.getByStore, product.getByStore, deals.getByStore)",
  "products": [
-  {
-   "name": "Philly Cheesesteak Oven-Toasted Sandwich",
-   "sku": "55-845-95-343",
-   "cat": "sandwiches",
-   "price": "9.99",
-   "regular": "9.99",
-   "calories": 790,
-   "servingLabel": "",
-   "desc": "Seasoned chopped steak, roasted onions and peppers, pizza ranch sauce, and white American cheese. Toasted on ciabatta bread with our signature Special Garlic Sa",
-   "image": "/static-assets/a/images/web/product/sandwiches/2026-p5-sandwiches-philly-menu.jpg"
-  },
-  {
-   "name": "Chicken Bacon Ranch Oven-Toasted Sandwich",
-   "sku": "55-845-95-344",
-   "cat": "sandwiches",
-   "price": "9.99",
-   "regular": "9.99",
-   "calories": 780,
-   "servingLabel": "",
-   "desc": "All-white meat grilled chicken, bacon, diced tomatoes, banana peppers, pizza ranch, and white American cheese. Toasted on ciabatta bread with our signature Spec",
-   "image": "/static-assets/a/images/web/product/sandwiches/2026-p5-sandwiches-chk-menu.jpg"
-  },
-  {
-   "name": "Steak & Mushroom Oven-Toasted Sandwich",
-   "sku": "55-845-95-345",
-   "cat": "sandwiches",
-   "price": "9.99",
-   "regular": "9.99",
-   "calories": 820,
-   "servingLabel": "",
-   "desc": "Seasoned chopped steak, roasted mushrooms and onions, garlic truffle sauce, and white American cheese. Toasted on ciabatta bread with our signature Special Garl",
-   "image": "/static-assets/a/images/web/product/sandwiches/2026-p5-sandwiches-steak-menu.jpg"
-  },
   {
    "name": "CYO Papa Bowl",
    "sku": "50-782-92-309",
@@ -48,281 +15,6 @@
    "servingLabel": "",
    "desc": "Create Your Own Papa Bowl",
    "image": "/static-assets/a/images/web/product/cyo/2025-cyo-papa-bowls.jpg"
-  },
-  {
-   "name": "10 Inch Original Create Your Own",
-   "sku": "1-1-2-83",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 180,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/cyo/Original-Crust-Cheese-105369.jpg"
-  },
-  {
-   "name": "10 Inch Original Pepperoni Pizza",
-   "sku": "1-1-2-115",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 210,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/cyo/Original-Crust-Pepperoni-105408.jpg"
-  },
-  {
-   "name": "10 Inch Original Sausage Pizza",
-   "sku": "1-1-2-117",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 220,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/sausage-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Works Pizza",
-   "sku": "1-1-2-24",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 230,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Small Original Crust The Works Pizza",
-   "image": "/static-assets/a/images/web/product/pizzas/p10-2026-works-menu.jpg"
-  },
-  {
-   "name": "10 Inch Original Meats Pizza",
-   "sku": "1-1-2-2",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 250,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Small Original Crust - The Meats",
-   "image": "/static-assets/a/images/web/product/pizzas/the-meats-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original BBQ Chicken Bacon Pizza",
-   "sku": "1-1-2-4",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 230,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/bbq-chicken-bacon-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Hawaiian BBQ Chicken Pizza",
-   "sku": "1-1-2-5",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 230,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/hawaiian-bbq-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Garden Fresh Pizza",
-   "sku": "1-1-2-22",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 190,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Small Original Crust - Garden Fresh",
-   "image": "/static-assets/a/images/web/product/pizzas/garden-fresh-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Tuscan Six Cheese Pizza",
-   "sku": "1-1-2-45",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 220,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Small Original Crust Tuscan Six Cheese",
-   "image": "/static-assets/a/images/web/product/pizzas/tuscan-6cheese-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Philly Cheesesteak Pizza",
-   "sku": "1-1-2-198",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 240,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/philly-cheesesteak-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Super Hawaiian Pizza",
-   "sku": "1-1-2-269",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 230,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/super-hawaiian-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Ultimate Pepperoni Pizza",
-   "sku": "1-1-2-268",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 240,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/p9-2026-ultpepp-menu.jpg"
-  },
-  {
-   "name": "10 Inch Original Fiery Buffalo Chicken Pizza",
-   "sku": "1-1-2-156",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 220,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/fiery-buffalo-chicken-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Original Fresh Spinach & Tomato Alfredo Pizza",
-   "sku": "1-1-2-280",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 190,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/fresh-spinach-tomato-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Create Your Own",
-   "sku": "1-631-2-83",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 150,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/cyo/GF-Crust-Cheese-105278.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Pepperoni Pizza",
-   "sku": "1-631-2-115",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 160,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Gluten-Free Crust Pepperoni",
-   "image": "/static-assets/a/images/web/product/cyo/GF-Crust-Pepperoni-105298.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Sausage Pizza",
-   "sku": "1-631-2-117",
-   "cat": "pizza",
-   "price": "12.99",
-   "regular": "12.99",
-   "calories": 170,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Gluten-Free Crust Sausage",
-   "image": "/static-assets/a/images/web/product/pizzas/gluten-free-sausage-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Works Pizza",
-   "sku": "1-631-2-24",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 170,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Gluten-Free Crust The Works",
-   "image": "/static-assets/a/images/web/product/pizzas/p10-2026-works-menu.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Meats Pizza",
-   "sku": "1-631-2-2",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 200,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Gluten-Free Crust The Meats",
-   "image": "/static-assets/a/images/web/product/pizzas/gluten-free-meats-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free BBQ Chicken Bacon Pizza",
-   "sku": "1-631-2-4",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": null,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/bbq-chicken-bacon-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Hawaiian BBQ Chicken Pizza",
-   "sku": "1-631-2-5",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": null,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/std_HawaiianBBQ_m-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Garden Fresh Pizza",
-   "sku": "1-631-2-22",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 140,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Gluten-Free Garden Fresh",
-   "image": "/static-assets/a/images/web/product/pizzas/gluten-free-garden-fresh-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Philly Cheesesteak Pizza",
-   "sku": "1-631-2-198",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 180,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/philly-cheesesteak-slate-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Super Hawaiian Pizza",
-   "sku": "1-631-2-269",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 170,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/super-hawaiian-compressed.jpg"
-  },
-  {
-   "name": "10 Inch Gluten Free Fiery Buffalo Chicken Pizza",
-   "sku": "1-631-2-156",
-   "cat": "pizza",
-   "price": "14.99",
-   "regular": "14.99",
-   "calories": 160,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/fiery-buffalo-chicken-compressed.jpg"
   },
   {
    "name": "12 Inch Original Create Your Own",
@@ -424,17 +116,6 @@
    "image": "/static-assets/a/images/web/product/pizzas/tuscan-6cheese-slate-compressed.jpg"
   },
   {
-   "name": "12 Inch Original Philly Cheesesteak Pizza",
-   "sku": "1-1-3-198",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 250,
-   "servingLabel": "/slice, 8 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/philly-cheesesteak-slate-compressed.jpg"
-  },
-  {
    "name": "12 Inch Original Super Hawaiian Pizza",
    "sku": "1-1-3-269",
    "cat": "pizza",
@@ -477,39 +158,6 @@
    "servingLabel": "/slice, 8 slices",
    "desc": "",
    "image": "/static-assets/a/images/web/product/pizzas/fresh-spinach-tomato-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Create Your Own",
-   "sku": "1-781-3-83",
-   "cat": "pizza",
-   "price": "15.99",
-   "regular": "15.99",
-   "calories": 240,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "NY Style pizza is more delicious than ever when it\u2019s made with Papa Johns fresh, never frozen dough. Oversized, foldable slices with just the right balance of c",
-   "image": "/static-assets/a/images/web/product/cyo/NYS-Crust-Cheese-105549.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Pepperoni Pizza",
-   "sku": "1-781-3-115",
-   "cat": "pizza",
-   "price": "15.99",
-   "regular": "15.99",
-   "calories": 260,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/cyo/NYS-Crust-Pepperoni-105540.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Sausage Pizza",
-   "sku": "1-781-3-117",
-   "cat": "pizza",
-   "price": "15.99",
-   "regular": "15.99",
-   "calories": 270,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust Sausage Pizza",
-   "image": "/static-assets/a/images/web/product/pizzas/NY-Style-1Topp-Sausage.jpg"
   },
   {
    "name": "12 Inch Pan Works Pizza",
@@ -578,17 +226,6 @@
    "image": "/static-assets/a/images/web/product/pan-crust/p9-2026-pan-cheese-menu.jpg"
   },
   {
-   "name": "12 Inch Pan Philly Cheesesteak Pizza",
-   "sku": "1-4-3-198",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 310,
-   "servingLabel": "/slice, 8 slices",
-   "desc": "Pan Philly Cheesesteak",
-   "image": "/static-assets/a/images/web/product/pizzas/philly-cheesesteak2-compressed.jpg"
-  },
-  {
    "name": "12 Inch Pan Super Hawaiian Pizza",
    "sku": "1-4-3-269",
    "cat": "pizza",
@@ -622,105 +259,6 @@
    "image": "/static-assets/a/images/web/product/pizzas/fiery-buffalo-chicken-compressed.jpg"
   },
   {
-   "name": "12 Inch New York Style Works Pizza",
-   "sku": "1-781-3-24",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 270,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust The Works Pizza",
-   "image": "/static-assets/a/images/web/product/pizzas/p10-2026-works-menu.jpg"
-  },
-  {
-   "name": "12 Inch New York Style BBQ Chicken Bacon Pizza",
-   "sku": "1-781-3-4",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 270,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust BBQ Chicken & Bacon Pizza",
-   "image": "/static-assets/a/images/web/product/pizzas/bbq-chicken-bacon-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Garden Fresh Pizza",
-   "sku": "1-781-3-22",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 220,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust Garden Fresh",
-   "image": "/static-assets/a/images/web/product/pizzas/garden-fresh-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Tuscan Six Cheese Pizza",
-   "sku": "1-781-3-45",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 260,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/tuscan-6cheese-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Ultimate Pepperoni Pizza",
-   "sku": "1-781-3-268",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 270,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/p9-2026-ultpepp-menu.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Philly Cheesesteak Pizza",
-   "sku": "1-781-3-198",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 290,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust Philly Cheesesteak",
-   "image": "/static-assets/a/images/web/product/pizzas/philly-cheesesteak-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Super Hawaiian Pizza",
-   "sku": "1-781-3-269",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 260,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/super-hawaiian-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Fiery Buffalo Chicken Pizza",
-   "sku": "1-781-3-156",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 260,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "",
-   "image": "/static-assets/a/images/web/product/pizzas/fiery-buffalo-chicken-slate-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Fresh Spinach & Tomato Alfredo Pizza",
-   "sku": "1-781-3-280",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 220,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "Medium New York Style Crust Fresh Spinach & Tomato Alfredo",
-   "image": "/static-assets/a/images/web/product/pizzas/fresh-spinach-tomato-compressed.jpg"
-  },
-  {
    "name": "12 Inch Pan Fresh Spinach & Tomato Alfredo Pizza",
    "sku": "1-4-3-280",
    "cat": "pizza",
@@ -730,17 +268,6 @@
    "servingLabel": "/slice, 8 slices",
    "desc": "",
    "image": "/static-assets/a/images/web/product/pizzas/fresh-spinach-tomato-compressed.jpg"
-  },
-  {
-   "name": "12 Inch New York Style Meats Pizza",
-   "sku": "1-781-3-2",
-   "cat": "pizza",
-   "price": "18.99",
-   "regular": "18.99",
-   "calories": 290,
-   "servingLabel": "/slice, 6 slices",
-   "desc": "A masterpiece of hearty, high-quality meats including pepperoni, savory sausage, real beef, hickory-smoked bacon, and julienne-cut Canadian bacon, all topped wi",
-   "image": "/static-assets/a/images/web/product/pizzas/the-meats-slate-compressed.jpg"
   },
   {
    "name": "12 Inch Pan Pepperoni Pizza",
@@ -1568,28 +1095,6 @@
    "image": "/static-assets/a/images/web/product/extras/std_jalapenos-compressed.jpg"
   },
   {
-   "name": "Cinnamon Pull Aparts",
-   "sku": "32-600-33-232",
-   "cat": "desserts",
-   "price": "9.99",
-   "regular": "9.99",
-   "calories": 1960,
-   "servingLabel": "",
-   "desc": "Bite-sized sweet roll pieces covered in cinnamon and sugar, topped with cinnamon crumbles then baked and drizzled with sweet cream cheese icing.",
-   "image": "/static-assets/a/images/web/product/desserts/Cinnamon_Pull_Aparts-104172.jpg"
-  },
-  {
-   "name": "Cheesy Garlic Bread",
-   "sku": "12-850-8-348",
-   "cat": "sides",
-   "price": "6.99",
-   "regular": "6.99",
-   "calories": 140,
-   "servingLabel": "/piece, 6 pieces",
-   "desc": "Ciabatta bread topped with garlic parmesan sauce and Italian seasoning, covered in cheese, baked to a golden brown, and cut into 6 pieces. Served with our origi",
-   "image": "/static-assets/a/images/web/product/sides/p5-2026-cheesy-garlic-bread-menu.jpg"
-  },
-  {
    "name": "6 Piece BBQ Wings",
    "sku": "9-165-8-223",
    "cat": "wings",
@@ -1654,17 +1159,6 @@
    "servingLabel": "/slice, 8 slices",
    "desc": "A family-sized chocolate chip cookie baked  and cut into eight slices. Served warm.",
    "image": "/static-assets/a/images/web/product/desserts/Chocolate_Chip_Cookie-104126.jpg"
-  },
-  {
-   "name": "8 Piece 10 Inch Garlic Knots",
-   "sku": "12-519-10-202",
-   "cat": "sides",
-   "price": "8.99",
-   "regular": "8.99",
-   "calories": 110,
-   "servingLabel": "/knot, 8 knots",
-   "desc": " Eight Garlic Knots made with original dough and garlic parmesan seasoning. Served with original pizza dipping sauce.",
-   "image": "/static-assets/a/images/web/product/sides/Garlic_Knots-102539.jpg"
   },
   {
    "name": "8 Piece BBQ Wings",
@@ -2182,39 +1676,6 @@
    "servingLabel": "/12 oz",
    "desc": "",
    "image": "/static-assets/a/images/web/product/beverages/2025/2025_beverages_menu_starry.jpg"
-  },
-  {
-   "name": "10 Inch Original Cheesesticks",
-   "sku": "13-289-33-181",
-   "cat": "sides",
-   "price": "9.99",
-   "regular": "9.99",
-   "calories": 90,
-   "servingLabel": "/stick, 14 sticks",
-   "desc": "Original fresh dough covered with Special Garlic sauce, topped with mounds of real cheese made from mozzarella, then baked to a cheesy, gooey goodness. Served w",
-   "image": "/static-assets/a/images/web/product/sides/Cheesesticks-88141.jpg"
-  },
-  {
-   "name": "10 Inch Bacon Cheesesticks",
-   "sku": "13-289-33-100",
-   "cat": "sides",
-   "price": "10.99",
-   "regular": "10.99",
-   "calories": 110,
-   "servingLabel": "/stick, 14 sticks",
-   "desc": "Original fresh dough covered with Special Garlic sauce, topped with bacon and real cheese made from mozzarella, then baked to a light golden brown. Served with ",
-   "image": "/static-assets/a/images/web/product/sides/Bacon_Cheesesticks-88270.jpg"
-  },
-  {
-   "name": "10 Inch Six Cheese Cheesesticks",
-   "sku": "13-346-33-181",
-   "cat": "sides",
-   "price": "10.99",
-   "regular": "10.99",
-   "calories": 110,
-   "servingLabel": "/stick, 14 sticks",
-   "desc": "Enjoy a taste of Tuscany with our fresh dough covered in Special Garlic sauce and smothered in an authentic six-cheese blend of real cheese made from Mozzarella",
-   "image": "/static-assets/a/images/web/product/sides/Tuscan_Six_Cheese-Cheesesticks-88174.jpg"
   }
  ],
  "deals": [
@@ -2354,15 +1815,6 @@
    "image": "/static-assets/a/images/web/deal/sides/bread-sides-eDeal-compressed.jpg"
   },
   {
-   "id": 59595,
-   "title": "SMALL CHEESESTICKS",
-   "offerCode": "899CS",
-   "desc": "Fresh dough brushed with garlic sauce, topped with real mozzarella cheese, baked to golden perfection and served with pizza sauce for dipping.",
-   "price": "8.99",
-   "regular": "9.99",
-   "image": "/static-assets/a/images/web/deal/sides/cheese-sticks-slate-compressed.jpg"
-  },
-  {
    "id": 67405,
    "title": "Papa Pairings",
    "offerCode": "EDMWP10",
@@ -2370,15 +1822,6 @@
    "price": "6.99",
    "regular": "8.99",
    "image": "/static-assets/a/images/web/deal/2026/p7-2026-papa-pairings-deal.jpg"
-  },
-  {
-   "id": 64528,
-   "title": "Cheesy Garlic Bread",
-   "offerCode": "OPTP61",
-   "desc": "Get Cheesy Garlic Bread for $4.99 when you spend $10 or more",
-   "price": "4.99",
-   "regular": "6.99",
-   "image": "/static-assets/a/images/web/deal/2026/p5-2026-cheesy-garlic-bread-deal.jpg"
   }
  ]
 }
