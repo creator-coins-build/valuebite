@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-23T03:56:08.959Z",
+ "fetchedAt": "2026-11-24T03:53:55.523Z",
  "zip": "33543",
  "storeId": "038716",
  "storeAddress": "28670 FL-54, Wesley Chapel, FL",
@@ -6735,22 +6735,10 @@
    "priceCents": 1699
   },
   {
-   "title": "Cheesy Bites Pizza",
-   "code": "MEALC11CB",
-   "desc": "Our iconic Stuffed Crust with a twist: 28 individual, cheese-stuffed bites, made for dipping. Limited time. Marinara dip included; no dip substitution. Avail., add\u2019l charges, price & partic. vary.",
-   "priceCents": 1499
-  },
-  {
    "title": "Breadsticks",
    "code": "MEALG21GY",
    "desc": "",
    "priceCents": 499
-  },
-  {
-   "title": "1-Topping Crispy Parm Pan",
-   "code": "MEAL150CR",
-   "desc": "Try the NEW Crispy Parm Pan Pizza! Our Original Pan\u00ae crust, with a crispy, golden parmesan edge. Add\u2019l\u202fcharges, excl., tax & fees apply.\u202fAvail.,\u202fprices &\u202fparticip. vary.",
-   "priceCents": 1199
   },
   {
    "title": "Large 1-Top (Carryout)",
@@ -6865,6 +6853,12 @@
    "code": "MEALD7878",
    "desc": "A Melt loaded with chicken, onion, buffalo sauce and cheese. Served with ranch for dipping. Comes with one dipping sauce; no substitutions.",
    "priceCents": 700
+  },
+  {
+   "title": "TWO Large 1-Top",
+   "code": "MEALY91XO",
+   "desc": "",
+   "priceCents": 1999
   },
   {
    "title": "Large 5-Top or Specialty + Large 1-Top + Breadsticks or Cinnamon Sticks + 2 Liter",
