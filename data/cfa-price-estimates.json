@@ -1,5 +1,5 @@
 {
-  "harvestedAt": "2026-11-20T03:52:56.204Z",
+  "harvestedAt": "2026-11-26T03:54:30.691Z",
   "estimates": [
     {
       "slug": "chick-fil-a-chicken-sandwich",
@@ -8,7 +8,7 @@
       "high": 7.69,
       "storeCount": 3055,
       "typical": 5.25,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-chicken-sandwich"
     },
     {
@@ -16,9 +16,9 @@
       "itemName": "Chick-fil-A 8 ct Chick-fil-A Nuggets",
       "low": 4.85,
       "high": 7.79,
-      "storeCount": 3053,
+      "storeCount": 3055,
       "typical": 5.35,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/8-ct-chick-fil-a-nuggets"
     },
     {
@@ -28,7 +28,7 @@
       "high": 6.74,
       "storeCount": 3053,
       "typical": 5,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-filet"
     },
     {
@@ -36,9 +36,9 @@
       "itemName": "Chick-fil-A 30 ct Chick-fil-A Nuggets",
       "low": 16.29,
       "high": 24.59,
-      "storeCount": 3050,
+      "storeCount": 3051,
       "typical": 18.19,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/30-ct-chick-fil-a-nuggets"
     },
     {
@@ -46,9 +46,9 @@
       "itemName": "Chick-fil-A Spicy Chicken Sandwich",
       "low": 5.25,
       "high": 8.15,
-      "storeCount": 3048,
+      "storeCount": 3049,
       "typical": 5.65,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-chicken-sandwich"
     },
     {
@@ -56,9 +56,9 @@
       "itemName": "Chick-fil-A Spicy Filet",
       "low": 5,
       "high": 7.2,
-      "storeCount": 3048,
+      "storeCount": 3049,
       "typical": 5.4,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-filet"
     },
     {
@@ -66,50 +66,30 @@
       "itemName": "Chick-fil-A 12 ct Chick-fil-A Nuggets",
       "low": 6.85,
       "high": 10,
-      "storeCount": 3046,
+      "storeCount": 3047,
       "typical": 7.29,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/12-ct-chick-fil-a-nuggets"
-    },
-    {
-      "slug": "chick-fil-a-deluxe-sandwich-w-no-cheese",
-      "itemName": "Chick-fil-A Deluxe Sandwich w/ No Cheese",
-      "low": 5.35,
-      "high": 7.59,
-      "storeCount": 3039,
-      "typical": 5.75,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-no-cheese"
-    },
-    {
-      "slug": "chick-fil-a-deluxe-sandwich-w-american",
-      "itemName": "Chick-fil-A Deluxe Sandwich w/ American",
-      "low": 5.65,
-      "high": 7.99,
-      "storeCount": 3039,
-      "typical": 6.05,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-american"
     },
     {
       "slug": "5-ct-chick-fil-a-nuggets",
       "itemName": "Chick-fil-A 5 ct Chick-fil-A Nuggets",
       "low": 3.05,
       "high": 4.45,
-      "storeCount": 3038,
+      "storeCount": 3039,
       "typical": 3.35,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/5-ct-chick-fil-a-nuggets"
     },
     {
-      "slug": "chick-fil-a-deluxe-sandwich-w-pepper-jack",
-      "itemName": "Chick-fil-A Deluxe Sandwich w/ Pepper Jack",
-      "low": 5.65,
-      "high": 7.99,
+      "slug": "chick-fil-a-deluxe-sandwich-w-no-cheese",
+      "itemName": "Chick-fil-A Deluxe Sandwich w/ No Cheese",
+      "low": 5.35,
+      "high": 7.59,
       "storeCount": 3037,
-      "typical": 6.05,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-pepper-jack"
+      "typical": 5.75,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-no-cheese"
     },
     {
       "slug": "spicy-deluxe-sandwich-w-no-cheese",
@@ -118,8 +98,18 @@
       "high": 8.09,
       "storeCount": 3036,
       "typical": 6.15,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-deluxe-sandwich-w-no-cheese"
+    },
+    {
+      "slug": "chick-fil-a-deluxe-sandwich-w-american",
+      "itemName": "Chick-fil-A Deluxe Sandwich w/ American",
+      "low": 5.65,
+      "high": 7.99,
+      "storeCount": 3036,
+      "typical": 6.05,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-american"
     },
     {
       "slug": "spicy-deluxe-sandwich-w-pepper-jack",
@@ -128,18 +118,28 @@
       "high": 8.49,
       "storeCount": 3035,
       "typical": 6.45,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-deluxe-sandwich-w-pepper-jack"
     },
     {
-      "slug": "chick-fil-a-deluxe-sandwich-w-colby-jack",
-      "itemName": "Chick-fil-A Deluxe Sandwich w/ Colby Jack",
+      "slug": "chick-fil-a-deluxe-sandwich-w-pepper-jack",
+      "itemName": "Chick-fil-A Deluxe Sandwich w/ Pepper Jack",
       "low": 5.65,
       "high": 7.99,
       "storeCount": 3035,
       "typical": 6.05,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-colby-jack"
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-pepper-jack"
+    },
+    {
+      "slug": "grilled-filet",
+      "itemName": "Chick-fil-A Grilled Filet",
+      "low": 5.44,
+      "high": 7.54,
+      "storeCount": 3034,
+      "typical": 5.74,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-filet"
     },
     {
       "slug": "spicy-deluxe-sandwich-w-colby-jack",
@@ -148,18 +148,8 @@
       "high": 8.49,
       "storeCount": 3033,
       "typical": 6.45,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-deluxe-sandwich-w-colby-jack"
-    },
-    {
-      "slug": "grilled-filet",
-      "itemName": "Chick-fil-A Grilled Filet",
-      "low": 5.44,
-      "high": 7.54,
-      "storeCount": 3033,
-      "typical": 5.74,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-filet"
     },
     {
       "slug": "grilled-chicken-sandwich",
@@ -168,27 +158,27 @@
       "high": 8.59,
       "storeCount": 3033,
       "typical": 6.79,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-chicken-sandwich"
     },
     {
-      "slug": "spicy-deluxe-sandwich-w-american",
-      "itemName": "Chick-fil-A Spicy Deluxe Sandwich w/ American",
-      "low": 6.05,
-      "high": 8.49,
-      "storeCount": 3032,
-      "typical": 6.45,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-deluxe-sandwich-w-american"
+      "slug": "chick-fil-a-deluxe-sandwich-w-colby-jack",
+      "itemName": "Chick-fil-A Deluxe Sandwich w/ Colby Jack",
+      "low": 5.65,
+      "high": 7.99,
+      "storeCount": 3033,
+      "typical": 6.05,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-deluxe-sandwich-w-colby-jack"
     },
     {
       "slug": "8-ct-grilled-nuggets",
       "itemName": "Chick-fil-A 8 ct Grilled Nuggets",
       "low": 5.69,
       "high": 7.99,
-      "storeCount": 3029,
+      "storeCount": 3030,
       "typical": 6.15,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/8-ct-grilled-nuggets"
     },
     {
@@ -196,19 +186,29 @@
       "itemName": "Chick-fil-A 12 ct Grilled Nuggets",
       "low": 8.19,
       "high": 11.45,
-      "storeCount": 3029,
+      "storeCount": 3030,
       "typical": 8.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/12-ct-grilled-nuggets"
+    },
+    {
+      "slug": "spicy-deluxe-sandwich-w-american",
+      "itemName": "Chick-fil-A Spicy Deluxe Sandwich w/ American",
+      "low": 6.05,
+      "high": 8.49,
+      "storeCount": 3029,
+      "typical": 6.45,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-deluxe-sandwich-w-american"
     },
     {
       "slug": "grilled-chicken-club-w-no-cheese",
       "itemName": "Chick-fil-A Grilled Chicken Club w/ No Cheese",
       "low": 7.89,
       "high": 10.69,
-      "storeCount": 3027,
+      "storeCount": 3028,
       "typical": 8.39,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-chicken-club-w-no-cheese"
     },
     {
@@ -216,9 +216,9 @@
       "itemName": "Chick-fil-A Grilled Chicken Club w/ Colby Jack",
       "low": 8.19,
       "high": 11.19,
-      "storeCount": 3027,
+      "storeCount": 3028,
       "typical": 8.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-chicken-club-w-colby-jack"
     },
     {
@@ -228,7 +228,7 @@
       "high": 11.19,
       "storeCount": 3026,
       "typical": 8.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-chicken-club-w-american"
     },
     {
@@ -236,9 +236,9 @@
       "itemName": "Chick-fil-A Grilled Chicken Club w/ Pepper Jack",
       "low": 8.19,
       "high": 11.19,
-      "storeCount": 3023,
+      "storeCount": 3022,
       "typical": 8.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/grilled-chicken-club-w-pepper-jack"
     },
     {
@@ -246,29 +246,19 @@
       "itemName": "Chick-fil-A 5 ct Grilled Nuggets",
       "low": 3.6,
       "high": 5,
-      "storeCount": 3018,
+      "storeCount": 3019,
       "typical": 3.85,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/5-ct-grilled-nuggets"
-    },
-    {
-      "slug": "30-ct-grilled-nuggets",
-      "itemName": "Chick-fil-A 30 ct Grilled Nuggets",
-      "low": 19.79,
-      "high": 28.55,
-      "storeCount": 3012,
-      "typical": 21.69,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/30-ct-grilled-nuggets"
     },
     {
       "slug": "cobb-salad-w-nuggets",
       "itemName": "Chick-fil-A Cobb Salad w/ Nuggets",
       "low": 9.49,
       "high": 11.39,
-      "storeCount": 3008,
+      "storeCount": 3016,
       "typical": 9.79,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-nuggets"
     },
     {
@@ -276,109 +266,59 @@
       "itemName": "Chick-fil-A Cobb Salad w/ No Chicken",
       "low": 7.19,
       "high": 8.69,
-      "storeCount": 3007,
+      "storeCount": 3015,
       "typical": 7.49,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-no-chicken"
     },
     {
-      "slug": "cobb-salad-w-chick-fil-a-filet",
-      "itemName": "Chick-fil-A Cobb Salad w/ Chick-fil-A Filet",
-      "low": 9.49,
-      "high": 11.39,
-      "storeCount": 3003,
-      "typical": 9.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-chick-fil-a-filet"
+      "slug": "30-ct-grilled-nuggets",
+      "itemName": "Chick-fil-A 30 ct Grilled Nuggets",
+      "low": 19.79,
+      "high": 28.55,
+      "storeCount": 3015,
+      "typical": 21.69,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/30-ct-grilled-nuggets"
     },
     {
       "slug": "market-salad-w-grilled-filet-cold",
       "itemName": "Chick-fil-A Market Salad w/ Grilled Filet (Cold)",
       "low": 9.69,
       "high": 12.55,
-      "storeCount": 3002,
+      "storeCount": 3013,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-grilled-filet-cold"
+    },
+    {
+      "slug": "cobb-salad-w-chick-fil-a-filet",
+      "itemName": "Chick-fil-A Cobb Salad w/ Chick-fil-A Filet",
+      "low": 9.49,
+      "high": 11.39,
+      "storeCount": 3011,
+      "typical": 9.79,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-chick-fil-a-filet"
     },
     {
       "slug": "cobb-salad-w-spicy-filet",
       "itemName": "Chick-fil-A Cobb Salad w/ Spicy Filet",
       "low": 9.49,
       "high": 11.39,
-      "storeCount": 3001,
+      "storeCount": 3010,
       "typical": 9.79,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-spicy-filet"
-    },
-    {
-      "slug": "4-ct-chick-fil-a-chick-n-strips",
-      "itemName": "Chick-fil-A 4 ct Chick-fil-A Chick-n-Strips",
-      "low": 6.55,
-      "high": 9.49,
-      "storeCount": 2997,
-      "typical": 7.09,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/4-ct-chick-fil-a-chick-n-strips"
-    },
-    {
-      "slug": "3-ct-chick-fil-a-chick-n-strips",
-      "itemName": "Chick-fil-A 3 ct Chick-fil-A Chick-n-Strips",
-      "low": 5.19,
-      "high": 7.45,
-      "storeCount": 2997,
-      "typical": 5.59,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/3-ct-chick-fil-a-chick-n-strips"
-    },
-    {
-      "slug": "cobb-salad-w-grilled-filet-cold",
-      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Filet (Cold)",
-      "low": 9.49,
-      "high": 12.29,
-      "storeCount": 2995,
-      "typical": 9.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-filet-cold"
-    },
-    {
-      "slug": "cobb-salad-w-grilled-nuggets",
-      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Nuggets",
-      "low": 9.49,
-      "high": 11.39,
-      "storeCount": 2994,
-      "typical": 9.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-nuggets"
-    },
-    {
-      "slug": "2-ct-chick-fil-a-chick-n-strips",
-      "itemName": "Chick-fil-A 2 ct Chick-fil-A Chick-n-Strips",
-      "low": 3.49,
-      "high": 4.99,
-      "storeCount": 2993,
-      "typical": 3.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/2-ct-chick-fil-a-chick-n-strips"
-    },
-    {
-      "slug": "10-ct-chick-fil-a-chick-n-strips",
-      "itemName": "Chick-fil-A 10 ct Chick-fil-A Chick-n-Strips",
-      "low": 15.69,
-      "high": 23.69,
-      "storeCount": 2991,
-      "typical": 17.69,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/10-ct-chick-fil-a-chick-n-strips"
     },
     {
       "slug": "market-salad-w-nuggets",
       "itemName": "Chick-fil-A Market Salad w/ Nuggets",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2987,
+      "storeCount": 3003,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-nuggets"
     },
     {
@@ -386,29 +326,29 @@
       "itemName": "Chick-fil-A Market Salad w/ No Chicken",
       "low": 7.39,
       "high": 8.89,
-      "storeCount": 2985,
+      "storeCount": 3003,
       "typical": 7.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-no-chicken"
     },
     {
-      "slug": "cobb-salad-w-grilled-filet-warm",
-      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Filet (Warm)",
+      "slug": "cobb-salad-w-grilled-nuggets",
+      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Nuggets",
       "low": 9.49,
       "high": 11.39,
-      "storeCount": 2984,
+      "storeCount": 3003,
       "typical": 9.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-filet-warm"
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-nuggets"
     },
     {
       "slug": "market-salad-w-spicy-filet",
       "itemName": "Chick-fil-A Market Salad w/ Spicy Filet",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2983,
+      "storeCount": 3000,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-spicy-filet"
     },
     {
@@ -416,109 +356,169 @@
       "itemName": "Chick-fil-A Market Salad w/ Chick-fil-A Filet",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2982,
+      "storeCount": 3000,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-chick-fil-a-filet"
     },
     {
-      "slug": "chick-fil-a-cool-wrap",
-      "itemName": "Chick-fil-A Cool Wrap",
-      "low": 7.79,
-      "high": 11.89,
-      "storeCount": 2981,
-      "typical": 8.45,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-cool-wrap"
+      "slug": "cobb-salad-w-grilled-filet-cold",
+      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Filet (Cold)",
+      "low": 9.49,
+      "high": 12.29,
+      "storeCount": 2997,
+      "typical": 9.79,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-filet-cold"
     },
     {
       "slug": "market-salad-w-grilled-nuggets",
       "itemName": "Chick-fil-A Market Salad w/ Grilled Nuggets",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2974,
+      "storeCount": 2993,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-grilled-nuggets"
     },
     {
-      "slug": "cobb-salad-w-chick-fil-a-chick-n-strips",
-      "itemName": "Chick-fil-A Cobb Salad w/ Chick-fil-A Chick-n-Strips",
+      "slug": "cobb-salad-w-grilled-filet-warm",
+      "itemName": "Chick-fil-A Cobb Salad w/ Grilled Filet (Warm)",
       "low": 9.49,
       "high": 11.39,
-      "storeCount": 2969,
+      "storeCount": 2992,
       "typical": 9.79,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-chick-fil-a-chick-n-strips"
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-grilled-filet-warm"
+    },
+    {
+      "slug": "3-ct-chick-fil-a-chick-n-strips",
+      "itemName": "Chick-fil-A 3 ct Chick-fil-A Chick-n-Strips",
+      "low": 5.19,
+      "high": 7.45,
+      "storeCount": 2988,
+      "typical": 5.59,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/3-ct-chick-fil-a-chick-n-strips"
+    },
+    {
+      "slug": "4-ct-chick-fil-a-chick-n-strips",
+      "itemName": "Chick-fil-A 4 ct Chick-fil-A Chick-n-Strips",
+      "low": 6.55,
+      "high": 9.49,
+      "storeCount": 2986,
+      "typical": 7.09,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/4-ct-chick-fil-a-chick-n-strips"
+    },
+    {
+      "slug": "chick-fil-a-cool-wrap",
+      "itemName": "Chick-fil-A Cool Wrap",
+      "low": 7.79,
+      "high": 11.89,
+      "storeCount": 2985,
+      "typical": 8.45,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-cool-wrap"
     },
     {
       "slug": "market-salad-w-grilled-filet-warm",
       "itemName": "Chick-fil-A Market Salad w/ Grilled Filet (Warm)",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2966,
+      "storeCount": 2982,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-grilled-filet-warm"
+    },
+    {
+      "slug": "2-ct-chick-fil-a-chick-n-strips",
+      "itemName": "Chick-fil-A 2 ct Chick-fil-A Chick-n-Strips",
+      "low": 3.49,
+      "high": 4.99,
+      "storeCount": 2982,
+      "typical": 3.79,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/2-ct-chick-fil-a-chick-n-strips"
+    },
+    {
+      "slug": "10-ct-chick-fil-a-chick-n-strips",
+      "itemName": "Chick-fil-A 10 ct Chick-fil-A Chick-n-Strips",
+      "low": 15.69,
+      "high": 23.69,
+      "storeCount": 2981,
+      "typical": 17.69,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/10-ct-chick-fil-a-chick-n-strips"
     },
     {
       "slug": "spicy-southwest-salad-w-no-chicken",
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ No Chicken",
       "low": 7.39,
       "high": 8.89,
-      "storeCount": 2959,
+      "storeCount": 2971,
       "typical": 7.69,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-no-chicken"
-    },
-    {
-      "slug": "spicy-southwest-salad-w-spicy-grilled-filet-cold",
-      "itemName": "Chick-fil-A Spicy Southwest Salad w/ Spicy Grilled Filet (Cold)",
-      "low": 9.69,
-      "high": 12.55,
-      "storeCount": 2957,
-      "typical": 9.99,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-spicy-grilled-filet-cold"
     },
     {
       "slug": "spicy-southwest-salad-w-nuggets",
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ Nuggets",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2956,
+      "storeCount": 2967,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-nuggets"
     },
     {
-      "slug": "spicy-southwest-salad-w-chick-fil-a-filet",
-      "itemName": "Chick-fil-A Spicy Southwest Salad w/ Chick-fil-A Filet",
-      "low": 9.69,
-      "high": 11.59,
-      "storeCount": 2955,
-      "typical": 9.99,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-chick-fil-a-filet"
+      "slug": "cobb-salad-w-chick-fil-a-chick-n-strips",
+      "itemName": "Chick-fil-A Cobb Salad w/ Chick-fil-A Chick-n-Strips",
+      "low": 9.49,
+      "high": 11.39,
+      "storeCount": 2967,
+      "typical": 9.79,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-chick-fil-a-chick-n-strips"
     },
     {
       "slug": "spicy-southwest-salad-w-spicy-filet",
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ Spicy Filet",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2952,
+      "storeCount": 2965,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-spicy-filet"
+    },
+    {
+      "slug": "spicy-southwest-salad-w-chick-fil-a-filet",
+      "itemName": "Chick-fil-A Spicy Southwest Salad w/ Chick-fil-A Filet",
+      "low": 9.69,
+      "high": 11.59,
+      "storeCount": 2965,
+      "typical": 9.99,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-chick-fil-a-filet"
+    },
+    {
+      "slug": "spicy-southwest-salad-w-spicy-grilled-filet-cold",
+      "itemName": "Chick-fil-A Spicy Southwest Salad w/ Spicy Grilled Filet (Cold)",
+      "low": 9.69,
+      "high": 12.55,
+      "storeCount": 2964,
+      "typical": 9.99,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-spicy-grilled-filet-cold"
     },
     {
       "slug": "market-salad-w-chick-fil-a-chick-n-strips",
       "itemName": "Chick-fil-A Market Salad w/ Chick-fil-A Chick-n-Strips",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2951,
+      "storeCount": 2959,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-chick-fil-a-chick-n-strips"
     },
     {
@@ -526,9 +526,9 @@
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ Grilled Filet (Cold)",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2948,
+      "storeCount": 2953,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-grilled-filet-cold"
     },
     {
@@ -536,9 +536,9 @@
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ Grilled Nuggets",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2938,
+      "storeCount": 2948,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-grilled-nuggets"
     },
     {
@@ -546,9 +546,9 @@
       "itemName": "Chick-fil-A Spicy Southwest Salad w/ Grilled Filet (Warm)",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2930,
+      "storeCount": 2939,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-grilled-filet-warm"
     },
     {
@@ -558,7 +558,7 @@
       "high": 11.59,
       "storeCount": 2926,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/spicy-southwest-salad-w-chick-fil-a-chick-n-strips"
     },
     {
@@ -566,9 +566,9 @@
       "itemName": "Chick-fil-A Cobb Salad w/ Spicy Grilled Filet (Cold)",
       "low": 9.49,
       "high": 11.39,
-      "storeCount": 2915,
+      "storeCount": 2917,
       "typical": 9.79,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/cobb-salad-w-spicy-grilled-filet-cold"
     },
     {
@@ -576,30 +576,30 @@
       "itemName": "Chick-fil-A Market Salad w/ Spicy Grilled Filet (Cold)",
       "low": 9.69,
       "high": 11.59,
-      "storeCount": 2909,
+      "storeCount": 2916,
       "typical": 9.99,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/market-salad-w-spicy-grilled-filet-cold"
+    },
+    {
+      "slug": "bacon",
+      "itemName": "Chick-fil-A Bacon",
+      "low": 1.4,
+      "high": 2.1,
+      "storeCount": 2903,
+      "typical": 1.6,
+      "checkedDate": "2026-11-26",
+      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/bacon"
     },
     {
       "slug": "chick-fil-a-chicken-biscuit",
       "itemName": "Chick-fil-A Chicken Biscuit",
       "low": 3.55,
       "high": 5.25,
-      "storeCount": 2900,
+      "storeCount": 2901,
       "typical": 3.85,
-      "checkedDate": "2026-11-20",
+      "checkedDate": "2026-11-26",
       "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/chick-fil-a-chicken-biscuit"
-    },
-    {
-      "slug": "4-ct-chick-fil-a-chick-n-minis",
-      "itemName": "Chick-fil-A 4 ct Chick-fil-A Chick-n-Minis",
-      "low": 4.55,
-      "high": 6.49,
-      "storeCount": 2899,
-      "typical": 4.95,
-      "checkedDate": "2026-11-20",
-      "sourceUrl": "https://drivethruindex.com/items/chick-fil-a/4-ct-chick-fil-a-chick-n-minis"
     }
   ]
 }
